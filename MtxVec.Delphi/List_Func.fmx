@@ -1,0 +1,75 @@
+object frmListFunc: TfrmListFunc
+  Left = 1495
+  Top = 205
+  Caption = 'frmListFunc'
+  ClientHeight = 560
+  ClientWidth = 602
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Left = 1495
+  Top = 205
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 602.000000000000000000
+    Size.Height = 519.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowHeight = 21.000000000000000000
+    Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+    Viewport.Width = 582.000000000000000000
+    Viewport.Height = 494.000000000000000000
+    object StringColumn1: TStringColumn
+      Header = '(Unit) Name'
+      Size.Width = 187.000000000000000000
+    end
+    object StringColumn2: TStringColumn
+      Header = 'Description'
+      Size.Width = 387.000000000000000000
+    end
+  end
+  object Panel1: TPanel
+    Size.Width = 602.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label1'
+    end
+    object Button1: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 455.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Find'
+      Visible = False
+      OnClick = Button1Click
+    end
+  end
+  object Button2: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 535.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 60.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Clear'
+    Visible = False
+    OnClick = Button2Click
+  end
+end

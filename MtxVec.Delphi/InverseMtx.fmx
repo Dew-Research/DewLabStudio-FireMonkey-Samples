@@ -1,0 +1,121 @@
+inherited InvMtx: TInvMtx
+  Caption = 'InvMtx'
+  ClientHeight = 502
+  ClientWidth = 615
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 615.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 615.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 463.000000000000000000
+    Size.Width = 615.000000000000000000
+    Size.Height = 39.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 222.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Generate random matrix'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 250.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 147.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Inverse of matrix'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 408.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'A*A-1 = ?'
+      OnClick = Button3Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 615.000000000000000000
+    Size.Height = 333.000000000000000000
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 274.000000000000000000
+      Size.Height = 333.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Left = 1
+      Top = 1
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 14.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Matrix dimension (Rows/Cols)'
+      end
+      object Label2: TLabel
+        Position.X = 210.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 55.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Label2'
+      end
+      object TrackBar1: TTrackBar
+        Frequency = 4.000000000000000000
+        Min = 2.000000000000000000
+        Orientation = Horizontal
+        Position.X = 16.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Value = 2.000000000000000000
+        OnChange = TrackBar1Change
+      end
+    end
+    object Panel5: TPanel
+      Align = Client
+      Size.Width = 341.000000000000000000
+      Size.Height = 333.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnResize = Panel5Resize
+      object StringGrid1: TStringGrid
+        Position.X = 17.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 288.000000000000000000
+        Size.Height = 140.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowCount = 2
+        RowHeight = 21.000000000000000000
+      end
+      object StringGrid2: TStringGrid
+        Position.X = 17.000000000000000000
+        Position.Y = 164.000000000000000000
+        Size.Width = 288.000000000000000000
+        Size.Height = 140.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowCount = 2
+        RowHeight = 21.000000000000000000
+      end
+    end
+  end
+end

@@ -1,0 +1,50 @@
+inherited BenchmarkXForm_Windows: TBenchmarkXForm_Windows
+  ClientHeight = 480
+  ClientWidth = 640
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 640.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 640.000000000000000000
+      Viewport.Width = 640.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 422.000000000000000000
+    Size.Width = 640.000000000000000000
+    inherited Label1: TLabel
+      Position.X = 138.000000000000000000
+    end
+    inherited Label2: TLabel
+      Position.X = 330.000000000000000000
+    end
+    inherited cbVectorLength: TComboEdit
+      Position.X = 217.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited cbIterationCount: TComboEdit
+      Position.X = 445.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 640.000000000000000000
+    Size.Height = 292.000000000000000000
+    inherited Panel4: TPanel
+      Size.Height = 292.000000000000000000
+      inherited clbFuncs: TListBox
+        Size.Height = 256.000000000000000000
+        Viewport.Width = 144.000000000000000000
+        Viewport.Height = 252.000000000000000000
+      end
+    end
+    inherited ChartResults: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Size.Width = 466.000000000000000000
+      Size.Height = 292.000000000000000000
+    end
+  end
+end

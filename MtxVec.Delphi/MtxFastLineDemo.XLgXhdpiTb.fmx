@@ -1,0 +1,28 @@
+inherited MtxFastLineForm_XLgXhdpiTb: TMtxFastLineForm_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 800.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 800.000000000000000000
+      Viewport.Width = 800.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 1216.000000000000000000
+    Size.Width = 800.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 139.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Size.Width = 800.000000000000000000
+    Size.Height = 1086.000000000000000000
+  end
+end

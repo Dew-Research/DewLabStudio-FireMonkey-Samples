@@ -1,0 +1,9 @@
+inherited frmChanges101: TfrmChanges101
+  Caption = 'frmChanges101'
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+end

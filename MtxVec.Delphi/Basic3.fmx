@@ -1,0 +1,31 @@
+object BasicForm3: TBasicForm3
+  Left = 50
+  Top = 240
+  Caption = 'BasicForm3'
+  ClientHeight = 446
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  Left = 50
+  Top = 240
+  DesignerMasterStyle = 0
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'RichEdit1')
+    ReadOnly = True
+    StyledSettings = [Family]
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 688.000000000000000000
+    Size.Height = 446.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 688.000000000000000000
+    Viewport.Height = 446.000000000000000000
+  end
+end

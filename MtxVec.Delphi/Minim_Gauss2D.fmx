@@ -1,0 +1,9 @@
+inherited frmGauss2D: TfrmGauss2D
+  Caption = 'frmGauss2D'
+  inherited Panel2: TPanel
+Position.Point = '(0,0)'
+  end
+  inherited Panel3: TPanel
+Position.Point = '(0,0)'
+  end
+end

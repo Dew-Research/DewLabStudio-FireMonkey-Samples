@@ -1,0 +1,208 @@
+inherited Mult1: TMult1
+  Left = 212
+  Top = 89
+  Caption = 'Mult1'
+  ClientHeight = 618
+  ClientWidth = 1003
+  Cursor = crHourGlass
+  OnDestroy = FormDestroy
+  Left = 212
+  Top = 89
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 1003.000000000000000000
+    Size.Height = 105.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 1003.000000000000000000
+      Size.Height = 105.000000000000000000
+      Viewport.Width = 1003.000000000000000000
+      Viewport.Height = 105.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 574.000000000000000000
+    Size.Width = 1003.000000000000000000
+    Size.Height = 44.000000000000000000
+    object Button4: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 152.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Do comparison'
+      OnClick = Button4Click
+    end
+  end
+  inherited Panel3: TPanel
+    Align = Left
+    Position.Y = 105.000000000000000000
+    Size.Width = 286.000000000000000000
+    Size.Height = 469.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 24.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 93.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Matrix dimension'
+    end
+    object CPUCacheSizeLabel: TLabel
+      AutoSize = True
+      Position.X = 14.000000000000000000
+      Position.Y = 209.000000000000000000
+      Size.Width = 82.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'CPU cache size:'
+    end
+    object CPUCoreCountLabel: TLabel
+      AutoSize = True
+      Position.X = 14.000000000000000000
+      Position.Y = 228.000000000000000000
+      Size.Width = 87.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'CPU Core count:'
+    end
+    object TrackBar1: TTrackBar
+      CanParentFocus = True
+      Frequency = 20.000000000000000000
+      Max = 1000.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 24.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 229.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Value = 40.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object RadioGroup1: TPanel
+      Position.X = 8.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 245.000000000000000000
+      Size.Height = 88.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object RadioButton1: TRadioButton
+        Position.X = 9.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Small matrix (eval. 1000x)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton2: TRadioButton
+        IsChecked = True
+        Position.X = 9.000000000000000000
+        Position.Y = 36.000000000000000000
+        Size.Width = 223.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Medium matrix (eval. 100x)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton3: TRadioButton
+        Position.X = 9.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 226.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Large matrix (eval 1x)'
+        OnChange = RadioButton1Change
+      end
+    end
+    object Label2: TLabel
+      Position.X = 9.000000000000000000
+      Position.Y = 75.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Matrix size:'
+    end
+    object StaticText1: TLabel
+      Position.X = 177.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = '0'
+    end
+  end
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'Matrix Multiply')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Dimension (square matrix)'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 628.131250000000100000
+    LeftAxis.Minimum = 415.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Time [ms]'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 3
+    Size.Width = 717.000000000000000000
+    Size.Height = 469.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'Delphi'
+      Brush.BackColor = x00FFFFFF
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+      Left = 135
+      Top = 39
+    end
+    object Series2: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'MtxVec'
+      Brush.BackColor = x00FFFFFF
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+end

@@ -1,0 +1,151 @@
+inherited GetMemC: TGetMemC
+  Left = 252
+  Top = 107
+  Caption = 'GetMemC'
+  ClientHeight = 456
+  ClientWidth = 654
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Left = 252
+  Top = 107
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 654.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 654.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 398.000000000000000000
+    Size.Width = 654.000000000000000000
+    object Button1: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Do comparison'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+  end
+  inherited Panel3: TPanel
+    Align = Left
+    Position.Y = 130.000000000000000000
+    Size.Width = 209.000000000000000000
+    Size.Height = 268.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 13.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Length : '
+    end
+    object Label2: TLabel
+      Position.X = 144.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label2'
+    end
+    object TrackBar1: TTrackBar
+      Frequency = 100.000000000000000000
+      Max = 2000.000000000000000000
+      Min = 16.000000000000000000
+      Orientation = Horizontal
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Value = 16.000000000000000000
+      OnChange = TrackBar1Change
+    end
+  end
+  object Chart1: TChart
+    BackWall.Brush.Color = claWhite
+    Gradient.EndColor = x00C08000
+    Legend.Alignment = laTop
+    Title.Text.Strings = (
+      'TChart')
+    Title.Visible = False
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Length'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'time [ms] (50.000 executions)'
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    BevelOuter = bvNone
+    Color = x00E2E2E2
+    TabOrder = 3
+    Size.Width = 445.000000000000000000
+    Size.Height = 268.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TLineSeries
+      SeriesColor = x000080FF
+      Title = 'GetMem'
+      Brush.BackColor = x00FFFFFF
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psTriangle
+      Pointer.VertSize = 3
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TLineSeries
+      SeriesColor = x00FF8080
+      Title = 'SliceIt'
+      Brush.BackColor = x00FFFFFF
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psDiamond
+      Pointer.VertSize = 3
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series3: TLineSeries
+      SeriesColor = claFuchsia
+      Title = 'SetLength'
+      Brush.BackColor = x00FFFFFF
+      Pointer.HorizSize = 2
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.VertSize = 2
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+end

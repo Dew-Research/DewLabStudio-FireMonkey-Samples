@@ -1,0 +1,136 @@
+inherited frmBlockProc: TfrmBlockProc
+  Top = 181
+  Caption = 'frmBlockProc'
+  ClientHeight = 403
+  ClientWidth = 596
+  Top = 181
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 596.000000000000000000
+    Size.Height = 105.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 596.000000000000000000
+      Size.Height = 105.000000000000000000
+      Viewport.Width = 596.000000000000000000
+      Viewport.Height = 105.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 354.000000000000000000
+    Size.Width = 596.000000000000000000
+    Size.Height = 49.000000000000000000
+    inherited CheckDownSample: TCheckBox
+      Visible = False
+    end
+    object Label1: TLabel
+      Position.X = 21.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Left = 220
+      Top = 12
+    end
+    object Button1: TButton
+      Position.X = 167.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 92.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Run test'
+      OnClick = Button1Click
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'Block vectorization')
+    BottomAxis.Axis.SmallSpace = 1
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 4
+    BottomAxis.MinimumOffset = 4
+    BottomAxis.Title.Caption = 'Vector length'
+    LeftAxis.AxisValuesFormat = '#,##0.0##'
+    LeftAxis.Maximum = 576.274374999999900000
+    LeftAxis.MaximumOffset = 4
+    LeftAxis.Minimum = 48.774999999999990000
+    LeftAxis.MinimumOffset = 4
+    LeftAxis.Title.Caption = 'Time [ms]'
+    Size.Width = 596.000000000000000000
+    Size.Height = 249.000000000000000000
+    object Series1: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'Plain function'
+      Brush.BackColor = x00FFFFFF
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      Pointer.Brush.Gradient.EndColor = claRed
+      Pointer.Gradient.EndColor = claRed
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psTriangle
+      Pointer.VertSize = 3
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'Vectorized'
+      Brush.BackColor = x00FFFFFF
+      LinePen.Color = claGreen
+      LinePen.Fill.Color = claGreen
+      Pointer.Brush.Gradient.EndColor = claGreen
+      Pointer.Gradient.EndColor = claGreen
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psDownTriangle
+      Pointer.VertSize = 3
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series3: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'Block vectorized'
+      Brush.BackColor = x00FFFFFF
+      LinePen.Color = claYellow
+      LinePen.Fill.Color = claYellow
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psDiamond
+      Pointer.VertSize = 3
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series4: TLineSeries
+      HoverElement = [heCurrent]
+      Title = 'Vectorized expression'
+      Brush.BackColor = x00FFFFFF
+      LinePen.Color = claBlue
+      LinePen.Fill.Color = claBlue
+      Pointer.Brush.Gradient.EndColor = claBlue
+      Pointer.Gradient.EndColor = claBlue
+      Pointer.HorizSize = 2
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.VertSize = 2
+      Pointer.Visible = True
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+end

@@ -1,0 +1,4 @@
+inherited MtxList: TMtxList
+  Caption = 'MtxList'
+  OnDestroy = FormDestroy
+end

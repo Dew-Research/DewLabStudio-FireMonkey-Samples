@@ -1,0 +1,218 @@
+object ForLoopExampleForm: TForLoopExampleForm
+  Left = 0
+  Top = 0
+  Caption = 'ForLoopExampleForm'
+  ClientHeight = 554
+  ClientWidth = 790
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 489.000000000000000000
+    Size.Width = 790.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 11.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 29.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Time:'
+    end
+    object MultiThreadedBox: TCheckBox
+      IsChecked = True
+      Position.X = 322.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Multi-threaded'
+    end
+    object Button2: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 667.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Benchmark'
+      OnClick = Button2Click
+    end
+    object Label2: TLabel
+      Anchors = [akLeft, akTop, akRight]
+      StyledSettings = [Family, Size, FontColor]
+      Position.X = 9.000000000000000000
+      Position.Y = 37.000000000000000000
+      Size.Width = 739.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      Text = 
+        'All multithreading timing tests show meaningfull results only wh' +
+        'en run outside of IDE!'
+      TabOrder = 5
+    end
+  end
+  object Timer1: TTimer
+    Interval = 150
+    OnTimer = Timer1Timer
+    Left = 376
+    Top = 32
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 790.000000000000000000
+    Size.Height = 489.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnResize = Panel2Resize
+    object Chart: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'CPU cost per element as a function of vector '
+        
+          'length and memory manager with multi-core processing of Student ' +
+          'CDF function')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Vector length'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 281.562499999999900000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Time [ms]'
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Animated = True
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Top
+      BevelOuter = bvNone
+      Color = claWhite
+      TabOrder = 0
+      Size.Width = 790.000000000000000000
+      Size.Height = 194.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series1: TFastLineSeries
+        HoverElement = []
+        SeriesColor = x00A00000
+        Title = 'Standard MM'
+        LinePen.Color = xFFC82525
+        LinePen.Fill.Color = xFFC82525
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 108
+        Top = 48
+      end
+      object Series2: TFastLineSeries
+        HoverElement = []
+        SeriesColor = x000080FF
+        Title = 'Super conductive MM'
+        LinePen.Color = xFF461FDE
+        LinePen.Fill.Color = xFF461FDE
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 177
+        Top = 48
+      end
+    end
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'Super conductive MM/Default MM'
+        
+          'Super conductive memory allocation makes the code run faster on ' +
+          'multi-core CPU'#39's for short arrays (vectors) '
+        'Gains grow with core count.')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Vector length'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 692.500000000000000000
+      LeftAxis.Minimum = 75.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Factor'
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Animated = True
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Client
+      BevelOuter = bvNone
+      Color = claWhite
+      TabOrder = 1
+      Size.Width = 790.000000000000000000
+      Size.Height = 295.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object FastLineSeries1: TFastLineSeries
+        HoverElement = []
+        SeriesColor = x00A00000
+        Title = 'Scalability'
+        LinePen.Color = xFFA00000
+        LinePen.Fill.Color = xFFA00000
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 252
+        Top = 60
+      end
+    end
+  end
+end

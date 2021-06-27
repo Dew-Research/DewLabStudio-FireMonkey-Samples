@@ -1,0 +1,155 @@
+inherited frmSparseTest: TfrmSparseTest
+  Top = 179
+  Caption = 'frmSparseTest'
+  ClientHeight = 545
+  ClientWidth = 771
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Top = 179
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 771.000000000000000000
+    Size.Height = 72.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 771.000000000000000000
+      Size.Height = 72.000000000000000000
+      Viewport.Width = 771.000000000000000000
+      Viewport.Height = 72.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 513.000000000000000000
+    Size.Width = 771.000000000000000000
+    Size.Height = 32.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 771.000000000000000000
+    Size.Height = 441.000000000000000000
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 201.000000000000000000
+      Size.Height = 441.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 85.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 98.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Solve Report Level'
+      end
+      object Button1: TButton
+        Position.X = 7.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 59.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Do tests'
+        OnClick = Button1Click
+      end
+      object ComboBox1: TComboBox
+        ItemIndex = 0
+        ItemHeight = 13.000000000000000000
+        Position.X = 85.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 111.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object TListBoxItem
+          Size.Width = 19.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'prlNone'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'prlErrorsOnly'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'prlBasic'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'prlExtensive'
+        end
+        object TListBoxItem
+          TabOrder = 4
+          Text = 'prlComplete'
+        end
+        object TListBoxItem
+          TabOrder = 5
+          Text = 'prlAll'
+        end
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = 7.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 279.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 185.000000000000000000
+        Viewport.Height = 275.000000000000000000
+      end
+    end
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 5.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 447.500000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Time for 100 evaluations [ms]'
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Align = Client
+      TabOrder = 1
+      Size.Width = 570.000000000000000000
+      Size.Height = 441.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series1: TBarSeries
+        HoverElement = []
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Bar'
+        YValues.Order = loNone
+        Left = 21
+        Top = 12
+      end
+    end
+  end
+end

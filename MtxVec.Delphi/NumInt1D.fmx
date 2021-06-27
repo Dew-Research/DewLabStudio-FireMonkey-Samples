@@ -1,0 +1,224 @@
+inherited frmInt1D: TfrmInt1D
+  Caption = 'frmInt1D'
+  ClientHeight = 477
+  ClientWidth = 768
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 768.000000000000000000
+    Size.Height = 118.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 768.000000000000000000
+      Size.Height = 118.000000000000000000
+      Viewport.Width = 768.000000000000000000
+      Viewport.Height = 118.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 448.000000000000000000
+    Size.Width = 768.000000000000000000
+    Size.Height = 29.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Align = Left
+    Position.Y = 118.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 330.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Function:'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 14.000000000000000000
+      Position.Y = 168.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Method:'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 11.000000000000000000
+      Position.Y = 212.000000000000000000
+      Size.Width = 194.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Number of subintervals:'
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Text = 'sin(x)/exp(-x)'
+      Position.X = 106.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 207.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button1: TButton
+      Position.X = 11.000000000000000000
+      Position.Y = 255.000000000000000000
+      Size.Width = 116.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Evaluate'
+      OnClick = Button1Click
+    end
+    object GroupBox1: TGroupBox
+      Position.X = 8.000000000000000000
+      Position.Y = 50.000000000000000000
+      Size.Width = 305.000000000000000000
+      Size.Height = 70.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Bounds'
+      TabOrder = 2
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 19.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 53.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Lower:'
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Position.X = 19.000000000000000000
+        Position.Y = 67.000000000000000000
+        Size.Width = 52.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Upper:'
+      end
+      object Editlb: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Text = '-3'
+        Position.X = 93.000000000000000000
+        Position.Y = 22.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Editub: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '1'
+        Position.X = 93.000000000000000000
+        Position.Y = 61.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object ComboBox1: TComboBox
+      ItemIndex = 3
+      ItemHeight = 13.000000000000000000
+      Position.X = 101.000000000000000000
+      Position.Y = 159.000000000000000000
+      Size.Width = 191.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object FItem0: TListBoxItem
+        TabOrder = 0
+        Text = 'Trapezoidal rule'
+      end
+      object FItem1: TListBoxItem
+        TabOrder = 1
+        Text = 'Simpson rule'
+      end
+      object FItem2: TListBoxItem
+        TabOrder = 2
+        Text = 'Simpson 3/8 rule'
+      end
+      object FItem3: TListBoxItem
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Boole'#39's rule'
+      end
+      object FItem4: TListBoxItem
+        TabOrder = 4
+        Text = '10 point Gauss quadrature'
+      end
+      object FItem5: TListBoxItem
+        TabOrder = 5
+        Text = '16 point Gauss quadrature'
+      end
+    end
+    object EditIntervals: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Text = '10'
+      Position.X = 215.000000000000000000
+      Position.Y = 203.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    Legend.Visible = False
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'f(x)')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 435.000000000000000000
+    LeftAxis.Minimum = 30.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 3
+    Size.Width = 383.000000000000000000
+    Size.Height = 330.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TLineSeries
+      HoverElement = [heCurrent]
+      Brush.BackColor = x00FFFFFF
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+end

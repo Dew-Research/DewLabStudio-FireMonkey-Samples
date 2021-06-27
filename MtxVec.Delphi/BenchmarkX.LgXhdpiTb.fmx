@@ -1,0 +1,66 @@
+inherited BenchmarkXForm_LgXhdpiTb: TBenchmarkXForm_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 480.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 480.000000000000000000
+      Viewport.Width = 480.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 771.000000000000000000
+    Size.Width = 480.000000000000000000
+    inherited Label1: TLabel
+      Position.X = -64.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited Label2: TLabel
+      Position.X = 164.000000000000000000
+      Size.Width = 165.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited cbVectorLength: TComboEdit
+      Position.X = 57.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited cbIterationCount: TComboEdit
+      Position.X = 339.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 480.000000000000000000
+    Size.Height = 641.000000000000000000
+    inherited Panel4: TPanel
+      Size.Height = 641.000000000000000000
+      inherited Label3: TLabel
+        Size.Width = 85.000000000000000000
+        Size.Height = 22.000000000000000000
+      end
+      inherited clbFuncs: TListBox
+        Size.Height = 605.000000000000000000
+        Viewport.Width = 148.000000000000000000
+        Viewport.Height = 605.000000000000000000
+      end
+    end
+    inherited ChartResults: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Size.Width = 306.000000000000000000
+      Size.Height = 641.000000000000000000
+    end
+  end
+  inherited OpenDialog1: TOpenDialog
+    Left = 230
+    Top = 58
+  end
+  inherited ChartMenu: TPopupMenu
+    Left = 294
+    Top = 67
+  end
+end

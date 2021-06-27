@@ -1,0 +1,28 @@
+inherited frmFileFormats: TfrmFileFormats
+  Caption = 'frmFileFormats'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  inherited Panel3: TPanel
+    object ButtonExport: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Export =>'
+      OnClick = ButtonExportClick
+    end
+    object RichEdit2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Size.Width = 401.000000000000000000
+      Size.Height = 163.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ReadOnly = True
+      Left = 160
+      Top = 6
+    end
+  end
+end

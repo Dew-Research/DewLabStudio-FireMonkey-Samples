@@ -1,0 +1,13 @@
+inherited IntroWhyMtxVecForm: TIntroWhyMtxVecForm
+  Left = 387
+  Top = 226
+  Caption = 'Why'
+  Left = 387
+  Top = 226
+  DesignerMasterStyle = 0
+  inherited RichEdit1: TMemo
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Viewport.Width = 688.000000000000000000
+    Viewport.Height = 446.000000000000000000
+  end
+end

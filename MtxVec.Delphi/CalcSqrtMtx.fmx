@@ -1,0 +1,142 @@
+inherited frmSqrtMtx: TfrmSqrtMtx
+  Left = 104
+  Top = 191
+  Caption = 'frmSqrtMtx'
+  ClientHeight = 516
+  ClientWidth = 623
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Left = 104
+  Top = 191
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 623.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 623.000000000000000000
+      Viewport.Width = 623.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 458.000000000000000000
+    Size.Width = 623.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Generate random matrix'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 235.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 171.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'SQRT(A)'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 414.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'SQRT(A)*SQRT(A) ?'
+      OnClick = Button3Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 623.000000000000000000
+    Size.Height = 328.000000000000000000
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 220.000000000000000000
+      Size.Height = 328.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Left = 1
+      Top = 1
+      object RadioGroup2: TPanel
+        Position.X = 7.000000000000000000
+        Position.Y = 34.000000000000000000
+        Size.Width = 195.000000000000000000
+        Size.Height = 78.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object SymmetricButton: TRadioButton
+          GroupName = 'MatrixTypeGroup'
+          IsChecked = True
+          Position.X = 12.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 154.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Symmetric'
+          OnChange = SymmetricButtonChange
+        end
+        object GeneralButton: TRadioButton
+          GroupName = 'MatrixTypeGroup'
+          Position.X = 12.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'General'
+          OnChange = SymmetricButtonChange
+        end
+      end
+      object Label1: TLabel
+        Position.X = 9.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Matrix type:'
+      end
+    end
+    object Panel5: TPanel
+      Align = Client
+      Size.Width = 403.000000000000000000
+      Size.Height = 328.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnResize = Panel5Resize
+      object StringGrid1: TStringGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 15.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 219.000000000000000000
+        Size.Height = 91.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowHeight = 21.000000000000000000
+        RowCount = 2
+        Viewport.Width = 215.000000000000000000
+        Viewport.Height = 66.000000000000000000
+      end
+      object StringGrid2: TStringGrid
+        CanFocus = True
+        ClipChildren = True
+        Position.X = 14.000000000000000000
+        Position.Y = 167.000000000000000000
+        Size.Width = 219.000000000000000000
+        Size.Height = 85.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowHeight = 21.000000000000000000
+        RowCount = 2
+        Viewport.Width = 215.000000000000000000
+        Viewport.Height = 60.000000000000000000
+      end
+    end
+  end
+end

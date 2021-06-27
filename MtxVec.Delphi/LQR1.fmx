@@ -1,0 +1,167 @@
+inherited LQRDemo: TLQRDemo
+  Left = 216
+  Top = 111
+  Caption = 'LQRDemo'
+  ClientHeight = 627
+  ClientWidth = 657
+  Left = 216
+  Top = 111
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Anchors = []
+    Size.Width = 657.000000000000000000
+    Size.Height = 148.000000000000000000
+    inherited RichEdit1: TMemo
+      Anchors = []
+      Size.Width = 657.000000000000000000
+      Size.Height = 148.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Anchors = []
+    Position.Y = 569.000000000000000000
+    Size.Width = 657.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 219.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Perform decomposition'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 247.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 171.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Singular values'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 427.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Button3'
+      OnClick = Button3Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 657.000000000000000000
+    Size.Height = 421.000000000000000000
+    object Label1: TLabel
+      Position.X = 235.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 156.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Matrix A : '
+    end
+    object RadioGroup1: TPanel
+      Position.X = 16.000000000000000000
+      Position.Y = 23.000000000000000000
+      Size.Width = 201.000000000000000000
+      Size.Height = 97.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object RadioButton1: TRadioButton
+        GroupName = 'RadioGroup'
+        IsChecked = True
+        Position.X = 9.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 199.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'LQ (Rows < Cols)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton2: TRadioButton
+        GroupName = 'RadioGroup'
+        Position.X = 9.000000000000000000
+        Position.Y = 27.000000000000000000
+        Size.Width = 187.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'QR (Rows > Cols)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton3: TRadioButton
+        GroupName = 'RadioGroup'
+        Position.X = 9.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 190.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'SVD (Rows < Cols)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton4: TRadioButton
+        GroupName = 'RadioGroup'
+        Position.X = 9.000000000000000000
+        Position.Y = 69.000000000000000000
+        Size.Width = 193.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'SVD (Rows > Cols)'
+        OnChange = RadioButton1Change
+      end
+    end
+    object StringGrid1: TStringGrid
+      Position.X = 238.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 390.000000000000000000
+      Size.Height = 118.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      RowCount = 4
+      RowHeight = 21.000000000000000000
+    end
+    object StringGrid2: TStringGrid
+      Position.X = 17.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 272.000000000000000000
+      Size.Height = 126.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      RowCount = 4
+      RowHeight = 21.000000000000000000
+    end
+    object StringGrid3: TStringGrid
+      Position.X = 306.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 256.000000000000000000
+      Size.Height = 126.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      RowCount = 4
+      RowHeight = 21.000000000000000000
+    end
+    object CheckBox1: TCheckBox
+      Position.X = 19.000000000000000000
+      Position.Y = 136.000000000000000000
+      Size.Width = 171.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = '"Ecomony" size'
+    end
+    object Label2: TLabel
+      Position.X = 15.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Examples:'
+    end
+  end
+end

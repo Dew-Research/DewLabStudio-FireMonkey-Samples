@@ -1,0 +1,175 @@
+inherited frmFloatEdit1: TfrmFloatEdit1
+  Caption = 'frmFloatEdit1'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Height = 85.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Height = 85.000000000000000000
+      Viewport.Width = 649.000000000000000000
+      Viewport.Height = 85.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 394.000000000000000000
+    Size.Height = 45.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Height = 309.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 7.000000000000000000
+      Position.Y = 38.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Z1 = '
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 7.000000000000000000
+      Position.Y = 67.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Z2 = '
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 52.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Result'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 352.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Operation'
+    end
+    object MtxFloatEdit1: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.####;-0.####'
+      ImFormat = '+0.####i;-0.####i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '1+1i'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 48.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 166.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      Left = 64
+      Top = 32
+    end
+    object MtxFloatEdit2: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.####;-0.####'
+      ImFormat = '+0.####i;-0.####i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '1+1i'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 48.000000000000000000
+      Position.Y = 63.000000000000000000
+      Size.Width = 166.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      Left = 64
+      Top = 64
+    end
+    object Button1: TButton
+      Position.X = 352.000000000000000000
+      Position.Y = 35.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Z1 * Z2'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 352.000000000000000000
+      Position.Y = 66.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Z1 / Z2'
+      OnClick = Button1Click
+    end
+    object Button3: TButton
+      Position.X = 352.000000000000000000
+      Position.Y = 97.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Z1 + Z2'
+      OnClick = Button1Click
+    end
+    object Button4: TButton
+      Position.X = 352.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 90.000000000000000000
+      Size.Height = 29.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Z1 - Z2'
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      Position.X = 16.000000000000000000
+      Position.Y = 136.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Button5: TButton
+      Position.X = 244.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = '<- Edit'
+      OnClick = Button5Click
+    end
+    object Button6: TButton
+      Position.X = 244.000000000000000000
+      Position.Y = 67.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = '<- Edit'
+      OnClick = Button6Click
+    end
+  end
+end

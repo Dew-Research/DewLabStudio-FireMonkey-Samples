@@ -1,0 +1,297 @@
+inherited frmParserPerformance: TfrmParserPerformance
+  Left = 372
+  Top = 230
+  Caption = 'frmParserPerformance'
+  ClientHeight = 490
+  ClientWidth = 938
+  OnDestroy = FormDestroy
+  Left = 372
+  Top = 230
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 938.000000000000000000
+    Size.Height = 82.000000000000000000
+    inherited RichEdit1: TMemo
+      Align = Top
+      Size.Width = 938.000000000000000000
+      Size.Height = 106.000000000000000000
+      Viewport.Width = 938.000000000000000000
+      Viewport.Height = 106.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 432.000000000000000000
+    Size.Width = 938.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 938.000000000000000000
+    Size.Height = 350.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 77.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Start at [x = ..]:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 57.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Stop at [x = ..] :'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 142.000000000000000000
+      Size.Width = 70.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Formula: y = '
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 97.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Step on x axis'
+    end
+    object Bevel1: TPanel
+      Position.X = 12.000000000000000000
+      Position.Y = 129.000000000000000000
+      Size.Width = 244.000000000000000000
+      Size.Height = 1.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 12
+    end
+    object StandardLabel: TLabel
+      Position.X = 12.000000000000000000
+      Position.Y = 339.000000000000000000
+      Size.Width = 247.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Standard time = '
+    end
+    object vectorLabel: TLabel
+      Position.X = 12.000000000000000000
+      Position.Y = 361.000000000000000000
+      Size.Width = 232.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Vector time = '
+    end
+    object RatioLabel: TLabel
+      Position.X = 14.000000000000000000
+      Position.Y = 378.000000000000000000
+      Size.Width = 263.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Ratio = '
+    end
+    object Chart1: TChart
+      Position.X = 279.000000000000000000
+      Position.Y = 1.000000000000000000
+      BackWall.Brush.Color = claWhite
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 885.000000000000000000
+      LeftAxis.Minimum = 70.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Mode = pmNotXor
+      Zoom.Pen.Fill.Color = claWhite
+      BevelOuter = bvLowered
+      TabOrder = 0
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Size.Width = 658.000000000000000000
+      Size.Height = 355.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series1: TFastLineSeries
+        HoverElement = []
+        LinePen.Color = claRed
+        LinePen.Fill.Color = claRed
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 150
+        Top = 42
+      end
+    end
+    object FormulaEdit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Text = 'x'
+      Position.X = 147.000000000000000000
+      Position.Y = 136.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object ComputationGroup: TPanel
+      Position.X = 16.000000000000000000
+      Position.Y = 219.000000000000000000
+      Size.Width = 174.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object RadioButton1: TRadioButton
+        GroupName = 'ComputationMethodGroup'
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 130.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Standard'
+        OnChange = RadioButton2Change
+      end
+      object RadioButton2: TRadioButton
+        GroupName = 'ComputationMethodGroup'
+        Position.X = 12.000000000000000000
+        Position.Y = 42.000000000000000000
+        Size.Width = 130.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Vectorized'
+        OnChange = RadioButton2Change
+      end
+    end
+    object UpdateButton: TButton
+      Position.X = 150.000000000000000000
+      Position.Y = 303.000000000000000000
+      Size.Width = 106.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Update'
+      OnClick = UpdateButtonClick
+    end
+    object BenchmarkButtom: TButton
+      Position.X = 11.000000000000000000
+      Position.Y = 303.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Benchmark'
+      OnClick = BenchmarkButtomClick
+    end
+    object StartXEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.000#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.000'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 147.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = StartXEditChange
+      Left = 100
+      Top = 14
+    end
+    object StopXEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '99.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 147.000000000000000000
+      Position.Y = 54.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = StopXEditChange
+      Left = 100
+      Top = 42
+    end
+    object StepXEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 7
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '1.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 147.000000000000000000
+      Position.Y = 93.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = StepXEditChange
+      Left = 100
+      Top = 70
+    end
+    object Label5: TLabel
+      Position.X = 15.000000000000000000
+      Position.Y = 186.000000000000000000
+      Size.Width = 232.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Computation method:'
+    end
+  end
+end

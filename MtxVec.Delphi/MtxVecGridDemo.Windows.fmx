@@ -1,0 +1,3 @@
+inherited frmGridDemo_Windows: TfrmGridDemo_Windows
+  DesignerMasterStyle = 0
+end

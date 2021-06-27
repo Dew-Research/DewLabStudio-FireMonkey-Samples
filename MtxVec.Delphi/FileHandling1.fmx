@@ -1,0 +1,105 @@
+inherited FileH1: TFileH1
+  Left = 276
+  Top = 196
+  Caption = 'FileH1'
+  ClientHeight = 734
+  ClientWidth = 961
+  Left = 276
+  Top = 196
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 961.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 961.000000000000000000
+      Viewport.Width = 961.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 676.000000000000000000
+    Size.Width = 961.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 961.000000000000000000
+    Size.Height = 546.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 267.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Code used : '
+    end
+    object CheckBox1: TCheckBox
+      Position.X = 14.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 194.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'View loaded values'
+    end
+    object RichEdit2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 264.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 581.000000000000000000
+      Size.Height = 466.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Left = 168
+      Top = 33
+      Viewport.Width = 577.000000000000000000
+      Viewport.Height = 462.000000000000000000
+    end
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Streams : Read/Write'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 81.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Binary files : Read/Write'
+      TextSettings.WordWrap = True
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 111.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'BLOB files : Read/Write'
+      TextSettings.WordWrap = True
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Text files : Read/Write'
+      TextSettings.WordWrap = True
+      OnClick = Button4Click
+    end
+  end
+end

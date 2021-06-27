@@ -1,0 +1,588 @@
+inherited frmParserUsage: TfrmParserUsage
+  Left = 279
+  Top = 194
+  Caption = 'frmParserUsage'
+  ClientHeight = 561
+  ClientWidth = 717
+  OnDestroy = FormDestroy
+  Left = 279
+  Top = 194
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 717.000000000000000000
+    Size.Height = 79.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 717.000000000000000000
+      Size.Height = 79.000000000000000000
+      Viewport.Width = 717.000000000000000000
+      Viewport.Height = 79.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 503.000000000000000000
+    Size.Width = 717.000000000000000000
+    object memoErrMsg: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Anchors = [akLeft, akTop, akRight]
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 697.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 689.000000000000000000
+      Viewport.Height = 33.000000000000000000
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 717.000000000000000000
+    Size.Height = 424.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Expression:'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 169.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Variables:'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 296.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Results:'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 174.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Predefined examples:'
+    end
+    object btn0: TSpeedButton
+      Position.X = 352.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '0'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btnDot: TSpeedButton
+      Position.X = 392.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '.'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn1: TSpeedButton
+      Position.X = 312.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '1'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn2: TSpeedButton
+      Position.X = 352.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '2'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn3: TSpeedButton
+      Position.X = 392.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '3'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn4: TSpeedButton
+      Position.X = 312.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '4'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn5: TSpeedButton
+      Position.X = 352.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '5'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn6: TSpeedButton
+      Position.X = 392.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '6'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn7: TSpeedButton
+      Position.X = 312.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '7'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn8: TSpeedButton
+      Position.X = 352.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '8'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btn9: TSpeedButton
+      Position.X = 392.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '9'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btnCloseBracket: TSpeedButton
+      Position.X = 392.000000000000000000
+      Position.Y = 296.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = ')'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btnOpenBracket: TSpeedButton
+      Position.X = 352.000000000000000000
+      Position.Y = 296.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = '('
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object btnI: TSpeedButton
+      Position.X = 312.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = 'i '
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = ' + '
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object SpeedButton2: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = ' - '
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object SpeedButton3: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = ' * '
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object SpeedButton4: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 240.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+      Text = ' / '
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.WordWrap = True
+      OnClick = btnSymClick
+    end
+    object memoExpr: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 16.000000000000000000
+      Position.Y = 81.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 265.000000000000000000
+      Viewport.Height = 49.000000000000000000
+    end
+    object lbVars: TListBox
+      Position.X = 16.000000000000000000
+      Position.Y = 191.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 74.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      OnDblClick = lbVarsDblClick
+      OnMouseMove = lbVarsMouseMove
+      DisableFocusEffect = True
+      ItemHeight = 24.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Sorted = True
+      Viewport.Width = 273.000000000000000000
+      Viewport.Height = 74.000000000000000000
+    end
+    object btnAddVar: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 273.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Add'
+      OnClick = btnAddVarClick
+    end
+    object btnDelVar: TButton
+      Position.X = 155.000000000000000000
+      Position.Y = 273.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = 'Delete'
+      OnClick = btnDelVarClick
+    end
+    object btnClearVarList: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 273.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Clear'
+      OnClick = btnClearVarListClick
+    end
+    object btnSetVar: TButton
+      Position.X = 224.000000000000000000
+      Position.Y = 273.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Set'
+      OnClick = btnSetVarClick
+    end
+    object cbExamples: TComboBox
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 673.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = cbExamplesChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'a + b'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'sin(a)'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'x := y'
+      end
+    end
+    object lbResults: TListBox
+      Position.X = 16.000000000000000000
+      Position.Y = 321.000000000000000000
+      Size.Width = 273.000000000000000000
+      Size.Height = 79.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      OnMouseMove = lbVarsMouseMove
+      DisableFocusEffect = True
+      ItemHeight = 24.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 273.000000000000000000
+      Viewport.Height = 79.000000000000000000
+    end
+    object PageControl1: TTabControl
+      FullSize = True
+      Position.X = 488.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 212.000000000000000000
+      Size.Height = 337.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 0
+      TabOrder = 11
+      TabPosition = Top
+      Sizes = (
+        212s
+        288s
+        212s
+        288s
+        212s
+        288s)
+      object tsConstants: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 70.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Constants'
+        ExplicitSize.cx = 71.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        object lbConstants: TListBox
+          Align = Client
+          Size.Width = 212.000000000000000000
+          Size.Height = 288.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnDblClick = lbSymbolsDblClick
+          OnMouseMove = lbConstantsMouseMove
+          DisableFocusEffect = True
+          ItemHeight = 24.000000000000000000
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Sorted = True
+          Viewport.Width = 212.000000000000000000
+          Viewport.Height = 288.000000000000000000
+        end
+      end
+      object tsFunctions: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 70.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Functions'
+        ExplicitSize.cx = 71.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        object lbFunctions: TListBox
+          Align = Client
+          Size.Width = 212.000000000000000000
+          Size.Height = 288.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnDblClick = lbSymbolsDblClick
+          OnMouseMove = lbFunctionsMouseMove
+          DisableFocusEffect = True
+          ItemHeight = 24.000000000000000000
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Sorted = True
+          Viewport.Width = 212.000000000000000000
+          Viewport.Height = 288.000000000000000000
+        end
+      end
+      object tsOperators: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 72.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Operators'
+        ExplicitSize.cx = 70.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        object lbOperators: TListBox
+          Align = Client
+          Size.Width = 212.000000000000000000
+          Size.Height = 288.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnDblClick = lbSymbolsDblClick
+          OnMouseMove = lbOperatorsMouseMove
+          DisableFocusEffect = True
+          ItemHeight = 24.000000000000000000
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Sorted = True
+          Viewport.Width = 212.000000000000000000
+          Viewport.Height = 288.000000000000000000
+        end
+      end
+    end
+    object btnDetect: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Detect'
+      OnClick = btnDetectClick
+    end
+    object btnEvaluate: TButton
+      Position.X = 317.000000000000000000
+      Position.Y = 374.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Text = 'Evaluate'
+      OnClick = btnEvaluateClick
+    end
+    object btnClearExpr: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 143.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Clear'
+      OnClick = btnClearExprClick
+    end
+    object HintLabel: TLabel
+      Position.X = 21.000000000000000000
+      Position.Y = 396.000000000000000000
+      Size.Width = 466.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Info'
+    end
+  end
+  object eval1: TMtxFunctionEvaluator
+    Context.Expression = 'a+b'
+    Context.Variables = <
+      item
+        VarName = 'a'
+        Value.Data = {010000000000000040}
+      end
+      item
+        VarName = 'b'
+        Value.Data = {010000000000000840}
+      end>
+    Left = 24
+    Top = 24
+    MtxDataValues = {}
+  end
+end

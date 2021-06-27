@@ -1,0 +1,537 @@
+object frmProbCalc: TfrmProbCalc
+  Left = 84
+  Top = 115
+  Caption = 'Dew Research: Probability Calculator 3.5'
+  ClientHeight = 679
+  ClientWidth = 1039
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Left = 84
+  Top = 115
+  DesignerMasterStyle = 3
+  object PageControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Margins.Left = 2.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 2.000000000000000000
+    Margins.Bottom = 2.000000000000000000
+    Size.Width = 467.000000000000000000
+    Size.Height = 605.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = Top
+    Sizes = (
+      467s
+      556s
+      467s
+      556s)
+    object TabSheetResults: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 229.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Text results'
+      ExplicitSize.cx = 230.000000000000000000
+      ExplicitSize.cy = 45.000000000000000000
+      object MemoResults: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 463.000000000000000000
+        Size.Height = 507.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 455.000000000000000000
+        Viewport.Height = 499.000000000000000000
+      end
+      object Panel2: TPanel
+        Align = Bottom
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 513.000000000000000000
+        Size.Width = 463.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object CheckBox4: TCheckBox
+          IsChecked = True
+          Margins.Left = 2.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 2.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 248.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Clear after each calculation'
+          OnClick = CheckBox4Click
+        end
+      end
+    end
+    object TabSheetChart: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Margins.Left = 2.000000000000000000
+      Margins.Top = 2.000000000000000000
+      Margins.Right = 2.000000000000000000
+      Margins.Bottom = 2.000000000000000000
+      Size.Width = 230.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Chart'
+      ExplicitSize.cx = 229.000000000000000000
+      ExplicitSize.cy = 45.000000000000000000
+      object Chart1: TChart
+        BackWall.Brush.Color = claWhite
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Foot.Visible = False
+        Gradient.EndColor = x00C08080
+        Legend.Alignment = laTop
+        Legend.ColorWidth = 50
+        Legend.LegendStyle = lsSeries
+        Legend.Symbol.Width = 50
+        Legend.TextStyle = ltsPlain
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        Legend.TopPos = 0
+        Legend.Visible = False
+        MarginBottom = 0
+        MarginLeft = 0
+        MarginRight = 0
+        MarginTop = 0
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.AutoSize = False
+        Title.Font.Style = [fsBold]
+        Title.Font.Color = claBlack
+        Title.Font.Brush.Color = claBlack
+        Title.Font.StyleExt = {00070000000000000004000000}
+        Title.Text.Strings = (
+          '')
+        Title.AdjustFrame = False
+        BottomAxis.Grid.Visible = False
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        BottomAxis.EndPosition = 100.000000000000000000
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.EndPosition = 100.000000000000000000
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.EndPosition = 100.000000000000000000
+        LeftAxis.Grid.Visible = False
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        LeftAxis.EndPosition = 100.000000000000000000
+        LeftAxis.Title.Caption = 'PDF'
+        RightAxis.Grid.Visible = False
+        RightAxis.Grid.ZPosition = 100.000000000000000000
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.EndPosition = 100.000000000000000000
+        RightAxis.Title.Caption = 'CDF'
+        RightAxis.ZPosition = 100.000000000000000000
+        TopAxis.Grid.ZPosition = 100.000000000000000000
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.EndPosition = 100.000000000000000000
+        TopAxis.ZPosition = 100.000000000000000000
+        View3D = False
+        View3DWalls = False
+        Zoom.Brush.Kind = None
+        Zoom.Pen.Color = claWhite
+        Zoom.Pen.Fill.Color = claWhite
+        OnAfterDraw = Chart1AfterDraw
+        Align = Client
+        BevelOuter = bvNone
+        Color = x00FFFFFF
+        TabOrder = 0
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Size.Width = 463.000000000000000000
+        Size.Height = 507.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 13
+        object Series1: TLineSeries
+          HoverElement = [heCurrent]
+          Title = 'PDF'
+          Brush.BackColor = x00FFFFFF
+          Pointer.HorizSize = 2
+          Pointer.InflateMargins = True
+          Pointer.Style = psCircle
+          Pointer.VertSize = 2
+          Pointer.Visible = True
+          XValues.Name = 'X'
+          XValues.Order = loNone
+          YValues.Name = 'Y'
+          YValues.Order = loNone
+          Left = 501
+          Top = 255
+        end
+      end
+      object Panel3: TPanel
+        Align = Bottom
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 2.000000000000000000
+        Position.Y = 513.000000000000000000
+        Size.Width = 463.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object CheckBox3: TCheckBox
+          IsChecked = True
+          Margins.Left = 2.000000000000000000
+          Margins.Top = 2.000000000000000000
+          Margins.Right = 2.000000000000000000
+          Margins.Bottom = 2.000000000000000000
+          Position.X = 2.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Additional info'
+          OnClick = aAdditionalInfoExecute
+        end
+      end
+    end
+  end
+  object MenuBar1: TMenuBar
+    Size.Width = 1039.000000000000000000
+    Size.Height = 28.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ItemPDF: TMenuItem
+      Action = aPDF
+      Enabled = True
+      Locked = True
+      ImageIndex = -1
+    end
+    object ItemCDF: TMenuItem
+      Action = aCDF
+      Enabled = True
+      Locked = True
+      ImageIndex = -1
+    end
+    object ItemICDF: TMenuItem
+      Action = aICDF
+      Enabled = True
+      ImageIndex = -1
+    end
+  end
+  object MenuBar2: TMenuBar
+    Position.Y = 28.000000000000000000
+    Size.Width = 1039.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object ItemCalculate: TMenuItem
+      Action = aCalc
+      Enabled = True
+      ImageIndex = -1
+    end
+    object ItemClearAll: TMenuItem
+      Action = aClearAll
+      Enabled = True
+      ImageIndex = -1
+    end
+  end
+  inline FrameDist1: TFrameDist
+    Align = Left
+    Position.Y = 70.000000000000000000
+    Size.Width = 568.000000000000000000
+    Size.Height = 609.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    inherited Panel1: TPanel
+      Size.Width = 369.000000000000000000
+      Size.Height = 609.000000000000000000
+      inherited LabelDec: TLabel
+        Size.Width = 114.000000000000000000
+        Size.Height = 22.000000000000000000
+      end
+      inherited RadioGroupOut: TPanel
+        Position.X = 8.000000000000000000
+        Position.Y = 172.000000000000000000
+        Size.Height = 72.000000000000000000
+        inherited RadioButton1: TRadioButton
+          Position.Y = 12.000000000000000000
+          Size.Width = 265.000000000000000000
+        end
+        inherited RadioButton2: TRadioButton
+          Position.Y = 45.000000000000000000
+          Size.Width = 220.000000000000000000
+        end
+      end
+      inherited GroupBoxRange: TGroupBox
+        Position.X = 17.000000000000000000
+        Position.Y = 263.000000000000000000
+        Size.Width = 314.000000000000000000
+        Size.Height = 70.000000000000000000
+        inherited Label1: TLabel
+          Size.Width = 141.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited Label2: TLabel
+          Position.X = 15.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited Label3: TLabel
+          Position.X = 15.000000000000000000
+          Position.Y = 102.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 22.000000000000000000
+        end
+        inherited EditNumPoints: TEdit
+          Position.X = 183.000000000000000000
+          Size.Width = 115.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited EditLB: TEdit
+          Position.X = 183.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 115.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited EditUB: TEdit
+          Position.X = 183.000000000000000000
+          Position.Y = 99.000000000000000000
+          Size.Width = 115.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+      end
+      inherited Edit1: TEdit
+        Position.X = 132.000000000000000000
+        Size.Height = 32.000000000000000000
+      end
+      inherited Label4: TLabel
+        Position.Y = 153.000000000000000000
+        Size.Width = 181.000000000000000000
+        Size.Height = 19.000000000000000000
+      end
+      inherited listViewParams: TStringGrid
+        Viewport.Width = 357.000000000000000000
+        Viewport.Height = 73.000000000000000000
+        inherited StringColumn1: TStringColumn
+          Size.Width = 70.000000000000000000
+        end
+        inherited StringColumn2: TStringColumn
+          Size.Width = 70.000000000000000000
+        end
+        inherited StringColumn3: TStringColumn
+          Size.Width = 70.000000000000000000
+        end
+        inherited StringColumn4: TStringColumn
+          Size.Width = 70.000000000000000000
+        end
+        inherited StringColumn5: TStringColumn
+          Size.Width = 70.000000000000000000
+        end
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 199.000000000000000000
+      Size.Height = 609.000000000000000000
+      inherited ListBoxDist: TListBox
+        Size.Width = 199.000000000000000000
+        Size.Height = 570.000000000000000000
+        Viewport.Width = 194.000000000000000000
+        Viewport.Height = 570.000000000000000000
+        inherited ListItem17: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem18: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem19: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem20: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem21: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem22: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem23: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem24: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem25: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem26: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem27: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem28: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListBoxItem1: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListBoxItem2: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem29: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem30: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem31: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem32: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListBoxItem3: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem33: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem34: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem35: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited Listitem36: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem37: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem38: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem39: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem40: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem41: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem42: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem43: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem44: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem45: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem46: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem47: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem48: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem49: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem50: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem51: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem52: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+        inherited ListItem53: TListBoxItem
+          Size.Width = 194.000000000000000000
+        end
+      end
+      inherited Panel3: TPanel
+        Position.Y = 570.000000000000000000
+        Size.Width = 199.000000000000000000
+        Size.Height = 39.000000000000000000
+        inherited Button1: TButton
+          Size.Width = 80.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+        inherited Button2: TButton
+          Position.X = 88.000000000000000000
+          Size.Width = 90.000000000000000000
+          Size.Height = 32.000000000000000000
+        end
+      end
+    end
+  end
+  object ActionList: TActionList
+    Left = 462
+    Top = 114
+    object aPDF: TAction
+      AutoCheck = True
+      Text = 'PDF'
+      Checked = True
+      GroupIndex = 1
+      OnExecute = aPDFExecute
+    end
+    object aCDF: TAction
+      AutoCheck = True
+      Text = 'CDF'
+      GroupIndex = 1
+      OnExecute = aCDFExecute
+    end
+    object aICDF: TAction
+      AutoCheck = True
+      Text = 'ICDF'
+      GroupIndex = 1
+      OnExecute = aICDFExecute
+    end
+    object aClearAll: TAction
+      Text = 'Clear all'
+      OnExecute = aClearAllExecute
+      OnUpdate = aClearAllUpdate
+    end
+    object aCalc: TAction
+      Text = 'Calculate'
+      OnExecute = aCalcExecute
+    end
+  end
+end

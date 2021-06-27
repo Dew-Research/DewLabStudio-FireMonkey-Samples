@@ -1,0 +1,17 @@
+inherited IntroMemMan: TIntroMemMan
+  Left = 252
+  Top = 107
+  Caption = 'IntroMemMan'
+  ClientWidth = 679
+  Left = 252
+  Top = 107
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  inherited RichEdit1: TMemo
+    Width = 679.000000000000000000
+  end
+end

@@ -1,0 +1,785 @@
+object ScriptingGridForm: TScriptingGridForm
+  Left = 0
+  Top = 0
+  Caption = 'MtxVec scripting'
+  ClientHeight = 743
+  ClientWidth = 1195
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object BackPanel: TPanel
+    Align = Client
+    Size.Width = 1195.000000000000000000
+    Size.Height = 743.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Panel1: TPanel
+      Align = Right
+      Position.X = 801.000000000000000000
+      Size.Width = 394.000000000000000000
+      Size.Height = 724.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Panel4: TPanel
+        Align = Top
+        Size.Width = 394.000000000000000000
+        Size.Height = 142.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object ScriptLabel: TLabel
+          AutoSize = True
+          Position.X = 10.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 83.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Script selection:'
+        end
+        object Bevel1: TPanel
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 5.000000000000000000
+          Position.Y = 102.000000000000000000
+          Size.Width = 384.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object ScriptBox: TComboBox
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 105.000000000000000000
+          Position.Y = 42.000000000000000000
+          Size.Width = 136.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnChange = ScriptBoxChange
+        end
+        object RunButton: TButton
+          Anchors = [akRight, akBottom]
+          Position.X = 186.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 58.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Run'
+          OnClick = RunButtonClick
+        end
+        object ResetButton: TButton
+          Anchors = [akRight, akBottom]
+          Position.X = 250.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Reset'
+          OnClick = ResetButtonClick
+        end
+        object StepButton: TButton
+          Anchors = [akRight, akBottom]
+          Position.X = 321.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Step'
+          OnClick = StepButtonClick
+        end
+        object SaveAsButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 250.000000000000000000
+          Position.Y = 71.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = 'Save As'
+          OnClick = SaveAsButtonClick
+        end
+        object DeleteScriptButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 321.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = 'Delete'
+          OnClick = DeleteScriptButtonClick
+        end
+        object GridInsertScriptButton: TButton
+          Anchors = [akLeft, akBottom]
+          Position.X = 11.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          Text = 'Grid insert'
+          OnClick = GridInsertScriptButtonClick
+        end
+        object GridAssignScriptButton: TButton
+          Anchors = [akLeft, akBottom]
+          Position.X = 96.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 79.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          Text = 'Grid assign'
+          OnClick = GridAssignScriptButtonClick
+        end
+        object Panel7: TPanel
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 5.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 384.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+        end
+        object LiveButton: TButton
+          StaysPressed = True
+          Anchors = [akTop, akRight]
+          CanFocus = False
+          DisableFocusEffect = True
+          Position.X = 312.000000000000000000
+          Position.Y = 6.000000000000000000
+          Size.Width = 76.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 11
+          Text = 'Live'
+          OnClick = LiveButtonClick
+        end
+        object SaveButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 250.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Save'
+          OnClick = SaveButtonClick
+        end
+        object NewButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 321.000000000000000000
+          Position.Y = 71.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = 'New'
+          OnClick = NewButtonClick
+        end
+      end
+      object ScriptEdit: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        StyledSettings = [Size, Style, FontColor]
+        TextSettings.Font.Family = 'Courier New'
+        Align = Client
+        Size.Width = 394.000000000000000000
+        Size.Height = 561.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        OnPaint = ScriptEditPaint
+        OnKeyUp = ScriptEditKeyUp
+        OnMouseMove = ScriptEditMouseMove
+        OnMouseUp = ScriptEditMouseUp
+        Viewport.Width = 390.000000000000000000
+        Viewport.Height = 557.000000000000000000
+      end
+      object Panel3: TPanel
+        Align = Bottom
+        Position.Y = 703.000000000000000000
+        Size.Width = 394.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object LineLabel: TLabel
+          AutoSize = True
+          Position.X = 5.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 28.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Line: '
+        end
+      end
+    end
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 358.000000000000000000
+      Size.Height = 724.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label1: TLabel
+        Align = Bottom
+        AutoSize = True
+        Position.Y = 360.000000000000000000
+        Size.Width = 358.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Command History'
+      end
+      object Splitter3: TSplitter
+        Align = Bottom
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Position.Y = 357.000000000000000000
+        Size.Width = 358.000000000000000000
+        Size.Height = 3.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Panel8: TPanel
+        Align = Top
+        Size.Width = 358.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 7.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 61.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Workspace:'
+        end
+        object Bevel2: TPanel
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 2.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 351.000000000000000000
+          Size.Height = 1.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 7.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 108.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Workspace variables'
+        end
+        object WorkspaceBox: TComboBox
+          Anchors = [akLeft, akTop, akRight]
+          Position.X = 78.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 129.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnChange = WorkspaceBoxChange
+        end
+        object SaveWorkButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 213.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 67.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Save As'
+          OnClick = SaveWorkButtonClick
+        end
+        object DeleteWorkButton: TButton
+          Anchors = [akTop, akRight]
+          Position.X = 286.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 58.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Delete'
+          OnClick = DeleteWorkButtonClick
+        end
+        object ResetWorkspaceButton: TButton
+          Anchors = [akTop, akRight]
+          Hint = 'Clear variables from workspace'
+          Position.X = 258.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 86.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Reset'
+          ParentShowHint = False
+          ShowHint = True
+          OnClick = ResetWorkspaceButtonClick
+        end
+      end
+      object VarView: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 358.000000000000000000
+        Size.Height = 287.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowCount = 200
+        Options = [ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellDblClick = VarViewCellDblClick
+        Viewport.Width = 338.000000000000000000
+        Viewport.Height = 246.000000000000000000
+        object StringColumn1: TStringColumn
+          Header = 'Name'
+          Size.Width = 50.000000000000000000
+        end
+        object StringColumn2: TStringColumn
+          Header = 'Type'
+        end
+        object StringColumn3: TStringColumn
+          Header = 'Value'
+          Size.Width = 200.000000000000000000
+        end
+      end
+      object ListBox: TStringGrid
+        Align = Bottom
+        CanFocus = True
+        ClipChildren = True
+        Position.Y = 376.000000000000000000
+        Size.Width = 358.000000000000000000
+        Size.Height = 348.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Courier New'
+        StyledSettings = [Size, Style, FontColor]
+        TabOrder = 0
+        RowCount = 1000
+        Options = [ColumnResize, RowSelect, Tabs, AutoDisplacement]
+        OnCellClick = ListBoxCellClick
+        OnCellDblClick = ListBoxCellDblClick
+        Viewport.Width = 338.000000000000000000
+        Viewport.Height = 344.000000000000000000
+        object HistoryCmdColumn: TStringColumn
+          Header = 'Name'
+        end
+      end
+    end
+    object Panel5: TPanel
+      Align = Client
+      Size.Width = 432.000000000000000000
+      Size.Height = 724.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object PageControl: TTabControl
+        Align = Client
+        Size.Width = 432.000000000000000000
+        Size.Height = 666.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = Top
+        Sizes = (
+          432s
+          640s
+          432s
+          640s
+          432s
+          640s
+          432s
+          640s)
+        object Sheet1: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 53.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Grid 1'
+          ExplicitSize.cx = 50.000000000000000000
+          ExplicitSize.cy = 50.000000000000000000
+          object Grid1: TStringGrid
+            Align = Client
+            CanFocus = True
+            ClipChildren = True
+            Size.Width = 432.000000000000000000
+            Size.Height = 640.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnSelectCell = Grid1SelectCell
+            OnSelChanged = Grid1SelChanged
+            OnDrawColumnCell = Grid1DrawColumnCell
+            Viewport.Width = 428.000000000000000000
+            Viewport.Height = 615.000000000000000000
+          end
+        end
+        object Sheet2: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          ImageIndex = 1
+          Size.Width = 53.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Grid 2'
+          ExplicitSize.cx = 50.000000000000000000
+          ExplicitSize.cy = 50.000000000000000000
+          object Grid2: TStringGrid
+            Align = Client
+            CanFocus = True
+            ClipChildren = True
+            Size.Width = 432.000000000000000000
+            Size.Height = 640.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnSelChanged = Grid2SelChanged
+            OnDrawColumnCell = Grid2DrawColumnCell
+            Viewport.Width = 432.000000000000000000
+            Viewport.Height = 640.000000000000000000
+          end
+        end
+        object ChartTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          ImageIndex = 2
+          Size.Width = 49.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Chart'
+          ExplicitSize.cx = 50.000000000000000000
+          ExplicitSize.cy = 50.000000000000000000
+          object Splitter5: TSplitter
+            Align = Top
+            Cursor = crVSplit
+            MinSize = 20.000000000000000000
+            Position.Y = 346.000000000000000000
+            Size.Width = 432.000000000000000000
+            Size.Height = 3.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Chart1: TChart
+            BackWall.Transparent = False
+            Foot.Font.Family = 'Verdana'
+            Foot.Font.Color = claBlue
+            Foot.Font.Brush.Color = claBlue
+            Foot.Font.StyleExt = {00040000000200000004000000}
+            Gradient.Direction = gdBottomTop
+            Gradient.EndColor = claWhite
+            Gradient.MidColor = x00EAEAEA
+            Gradient.StartColor = x00EAEAEA
+            Gradient.Visible = True
+            LeftWall.Color = x00E0FFFF
+            Legend.Font.Family = 'Verdana'
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            Legend.Visible = False
+            RightWall.Color = x00E0FFFF
+            SubFoot.Font.StyleExt = {00040000000200000004000000}
+            Title.Font.Family = 'Verdana'
+            Title.Text.Strings = (
+              'Chart 1')
+            BottomAxis.Axis.Color = x00404040
+            BottomAxis.Axis.Fill.Color = x00404040
+            BottomAxis.Grid.Color = x00A9A9A9
+            BottomAxis.Grid.Fill.Color = x00A9A9A9
+            BottomAxis.LogarithmicBase = 10.000000000000000000
+            BottomAxis.EndPosition = 100.000000000000000000
+            BottomAxis.TicksInner.Color = x00A9A9A9
+            BottomAxis.TicksInner.Fill.Color = x00A9A9A9
+            BottomAxis.Title.Font.Family = 'Verdana'
+            DepthAxis.Axis.Color = x00404040
+            DepthAxis.Axis.Fill.Color = x00404040
+            DepthAxis.Grid.Color = x00A9A9A9
+            DepthAxis.Grid.Fill.Color = x00A9A9A9
+            DepthAxis.LogarithmicBase = 10.000000000000000000
+            DepthAxis.EndPosition = 100.000000000000000000
+            DepthAxis.TicksInner.Color = x00A9A9A9
+            DepthAxis.TicksInner.Fill.Color = x00A9A9A9
+            DepthAxis.Title.Font.Family = 'Verdana'
+            DepthTopAxis.Axis.Color = x00404040
+            DepthTopAxis.Axis.Fill.Color = x00404040
+            DepthTopAxis.Grid.Color = x00A9A9A9
+            DepthTopAxis.Grid.Fill.Color = x00A9A9A9
+            DepthTopAxis.LogarithmicBase = 10.000000000000000000
+            DepthTopAxis.EndPosition = 100.000000000000000000
+            DepthTopAxis.TicksInner.Color = x00A9A9A9
+            DepthTopAxis.TicksInner.Fill.Color = x00A9A9A9
+            DepthTopAxis.Title.Font.Family = 'Verdana'
+            LeftAxis.Axis.Color = x00404040
+            LeftAxis.Axis.Fill.Color = x00404040
+            LeftAxis.Grid.Color = x00A9A9A9
+            LeftAxis.Grid.Fill.Color = x00A9A9A9
+            LeftAxis.LogarithmicBase = 10.000000000000000000
+            LeftAxis.EndPosition = 100.000000000000000000
+            LeftAxis.TicksInner.Color = x00A9A9A9
+            LeftAxis.TicksInner.Fill.Color = x00A9A9A9
+            LeftAxis.Title.Font.Family = 'Verdana'
+            RightAxis.Axis.Color = x00404040
+            RightAxis.Axis.Fill.Color = x00404040
+            RightAxis.Grid.Color = x00A9A9A9
+            RightAxis.Grid.Fill.Color = x00A9A9A9
+            RightAxis.Grid.ZPosition = 100.000000000000000000
+            RightAxis.LogarithmicBase = 10.000000000000000000
+            RightAxis.EndPosition = 100.000000000000000000
+            RightAxis.TicksInner.Color = x00A9A9A9
+            RightAxis.TicksInner.Fill.Color = x00A9A9A9
+            RightAxis.Title.Font.Family = 'Verdana'
+            RightAxis.ZPosition = 100.000000000000000000
+            TopAxis.Axis.Color = x00404040
+            TopAxis.Axis.Fill.Color = x00404040
+            TopAxis.Grid.Color = x00A9A9A9
+            TopAxis.Grid.Fill.Color = x00A9A9A9
+            TopAxis.Grid.ZPosition = 100.000000000000000000
+            TopAxis.LogarithmicBase = 10.000000000000000000
+            TopAxis.EndPosition = 100.000000000000000000
+            TopAxis.TicksInner.Color = x00A9A9A9
+            TopAxis.TicksInner.Fill.Color = x00A9A9A9
+            TopAxis.Title.Font.Family = 'Verdana'
+            TopAxis.ZPosition = 100.000000000000000000
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Top
+            BevelOuter = bvNone
+            TabOrder = 0
+            Size.Width = 432.000000000000000000
+            Size.Height = 346.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object Series1: TFastLineSeries
+              HoverElement = []
+              LinePen.Color = x00FFFFFF
+              XValues.Name = 'X'
+              XValues.Order = loNone
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+          object Chart2: TChart
+            BackWall.Transparent = False
+            Foot.Font.Family = 'Verdana'
+            Foot.Font.Color = claBlue
+            Foot.Font.Brush.Color = claBlue
+            Foot.Font.StyleExt = {00040000000200000004000000}
+            Gradient.Direction = gdBottomTop
+            Gradient.EndColor = claWhite
+            Gradient.MidColor = x00EAEAEA
+            Gradient.StartColor = x00EAEAEA
+            Gradient.Visible = True
+            LeftWall.Color = x00E0FFFF
+            Legend.Font.Family = 'Verdana'
+            Legend.Title.Font.StyleExt = {00070000000000000004000000}
+            Legend.Visible = False
+            RightWall.Color = x00E0FFFF
+            SubFoot.Font.StyleExt = {00040000000200000004000000}
+            Title.Font.Family = 'Verdana'
+            Title.Text.Strings = (
+              'Chart 2')
+            BottomAxis.Axis.Color = x00404040
+            BottomAxis.Axis.Fill.Color = x00404040
+            BottomAxis.Grid.Color = x00A9A9A9
+            BottomAxis.Grid.Fill.Color = x00A9A9A9
+            BottomAxis.LogarithmicBase = 10.000000000000000000
+            BottomAxis.EndPosition = 100.000000000000000000
+            BottomAxis.TicksInner.Color = x00A9A9A9
+            BottomAxis.TicksInner.Fill.Color = x00A9A9A9
+            BottomAxis.Title.Font.Family = 'Verdana'
+            DepthAxis.Axis.Color = x00404040
+            DepthAxis.Axis.Fill.Color = x00404040
+            DepthAxis.Grid.Color = x00A9A9A9
+            DepthAxis.Grid.Fill.Color = x00A9A9A9
+            DepthAxis.LogarithmicBase = 10.000000000000000000
+            DepthAxis.EndPosition = 100.000000000000000000
+            DepthAxis.TicksInner.Color = x00A9A9A9
+            DepthAxis.TicksInner.Fill.Color = x00A9A9A9
+            DepthAxis.Title.Font.Family = 'Verdana'
+            DepthTopAxis.Axis.Color = x00404040
+            DepthTopAxis.Axis.Fill.Color = x00404040
+            DepthTopAxis.Grid.Color = x00A9A9A9
+            DepthTopAxis.Grid.Fill.Color = x00A9A9A9
+            DepthTopAxis.LogarithmicBase = 10.000000000000000000
+            DepthTopAxis.EndPosition = 100.000000000000000000
+            DepthTopAxis.TicksInner.Color = x00A9A9A9
+            DepthTopAxis.TicksInner.Fill.Color = x00A9A9A9
+            DepthTopAxis.Title.Font.Family = 'Verdana'
+            LeftAxis.Axis.Color = x00404040
+            LeftAxis.Axis.Fill.Color = x00404040
+            LeftAxis.Grid.Color = x00A9A9A9
+            LeftAxis.Grid.Fill.Color = x00A9A9A9
+            LeftAxis.LogarithmicBase = 10.000000000000000000
+            LeftAxis.EndPosition = 100.000000000000000000
+            LeftAxis.TicksInner.Color = x00A9A9A9
+            LeftAxis.TicksInner.Fill.Color = x00A9A9A9
+            LeftAxis.Title.Font.Family = 'Verdana'
+            RightAxis.Axis.Color = x00404040
+            RightAxis.Axis.Fill.Color = x00404040
+            RightAxis.Grid.Color = x00A9A9A9
+            RightAxis.Grid.Fill.Color = x00A9A9A9
+            RightAxis.Grid.ZPosition = 100.000000000000000000
+            RightAxis.LogarithmicBase = 10.000000000000000000
+            RightAxis.EndPosition = 100.000000000000000000
+            RightAxis.TicksInner.Color = x00A9A9A9
+            RightAxis.TicksInner.Fill.Color = x00A9A9A9
+            RightAxis.Title.Font.Family = 'Verdana'
+            RightAxis.ZPosition = 100.000000000000000000
+            TopAxis.Axis.Color = x00404040
+            TopAxis.Axis.Fill.Color = x00404040
+            TopAxis.Grid.Color = x00A9A9A9
+            TopAxis.Grid.Fill.Color = x00A9A9A9
+            TopAxis.Grid.ZPosition = 100.000000000000000000
+            TopAxis.LogarithmicBase = 10.000000000000000000
+            TopAxis.EndPosition = 100.000000000000000000
+            TopAxis.TicksInner.Color = x00A9A9A9
+            TopAxis.TicksInner.Fill.Color = x00A9A9A9
+            TopAxis.Title.Font.Family = 'Verdana'
+            TopAxis.ZPosition = 100.000000000000000000
+            View3D = False
+            Zoom.Brush.Kind = None
+            Zoom.Pen.Fill.Color = claSilver
+            Align = Client
+            BevelOuter = bvNone
+            TabOrder = 1
+            Size.Width = 432.000000000000000000
+            Size.Height = 291.000000000000000000
+            Size.PlatformDefault = False
+            ColorPaletteIndex = 13
+            object Series2: TFastLineSeries
+              HoverElement = []
+              LinePen.Color = x00FFFFFF
+              XValues.Name = 'X'
+              XValues.Order = loNone
+              YValues.Name = 'Y'
+              YValues.Order = loNone
+            end
+          end
+        end
+        object TextTab: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 41.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Text'
+          ExplicitSize.cx = 43.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object RichEdit: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            HideSelectionOnExit = False
+            ShowSizeGrip = True
+            StyledSettings = [Size, Style, FontColor]
+            TextSettings.Font.Family = 'Courier New'
+            Align = Client
+            Size.Width = 432.000000000000000000
+            Size.Height = 640.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Viewport.Width = 432.000000000000000000
+            Viewport.Height = 640.000000000000000000
+          end
+        end
+      end
+      object Panel6: TPanel
+        StyleName = 'Panelstyle'
+        Align = Bottom
+        Position.Y = 666.000000000000000000
+        Size.Width = 432.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnPaint = Panel6Paint
+        object ExprEdit: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 2
+          Text = '1'
+          TextSettings.Font.Family = 'Courier New'
+          Position.Y = 34.000000000000000000
+          Hint = 'Enter expression to be evaluated here'
+          Size.Width = 432.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Size, Style, FontColor]
+          ParentShowHint = False
+          ShowHint = True
+          OnKeyUp = ExprEditKeyUp
+          OnMouseEnter = ExprEditMouseEnter
+        end
+        object GridInsertEditButton: TButton
+          Position.X = 5.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Grid insert'
+          OnClick = GridInsertEditButtonClick
+        end
+        object GridAssignEditButton: TButton
+          Position.X = 111.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Grid assign'
+          OnClick = GridAssignEditButtonClick
+        end
+      end
+    end
+    object Splitter2: TSplitter
+      Align = Left
+      Cursor = crHSplit
+      MinSize = 20.000000000000000000
+      Position.X = 358.000000000000000000
+      Size.Width = 5.000000000000000000
+      Size.Height = 724.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Splitter6: TSplitter
+      Align = Right
+      Cursor = crHSplit
+      MinSize = 20.000000000000000000
+      Position.X = 795.000000000000000000
+      Size.Width = 6.000000000000000000
+      Size.Height = 724.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object StatusBar: TStatusBar
+      Position.Y = 724.000000000000000000
+      ShowSizeGrip = True
+      Size.Width = 1195.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object StatusLabel: TLabel
+        Align = Left
+        Size.Width = 359.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+end

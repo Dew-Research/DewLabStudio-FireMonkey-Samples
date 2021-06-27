@@ -1,0 +1,182 @@
+inherited frmGridDemo: TfrmGridDemo
+  Left = 227
+  Top = 183
+  Caption = 'frmGridDemo'
+  ClientHeight = 628
+  ClientWidth = 748
+  OnCreate = FormCreate
+  Left = 227
+  Top = 183
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 748.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 748.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 593.000000000000000000
+    Size.Width = 748.000000000000000000
+    Size.Height = 35.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 748.000000000000000000
+    Size.Height = 463.000000000000000000
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 265.000000000000000000
+      Size.Height = 463.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Left = 1
+      Top = 1
+      object GroupBox1: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 248.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Behavior'
+        TabOrder = 0
+        object CheckBox1: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 189.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Editable'
+          OnChange = CheckBox1Change
+        end
+        object CheckBox3: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 46.000000000000000000
+          Size.Width = 189.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Autosize columns'
+          OnChange = CheckBox3Change
+        end
+        object CheckBox4: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 69.000000000000000000
+          Size.Width = 213.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Split complex numbers'
+          OnChange = CheckBox4Change
+        end
+        object CheckBox6: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 92.000000000000000000
+          Size.Width = 186.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Show object info'
+          OnChange = CheckBox6Change
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 188.000000000000000000
+        Size.Width = 242.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Format'
+        TabOrder = 1
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 10.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 68.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Format:'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 7.000000000000000000
+          Position.Y = 83.000000000000000000
+          Size.Width = 129.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Text alignment:'
+        end
+        object CheckBox5: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = -60.000000000000000000
+          Size.Width = 195.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Scientific format'
+          OnChange = CheckBox5Change
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = 'Edit1'
+          Position.X = 91.000000000000000000
+          Position.Y = 26.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = Edit1Change
+        end
+        object ComboBox1: TComboBox
+          DisableFocusEffect = False
+          ItemIndex = 2
+          ItemHeight = 13.000000000000000000
+          Position.X = 147.000000000000000000
+          Position.Y = 80.000000000000000000
+          Size.Width = 78.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          OnChange = ComboBox1Change
+          object Item0: TListBoxItem
+            TabOrder = 0
+            Text = 'Center'
+          end
+          object Item1: TListBoxItem
+            TabOrder = 1
+            Text = 'Leading'
+          end
+          object Item2: TListBoxItem
+            IsSelected = True
+            Size.Width = 19.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'Trailing'
+          end
+        end
+      end
+      object Button1: TButton
+        Position.X = 11.000000000000000000
+        Position.Y = 335.000000000000000000
+        Size.Width = 110.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Show vector'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 125.000000000000000000
+        Position.Y = 335.000000000000000000
+        Size.Width = 113.000000000000000000
+        Size.Height = 38.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Show matrix'
+        OnClick = Button2Click
+      end
+    end
+  end
+end

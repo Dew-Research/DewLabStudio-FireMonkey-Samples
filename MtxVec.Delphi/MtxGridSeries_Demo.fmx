@@ -1,0 +1,283 @@
+inherited frmMtxGridSeries: TfrmMtxGridSeries
+  Left = 308
+  Top = 167
+  Caption = 'frmMtxGridSeries'
+  ClientHeight = 613
+  ClientWidth = 962
+  OnDestroy = FormDestroy
+  Left = 308
+  Top = 167
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 962.000000000000000000
+    Size.Height = 85.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 962.000000000000000000
+      Size.Height = 85.000000000000000000
+      Viewport.Width = 962.000000000000000000
+      Viewport.Height = 85.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 555.000000000000000000
+    Size.Width = 962.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 962.000000000000000000
+    Size.Height = 470.000000000000000000
+    object Splitter1: TSplitter
+      Align = Right
+      Cursor = crHSplit
+      MinSize = 20.000000000000000000
+      Position.X = 824.000000000000000000
+      Size.Width = 5.000000000000000000
+      Size.Height = 470.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 220.000000000000000000
+      Size.Height = 470.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 137.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 16.000000000000000000
+        Position.Y = 372.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Color balance:'
+      end
+      object CheckBox2: TCheckBox
+        Position.X = 7.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Animate'
+        OnChange = CheckBox2Change
+      end
+      object Button2: TButton
+        Position.X = 13.000000000000000000
+        Position.Y = 267.000000000000000000
+        Size.Width = 165.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit GridSeries'
+        OnClick = Button2Click
+      end
+      object RadioGroup1: TPanel
+        Position.X = 7.000000000000000000
+        Position.Y = 87.000000000000000000
+        Size.Width = 204.000000000000000000
+        Size.Height = 172.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object NonZeroBox: TRadioButton
+          GroupName = 'DownSampleGroup'
+          IsChecked = True
+          Position.X = 9.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 157.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Non-zero pattern'
+          OnChange = NonZeroBoxChange
+        end
+        object AverageBox: TRadioButton
+          GroupName = 'DownSampleGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Average'
+          OnChange = NonZeroBoxChange
+        end
+        object AverageMagnitudeBox: TRadioButton
+          GroupName = 'DownSampleGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 193.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Average magnitude'
+          OnChange = NonZeroBoxChange
+        end
+        object PeakBox: TRadioButton
+          GroupName = 'DownSampleGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 103.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Peak'
+          OnChange = NonZeroBoxChange
+        end
+        object PeakMagnitudeBox: TRadioButton
+          GroupName = 'DownSampleGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 135.000000000000000000
+          Size.Width = 181.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Peak magnitude'
+          OnChange = NonZeroBoxChange
+        end
+      end
+      object CheckBox1: TCheckBox
+        IsChecked = True
+        Position.X = 7.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Matrix value at cursor'
+        OnChange = CheckBox1Change
+      end
+      object PaletteBar: TScrollBar
+        Max = 99.000000000000000000
+        Min = -99.000000000000000000
+        SmallChange = 0.000000000000000000
+        Orientation = Horizontal
+        Position.X = 19.000000000000000000
+        Position.Y = 402.000000000000000000
+        Size.Width = 155.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = PaletteBarChange
+      end
+      object ThreeColorBox: TCheckBox
+        Position.X = 16.000000000000000000
+        Position.Y = 303.000000000000000000
+        Size.Width = 156.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Three colors'
+        OnChange = ThreeColorBoxChange
+      end
+      object PixelResampleBox: TCheckBox
+        Position.X = 7.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Pixel resample'
+        OnChange = PixelResampleBoxChange
+      end
+      object SharpContrastBox: TCheckBox
+        Enabled = False
+        Position.X = 16.000000000000000000
+        Position.Y = 330.000000000000000000
+        Size.Width = 171.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'Sharp contrast'
+        OnChange = SharpContrastBoxChange
+      end
+    end
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Align = Client
+      TabOrder = 1
+      Size.Width = 604.000000000000000000
+      Size.Height = 470.000000000000000000
+      Size.PlatformDefault = False
+      OnMouseMove = Chart1MouseMove
+      ColorPaletteIndex = 13
+    end
+    object ColorChart: TChart
+      Position.X = 829.000000000000000000
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Align = Right
+      TabOrder = 2
+      Size.Width = 133.000000000000000000
+      Size.Height = 470.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 18
+    Top = 12
+  end
+end

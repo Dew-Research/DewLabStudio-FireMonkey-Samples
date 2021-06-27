@@ -1,0 +1,64 @@
+inherited DownS_LgXhdpiTb: TDownS_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 480.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 480.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 716.000000000000000000
+    Size.Width = 480.000000000000000000
+    Size.Height = 113.000000000000000000
+    inherited Label2: TLabel
+      Position.X = 124.000000000000000000
+      Position.Y = 66.000000000000000000
+    end
+    inherited Label3: TLabel
+      Position.X = 353.000000000000000000
+      Position.Y = 16.000000000000000000
+    end
+    inherited Label4: TLabel
+      Position.X = 353.000000000000000000
+      Position.Y = 69.000000000000000000
+    end
+    inherited Label5: TLabel
+      Position.X = 538.000000000000000000
+      Position.Y = 12.000000000000000000
+    end
+    inherited Label6: TLabel
+      Position.X = 694.000000000000000000
+      Position.Y = 12.000000000000000000
+    end
+    inherited DrawNormalButton: TSpeedButton
+      Position.X = 414.000000000000000000
+      Position.Y = 2.000000000000000000
+    end
+    inherited DrawFastButton: TSpeedButton
+      Position.Y = 55.000000000000000000
+    end
+    inherited TrackBar1: TTrackBar
+      Position.X = 532.000000000000000000
+    end
+    inherited Button1: TButton
+      Position.Y = 30.000000000000000000
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 480.000000000000000000
+    Size.Height = 616.000000000000000000
+    inherited Chart1: TChart
+      LeftAxis.Maximum = 885.000000000000000000
+      LeftAxis.Minimum = 482.500000000000000000
+      Size.Width = 480.000000000000000000
+    end
+    inherited Chart2: TChart
+      Position.Y = 443.000000000000000000
+      LeftAxis.Maximum = 437.500000000000000000
+      LeftAxis.Minimum = 10.000000000000000000
+      Size.Width = 480.000000000000000000
+    end
+  end
+end

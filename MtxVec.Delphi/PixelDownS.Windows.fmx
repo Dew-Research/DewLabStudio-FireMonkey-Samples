@@ -1,0 +1,44 @@
+inherited DownS_Windows: TDownS_Windows
+  DesignerMasterStyle = 0
+  inherited Panel2: TPanel
+    Position.Y = 480.000000000000000000
+    Size.Height = 87.000000000000000000
+    inherited Label2: TLabel
+      Position.X = 121.000000000000000000
+      Position.Y = 45.000000000000000000
+    end
+    inherited Label3: TLabel
+      Position.X = 275.000000000000000000
+      Position.Y = 22.000000000000000000
+    end
+    inherited Label4: TLabel
+      Position.X = 275.000000000000000000
+      Position.Y = 48.000000000000000000
+    end
+    inherited DrawNormalButton: TSpeedButton
+      Position.X = 330.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Height = 23.000000000000000000
+    end
+    inherited DrawFastButton: TSpeedButton
+      Position.X = 330.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Height = 27.000000000000000000
+    end
+    inherited Button1: TButton
+      Position.Y = 27.000000000000000000
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Height = 380.000000000000000000
+    inherited Chart1: TChart
+      LeftAxis.Maximum = 910.000000000000000000
+      LeftAxis.Minimum = 445.000000000000000000
+    end
+    inherited Chart2: TChart
+      Position.Y = 207.000000000000000000
+      LeftAxis.Maximum = 590.000000000000000000
+      LeftAxis.Minimum = 0.000000000000000000
+    end
+  end
+end

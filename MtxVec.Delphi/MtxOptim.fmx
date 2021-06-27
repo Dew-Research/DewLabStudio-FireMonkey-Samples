@@ -1,0 +1,407 @@
+inherited frmMtxOptim: TfrmMtxOptim
+  Left = 253
+  Top = 128
+  Caption = 'frmMtxOptim'
+  ClientHeight = 522
+  ClientWidth = 764
+  OnCreate = FormCreate
+  Left = 253
+  Top = 128
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 764.000000000000000000
+    Size.Height = 98.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 764.000000000000000000
+      Size.Height = 98.000000000000000000
+      Viewport.Width = 764.000000000000000000
+      Viewport.Height = 98.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 464.000000000000000000
+    Size.Width = 764.000000000000000000
+    object Button1: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Find minimum'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 218.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 212.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Show Hessian mtx'
+      TextSettings.WordWrap = True
+      OnClick = Button2Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 764.000000000000000000
+    Size.Height = 366.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 17.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 208.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Max. number of iterations'
+    end
+    object Label2: TLabel
+      Position.X = 154.000000000000000000
+      Position.Y = 83.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label2'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 17.000000000000000000
+      Position.Y = 105.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Tolerance'
+    end
+    object Label4: TLabel
+      Position.X = 154.000000000000000000
+      Position.Y = 139.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label4'
+    end
+    object Label12: TLabel
+      AutoSize = True
+      Position.X = 17.000000000000000000
+      Position.Y = 161.000000000000000000
+      Size.Width = 149.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Gradient tolerance'
+    end
+    object Label13: TLabel
+      Position.X = 154.000000000000000000
+      Position.Y = 196.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label11'
+    end
+    object Label10: TLabel
+      AutoSize = True
+      Position.X = 17.000000000000000000
+      Position.Y = 221.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Initial lambda'
+    end
+    object Label11: TLabel
+      Position.X = 154.000000000000000000
+      Position.Y = 252.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label11'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 273.000000000000000000
+      Position.Y = 205.000000000000000000
+      Size.Width = 213.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Parameters - initial values'
+    end
+    object Label7: TLabel
+      Position.X = 444.000000000000000000
+      Position.Y = 244.000000000000000000
+      Size.Width = 61.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label7'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 274.000000000000000000
+      Position.Y = 244.000000000000000000
+      Size.Width = 10.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'a'
+    end
+    object Label9: TLabel
+      AutoSize = True
+      Position.X = 274.000000000000000000
+      Position.Y = 292.000000000000000000
+      Size.Width = 11.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'b'
+    end
+    object Label8: TLabel
+      Position.X = 444.000000000000000000
+      Position.Y = 292.000000000000000000
+      Size.Width = 61.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label8'
+    end
+    object Label14: TLabel
+      AutoSize = True
+      Position.X = 17.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 146.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Gradient step size'
+    end
+    object Label15: TLabel
+      Position.X = 154.000000000000000000
+      Position.Y = 309.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label11'
+    end
+    object CheckBox1: TCheckBox
+      IsChecked = True
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Log'
+      OnChange = CheckBox1Change
+    end
+    object Memo2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 546.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 193.000000000000000000
+      Size.Height = 321.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 185.000000000000000000
+      Viewport.Height = 313.000000000000000000
+    end
+    object CheckBox2: TCheckBox
+      Position.X = 264.000000000000000000
+      Position.Y = 343.000000000000000000
+      Size.Width = 238.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Numerical derivative'
+      OnChange = CheckBox2Change
+    end
+    object RadioGroup1: TPanel
+      Position.X = 258.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 199.000000000000000000
+      Size.Height = 140.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object RadioButton1: TRadioButton
+        Position.X = 12.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 235.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Nelder-Mead (Simplex)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton2: TRadioButton
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 238.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Levenberg-Marquardt'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton3: TRadioButton
+        Position.X = 12.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 241.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Quasi-Newton (BFGS)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton4: TRadioButton
+        Position.X = 12.000000000000000000
+        Position.Y = 82.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Quasi-Newton (DFP)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton5: TRadioButton
+        Position.X = 12.000000000000000000
+        Position.Y = 107.000000000000000000
+        Size.Width = 259.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Conjugate gradient (Fletcher)'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton6: TRadioButton
+        Position.X = 12.000000000000000000
+        Position.Y = 132.000000000000000000
+        Size.Width = 256.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Conjugate gradient (Polak)'
+        OnChange = RadioButton1Change
+      end
+    end
+    object TrackBar1: TTrackBar
+      CanParentFocus = True
+      Frequency = 100.000000000000000000
+      Max = 10000.000000000000000000
+      Min = 50.000000000000000000
+      Orientation = Horizontal
+      Position.X = 17.000000000000000000
+      Position.Y = 74.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Value = 400.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object TrackBar2: TTrackBar
+      CanParentFocus = True
+      Frequency = 2.000000000000000000
+      Max = 16.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 17.000000000000000000
+      Position.Y = 130.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Value = 6.000000000000000000
+      OnChange = TrackBar2Change
+    end
+    object TrackBar6: TTrackBar
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Max = 16.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 17.000000000000000000
+      Position.Y = 187.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Value = 10.000000000000000000
+      OnChange = TrackBar6Change
+    end
+    object TrackBar5: TTrackBar
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Max = 9.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 17.000000000000000000
+      Position.Y = 243.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Value = 5.000000000000000000
+      OnChange = TrackBar5Change
+    end
+    object TrackBar3: TTrackBar
+      CanParentFocus = True
+      Frequency = 10.000000000000000000
+      Min = -100.000000000000000000
+      Orientation = Horizontal
+      Position.X = 303.000000000000000000
+      Position.Y = 241.000000000000000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      OnChange = TrackBar3Change
+    end
+    object TrackBar4: TTrackBar
+      CanParentFocus = True
+      Frequency = 10.000000000000000000
+      Min = -100.000000000000000000
+      Orientation = Horizontal
+      Position.X = 303.000000000000000000
+      Position.Y = 289.000000000000000000
+      Size.Width = 133.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      OnChange = TrackBar4Change
+    end
+    object TrackBar7: TTrackBar
+      CanParentFocus = True
+      Frequency = 1.000000000000000000
+      Max = 16.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 17.000000000000000000
+      Position.Y = 300.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      Value = 10.000000000000000000
+      OnChange = TrackBar7Change
+    end
+    object Label16: TLabel
+      Position.X = 276.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Method:'
+    end
+  end
+end

@@ -1,0 +1,27 @@
+object ExprToolTipForm: TExprToolTipForm
+  Left = 0
+  Top = 0
+  Caption = 'ToolTip'
+  ClientHeight = 353
+  ClientWidth = 381
+  Position = Designed
+  FormStyle = Popup
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object MtxVecGrid: TMtxVecGrid
+    Align = Client
+    Size.Width = 381.000000000000000000
+    Size.Height = 353.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowCount = 100
+    RowHeight = 21.000000000000000000
+    MtxVecType = mvTVec
+    Scientific = True
+    StringFormat = '0.####'
+    Viewport.Width = 377.000000000000000000
+    Viewport.Height = 328.000000000000000000
+  end
+end

@@ -1,0 +1,41 @@
+inherited MSOffice: TMSOffice
+  Caption = 'MSOffice'
+  ClientHeight = 357
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Height = 193.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Height = 193.000000000000000000
+      Viewport.Width = 649.000000000000000000
+      Viewport.Height = 193.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 299.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Height = 106.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'MtxVec -> Excel'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Word -> MtxVec'
+      OnClick = Button2Click
+    end
+  end
+end

@@ -1,0 +1,220 @@
+inherited EigVec1: TEigVec1
+  Top = 127
+  Caption = 'EigVec1'
+  ClientHeight = 581
+  ClientWidth = 928
+  OnCreate = FormCreate
+  Top = 127
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Anchors = []
+    Size.Width = 928.000000000000000000
+    Size.Height = 175.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 928.000000000000000000
+      Size.Height = 175.000000000000000000
+      Viewport.Width = 928.000000000000000000
+      Viewport.Height = 175.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Anchors = []
+    Position.Y = 537.000000000000000000
+    Size.Width = 928.000000000000000000
+    Size.Height = 44.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Calc eigenvalues'
+      OnClick = Button1Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 928.000000000000000000
+    Size.Height = 362.000000000000000000
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 164.000000000000000000
+      Size.Height = 46.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Matrix A: '
+    end
+    object Label2: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 156.000000000000000000
+      Size.Width = 338.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Eigenvalues are elements of vector D:  '
+    end
+    object Label3: TLabel
+      Position.X = 363.000000000000000000
+      Position.Y = 156.000000000000000000
+      Size.Width = 343.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Eigenvectors: '
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 708.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Left'
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Position.X = 755.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Right'
+      OnClick = SpeedButton2Click
+    end
+    object StringGrid4: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 8.000000000000000000
+      Position.Y = 54.000000000000000000
+      Size.Width = 476.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      RowHeight = 21.000000000000000000
+      Viewport.Width = 472.000000000000000000
+      Viewport.Height = 75.000000000000000000
+    end
+    object StringGrid2: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 8.000000000000000000
+      Position.Y = 202.000000000000000000
+      Size.Width = 338.000000000000000000
+      Size.Height = 102.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      RowHeight = 21.000000000000000000
+      Viewport.Width = 334.000000000000000000
+      Viewport.Height = 77.000000000000000000
+    end
+    object RadioGroup1: TPanel
+      Position.X = 519.000000000000000000
+      Position.Y = 23.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object EigButton: TRadioButton
+        GroupName = 'Vector form'
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 115.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Eig'
+        OnChange = EigButtonChange
+      end
+      object ShurButton: TRadioButton
+        GroupName = 'Vector form'
+        Position.X = 11.000000000000000000
+        Position.Y = 39.000000000000000000
+        Size.Width = 119.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Shur'
+      end
+    end
+    object BalanceGroup: TPanel
+      Position.X = 633.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 220.000000000000000000
+      Size.Height = 71.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object NoneButton: TRadioButton
+        GroupName = 'BalanceGroup'
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 94.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'None'
+        OnChange = NoneButtonChange
+      end
+      object ScaleButton: TRadioButton
+        GroupName = 'BalanceGroup'
+        Position.X = 12.000000000000000000
+        Position.Y = 39.000000000000000000
+        Size.Width = 94.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Scale'
+        OnChange = NoneButtonChange
+      end
+      object PermButton: TRadioButton
+        GroupName = 'BalanceGroup'
+        Position.X = 126.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Perm'
+        OnChange = NoneButtonChange
+      end
+      object FullButton: TRadioButton
+        GroupName = 'BalanceGroup'
+        Position.X = 126.000000000000000000
+        Position.Y = 39.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Full'
+        OnChange = NoneButtonChange
+      end
+    end
+    object StringGrid1: TStringGrid
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 360.000000000000000000
+      Position.Y = 202.000000000000000000
+      Size.Width = 436.000000000000000000
+      Size.Height = 102.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      RowHeight = 21.000000000000000000
+      Viewport.Width = 432.000000000000000000
+      Viewport.Height = 77.000000000000000000
+    end
+    object Label4: TLabel
+      Position.X = 519.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Vector Form'
+    end
+    object BalanceLabel: TLabel
+      Position.X = 636.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Balance'
+    end
+  end
+end

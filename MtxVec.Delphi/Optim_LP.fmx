@@ -1,0 +1,328 @@
+inherited frmLP: TfrmLP
+  Caption = 'frmLP'
+  ClientHeight = 675
+  ClientWidth = 993
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 993.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 993.000000000000000000
+      Viewport.Width = 993.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 617.000000000000000000
+    Size.Width = 993.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 993.000000000000000000
+    Size.Height = 487.000000000000000000
+    object Panel4: TPanel
+      Align = Left
+      Size.Width = 307.000000000000000000
+      Size.Height = 487.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Left = 1
+      Top = 1
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 14.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 84.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Algorithm:'
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 11.000000000000000000
+        Position.Y = 164.000000000000000000
+        Size.Width = 278.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'System of equations'
+        TabOrder = 0
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 16.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 117.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = '# of equations'
+        end
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 16.000000000000000000
+          Position.Y = 77.000000000000000000
+          Size.Width = 129.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = '# of constraints'
+        end
+        object MtxFloatEdit1: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = False
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '7'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 153.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 103.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = MtxFloatEdit1Change
+        end
+        object MtxFloatEdit2: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = False
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '2'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 153.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = MtxFloatEdit2Change
+        end
+      end
+      object ComboBox1: TComboBox
+        ItemIndex = 1
+        ItemHeight = 13.000000000000000000
+        Position.X = 14.000000000000000000
+        Position.Y = 47.000000000000000000
+        Size.Width = 272.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'Dual Simplex'
+        end
+        object TListBoxItem
+          IsSelected = True
+          Size.Width = 19.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Two Phase Simplex'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'Simplex'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'Gomory'#39's CPA'
+        end
+      end
+      object CheckBox2: TCheckBox
+        IsChecked = True
+        Position.X = 14.000000000000000000
+        Position.Y = 125.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Log'
+        OnChange = CheckBox2Change
+      end
+      object CheckBox1: TCheckBox
+        IsChecked = True
+        Position.X = 14.000000000000000000
+        Position.Y = 98.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Minimum'
+        OnChange = CheckBox1Change
+      end
+      object Button1: TButton
+        Position.X = 47.000000000000000000
+        Position.Y = 290.000000000000000000
+        Size.Width = 197.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Solve'
+        OnClick = Button1Click
+      end
+    end
+    object Panel5: TPanel
+      Align = Client
+      Size.Width = 686.000000000000000000
+      Size.Height = 487.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Splitter1: TSplitter
+        Align = Top
+        Cursor = crVSplit
+        MinSize = 20.000000000000000000
+        Position.Y = 220.000000000000000000
+        Size.Width = 686.000000000000000000
+        Size.Height = 3.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Panel6: TPanel
+        Align = Top
+        Size.Width = 686.000000000000000000
+        Size.Height = 220.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object LabelA: TLabel
+          AutoSize = True
+          Position.X = 5.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 86.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'A in Ax<=b'
+        end
+        object Label5: TLabel
+          AutoSize = True
+          Position.X = 221.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 84.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'b in Ax<=b'
+        end
+        object Label4: TLabel
+          AutoSize = True
+          Position.X = 365.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 112.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'c in f(x)=c(T)x'
+        end
+        object Label6: TLabel
+          Anchors = [akLeft, akBottom]
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 183.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Relations:'
+        end
+        object EditRelations: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akBottom]
+          TabOrder = 3
+          Text = '=='
+          Position.X = 103.000000000000000000
+          Position.Y = 177.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = EditRelationsChange
+        end
+        object MtxVecGrid1: TMtxVecGrid
+          Position.X = 9.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 187.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          RowCount = 100
+          RowHeight = 21.000000000000000000
+          MtxVecType = mvTVec
+          Scientific = False
+          StringFormat = '0.####'
+          Viewport.Width = 187.000000000000000000
+          Viewport.Height = 68.000000000000000000
+        end
+        object MtxVecGrid2: TMtxVecGrid
+          Position.X = 219.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 130.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          RowCount = 100
+          RowHeight = 21.000000000000000000
+          MtxVecType = mvTVec
+          Scientific = False
+          StringFormat = '0.####'
+          Viewport.Width = 130.000000000000000000
+          Viewport.Height = 68.000000000000000000
+        end
+        object MtxVecGrid3: TMtxVecGrid
+          Position.X = 369.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 127.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          RowCount = 100
+          RowHeight = 21.000000000000000000
+          MtxVecType = mvTVec
+          Scientific = False
+          StringFormat = '0.####'
+          Viewport.Width = 127.000000000000000000
+          Viewport.Height = 68.000000000000000000
+        end
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Size.Width = 686.000000000000000000
+        Size.Height = 264.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 678.000000000000000000
+        Viewport.Height = 256.000000000000000000
+      end
+    end
+  end
+  object MtxLP1: TMtxLP
+    c.DataValues = {
+      0000000000000000000000000000803F00000000008004440000004100000000
+      00137A47000000000000000000000000}
+    A.LeadingCols = 0
+    A.DataValues = {
+      000000000000000000000000000000000000000000000000000040400000803F
+      0000000000000000000000000000803F00000000000000000000000000000041
+      008004440000000000137A470000000000000000000000000000000000000000
+      000000000000000000000000}
+    b.DataValues = {
+      0000000000000000000000000000803F00000000008004440000004100000000
+      00137A47000000000000000000000000}
+    Algorithm = LPAlgoTwoPhaseSimplex
+    Left = 159
+    Top = 87
+    MtxDataValues = {}
+  end
+end

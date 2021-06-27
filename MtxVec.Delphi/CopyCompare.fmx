@@ -1,0 +1,108 @@
+inherited CopyComp: TCopyComp
+  Top = 165
+  Caption = 'CopyComp'
+  ClientHeight = 468
+  ClientWidth = 670
+  OnDestroy = FormDestroy
+  Top = 165
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 670.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 670.000000000000000000
+      Viewport.Width = 670.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 410.000000000000000000
+    Size.Width = 670.000000000000000000
+    object Button1: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 156.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Do comparison'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+  end
+  inherited Panel3: TPanel
+    Align = Left
+    Size.Width = 244.000000000000000000
+    Size.Height = 280.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 24.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 155.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Matrix dimension : '
+    end
+    object Label2: TLabel
+      Position.X = 179.000000000000000000
+      Position.Y = 19.000000000000000000
+      Size.Width = 59.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label2'
+    end
+    object TrackBar1: TTrackBar
+      CanParentFocus = True
+      Frequency = 10.000000000000000000
+      Max = 1300.000000000000000000
+      Min = 2.000000000000000000
+      Orientation = Horizontal
+      Position.X = 16.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 189.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Value = 30.000000000000000000
+      OnChange = TrackBar1Change
+    end
+  end
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'Copy and Transpose')
+    LeftAxis.Title.Caption = 'Time [ms]'
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 4
+    Size.Width = 426.000000000000000000
+    Size.Height = 280.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TBarSeries
+      HoverElement = []
+      Title = 'Delphi'
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      Left = 123
+      Top = 51
+    end
+    object Series2: TBarSeries
+      HoverElement = []
+      Title = 'MtxVec'
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      Left = 186
+      Top = 54
+    end
+  end
+end

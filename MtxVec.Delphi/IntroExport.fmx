@@ -1,0 +1,8 @@
+inherited IntroExpImp: TIntroExpImp
+  Left = 252
+  Top = 107
+  Caption = 'IntroExpImp'
+  Left = 252
+  Top = 107
+  DesignerMasterStyle = 0
+end

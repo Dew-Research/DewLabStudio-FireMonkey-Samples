@@ -1,0 +1,42 @@
+inherited Mult1_XLgXhdpiTb: TMult1_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 800.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 800.000000000000000000
+      Viewport.Width = 800.000000000000000000
+      Viewport.Height = 105.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 1211.000000000000000000
+    Size.Width = 800.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Height = 1106.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 141.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited CPUCacheSizeLabel: TLabel
+      Size.Width = 130.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited CPUCoreCountLabel: TLabel
+      Size.Width = 132.000000000000000000
+      Size.Height = 22.000000000000000000
+    end
+    inherited TrackBar1: TTrackBar
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Size.Width = 514.000000000000000000
+    Size.Height = 1106.000000000000000000
+  end
+end

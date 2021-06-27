@@ -1,0 +1,48 @@
+inherited frmGridDemo_LgXhdpiTb: TfrmGridDemo_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 480.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 480.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 794.000000000000000000
+    Size.Width = 480.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 480.000000000000000000
+    Size.Height = 664.000000000000000000
+    inherited Panel4: TPanel
+      Size.Width = 286.000000000000000000
+      Size.Height = 664.000000000000000000
+      inherited GroupBox1: TGroupBox
+        Size.Width = 230.000000000000000000
+        inherited CheckBox1: TCheckBox
+          Size.Width = 204.000000000000000000
+        end
+        inherited CheckBox3: TCheckBox
+          Size.Width = 204.000000000000000000
+        end
+        inherited CheckBox4: TCheckBox
+          Size.Width = 210.000000000000000000
+        end
+      end
+      inherited GroupBox2: TGroupBox
+        Size.Width = 233.000000000000000000
+        inherited CheckBox5: TCheckBox
+          Size.Width = 219.000000000000000000
+        end
+        inherited Edit1: TEdit
+          Position.X = 85.000000000000000000
+        end
+        inherited ComboBox1: TComboBox
+          Position.X = 148.000000000000000000
+          Position.Y = 74.000000000000000000
+        end
+      end
+    end
+  end
+end

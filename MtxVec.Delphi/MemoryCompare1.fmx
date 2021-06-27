@@ -1,0 +1,149 @@
+inherited MemComp1: TMemComp1
+  Left = 202
+  Top = 97
+  Caption = 'Object cache'
+  ClientHeight = 539
+  ClientWidth = 655
+  Left = 202
+  Top = 97
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 655.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 655.000000000000000000
+      Viewport.Width = 655.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 501.000000000000000000
+    Size.Width = 655.000000000000000000
+    Size.Height = 38.000000000000000000
+    object Button3: TButton
+      Position.X = 328.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 189.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Do full comparison'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+  end
+  inherited Panel3: TPanel
+    Align = Left
+    Size.Width = 229.000000000000000000
+    Size.Height = 371.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 108.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Vector length'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 145.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 55.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label2'
+    end
+    object TrackBar1: TTrackBar
+      CanParentFocus = True
+      Frequency = 200.000000000000000000
+      Max = 5000.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 8.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 212.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Value = 1000.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object Memo2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Lines.Strings = (
+        'Vec(32,1024) - preallocate 32 '
+        'objects each with 1024 '
+        'elements. Requires 32 calls to '
+        'Create/Destroy and '
+        'GetMem/FreeMem.'
+        ''
+        'Vec(32,0)- preallocated 32 '
+        'objects with no memory in '
+        'advance.'
+        ''
+        'Vec(0,0) - do not preallocated '
+        'objects or memory.'
+        ''
+        'Create/Destroy-  direct call to'
+        'Create/Destroy and '
+        'GetMem/FreeMem.')
+      Position.X = 16.000000000000000000
+      Position.Y = 75.000000000000000000
+      Size.Width = 204.000000000000000000
+      Size.Height = 295.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 191.000000000000000000
+      Viewport.Height = 282.000000000000000000
+    end
+  end
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 5.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'SetVecCacheSize'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 452.500000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Time [ms]'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 4
+    Size.Width = 426.000000000000000000
+    Size.Height = 371.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TBarSeries
+      HoverElement = []
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+    end
+  end
+end

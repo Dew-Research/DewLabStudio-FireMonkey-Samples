@@ -1,0 +1,64 @@
+object frmFind: TfrmFind
+  Left = 625
+  Top = 308
+  Caption = 'Look for...'
+  ClientHeight = 93
+  ClientWidth = 379
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnClose = FormClose
+  Left = 625
+  Top = 308
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    AutoSize = True
+    Position.X = 8.000000000000000000
+    Position.Y = 14.000000000000000000
+    Size.Width = 86.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Search for text : '
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 151.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Default = True
+    ModalResult = 1
+    Position.X = 8.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Search'
+  end
+  object Button2: TButton
+    ModalResult = 2
+    Position.X = 91.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Cancel'
+  end
+  object CheckBox1: TCheckBox
+    Position.X = 184.000000000000000000
+    Position.Y = 52.000000000000000000
+    Size.Width = 147.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Find All Words'
+  end
+end

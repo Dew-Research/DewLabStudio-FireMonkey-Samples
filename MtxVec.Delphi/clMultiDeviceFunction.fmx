@@ -1,0 +1,325 @@
+object clMultiDeviceFunctionForm: TclMultiDeviceFunctionForm
+  Left = 0
+  Top = 0
+  Caption = 'clMultiDeviceFunctionForm'
+  ClientHeight = 625
+  ClientWidth = 717
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 717.000000000000000000
+    Size.Height = 501.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Platform list:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 109.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Device list:'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 231.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Test function list:'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 348.000000000000000000
+      Size.Width = 74.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Vector length:'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 12.000000000000000000
+      Position.Y = 384.000000000000000000
+      Size.Width = 127.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Open CL float precision:'
+    end
+    object CPUFloatPrecisionLabel: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 417.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'CPU (MtxVec) float precision:'
+    end
+    object Label7: TLabel
+      AutoSize = True
+      Position.X = 356.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Maximum job count:'
+    end
+    object CurrentJobCountLabel: TLabel
+      AutoSize = True
+      Position.X = 356.000000000000000000
+      Position.Y = 51.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Current job count:'
+    end
+    object TotalRunningTimeLabel: TLabel
+      AutoSize = True
+      Position.X = 356.000000000000000000
+      Position.Y = 79.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Total running time:'
+    end
+    object ErrorsLabel: TLabel
+      AutoSize = True
+      Position.X = 356.000000000000000000
+      Position.Y = 103.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Errors: None'
+    end
+    object Button1: TButton
+      Position.X = 597.000000000000000000
+      Position.Y = 119.000000000000000000
+      Size.Width = 82.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Run'
+      OnClick = Button1Click
+    end
+    object PlatformListBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnClick = PlatformListBoxClick
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 69.000000000000000000
+    end
+    object DeviceListBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 89.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      MultiSelectStyle = Default
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 85.000000000000000000
+    end
+    object FunctionBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 250.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 82.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 78.000000000000000000
+      object TListBoxItem
+        Size.Width = 321.000000000000000000
+        Size.Height = 13.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'c = c *  b'
+      end
+      object TListBoxItem
+        Position.Y = 13.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 13.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'a = sin(a) + sin(c)'
+      end
+      object TListBoxItem
+        Position.Y = 26.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 13.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'c = sqrt(4 * a * INVTWOPI) * a * sqr(x) * Exp(-0.5 * a * sqr(x))'
+      end
+    end
+    object VectorLengthBox: TComboBox
+      Position.X = 139.000000000000000000
+      Position.Y = 342.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object TListBoxItem
+        TabOrder = 0
+        Text = '4096'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '16384'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = '32768'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = '131072'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = '262144'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = '524288'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = '1048576'
+      end
+    end
+    object ComplexBox: TCheckBox
+      Position.X = 337.000000000000000000
+      Position.Y = 353.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Complex'
+    end
+    object FloatPrecisionBox: TComboBox
+      Position.X = 214.000000000000000000
+      Position.Y = 375.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      object TListBoxItem
+        TabOrder = 0
+        Text = '32bit single precision'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '64bit double precision'
+      end
+    end
+    object MaximumJobCountEdit: TComboBox
+      Position.X = 537.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object TListBoxItem
+        TabOrder = 0
+        Text = '1'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '2'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = '4'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = '8'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = '16'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = '32'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = '64'
+      end
+      object TListBoxItem
+        TabOrder = 7
+        Text = '128'
+      end
+      object TListBoxItem
+        TabOrder = 8
+        Text = '256'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'RichEdit1')
+    Align = Top
+    Size.Width = 717.000000000000000000
+    Size.Height = 124.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 713.000000000000000000
+    Viewport.Height = 120.000000000000000000
+  end
+  object SchedulerTimer: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = SchedulerTimerTimer
+    Left = 522
+    Top = 516
+  end
+end

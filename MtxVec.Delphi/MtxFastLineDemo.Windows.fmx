@@ -1,0 +1,21 @@
+inherited MtxFastLineForm_Windows: TMtxFastLineForm_Windows
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited RichEdit1: TMemo
+      Viewport.Width = 574.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    inherited MtxFloatEdit: TMtxFloatEdit
+      Position.X = 273.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Height = 25.000000000000000000
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+  end
+end

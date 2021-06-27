@@ -1,0 +1,346 @@
+inherited frmProgDialog: TfrmProgDialog
+  Caption = 'frmProgDialog'
+  ClientHeight = 518
+  ClientWidth = 505
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 505.000000000000000000
+    Size.Height = 85.000000000000000000
+    inherited RichEdit1: TMemo
+      DragMode = dmAutomatic
+      Size.Width = 505.000000000000000000
+      Size.Height = 85.000000000000000000
+      Viewport.Width = 505.000000000000000000
+      Viewport.Height = 85.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 460.000000000000000000
+    Size.Width = 505.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Width = 505.000000000000000000
+    Size.Height = 375.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 13.000000000000000000
+      Position.Y = 156.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Thread priority:'
+    end
+    object ProgressLabel: TLabel
+      AutoSize = True
+      Position.X = 237.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 99.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Progress indicator:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 13.000000000000000000
+      Position.Y = 189.000000000000000000
+      Size.Width = 187.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Progress indicators update interval:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 270.000000000000000000
+      Position.Y = 189.000000000000000000
+      Size.Width = 23.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = '[ms]'
+    end
+    object IteratorGroup: TPanel
+      Position.X = 8.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 79.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object RadioButton1: TRadioButton
+        GroupName = 'IteratorGroup'
+        Position.X = 6.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Internal Loop'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton2: TRadioButton
+        GroupName = 'IteratorGroup'
+        Position.X = 7.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'External loop'
+        OnChange = RadioButton1Change
+      end
+      object RadioButton3: TRadioButton
+        GroupName = 'IteratorGroup'
+        Position.X = 7.000000000000000000
+        Position.Y = 51.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'In Procedure'
+        OnChange = RadioButton1Change
+      end
+    end
+    object LoopTypeGroup: TPanel
+      Position.X = 125.000000000000000000
+      Position.Y = 28.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 63.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnClick = LoopTypeGroupClick
+      object RadioButton4: TRadioButton
+        GroupName = 'LoopGroup'
+        Position.X = 9.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'For Loop'
+        OnChange = RadioButton4Change
+      end
+      object RadioButton5: TRadioButton
+        GroupName = 'LoopGroup'
+        Position.X = 9.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'While Loop'
+        OnChange = RadioButton4Change
+      end
+    end
+    object ShowFormBox: TCheckBox
+      Position.X = 12.000000000000000000
+      Position.Y = 119.000000000000000000
+      Size.Width = 152.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Show progress form'
+      OnClick = ShowFormBoxClick
+    end
+    object ThreadBox: TComboBox
+      ItemHeight = 13.000000000000000000
+      Position.X = 98.000000000000000000
+      Position.Y = 151.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = ThreadBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Idle'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Lowest'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'Lower'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = 'Normal'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = 'Higher'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = 'Highest'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = 'Time critical'
+      end
+    end
+    object StartButton: TButton
+      Position.X = 346.000000000000000000
+      Position.Y = 223.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Start'
+      OnClick = StartButtonClick
+    end
+    object ProgressBar: TProgressBar
+      Orientation = Horizontal
+      Position.X = 236.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 151.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object UpdateIntervalEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '10'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '200'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 189.000000000000000000
+      Position.Y = 189.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = UpdateIntervalEditChange
+      Left = 187
+      Top = 148
+    end
+    object GroupBox1: TGroupBox
+      Position.X = 13.000000000000000000
+      Position.Y = 213.000000000000000000
+      Size.Width = 312.000000000000000000
+      Size.Height = 54.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Loop range'
+      TabOrder = 7
+      object Label4: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'For Counter := '
+      end
+      object Label5: TLabel
+        AutoSize = True
+        Position.X = 173.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 15.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'to '
+      end
+      object Label6: TLabel
+        AutoSize = True
+        Position.X = 278.000000000000000000
+        Position.Y = 23.000000000000000000
+        Size.Width = 15.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'do'
+      end
+      object MinEdit: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        RegistryPath = '\Software\DewResearch\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '100'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '0'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 96.000000000000000000
+        Position.Y = 21.000000000000000000
+        Size.Width = 68.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = MinEditChange
+        Left = 85
+        Top = 19
+      end
+      object MaxEdit: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        RegistryPath = '\Software\DewResearch\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '100'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '1500'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 195.000000000000000000
+        Position.Y = 21.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = MaxEditChange
+        Left = 154
+        Top = 18
+      end
+    end
+    object Label7: TLabel
+      Position.X = 9.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Iterator control'
+    end
+    object Label8: TLabel
+      Position.X = 126.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Loop type'
+    end
+  end
+  object MtxThread: TMtxProgressDialog
+    FreeOnTerminate = False
+    ThreadBypass = False
+    OnCompute = MtxThreadCompute
+    OnProgressUpdate = MtxThreadProgressUpdate
+    InternalLoop = True
+    InfiniteLoop = False
+    Min = 0
+    Max = 0
+    ShowDialog = False
+    Left = 282
+    Top = 21
+    MtxDataValues = {}
+  end
+end

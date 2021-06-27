@@ -1,0 +1,25 @@
+inherited Mult1_SmXhdpiPh: TMult1_SmXhdpiPh
+  ClientHeight = 375
+  ClientWidth = 250
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 250.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 250.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 331.000000000000000000
+    Size.Width = 250.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Height = 226.000000000000000000
+    inherited TrackBar1: TTrackBar
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited Chart1: TChart
+    Size.Width = 0.000000000000000000
+    Size.Height = 226.000000000000000000
+  end
+end

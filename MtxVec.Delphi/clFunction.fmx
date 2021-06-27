@@ -1,0 +1,262 @@
+object clFunctionForm: TclFunctionForm
+  Left = 0
+  Top = 0
+  Caption = 'clFunctionForm'
+  ClientHeight = 625
+  ClientWidth = 717
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 717.000000000000000000
+    Size.Height = 540.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Platform list:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 106.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Device list:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 363.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Timings:'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 228.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Test function list:'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 375.000000000000000000
+      Size.Width = 74.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Vector length:'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 411.000000000000000000
+      Size.Width = 127.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Open CL float precision:'
+    end
+    object CPUFloatPrecisionLabel: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 447.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'CPU (MtxVec) float precision:'
+    end
+    object Button1: TButton
+      Position.X = 519.000000000000000000
+      Position.Y = 367.000000000000000000
+      Size.Width = 118.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Run'
+      OnClick = Button1Click
+    end
+    object Memo: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 363.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 274.000000000000000000
+      Size.Height = 328.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 270.000000000000000000
+      Viewport.Height = 324.000000000000000000
+    end
+    object PlatformListBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 69.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnClick = PlatformListBoxClick
+      DisableFocusEffect = True
+      ItemHeight = 24.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 65.000000000000000000
+    end
+    object DeviceListBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 86.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      DisableFocusEffect = True
+      ItemHeight = 24.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 82.000000000000000000
+    end
+    object FunctionBox: TListBox
+      Position.X = 15.000000000000000000
+      Position.Y = 250.000000000000000000
+      Size.Width = 325.000000000000000000
+      Size.Height = 108.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      DisableFocusEffect = True
+      ItemHeight = 24.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 321.000000000000000000
+      Viewport.Height = 104.000000000000000000
+      object TListBoxItem
+        Size.Width = 321.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'c = c *  b'
+      end
+      object TListBoxItem
+        Position.Y = 24.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'a = sin(a) + sin(c)'
+      end
+      object TListBoxItem
+        Position.Y = 48.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'c = sqrt(4 * a * INVTWOPI) * a * sqr(x) * Exp(-0.5 * a * sqr(x))'
+      end
+      object TListBoxItem
+        Position.Y = 72.000000000000000000
+        Size.Width = 321.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'a = Mean(c)'
+      end
+    end
+    object VectorLengthBox: TComboBox
+      Position.X = 141.000000000000000000
+      Position.Y = 372.000000000000000000
+      Size.Width = 199.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object TListBoxItem
+        TabOrder = 0
+        Text = '4096'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '16384'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = '32768'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = '131072'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = '262144'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = '524288'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = '1048576'
+      end
+    end
+    object ComplexBox: TCheckBox
+      Position.X = 376.000000000000000000
+      Position.Y = 377.000000000000000000
+      Size.Width = 135.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Complex'
+    end
+    object FloatPrecisionBox: TComboBox
+      Position.X = 216.000000000000000000
+      Position.Y = 408.000000000000000000
+      Size.Width = 229.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object TListBoxItem
+        TabOrder = 0
+        Text = '32bit single precision'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '64bit double precision'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'RichEdit1')
+    Align = Top
+    Size.Width = 717.000000000000000000
+    Size.Height = 85.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 713.000000000000000000
+    Viewport.Height = 81.000000000000000000
+  end
+end

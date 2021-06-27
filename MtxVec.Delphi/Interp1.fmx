@@ -1,0 +1,202 @@
+inherited Interpolating1: TInterpolating1
+  Left = 257
+  Top = 144
+  Caption = 'Interpolating points'
+  ClientHeight = 515
+  OnCreate = FormCreate
+  Left = 257
+  Top = 144
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited RichEdit1: TMemo
+      Viewport.Width = 574.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 363.000000000000000000
+    Size.Height = 152.000000000000000000
+    inherited CheckDownSample: TCheckBox
+      Position.X = 14.000000000000000000
+      Size.Width = 158.000000000000000000
+      TabOrder = 5
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 378.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Time needed:'
+      Left = 264
+      Top = 40
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 71.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Interpolation:'
+      Left = 8
+      Top = 32
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Data points:'
+      Left = 10
+      Top = 56
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 495.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 29.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'XXXX'
+      Left = 336
+      Top = 40
+    end
+    object ComboBox1: TComboBox
+      ItemHeight = 13.000000000000000000
+      Position.X = 123.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 184.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = ComboBox1Change
+      object Item0: TListBoxItem
+        TabOrder = 0
+        Text = 'Linear'
+      end
+      object Item1: TListBoxItem
+        TabOrder = 1
+        Text = 'Cubic'
+      end
+    end
+    object TrackBar1: TTrackBar
+      CanParentFocus = True
+      Frequency = 50.000000000000000000
+      Max = 100000.000000000000000000
+      Min = 60.000000000000000000
+      Orientation = Horizontal
+      Position.X = 120.000000000000000000
+      Position.Y = 77.000000000000000000
+      Size.Width = 184.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Value = 100.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object StaticText2: TLabel
+      Position.X = 329.000000000000000000
+      Position.Y = 80.000000000000000000
+      Size.Width = 146.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'StaticText2'
+    end
+    object TrackBar2: TTrackBar
+      CanParentFocus = True
+      Max = 10.000000000000000000
+      Min = 1.000000000000000000
+      Orientation = Horizontal
+      Position.X = 119.000000000000000000
+      Position.Y = 107.000000000000000000
+      Size.Width = 188.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Value = 6.808510780334473000
+      OnChange = TrackBar2Change
+    end
+    object StaticText3: TLabel
+      Position.X = 332.000000000000000000
+      Position.Y = 107.000000000000000000
+      Size.Width = 143.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'StaticText2'
+    end
+    object Button1: TButton
+      Position.X = 378.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Recreate'
+      OnClick = Button1Click
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 18.000000000000000000
+      Position.Y = 108.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Factor:'
+      Left = 32
+      Top = 80
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Alignment = laTop
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Visible = False
+    BottomAxis.Maximum = 24.000000000000000000
+    LeftAxis.Maximum = 592.687500000000000000
+    LeftAxis.Minimum = 172.500000000000000000
+    BevelOuter = bvLowered
+    Size.Height = 233.000000000000000000
+    object Series1: TPointSeries
+      HoverElement = [heCurrent]
+      Title = 'Original data'
+      ClickableLine = False
+      Pointer.Brush.Gradient.EndColor = claRed
+      Pointer.Gradient.EndColor = claRed
+      Pointer.HorizSize = 2
+      Pointer.InflateMargins = True
+      Pointer.Style = psDiagCross
+      Pointer.VertSize = 2
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+      Left = 246
+      Top = 66
+    end
+    object Series2: TFastLineSeries
+      HoverElement = []
+      SeriesColor = x00BA7F4A
+      Title = 'Fitted values'
+      LinePen.Color = xFFBA7F4A
+      LinePen.Fill.Color = xFFBA7F4A
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+      Left = 171
+      Top = 48
+    end
+  end
+end

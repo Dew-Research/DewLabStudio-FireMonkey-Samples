@@ -1,0 +1,43 @@
+object HintForm: THintForm
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Form1'
+  ClientHeight = 35
+  ClientWidth = 441
+  Position = Designed
+  StyleLookup = 'Panelstyle'
+  FormStyle = Popup
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Client
+    Fill.Color = claBeige
+    Size.Width = 441.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    object Text1: TText
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 406.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Hint and more hint and maore and more and more and more '
+      TextSettings.Font.Family = 'Courier New'
+      TextSettings.HorzAlign = Leading
+    end
+  end
+  object Timer: TTimer
+    Interval = 100
+    OnTimer = TimerTimer
+    Left = 78
+    Top = 39
+  end
+end

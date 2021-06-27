@@ -1,0 +1,8 @@
+inherited IntroVec: TIntroVec
+  Left = 252
+  Top = 107
+  Caption = 'IntroVec'
+  Left = 252
+  Top = 107
+  DesignerMasterStyle = 0
+end

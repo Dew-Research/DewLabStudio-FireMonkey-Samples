@@ -1,0 +1,193 @@
+object SuperConductiveForm: TSuperConductiveForm
+  Left = 0
+  Top = 0
+  Caption = 'SuperConductiveForm'
+  ClientHeight = 598
+  ClientWidth = 822
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 459.000000000000000000
+    Size.Width = 822.000000000000000000
+    Size.Height = 139.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Bevel1: TPanel
+      Position.X = 9.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 418.000000000000000000
+      Size.Height = 94.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object MultithreadBox: TCheckBox
+        IsChecked = True
+        Position.X = 265.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 142.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Multithreaded'
+      end
+      object SuperConductiveMMBox: TCheckBox
+        IsChecked = True
+        Position.X = 17.000000000000000000
+        Position.Y = 63.000000000000000000
+        Size.Width = 195.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Super conductive MM'
+      end
+      object Label31: TLabel
+        AutoSize = True
+        Position.X = 21.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Test method:'
+        TabOrder = 2
+      end
+      object Label41: TLabel
+        AutoSize = True
+        Position.X = 222.000000000000000000
+        Position.Y = 21.000000000000000000
+        Size.Width = 74.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Vector length:'
+        TabOrder = 3
+      end
+      object TestBox: TComboBox
+        Items.Strings = (
+          'GetMem'
+          'TVec'
+          'Vector'
+          'VectorGlobal')
+        ItemHeight = 13.000000000000000000
+        Position.X = 107.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+      end
+      object VectorLenEdit: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = False
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '30000'
+        MinValue = '3'
+        Value = '1000'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 312.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Left = 458
+        Top = 45
+      end
+    end
+    object FullRunButton: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 665.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 148.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Run full test'
+      OnClick = FullRunButtonClick
+    end
+    object Button2: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 512.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 142.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Run single shot'
+      OnClick = Button2Click
+    end
+    object AllocsLabel: TLabel
+      Anchors = [akTop, akRight]
+      Position.X = 513.000000000000000000
+      Position.Y = 54.000000000000000000
+      Size.Width = 301.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object Label1: TLabel
+      Anchors = [akLeft, akTop, akRight]
+      StyledSettings = [Family, Size, FontColor]
+      Position.X = 6.000000000000000000
+      Position.Y = 111.000000000000000000
+      Size.Width = 802.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      Text = 
+        'All multithreading timing tests show meaningfull results only wh' +
+        'en run outside of IDE!'
+      TabOrder = 5
+    end
+  end
+  object Chart: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'Memory allocations/second/thread'
+      'depending on object type and memory manager used. ')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Milions of allocs/second/thread'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3D = False
+    Zoom.Animated = True
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Align = Client
+    Color = claWhite
+    TabOrder = 1
+    Size.Width = 822.000000000000000000
+    Size.Height = 459.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+  end
+end

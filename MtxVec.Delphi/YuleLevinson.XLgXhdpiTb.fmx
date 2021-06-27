@@ -1,0 +1,27 @@
+inherited YuleLev_XLgXhdpiTb: TYuleLev_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 800.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 800.000000000000000000
+      Viewport.Width = 800.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 1181.000000000000000000
+    Size.Width = 800.000000000000000000
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Size.Width = 553.000000000000000000
+    Size.Height = 1051.000000000000000000
+  end
+  inherited Panel3: TPanel
+    Size.Height = 1051.000000000000000000
+  end
+end

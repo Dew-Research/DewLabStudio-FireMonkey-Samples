@@ -1,0 +1,89 @@
+object BasicForm1: TBasicForm1
+  Left = 348
+  Top = 216
+  Caption = 'BasicForm1'
+  ClientHeight = 461
+  ClientWidth = 574
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  Left = 348
+  Top = 216
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 574.000000000000000000
+    Size.Height = 130.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object RichEdit1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Align = Client
+      Size.Width = 574.000000000000000000
+      Size.Height = 130.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Left = 1
+      Top = 1
+      Viewport.Width = 566.000000000000000000
+      Viewport.Height = 122.000000000000000000
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 387.000000000000000000
+    Size.Width = 574.000000000000000000
+    Size.Height = 74.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object CheckDownSample: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'DownSample'
+      OnClick = CheckDownSampleClick
+    end
+  end
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 3
+    Size.Width = 574.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+  end
+end

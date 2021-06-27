@@ -1,0 +1,225 @@
+inherited DownS: TDownS
+  Left = 255
+  Top = 158
+  Caption = 'DownS'
+  ClientHeight = 567
+  ClientWidth = 759
+  Left = 255
+  Top = 158
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 759.000000000000000000
+    Size.Height = 100.000000000000000000
+    inherited RichEdit1: TMemo
+      Size.Width = 759.000000000000000000
+      Size.Height = 100.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 444.000000000000000000
+    Size.Width = 759.000000000000000000
+    Size.Height = 123.000000000000000000
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 121.000000000000000000
+      Position.Y = 19.000000000000000000
+      Size.Width = 149.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Time for "normal" plotting : '
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 118.000000000000000000
+      Position.Y = 75.000000000000000000
+      Size.Width = 155.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Time for optimized plotting : '
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 350.000000000000000000
+      Position.Y = 19.000000000000000000
+      Size.Width = 30.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = '0000'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 350.000000000000000000
+      Position.Y = 75.000000000000000000
+      Size.Width = 30.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = '0000'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 505.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Number of points : '
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 670.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 38.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label6'
+    end
+    object DrawNormalButton: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Draw'
+      TextSettings.WordWrap = True
+      OnClick = DrawNormalButtonClick
+    end
+    object DrawFastButton: TSpeedButton
+      Position.X = 432.000000000000000000
+      Position.Y = 61.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Draw'
+      TextSettings.WordWrap = True
+      OnClick = DrawFastButtonClick
+    end
+    object TrackBar1: TTrackBar
+      Frequency = 300000.000000000000000000
+      Max = 10000000.000000000000000000
+      Min = 100000.000000000000000000
+      Orientation = Horizontal
+      Position.X = 502.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 219.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Value = 100000.000000000000000000
+      OnChange = TrackBar1Change
+    end
+    object Button1: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 45.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Compare'
+      TextSettings.WordWrap = True
+      OnClick = Button1Click
+    end
+  end
+  inherited Panel3: TPanel
+    Size.Width = 759.000000000000000000
+    Size.Height = 344.000000000000000000
+    OnResize = Panel3Resize
+    object Chart1: TChart
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Normal')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 490.000000000000000000
+      LeftAxis.Minimum = 7.500000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Align = Top
+      TabOrder = 1
+      Size.Width = 759.000000000000000000
+      Size.Height = 181.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series1: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    object Chart2: TChart
+      Position.Y = 171.000000000000000000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Using PixelDownSample')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 337.500000000000000000
+      LeftAxis.Minimum = 80.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Align = Bottom
+      TabOrder = 0
+      Size.Width = 759.000000000000000000
+      Size.Height = 173.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series2: TFastLineSeries
+        LinePen.Color = xFF4466A3
+        LinePen.Fill.Color = xFF4466A3
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+  end
+end

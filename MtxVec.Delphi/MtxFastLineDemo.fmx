@@ -1,0 +1,69 @@
+inherited MtxFastLineForm: TMtxFastLineForm
+  Caption = 'MtxFastLineForm'
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited RichEdit1: TMemo
+      Viewport.Width = 574.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Position.Y = 422.000000000000000000
+    Size.Height = 39.000000000000000000
+    inherited CheckDownSample: TCheckBox
+      IsChecked = True
+      Position.X = 9.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 142.000000000000000000
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 177.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Samples to draw:'
+      Left = 186
+      Top = 9
+    end
+    object MtxFloatEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '10'
+      MaxValue = '10000000'
+      MinValue = '0'
+      Value = '100000'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 313.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = MtxFloatEditChange
+      Left = 273
+      Top = 6
+    end
+  end
+  inherited Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TMtxFastLineSeries')
+    Size.Height = 292.000000000000000000
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Left = 130
+    Top = 144
+  end
+end
