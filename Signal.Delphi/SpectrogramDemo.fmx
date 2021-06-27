@@ -1,0 +1,202 @@
+object SpectrogramDemoForm: TSpectrogramDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'SpectrogramDemoForm'
+  ClientHeight = 438
+  ClientWidth = 678
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 390.000000000000000000
+    Size.Width = 678.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Position.X = 12.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Open file...'
+      OnClick = OKButtonClick
+    end
+    object ProgressPanel: TProgressBar
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Orientation = Horizontal
+      Position.X = 144.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 523.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Chart1: TChart
+    Legend.Visible = False
+    MarginBottom = 1
+    MarginRight = 1
+    Title.Text.Strings = (
+      'Spectrogram')
+    BottomAxis.Title.Caption = 'Time [s]'
+    LeftAxis.Title.Caption = 'Frequency [Hz]'
+    View3D = False
+    Zoom.Animated = True
+    Zoom.Brush.Kind = None
+    Zoom.Brush.Gradient.Direction = gdFromTopLeft
+    Zoom.Brush.Gradient.EndColor = claSilver
+    Zoom.Brush.Gradient.MidColor = claWhite
+    Zoom.Brush.Gradient.StartColor = claSilver
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    BevelOuter = bvNone
+    Color = claWhite
+    TabOrder = 1
+    Size.Width = 678.000000000000000000
+    Size.Height = 390.000000000000000000
+    Size.PlatformDefault = False
+    OnDblClick = Chart1DblClick
+    PrintMargins = (
+      15
+      22
+      15
+      22)
+    ColorPaletteIndex = 13
+    object Series1: TMtxGridSeries
+      Legend.Visible = False
+      XStep = 1.000000000000000000
+      YStep = 1.000000000000000000
+      PixelResample = True
+      PixelResampleMethod = pdsAverage
+      LegendItemsCount = 11
+      ColorPalette.PaletteSteps = 1000
+      ColorPalette.PaletteStyle = palRangeDiscrete
+      ColorPalette.ColorBalance = -0.500000000000000000
+      ColorPalette.SharpContrast = False
+      ColorPalette.TopClipOffColor = claNull
+      ColorPalette.BottomClipOffColor = claNull
+      ColorPalette.UseMidColor = False
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Left = 288
+    Top = 195
+  end
+  object SignalRead: TSignalRead
+    SamplingFrequency = 1.000000000000000000
+    LastFrameCheck = lfcLastFullBlock
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 267
+    Top = 78
+    MtxDataValues = {}
+  end
+  object Spectrogram: TSpectrogram
+    OnAfterUpdate = SpectrogramAfterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    TraceOnly = False
+    Input = SpectrumAnalyzer
+    SpectralSamplingFrequency = 1.000000000000000000
+    SpectralDt = 1.000000000000000000
+    Logarithmic = False
+    Left = 594
+    Top = 81
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    OnAfterUpdate = SpectrumAnalyzerAfterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Input = SignalDemux1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 40.000000000000000000
+    Left = 468
+    Top = 78
+    MtxDataValues = {}
+  end
+  object SignalDemux1: TSignalDemux
+    OnAfterUpdate = SignalDemux1AfterUpdate
+    SamplingFrequency = 1.000000000000000000
+    Input = SignalRead
+    Left = 363
+    Top = 78
+    MtxDataValues = {}
+  end
+  object ComputeSpectrogramThread: TMtxProgressDialog
+    FreeOnTerminate = False
+    ThreadBypass = True
+    OnCompute = ComputeSpectrogramThreadCompute
+    OnProgressUpdate = ComputeSpectrogramThreadProgressUpdate
+    InternalLoop = True
+    InfiniteLoop = True
+    Min = 0
+    Max = 0
+    ShowDialog = False
+    Left = 129
+    Top = 78
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    Chart = Chart1
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 399
+    Top = 195
+  end
+end

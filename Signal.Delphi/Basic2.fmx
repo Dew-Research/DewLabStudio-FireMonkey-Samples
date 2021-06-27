@@ -1,0 +1,47 @@
+object BasicForm2: TBasicForm2
+  Left = 0
+  Top = 0
+  Caption = 'BasicForm2'
+  ClientHeight = 397
+  ClientWidth = 582
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 582.000000000000000000
+    Size.Height = 130.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object RichEdit1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Align = Client
+      Size.Width = 582.000000000000000000
+      Size.Height = 130.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 578.000000000000000000
+      Viewport.Height = 126.000000000000000000
+    end
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 339.000000000000000000
+    Size.Width = 582.000000000000000000
+    Size.Height = 58.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Align = Client
+    Size.Width = 582.000000000000000000
+    Size.Height = 209.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,4 @@
+inherited IntroApplicationForm: TIntroApplicationForm
+  Caption = 'Application form'
+  DesignerMasterStyle = 0
+end

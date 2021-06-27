@@ -1,0 +1,501 @@
+object BufferForm: TBufferForm
+  Left = 0
+  Top = 0
+  Caption = 'Buffer test'
+  ClientHeight = 711
+  ClientWidth = 683
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 139.000000000000000000
+    Size.Width = 683.000000000000000000
+    Size.Height = 3.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Splitter2: TSplitter
+    Align = Bottom
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 415.000000000000000000
+    Size.Width = 683.000000000000000000
+    Size.Height = 3.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object SignalChart1: TSignalChart
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Signal generator chart')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 432.500000000000000000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.Minimum = 40.000000000000000000
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 0
+    Size.Width = 683.000000000000000000
+    Size.Height = 273.000000000000000000
+    Size.PlatformDefault = False
+    Signals = <
+      item
+        SeriesName = 'Series1'
+        Series = Series1
+        InputsItemIndex = 0
+        Input = SignalGenerator
+      end>
+    ComplexSignalPart = cspReal
+    ColorPaletteIndex = 0
+    object Series1: TFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 535.000000000000000000
+    Size.Width = 683.000000000000000000
+    Size.Height = 176.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object BufferSizeLabel: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 78.000000000000000000
+      Size.Width = 95.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Buffer size:'
+    end
+    object UnreadBufferDataLabel: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 124.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Unread Buffer:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 191.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 154.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Output buffer size:'
+    end
+    object SignalUpdateLabel: TLabel
+      AutoSize = True
+      Position.X = 382.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 287.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Signal generator has been updated'
+    end
+    object ReadCursorLabel: TLabel
+      AutoSize = True
+      Position.X = 260.000000000000000000
+      Position.Y = 102.000000000000000000
+      Size.Width = 106.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Read cursor:'
+    end
+    object DataReadLabel: TLabel
+      AutoSize = True
+      Position.X = 260.000000000000000000
+      Position.Y = 81.000000000000000000
+      Size.Width = 96.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Stream OK:'
+    end
+    object WriteCursorLabel: TLabel
+      AutoSize = True
+      Position.X = 260.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 107.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Write cursor:'
+    end
+    object InputBufferSizeLabel: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 101.000000000000000000
+      Size.Width = 141.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Input buffer size:'
+    end
+    object StoreBufferLabel: TLabel
+      AutoSize = True
+      Position.X = 15.000000000000000000
+      Position.Y = 147.000000000000000000
+      Size.Width = 104.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Store buffer:'
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 12.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 141.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Input buffer size:'
+    end
+    object ButtonUpdate: TButton
+      Anchors = [akRight, akBottom]
+      Position.X = 547.000000000000000000
+      Position.Y = 132.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Update'
+      OnClick = ButtonUpdateClick
+    end
+    object BufferSizeEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '500'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 194.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 158.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = BufferSizeEditChange
+    end
+    object InputBufferEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '500'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 12.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = InputBufferEditChange
+    end
+    object ResetButton: TButton
+      Anchors = [akRight, akBottom]
+      Position.X = 547.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Reset'
+      OnClick = ResetButtonClick
+    end
+  end
+  object SpectrumChart1: TSpectrumChart
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'TSpectrumChart')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 1422.500000000000000000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.Minimum = 877.500000000000000000
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claWhite
+    Zoom.Pen.Mode = pmNotXor
+    Zoom.Pen.Fill.Color = claWhite
+    Align = Top
+    TabOrder = 2
+    Size.Width = 683.000000000000000000
+    Size.Height = 139.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        SeriesName = 'Series2'
+        Series = Series2
+        InputsItemIndex = 0
+        Input = SpectrumAnalyzer1
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object Series2: TFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object SignalChart2: TSignalChart
+    Position.Y = 418.000000000000000000
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Signal buffer chart')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.EndPosition = 100.000000000000000000
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 325.000000000000000000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.Minimum = 7.500000000000000000
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Bottom
+    TabOrder = 3
+    Size.Width = 683.000000000000000000
+    Size.Height = 117.000000000000000000
+    Size.PlatformDefault = False
+    Signals = <
+      item
+        SeriesName = 'FastLineSeries1'
+        Series = FastLineSeries1
+        InputsItemIndex = 0
+        Input = SignalBuffer
+      end>
+    ComplexSignalPart = cspReal
+    ColorPaletteIndex = 0
+    object FastLineSeries1: TFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object SignalBuffer: TSignalBuffer
+    OnAfterUpdate = SignalBufferAfterUpdate
+    OnBeforeUpdate = SignalBufferBeforeUpdate
+    Length = 500
+    SamplingFrequency = 1.000000000000000000
+    IncrementStep = 1.000000000000000000
+    Input = SignalGenerator
+    Left = 336
+    Top = 21
+    MtxDataValues = {}
+  end
+  object SignalGenerator: TSignalGenerator
+    OnAfterUpdate = SignalGeneratorAfterUpdate
+    Length = 900
+    SamplingFrequency = 40.000000000000000000
+    Inputs = <
+      item
+      end>
+    Sounds.Templates.Strings = (
+      'Template 1'
+      'Template 2')
+    Sounds.Templates.StreamBinaryData = {
+      9800000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000001000000000100000E005839B4C876BEF33F000000
+      0000000000CDCCCCCCCCCC004000000000000000000000000000000000000000
+      0000000000000000000000000001000000000000000000000000000098000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000001000000000100000E00000000000000084000000000000000
+      00CDCCCCCCCCCC00400000000000000000000000000000000000000000000000
+      000000000000000000010000000000000000000000000000}
+    Sounds.TemplateIndex = 0
+    Left = 252
+    Top = 24
+    MtxDataValues = {}
+  end
+  object SignalStoreBuffer: TSignalStoreBuffer
+    Length = 0
+    SamplingFrequency = 1.000000000000000000
+    ActualBufferSize = 0
+    IncrementStep = 1.500000000000000000
+    Input = SignalBuffer
+    Left = 411
+    Top = 24
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer1: TSpectrumAnalyzer
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 8.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    ZeroPadding = 16
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    LogSpan = ls200
+    ScaleFactor = 1.000000000000000000
+    Input = SignalStoreBuffer
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    DCDump = False
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 90.000000000000000000
+    Window = wtKaiser
+    Left = 495
+    Top = 27
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer2: TSpectrumAnalyzer
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 40.000000000000000000
+    Left = 567
+    Top = 24
+    MtxDataValues = {}
+  end
+end

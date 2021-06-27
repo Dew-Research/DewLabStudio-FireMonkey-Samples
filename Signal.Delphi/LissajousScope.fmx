@@ -1,0 +1,308 @@
+object LissajousScopeForm: TLissajousScopeForm
+  Left = 0
+  Top = 0
+  Caption = 'Lissajous scope'
+  ClientHeight = 382
+  ClientWidth = 563
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 325.000000000000000000
+    Size.Width = 563.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 227.000000000000000000
+      Position.Y = 21.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Samples:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 13.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 159.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartButton: TButton
+        Position.X = 9.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '      Chart       '
+        TextSettings.WordWrap = True
+        OnClick = ChartButtonClick
+      end
+    end
+    object SamplesBox: TComboBox
+      Position.X = 319.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 135.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = SamplesBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = '500'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '1000'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = '2000'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = '3000'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = '4000'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = '8000'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = '16000'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 563.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 555.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 563.000000000000000000
+    Size.Height = 249.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object PhaseChart: TChart
+      BackWall.Brush.Gradient.Direction = gdBottomTop
+      BackWall.Brush.Gradient.EndColor = claWhite
+      BackWall.Brush.Gradient.StartColor = x00EAEAEA
+      BackWall.Color = claWhite
+      BackWall.Transparent = False
+      Foot.Font.Family = 'Verdana'
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.Direction = gdBottomTop
+      Gradient.EndColor = claWhite
+      Gradient.MidColor = x00EAEAEA
+      Gradient.StartColor = x00EAEAEA
+      LeftWall.Color = x00E0FFFF
+      Legend.Font.Family = 'Verdana'
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      RightWall.Color = x00E0FFFF
+      SubFoot.Font.Family = 'Verdana'
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      SubTitle.Font.Family = 'Verdana'
+      Title.Font.Family = 'Verdana'
+      Title.Text.Strings = (
+        'Lissajous')
+      BottomAxis.Automatic = False
+      BottomAxis.AutomaticMinimum = False
+      BottomAxis.Axis.Color = x00404040
+      BottomAxis.Axis.Fill.Color = x00404040
+      BottomAxis.Grid.Color = x00A9A9A9
+      BottomAxis.Grid.Fill.Color = x00A9A9A9
+      BottomAxis.Increment = 10.000000000000000000
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 513.976966609082600000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.TicksInner.Color = x00A9A9A9
+      BottomAxis.TicksInner.Fill.Color = x00A9A9A9
+      BottomAxis.Title.Font.Family = 'Verdana'
+      ClipPoints = False
+      DepthAxis.Axis.Color = x00404040
+      DepthAxis.Axis.Fill.Color = x00404040
+      DepthAxis.Grid.Color = x00A9A9A9
+      DepthAxis.Grid.Fill.Color = x00A9A9A9
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthAxis.TicksInner.Color = x00A9A9A9
+      DepthAxis.TicksInner.Fill.Color = x00A9A9A9
+      DepthAxis.Title.Font.Family = 'Verdana'
+      DepthTopAxis.Axis.Color = x00404040
+      DepthTopAxis.Axis.Fill.Color = x00404040
+      DepthTopAxis.Grid.Color = x00A9A9A9
+      DepthTopAxis.Grid.Fill.Color = x00A9A9A9
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.TicksInner.Color = x00A9A9A9
+      DepthTopAxis.TicksInner.Fill.Color = x00A9A9A9
+      DepthTopAxis.Title.Font.Family = 'Verdana'
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.Axis.Color = x00404040
+      LeftAxis.Axis.Fill.Color = x00404040
+      LeftAxis.Grid.Color = x00A9A9A9
+      LeftAxis.Grid.Fill.Color = x00A9A9A9
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 769.629247909774100000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.TicksInner.Color = x00A9A9A9
+      LeftAxis.TicksInner.Fill.Color = x00A9A9A9
+      LeftAxis.Title.Font.Family = 'Verdana'
+      RightAxis.Automatic = False
+      RightAxis.AutomaticMinimum = False
+      RightAxis.Axis.Color = x00404040
+      RightAxis.Axis.Fill.Color = x00404040
+      RightAxis.Grid.Color = x00A9A9A9
+      RightAxis.Grid.Fill.Color = x00A9A9A9
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.TicksInner.Color = x00A9A9A9
+      RightAxis.TicksInner.Fill.Color = x00A9A9A9
+      RightAxis.Title.Font.Family = 'Verdana'
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Automatic = False
+      TopAxis.AutomaticMinimum = False
+      TopAxis.Axis.Color = x00404040
+      TopAxis.Axis.Fill.Color = x00404040
+      TopAxis.Grid.Color = x00A9A9A9
+      TopAxis.Grid.Fill.Color = x00A9A9A9
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.TicksInner.Color = x00A9A9A9
+      TopAxis.TicksInner.Fill.Color = x00A9A9A9
+      TopAxis.Title.Font.Family = 'Verdana'
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Mode = pmNotXor
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      TabOrder = 0
+      Size.Width = 563.000000000000000000
+      Size.Height = 249.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object Series1: TSignalPolarSeries
+        HoverElement = []
+        XValues.Name = 'Angle'
+        XValues.Order = loNone
+        YValues.Name = 'Radius'
+        YValues.Order = loNone
+        Frame.InnerBrush.Kind = Gradient
+        Frame.InnerBrush.Gradient.EndColor = claGray
+        Frame.InnerBrush.Gradient.MidColor = claWhite
+        Frame.InnerBrush.Gradient.StartColor = xFF404040
+        Frame.InnerBrush.Gradient.Visible = True
+        Frame.InnerBrush.BackColor = claRed
+        Frame.MiddleBrush.Kind = Gradient
+        Frame.MiddleBrush.Gradient.EndColor = xFF828282
+        Frame.MiddleBrush.Gradient.MidColor = claWhite
+        Frame.MiddleBrush.Gradient.StartColor = claGray
+        Frame.MiddleBrush.Gradient.Visible = True
+        Frame.MiddleBrush.BackColor = claYellow
+        Frame.OuterBrush.Kind = Gradient
+        Frame.OuterBrush.Gradient.EndColor = xFF404040
+        Frame.OuterBrush.Gradient.MidColor = claWhite
+        Frame.OuterBrush.Gradient.StartColor = claSilver
+        Frame.OuterBrush.Gradient.Visible = True
+        Frame.OuterBrush.BackColor = claGreen
+        Frame.Width = 4
+        Shadow.Visible = False
+        AngleIncrement = 10.000000000000000000
+        AngleValues.Name = 'Angle'
+        AngleValues.Order = loNone
+        Brush.Color = claWhite
+        Brush.Kind = None
+        CloseCircle = False
+        Pen.Color = xFF4466A3
+        Pen.Fill.Color = xFF4466A3
+        Pen.Visible = False
+        Pointer.Brush.Gradient.EndColor = x00A36644
+        Pointer.Gradient.EndColor = x00A36644
+        Pointer.InflateMargins = True
+        Pointer.Style = psSmallDot
+      end
+    end
+  end
+  object ChartEditor: TChartEditor
+    Chart = PhaseChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 288
+    Top = 24
+  end
+  object SignalTimer1: TSignalTimer
+    Enabled = True
+    Interval = 50
+    Frequency = 20.000000000000000000
+    OnTimer = SignalTimer1Timer
+    Left = 165
+    Top = 21
+    MtxDataValues = {}
+  end
+  object SignalIn1: TSignalIn
+    IsDouble = True
+    ChannelCount = 2
+    SamplingFrequency = 44100.000000000000000000
+    BufferSize = 32000
+    UsesInputs = False
+    TriggerChannel = chLeft
+    TriggerDelay = 0
+    TriggerPosition = tpAfter
+    TriggerMode = trCrossing
+    Triggering = trNone
+    Left = 81
+    Top = 15
+    MtxDataValues = {}
+  end
+  object Signal1: TSignal
+    IsDouble = True
+    SamplingFrequency = 1.000000000000000000
+    Left = 381
+    Top = 18
+    MtxDataValues = {}
+  end
+  object Signal2: TSignal
+    IsDouble = True
+    SamplingFrequency = 1.000000000000000000
+    Left = 480
+    Top = 21
+    MtxDataValues = {}
+  end
+end

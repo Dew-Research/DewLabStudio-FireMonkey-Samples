@@ -1,0 +1,4 @@
+inherited QStart: TQStart
+  Caption = 'QStart'
+  DesignerMasterStyle = 0
+end

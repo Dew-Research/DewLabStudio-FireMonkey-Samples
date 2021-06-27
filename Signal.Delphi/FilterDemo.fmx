@@ -1,0 +1,336 @@
+object FiltersDemoForm: TFiltersDemoForm
+  Position.X = 301
+  Position.Y = 280
+  Width = 696
+  Height = 393
+  Caption = 'Filter demo'
+  OnCreate = FormCreate
+  object Panel1: TPanel
+Position.Point = '(0,327)'
+    Width = 688
+    Height = 39
+    Align = alBottom
+    TabOrder = 0
+    object Label1: TLabel
+Position.Point = '(320,15)'
+      Width = 24
+      Height = 13
+      Text = 'Freq:'
+WordWrap = False
+AutoSize = True
+    end
+    object Label2: TLabel
+Position.Point = '(412,15)'
+      Width = 33
+      Height = 13
+      Text = 'Phase:'
+WordWrap = False
+AutoSize = True
+    end
+    object Label3: TLabel
+Position.Point = '(500,15)'
+      Width = 29
+      Height = 13
+      Text = 'Amplt:'
+WordWrap = False
+AutoSize = True
+    end
+    object ToolBar1: TToolBar
+      Position.X = 4
+      Position.Y = 9
+      Width = 309
+      Height = 31
+      Align = alNone
+      ButtonHeight = 21
+      ButtonWidth = 82
+      EdgeBorders = []
+      Flat = True
+      ShowCaptions = True
+      TabOrder = 0
+      Wrapable = False
+      object SpectrumEditButton: TButton
+Position.Point = '(0,0)'
+        Text = '    Spectrum      '
+        OnClick = SpectrumEditButtonClick
+WordWrap = True
+      end
+      object ChartEditButton: TButton
+Position.Point = '(82,0)'
+        Text = 'Spectrum chart'
+        OnClick = ChartEditButtonClick
+WordWrap = True
+      end
+      object ToolButton1: TButton
+Position.Point = '(164,0)'
+        Text = 'Signal chart'
+        OnClick = ToolButton1Click
+WordWrap = True
+      end
+    end
+    object FreqEdit: TMtxFloatEdit
+      Position.X = 346
+      Position.Y = 9
+      Width = 61
+      Height = 22
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Position = 0.010000000000000000
+      IntPosition = 0
+      Scientific = False
+      ReFormat = '0.0000;-0.0000'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.0002'
+      MaxValue = '0'
+      MinValue = '0'
+      TabOrder = 1
+      Value = '0.0100'
+      OnChange = FreqEditChange
+    end
+    object PhaseEdit: TMtxFloatEdit
+      Position.X = 448
+      Position.Y = 9
+      Width = 47
+      Height = 22
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      IntPosition = 0
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      TabOrder = 2
+      Value = '0'
+      OnChange = FreqEditChange
+    end
+    object AmpltEdit: TMtxFloatEdit
+      Position.X = 534
+      Position.Y = 9
+      Width = 47
+      Height = 22
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Position = 1
+      IntPosition = 1
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      TabOrder = 3
+      Value = '1.0'
+      OnChange = FreqEditChange
+    end
+  end
+  object RichEdit1: TMemo
+    Position.X = 0
+    Position.Y = 0
+    Width = 688
+    Height = 76
+    Align = alTop
+    Color = 16768991
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object Panel2: TPanel
+Position.Point = '(0,76)'
+    Width = 688
+    Height = 251
+    Align = alClient
+    TabOrder = 2
+    OnResize = Panel2Resize
+    object Splitter1: TSplitter
+Position.Point = '(0,120)'
+      Width = 688
+      Height = 4
+      Cursor = crVSplit
+      Align = alTop
+    end
+    object SpectrumChart: TSpectrumChart
+      Position.X = 0
+      Position.Y = 0
+      Width = 688
+      Height = 120
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = clWhite
+      Gradient.StartColor = 12615680
+      Gradient.Visible = True
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Frequency spectrum')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Frequency [Hz]'
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMaximum = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.Maximum = 1157
+      LeftAxis.Minimum = -47.500000000000000000
+      Zoom.Pen.Color = clBlack
+      Align = alTop
+      TabOrder = 0
+      SpectrumPart = spAmplt
+      Spectrums = <
+        item
+          Input = SpectrumAnalyzer
+        end>
+      object Series1: TFastLineSeries
+        Marks.ArrowLength = 8
+        Marks.Callout.Brush.Color = clBlack
+        Marks.Callout.Length = 8
+        Marks.Visible = False
+        SeriesColor = 10485760
+        LinePen.Color = 10485760
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+      end
+      object Series2: TPointSeries
+        Marks.ArrowLength = 0
+        Marks.Callout.Brush.Color = clBlack
+        Marks.Callout.Distance = 10
+        Marks.Callout.Length = 0
+        Marks.Transparent = True
+        Marks.Visible = True
+        SeriesColor = clGreen
+        ClickableLine = False
+        Pointer.Brush.Color = clRed
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+      end
+      object ChartTool1: TAxisScaleTool
+        UpperMargin = 20
+        LowerMargin = 5
+        AxisScaleMode = amPeakHold
+        DataIsSpectrum = True
+        AxisID = 2
+      end
+      object ChartTool2: TSpectrumMarkTool
+        CursorActive = False
+        MarkSeries = Series2
+        DoubleClickClear = True
+        Series = Series1
+        PeakFilterMode = False
+        MarkMode = mmSingle
+        MarkType = mtAmpltPhase
+        AmpltFormat = '0.0000'
+        PhaseFormat = '0.0000'
+        FreqFormat = '0.0000'
+        LabelHeaders = True
+        PeakZoomBand = False
+      end
+    end
+    object SignalChart: TSignalChart
+      Position.X = 0
+      Position.Y = 124
+      Width = 688
+      Height = 127
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = clWhite
+      Gradient.StartColor = 12615680
+      Gradient.Visible = True
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Signal')
+      Zoom.Pen.Color = clBlack
+      Align = alClient
+      TabOrder = 1
+      Signals = <
+        item
+          Input = Signal1
+        end>
+      object Series3: TFastLineSeries
+        Marks.ArrowLength = 8
+        Marks.Callout.Brush.Color = clBlack
+        Marks.Callout.Length = 8
+        Marks.Visible = False
+        SeriesColor = 10485760
+        LinePen.Color = 10485760
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+      end
+    end
+    object SignalChart1: TSignalChart
+      Position.X = 0
+      Position.Y = 124
+      Width = 688
+      Height = 0
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'TSignalChart')
+      Align = alTop
+      TabOrder = 2
+      Signals = <>
+    end
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    SamplingFrequency = 1
+    SamplingTime = 128
+    HzRes = 0.007812500000000000
+    Dt = 1
+    Averages = 0
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Bands.TemplateIndex = -1
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1
+    CZT.StopRadius = 1
+    ExpWindow = 0.010000000000000000
+    Input = Signal1
+    Peaks.Interpolation.Method = imNumeric
+    Peaks.TraceMethod = ptLargest
+    Peaks.HarmonicsCount = 10
+    Peaks.OrderFrequency = 1
+    PhaseRange = prPiPi
+    RealCepstrum = False
+    ScaleFactor = 1
+    SidelobeAtt = 60
+    Window = wtKaiser
+    Position.X = 422
+    Position.Y = 117
+  end
+  object SpectrumAnalyzerDialog: TSpectrumAnalyzerDialog
+    ShowLive = True
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Continuous = False
+    Source = SpectrumAnalyzer
+    Position.X = 422
+    Position.Y = 75
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    Position.X = 424
+    Position.Y = 159
+  end
+  object Signal1: TSignal
+    OnAfterUpdate = Signal1AfterUpdate
+    Length = 512
+    SamplingFrequency = 1
+    Position.X = 374
+    Position.Y = 117
+  end
+  object ChartEditor1: TChartEditor
+    Chart = SignalChart
+    Position.X = 510
+    Position.Y = 216
+  end
+end

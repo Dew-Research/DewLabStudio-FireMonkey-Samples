@@ -1,0 +1,8 @@
+inherited WhatIsNewForm: TWhatIsNewForm
+  Caption = 'What is new'
+  DesignerMasterStyle = 0
+  inherited RichEdit1: TMemo
+    Viewport.Width = 688.000000000000000000
+    Viewport.Height = 446.000000000000000000
+  end
+end

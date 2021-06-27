@@ -1,0 +1,389 @@
+object CoherenceTest2Form: TCoherenceTest2Form
+  Left = 0
+  Top = 0
+  Caption = 'Cross-spectrum analyzer'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object SpectrumChart: TSpectrumChart
+    Gradient.EndColor = claWhite
+    Gradient.StartColor = x00C08000
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Frequency spectrum')
+    BottomAxis.LabelsSeparation = 0
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.MinorTicks.Visible = False
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 709.500000000000000000
+    LeftAxis.Minimum = -16.750000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Amplitude [dB]'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 0
+    Size.Width = 688.000000000000000000
+    Size.Height = 258.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        InputsItemIndex = 0
+        Input = CrossAnalyzer
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object Series1: TFastLineSeries
+      SeriesColor = x00A00000
+      LinePen.Color = claBlue
+      LinePen.Fill.Color = claBlue
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TPointSeries
+      Marks.Transparent = True
+      Marks.Visible = True
+      Marks.Arrow.Visible = False
+      Marks.Callout.Arrow.Visible = False
+      Marks.Callout.Length = 10
+      ClickableLine = False
+      Pointer.Brush.Color = claRed
+      Pointer.Brush.Gradient.EndColor = claGreen
+      Pointer.Gradient.EndColor = claGreen
+      Pointer.InflateMargins = True
+      Pointer.Style = psCircle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object ChartTool1: TAxisScaleTool
+      UpperMargin = 20
+      LowerMargin = 5
+      AxisScaleMode = amAuto
+      DataIsSpectrum = True
+      AxisID = 2
+    end
+    object ChartTool2: TSpectrumMarkTool
+      CursorActive = True
+      MarkSeries = Series2
+      DoubleClickClear = True
+      Series = Series1
+      PeakFilterMode = False
+      MarkMode = mmSingle
+      MarkType = mtAmplt
+      AmpltFormat = '0.00#'
+      PhaseFormat = '0.00#'
+      FreqFormat = '0.00#'
+      LabelHeaders = True
+      PeakZoomBand = False
+      ConfLabels = cnfNone
+    end
+  end
+  object EditPanel: TPanel
+    Align = Bottom
+    Position.Y = 258.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 101.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 142.000000000000000000
+      Position.Y = 66.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Samples:'
+    end
+    object ProgressLabel: TLabel
+      AutoSize = True
+      Position.X = 399.000000000000000000
+      Position.Y = 66.000000000000000000
+      Size.Width = 124.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Progress: 0 [%]'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 8.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 530.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartEditButton: TButton
+        Position.X = 9.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '         Chart        '
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+      object EditSpectrumButton: TButton
+        Position.X = 134.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Spectrum'
+        TextSettings.WordWrap = True
+        OnClick = EditSpectrumButtonClick
+      end
+      object UpdateButton: TButton
+        Position.X = 262.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Process all'
+        TextSettings.WordWrap = True
+        OnClick = UpdateButtonClick
+      end
+      object OptionsButton: TButton
+        PopupMenu = PopupMenu1
+        Position.X = 387.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Options'
+        TextSettings.WordWrap = True
+        OnClick = OptionsButtonClick
+      end
+    end
+    object PhaseBox: TCheckBox
+      Position.X = 11.000000000000000000
+      Position.Y = 69.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Phase'
+      OnClick = PhaseBoxClick
+    end
+    object SamplesBox: TComboBox
+      DisableFocusEffect = False
+      Position.X = 228.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 127.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnChange = SamplesBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = '16'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = '32'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = '64'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = '128'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = '256'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = '512'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = '1024'
+      end
+      object TListBoxItem
+        TabOrder = 7
+        Text = '2048'
+      end
+      object TListBoxItem
+        TabOrder = 8
+        Text = '4096'
+      end
+      object TListBoxItem
+        TabOrder = 9
+        Text = '8192'
+      end
+      object TListBoxItem
+        TabOrder = 10
+        Text = '16384'
+      end
+      object TListBoxItem
+        TabOrder = 11
+        Text = '32768'
+      end
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Left = 339
+    Top = 24
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 600
+    Top = 165
+    object Openfile1: TMenuItem
+      Text = 'Open file 1...'
+      OnClick = Openfile1Click
+    end
+    object OpenFile2: TMenuItem
+      Text = 'Open file 2...'
+      OnClick = OpenFile2Click
+    end
+    object N1: TMenuItem
+      Text = '-'
+    end
+    object Copychart: TMenuItem
+      Text = 'Copy chart'
+      OnClick = CopychartClick
+    end
+    object N2: TMenuItem
+      Text = '-'
+    end
+    object Saveconfiguration: TMenuItem
+      Text = 'Save configuration'
+      OnClick = SaveconfigurationClick
+    end
+    object Loadconfiguration: TMenuItem
+      Text = 'Load configuration'
+      OnClick = LoadconfigurationClick
+    end
+  end
+  object SaveDialog: TSaveDialog
+    Left = 558
+    Top = 222
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 249
+    Top = 153
+  end
+  object SignalRead1: TSignalRead
+    Length = 2048
+    SamplingFrequency = 4666.666666666670000000
+    FileFormat = ffSfs
+    FileName = 'BZ.SFS'
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 408
+    Top = 165
+    MtxDataValues = {}
+  end
+  object CrossAnalyzer: TCrossSpectrumAnalyzer
+    OnParameterUpdate = CrossAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 16.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    ZeroPadding = 8
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Input = SignalRead1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    Stats.Averaging = avLinearInf
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    UnwrapPhase = True
+    SidelobeAtt = 40.000000000000000000
+    Window = wtHanning
+    Left = 483
+    Top = 159
+    MtxDataValues = {}
+  end
+  object CrossSpectrumAnalyzerDialog: TCrossSpectrumAnalyzerDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = CrossAnalyzer
+    SourceListIndex = 0
+    Left = 321
+    Top = 153
+    MtxDataValues = {}
+  end
+  object SignalRead2: TSignalRead
+    Length = 2048
+    SamplingFrequency = 4666.666666666670000000
+    FileFormat = ffSfs
+    FileName = 'BZ.SFS'
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 162
+    Top = 144
+    MtxDataValues = {}
+  end
+end

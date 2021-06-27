@@ -1,0 +1,314 @@
+object PhaseShifterForm: TPhaseShifterForm
+  Left = 0
+  Top = 0
+  Caption = 'Phase shifter'
+  ClientHeight = 421
+  ClientWidth = 853
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object SpectrumChart: TSpectrumChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Gradient.EndColor = x00C08000
+    Legend.Brush.Gradient.StartColor = x00C08000
+    Legend.CheckBoxes = True
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    Legend.Visible = False
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Font.Color = claWhite
+    Title.Font.Brush.Color = claWhite
+    Title.Text.Strings = (
+      'Frequency response of optimal FIR filter')
+    BottomAxis.LabelsSeparation = 0
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MinorTicks.Visible = False
+    BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    LeftAxis.AxisValuesFormat = '#,##0.00###'
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 292.500000000000000000
+    LeftAxis.Minimum = 0.337500000000002900
+    LeftAxis.Title.Caption = 'Amplitude'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Align = Client
+    TabOrder = 0
+    Size.Width = 853.000000000000000000
+    Size.Height = 269.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        InputsItemIndex = 0
+        UnitScaleXAxis = 1.000000000000000000
+        Input = SpectrumAnalyzer
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object Series1: TFastLineSeries
+      HoverElement = []
+      SeriesColor = claBlue
+      Title = 'Response'
+      LinePen.Color = claBlue
+      LinePen.Fill.Color = claBlue
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TFastLineSeries
+      HoverElement = []
+      Title = 'Error'
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series3: TPointSeries
+      HoverElement = [heCurrent]
+      Legend.Visible = False
+      Marks.Visible = True
+      Marks.Arrow.Visible = False
+      Marks.Callout.Arrow.Visible = False
+      Marks.Callout.Length = 10
+      ShowInLegend = False
+      Title = 'Marks'
+      ClickableLine = False
+      Pointer.Brush.Color = claRed
+      Pointer.Brush.Gradient.EndColor = claGreen
+      Pointer.Gradient.EndColor = claGreen
+      Pointer.HorizSize = 3
+      Pointer.InflateMargins = True
+      Pointer.Style = psCircle
+      Pointer.VertSize = 3
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object ChartTool1: TAxisScaleTool
+      UpperMargin = 20
+      LowerMargin = 5
+      AxisScaleMode = amAuto
+      DataIsSpectrum = True
+      AxisID = 2
+    end
+    object ChartTool2: TSpectrumMarkTool
+      CursorActive = True
+      MarkSeries = Series3
+      DoubleClickClear = True
+      Series = Series1
+      PeakFilterMode = False
+      MarkMode = mmFreeStyle
+      MarkType = mtAmplt
+      AmpltFormat = '0.00#'
+      PhaseFormat = '0.00#'
+      FreqFormat = '0.00#'
+      LabelHeaders = True
+      PeakZoomBand = False
+      ConfLabels = cnfNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 345.000000000000000000
+    Size.Width = 853.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object FirLengthLabel: TLabel
+      AutoSize = True
+      Position.X = 647.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 87.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'FIR length:'
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 318.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 117.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Transition BW:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 488.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 45.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Filter:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 7.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 294.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpectrumEditButton: TButton
+        Position.X = 9.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '      Spectrum      '
+        TextSettings.WordWrap = True
+        OnClick = SpectrumEditButtonClick
+      end
+      object ChartEditButton: TButton
+        Position.X = 148.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Chart'
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+    end
+    object TransBWEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = True
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.001'
+      MaxValue = '0.5'
+      MinValue = '0'
+      Value = '0.05'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 320.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 134.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = TransBWEditChange
+    end
+    object DiffBox: TComboBox
+      Position.X = 489.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 262.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnChange = TransBWEditChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Hilbert type III (window)'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Hilbert type IV (window)'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'Hilbert type III (remez)'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = 'Hilbert type IV (remez)'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 853.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 845.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 40.000000000000000000
+    Window = wtHanning
+    Left = 417
+    Top = 15
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzerDialog: TSpectrumAnalyzerDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SpectrumAnalyzer
+    SourceListIndex = 0
+    Left = 318
+    Top = 15
+    MtxDataValues = {}
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 180
+    Top = 18
+  end
+end

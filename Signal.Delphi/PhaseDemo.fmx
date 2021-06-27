@@ -1,0 +1,196 @@
+object PhaseDemoForm: TPhaseDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'Phase demo'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 297.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 62.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 161.000000000000000000
+      Position.Y = 18.000000000000000000
+      Size.Width = 86.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Fir length:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 389.000000000000000000
+      Position.Y = 21.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Zero padding power:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 10.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartEditButton: TButton
+        Position.X = 6.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '       Chart       '
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+    end
+    object StepEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '64'
+      MinValue = '4'
+      Value = '60'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 253.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 117.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = StepEditChange
+    end
+    object ZeroPaddEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '10'
+      MinValue = '1'
+      Value = '4'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 560.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 95.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = StepEditChange
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Top
+    Size.Width = 688.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ReadOnly = True
+    TextSettings.WordWrap = True
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 688.000000000000000000
+    Size.Height = 221.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Splitter1: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Size.Width = 688.000000000000000000
+      Size.Height = 3.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SignalChart1: TSignalChart
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Phase spectrum')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Frequency'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 612.500000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Degrees'
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Align = Client
+      BevelOuter = bvNone
+      TabOrder = 0
+      Size.Width = 688.000000000000000000
+      Size.Height = 218.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          InputsItemIndex = 0
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+      object Series1: TSignalDiscreteSeries
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = claRed
+        Pointer.Gradient.EndColor = claRed
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        UseYOrigin = True
+      end
+    end
+  end
+  object ChartEditor: TChartEditor
+    Chart = SignalChart1
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 264
+    Top = 9
+  end
+end

@@ -1,0 +1,349 @@
+object CepstrumDemoForm: TCepstrumDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'CepstrumDemoForm'
+  ClientHeight = 426
+  ClientWidth = 653
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnResize = FormResize
+  DesignerMasterStyle = 3
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 653.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 645.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Bottom
+    Position.Y = 360.000000000000000000
+    Size.Width = 653.000000000000000000
+    Size.Height = 66.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 462.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Cepstrum:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 10.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 435.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpectrumEditButton: TButton
+        Position.X = 6.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '    Spectrum      '
+        TextSettings.WordWrap = True
+        OnClick = SpectrumEditButtonClick
+      end
+      object ChartEditButton: TButton
+        Position.X = 130.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 159.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Spectrum chart'
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+      object ToolButton1: TButton
+        Position.X = 296.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 131.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Chart'
+        TextSettings.WordWrap = True
+        OnClick = ToolButton1Click
+      end
+    end
+    object CepstrumBox: TComboBox
+      DisableFocusEffect = False
+      Position.X = 462.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 142.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = CepstrumBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Real'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Complex'
+      end
+    end
+  end
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 653.000000000000000000
+    Size.Height = 284.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Splitter2: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Position.Y = 139.000000000000000000
+      Size.Width = 653.000000000000000000
+      Size.Height = 3.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SpectrumChart2: TSpectrumChart
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Frequency spectrum')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Frequency [Hz]'
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Top
+      TabOrder = 0
+      Size.Width = 653.000000000000000000
+      Size.Height = 139.000000000000000000
+      Size.PlatformDefault = False
+      Spectrums = <
+        item
+          SeriesName = 'FastLineSeries1'
+          Series = FastLineSeries1
+          InputsItemIndex = 0
+          Input = SpectrumAnalyzer1
+        end>
+      ConfidenceIntervalIndex = 0
+      ConfidenceIntervalVisible = False
+      ColorPaletteIndex = 0
+      object FastLineSeries1: TFastLineSeries
+        SeriesColor = claWhite
+        LinePen.Color = claBlue
+        LinePen.Fill.Color = claBlue
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object SignalDiscreteSeries1: TSignalDiscreteSeries
+        Marks.Transparent = True
+        Marks.Arrow.Visible = False
+        Marks.Callout.Arrow.Visible = False
+        Marks.Callout.Length = 10
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = claGreen
+        Pointer.Gradient.EndColor = claGreen
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object AxisScaleTool1: TAxisScaleTool
+        UpperMargin = 0
+        LowerMargin = 0
+        AxisScaleMode = amAuto
+        DataIsSpectrum = False
+        AxisID = 2
+      end
+      object ChartTool2: TSpectrumMarkTool
+        CursorActive = True
+        MarkSeries = SignalDiscreteSeries1
+        DoubleClickClear = True
+        Series = FastLineSeries1
+        PeakFilterMode = False
+        MarkMode = mmSingle
+        MarkType = mtAmplt
+        AmpltFormat = '0.00#'
+        PhaseFormat = '0.00#'
+        FreqFormat = '0.00#'
+        LabelHeaders = True
+        PeakZoomBand = False
+        ConfLabels = cnfNone
+      end
+    end
+    object SignalChart1: TSignalChart
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Cepstrum')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Spectral frequency (quefrency) [Hz]'
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Client
+      TabOrder = 1
+      Size.Width = 653.000000000000000000
+      Size.Height = 142.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          SeriesName = 'Series1'
+          Series = Series1
+          InputsItemIndex = 0
+          Input = Signal1
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+      object Series1: TFastLineSeries
+        SeriesColor = x00A00000
+        LinePen.Color = claBlue
+        LinePen.Fill.Color = claBlue
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TPointSeries
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = claRed
+        Pointer.Gradient.EndColor = claRed
+        Pointer.HorizSize = 3
+        Pointer.InflateMargins = True
+        Pointer.Style = psDiamond
+        Pointer.VertSize = 3
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TSignalMarkTool
+        CursorActive = True
+        MarkSeries = Series2
+        DoubleClickClear = True
+        Series = Series1
+        AmpltFormat = '0.00#'
+        TimeFormat = '0.00#'
+        MarkMode = tmMaximum
+      end
+    end
+  end
+  object SpectrumAnalyzerDialog1: TSpectrumAnalyzerDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SpectrumAnalyzer1
+    SourceListIndex = 0
+    Left = 549
+    Top = 24
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer1: TSpectrumAnalyzer
+    OnAfterUpdate = SpectrumAnalyzer1AfterUpdate
+    OnParameterUpdate = SpectrumAnalyzer1ParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 64.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    ZeroPadding = 2
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Input = SignalRead1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    RunningPhase = rpDefault
+    SidelobeAtt = 40.000000000000000000
+    Window = wtHanning
+    Left = 447
+    Top = 18
+    MtxDataValues = {}
+  end
+  object SignalRead1: TSignalRead
+    Length = 1024
+    SamplingFrequency = 4666.666666666669000000
+    FileFormat = ffSfs
+    FileName = 'D:\CommonObjects\SignalProcessing\CZT\BZ.SFS'
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 306
+    Top = 18
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    Chart = SpectrumChart2
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 108
+    Top = 285
+  end
+  object Signal1: TSignal
+    SamplingFrequency = 1.000000000000000000
+    Left = 117
+    Top = 24
+    MtxDataValues = {}
+  end
+  object ChartEditor2: TChartEditor
+    Chart = SignalChart1
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 84
+    Top = 123
+  end
+end

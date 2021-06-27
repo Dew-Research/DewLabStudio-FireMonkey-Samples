@@ -1,0 +1,240 @@
+object SignalAnalysisDemoForm: TSignalAnalysisDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'Analysis demo'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 294.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 308.000000000000000000
+      Position.Y = 21.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Transform:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 10.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 282.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartEditButton: TButton
+        Position.X = 15.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '       Chart       '
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+      object AnalysisButton: TButton
+        Position.X = 146.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Analysis'
+        TextSettings.WordWrap = True
+        OnClick = AnalysisButtonClick
+      end
+    end
+    object FilterBox: TComboBox
+      DisableFocusEffect = False
+      Position.X = 405.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = FilterBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Window'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'AutoCorr'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'CrossCorr'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = 'Dct'
+      end
+      object TListBoxItem
+        TabOrder = 4
+        Text = 'InverseDct'
+      end
+      object TListBoxItem
+        TabOrder = 5
+        Text = 'RealCepstrum'
+      end
+      object TListBoxItem
+        TabOrder = 6
+        Text = 'CplxCepstrum'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 688.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 680.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 688.000000000000000000
+    Size.Height = 218.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Splitter1: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Size.Width = 688.000000000000000000
+      Size.Height = 3.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SignalChart1: TSignalChart
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Time signal')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.MaximumOffset = 1
+      BottomAxis.MinimumOffset = 1
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Time [s]'
+      LeftAxis.MaximumOffset = 1
+      LeftAxis.MinimumOffset = 1
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Client
+      BevelOuter = bvNone
+      TabOrder = 0
+      Size.Width = 688.000000000000000000
+      Size.Height = 215.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          SeriesName = 'Series3'
+          Series = Series3
+          InputsItemIndex = 0
+          Input = SignalAnalyzer1
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 13
+      object Series3: TFastLineSeries
+        SeriesColor = x00A00000
+        Title = 'Original'
+        LinePen.Color = claBlue
+        LinePen.Fill.Color = claBlue
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series1: TPointSeries
+        SeriesColor = claRed
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = x00A36644
+        Pointer.Gradient.EndColor = x00A36644
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TSignalMarkTool
+        CursorActive = True
+        MarkSeries = Series1
+        DoubleClickClear = True
+        Series = Series3
+        AmpltFormat = '0.00#'
+        TimeFormat = '0.00#'
+        MarkMode = tmFreeStyle
+      end
+    end
+  end
+  object ChartEditor: TChartEditor
+    Chart = SignalChart1
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 156
+    Top = 153
+  end
+  object SignalRead1: TSignalRead
+    Length = 1024
+    SamplingFrequency = 4666.666666666667000000
+    FileFormat = ffSfs
+    FileName = 'BZ.SFS'
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 219
+    Top = 159
+    MtxDataValues = {}
+  end
+  object SignalAnalyzer1: TSignalAnalyzer
+    OnParameterUpdate = SignalAnalyzer1ParameterUpdate
+    SamplingFrequency = 1.000000000000000000
+    Inputs = <
+      item
+        Input = SignalRead1
+      end>
+    AutoCorrType = ctNormal
+    SidelobeAtt = 40.000000000000000000
+    ScaleFactor = 1.000000000000000000
+    Window = wtRectangular
+    Transform = ttWindow
+    Integration = inNone
+    ExpWindow = 0.010000000000000000
+    Left = 300
+    Top = 162
+    MtxDataValues = {}
+  end
+  object SignalAnalyzerDialog1: TSignalAnalyzerDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SignalAnalyzer1
+    SourceListIndex = 0
+    Left = 303
+    Top = 108
+    MtxDataValues = {}
+  end
+end

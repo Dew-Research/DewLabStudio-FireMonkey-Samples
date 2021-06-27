@@ -1,0 +1,40 @@
+object Introduction: TIntroduction
+  Left = 0
+  Top = 0
+  Caption = 'Introduction'
+  ClientHeight = 329
+  ClientWidth = 506
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    Align = Top
+    StyledSettings = [FontColor]
+    Size.Width = 506.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.HorzAlign = Center
+    TextSettings.WordWrap = False
+    Text = 'Welcome to DSP Master  v6'
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    StyledSettings = [Family, Style, FontColor]
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Align = Client
+    Size.Width = 506.000000000000000000
+    Size.Height = 280.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 502.000000000000000000
+    Viewport.Height = 276.000000000000000000
+  end
+end

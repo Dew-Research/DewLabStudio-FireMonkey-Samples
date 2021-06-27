@@ -1,0 +1,9 @@
+inherited IntroPlaybackForm: TIntroPlaybackForm
+  Caption = 'Playback form'
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+end

@@ -1,0 +1,365 @@
+object AsioPlaybackForm: TAsioPlaybackForm
+  Left = 0
+  Top = 0
+  Caption = 'AsioPlaybackForm'
+  ClientHeight = 587
+  ClientWidth = 771
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 232.000000000000000000
+    Size.Width = 771.000000000000000000
+    Size.Height = 3.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object TopChart: TSignalChart
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Channel 0')
+    BottomAxis.AxisValuesFormat = '#,##0.00##'
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.Maximum = 742.125000000000000000
+    LeftAxis.Minimum = 145.375000000000000000
+    Zoom.Animated = True
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Top
+    TabOrder = 0
+    Size.Width = 771.000000000000000000
+    Size.Height = 232.000000000000000000
+    Size.PlatformDefault = False
+    Signals = <
+      item
+        SeriesName = 'Series3'
+        Series = Series3
+        InputsItemIndex = 0
+        Inputs = SignalList
+      end>
+    ComplexSignalPart = cspReal
+    PrintMargins = (
+      15
+      35
+      15
+      35)
+    ColorPaletteIndex = 13
+    object Series3: TFastLineSeries
+      LinePen.Color = claGreen
+      LinePen.Fill.Color = claGreen
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object ChartTool1: TAxisScaleTool
+      UpperMargin = 5
+      LowerMargin = 5
+      AxisScaleMode = amPeakHold
+      DataIsSpectrum = False
+      AxisID = 2
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 405.000000000000000000
+    Size.Width = 771.000000000000000000
+    Size.Height = 182.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Drivers'
+    end
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 175.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Supported FS [Hz]:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 315.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 94.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Output channels:'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 491.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 77.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'ClockSources:'
+    end
+    object StatusLabel: TLabel
+      AutoSize = True
+      Position.X = 11.000000000000000000
+      Position.Y = 155.000000000000000000
+      Size.Width = 39.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Status:'
+    end
+    object DriverNameListBox: TListBox
+      Position.X = 8.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 161.000000000000000000
+      Size.Height = 83.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnClick = DriverNameListBoxClick
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 157.000000000000000000
+      Viewport.Height = 79.000000000000000000
+    end
+    object FSListBox: TListBox
+      Position.X = 175.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 96.000000000000000000
+      Size.Height = 84.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 92.000000000000000000
+      Viewport.Height = 80.000000000000000000
+    end
+    object OutputChBox: TListBox
+      Position.X = 315.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 166.000000000000000000
+      Size.Height = 84.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      MultiSelectStyle = Default
+      Viewport.Width = 162.000000000000000000
+      Viewport.Height = 80.000000000000000000
+    end
+    object StartButton: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 124.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Start'
+      OnClick = StartButtonClick
+    end
+    object StopButton: TButton
+      Position.X = 119.000000000000000000
+      Position.Y = 125.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Stop'
+      OnClick = StopButtonClick
+    end
+    object Button1: TButton
+      Position.X = 227.000000000000000000
+      Position.Y = 126.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Control panel'
+      OnClick = Button1Click
+    end
+    object ClockSourcesBox: TListBox
+      Position.X = 491.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 166.000000000000000000
+      Size.Height = 84.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      DisableFocusEffect = True
+      ItemHeight = 13.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      MultiSelectStyle = Default
+      Viewport.Width = 162.000000000000000000
+      Viewport.Height = 80.000000000000000000
+    end
+    object VolumeTrackBar: TTrackBar
+      CanParentFocus = True
+      Orientation = Horizontal
+      Position.X = 363.000000000000000000
+      Position.Y = 123.000000000000000000
+      Size.Width = 109.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+    end
+  end
+  object BottomChart: TSignalChart
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Channel 1')
+    BottomAxis.AxisValuesFormat = '#,##0.00##'
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    DepthAxis.Automatic = False
+    DepthAxis.AutomaticMaximum = False
+    DepthAxis.AutomaticMinimum = False
+    DepthAxis.AxisValuesFormat = '#,##0.00##'
+    DepthAxis.Maximum = 3.799999999999990000
+    DepthAxis.Minimum = 2.799999999999993000
+    DepthTopAxis.Automatic = False
+    DepthTopAxis.AutomaticMaximum = False
+    DepthTopAxis.AutomaticMinimum = False
+    DepthTopAxis.Maximum = 3.799999999999990000
+    DepthTopAxis.Minimum = 2.799999999999993000
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.Maximum = 610.500000000000000000
+    LeftAxis.Minimum = -5.500000000000000000
+    RightAxis.Automatic = False
+    RightAxis.AutomaticMaximum = False
+    RightAxis.AutomaticMinimum = False
+    Zoom.Animated = True
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 2
+    Size.Width = 771.000000000000000000
+    Size.Height = 170.000000000000000000
+    Size.PlatformDefault = False
+    Signals = <
+      item
+        SeriesName = 'Series2'
+        Series = Series2
+        InputsItemIndex = 1
+        Inputs = SignalList
+      end>
+    ComplexSignalPart = cspReal
+    ColorPaletteIndex = 13
+    object Series2: TMtxFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object ChartTool2: TAxisScaleTool
+      UpperMargin = 5
+      LowerMargin = 5
+      AxisScaleMode = amPeakHold
+      DataIsSpectrum = False
+      AxisID = 2
+    end
+  end
+  object Timer: TTimer
+    Interval = 100
+    OnTimer = TimerTimer
+    Left = 480
+    Top = 60
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'Uncompressed WAV files.|*.wav'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing]
+    Title = 'Select uncompressed wav file'
+    Left = 198
+    Top = 132
+  end
+  object SignalList: TSignalList
+    PropagateTemplate = False
+    Count = 2
+    Left = 396
+    Top = 66
+    MtxDataValues = {
+      07000000545369676E616C5450463007545369676E616C001153616D706C696E
+      674672657175656E6379050000000000000080FF3F0D4D74784461746156616C
+      7565730A00000000000007000000545369676E616C5450463007545369676E61
+      6C001153616D706C696E674672657175656E6379050000000000000080FF3F0D
+      4D74784461746156616C7565730A000000000000}
+  end
+  object ChartEditor1: TChartEditor
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 306
+    Top = 66
+  end
+  object SignalRead: TSignalRead
+    SamplingFrequency = 1.000000000000000000
+    SelectionStop = -1
+    SelectionStart = 0
+    ScaleFactor = 1.000000000000000000
+    ForceLength = True
+    PostBufferSamples = 0
+    Left = 396
+    Top = 150
+    MtxDataValues = {}
+  end
+  object SignalDemuxList: TSignalDemuxList
+    PropagateTemplate = False
+    Count = 0
+    Input = SignalRead
+    Left = 480
+    Top = 138
+    MtxDataValues = {}
+  end
+  object SignalRateConverterList: TSignalRateConverterList
+    PropagateTemplate = False
+    Count = 0
+    OnBeforeUpdate = SignalRateConverterListBeforeUpdate
+    Inputs = SignalDemuxList
+    Left = 303
+    Top = 150
+    MtxDataValues = {}
+  end
+  object SignalAsio: TSignalAsio
+    PropagateTemplate = False
+    Count = 0
+    Inputs = SignalRateConverterList
+    SamplingFrequency = 48000.000000000000000000
+    OnProcessRealTime = SignalAsioProcessRealTime
+    Left = 582
+    Top = 147
+    MtxDataValues = {}
+  end
+end

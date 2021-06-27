@@ -1,0 +1,191 @@
+object IirGroupDelayForm: TIirGroupDelayForm
+  Left = 0
+  Top = 0
+  Caption = 'IIR group delay'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object SpectrumChart: TSpectrumChart
+    Gradient.EndColor = x00C08000
+    Legend.CheckBoxes = True
+    Title.Font.Color = claWhite
+    Title.Font.Brush.Color = claWhite
+    Title.Text.Strings = (
+      'Group delay')
+    BottomAxis.AxisValuesFormat = '#,##0.00'
+    BottomAxis.LabelsSeparation = 20
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.MinorTicks.Visible = False
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Grou delay [samples]'
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 0
+    Size.Width = 688.000000000000000000
+    Size.Height = 230.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        InputsItemIndex = 0
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object ChartTool1: TAxisScaleTool
+      UpperMargin = 20
+      LowerMargin = 5
+      AxisScaleMode = amNone
+      DataIsSpectrum = True
+      AxisID = 2
+    end
+    object ChartTool2: TSpectrumMarkTool
+      CursorActive = True
+      DoubleClickClear = True
+      PeakFilterMode = False
+      MarkMode = mmSingle
+      MarkType = mtAmplt
+      AmpltFormat = '0.00#'
+      PhaseFormat = '0.00#'
+      FreqFormat = '0.00#'
+      LabelHeaders = True
+      PeakZoomBand = False
+      ConfLabels = cnfNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 306.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 53.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 157.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 53.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Order:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 337.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 71.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Att (dB):'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 4.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 127.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartEditButton: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 115.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '      Chart        '
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+    end
+    object OrderEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '45'
+      MinValue = '1'
+      Value = '5'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 219.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = OrderEditChange
+    end
+    object AttEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '200'
+      MinValue = '1'
+      Value = '40'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 414.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 124.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = OrderEditChange
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Top
+    Size.Width = 688.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ReadOnly = True
+    TextSettings.WordWrap = True
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 108
+    Top = 180
+  end
+end

@@ -1,0 +1,144 @@
+object PinkNoiseForm: TPinkNoiseForm
+  Left = 0
+  Top = 0
+  Caption = 'Pink noise'
+  ClientHeight = 452
+  ClientWidth = 635
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object SpectrumChart: TSpectrumChart
+    Legend.Visible = False
+    Title.Text.Strings = (
+      'Frequency response of the designed FIR filter')
+    BottomAxis.Automatic = False
+    BottomAxis.AutomaticMinimum = False
+    BottomAxis.Logarithmic = True
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.Minimum = 0.100000000000000000
+    BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.Automatic = False
+    DepthAxis.AutomaticMaximum = False
+    DepthAxis.AutomaticMinimum = False
+    DepthAxis.Maximum = -1.809999999999999000
+    DepthAxis.Minimum = -2.809999999999996000
+    DepthTopAxis.Automatic = False
+    DepthTopAxis.AutomaticMaximum = False
+    DepthTopAxis.AutomaticMinimum = False
+    DepthTopAxis.Maximum = -1.809999999999999000
+    DepthTopAxis.Minimum = -2.809999999999996000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.Title.Caption = 'Magnitude [dB]'
+    RightAxis.Automatic = False
+    RightAxis.AutomaticMaximum = False
+    RightAxis.AutomaticMinimum = False
+    Zoom.Animated = True
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Align = Client
+    TabOrder = 0
+    Size.Width = 635.000000000000000000
+    Size.Height = 405.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 13
+    object Series1: TMtxFastLineSeries
+      SeriesColor = claBlue
+      LinePen.Color = claBlue
+      LinePen.Fill.Color = claBlue
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 405.000000000000000000
+    Size.Width = 635.000000000000000000
+    Size.Height = 47.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Noise color:'
+    end
+    object FsLabel: TLabel
+      AutoSize = True
+      Position.X = 291.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 170.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Sampling frequency:'
+    end
+    object NoiseBox: TComboBox
+      DisableFocusEffect = False
+      Position.X = 120.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = NoiseBoxChange
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Pink (-10dB/dek)'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Brown(ian) (-20dB/dek)'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'Blue (+10dB/dek)'
+      end
+      object TListBoxItem
+        TabOrder = 3
+        Text = 'Violet (+20dB/dek)'
+      end
+    end
+    object FSEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1000'
+      MaxValue = '1E30'
+      MinValue = '1'
+      Value = '22050'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 467.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 146.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FSEditChange
+    end
+  end
+  object ChartEditor1: TChartEditor
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 228
+    Top = 87
+  end
+end

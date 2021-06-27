@@ -1,0 +1,413 @@
+object MonitorDemoForm: TMonitorDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'Monitor demo'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 300.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 59.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 277.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 71.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Channel:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 7.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 258.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpectrumEditButton: TButton
+        Position.X = 3.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '         Edit        '
+        TextSettings.WordWrap = True
+      end
+      object StartButton: TButton
+        Position.X = 124.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Start'
+        TextSettings.WordWrap = True
+        OnClick = StartButtonClick
+      end
+    end
+    object ChannelBox: TComboBox
+      Position.X = 353.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 119.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Left'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Right'
+      end
+    end
+    object RecordToFileBox: TCheckBox
+      Position.X = 507.000000000000000000
+      Position.Y = 15.000000000000000000
+      Size.Width = 160.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Record to file'
+      OnClick = RecordToFileBoxClick
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 688.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 680.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 688.000000000000000000
+    Size.Height = 224.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnResize = Panel2Resize
+    object Splitter1: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Position.Y = 126.000000000000000000
+      Size.Width = 688.000000000000000000
+      Size.Height = 3.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SpectrumChart: TSpectrumChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'Frequency spectrum')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Frequency [Hz]'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMaximum = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 793.787499999999700000
+      LeftAxis.Minimum = -16.720312499999990000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Align = Top
+      BevelOuter = bvNone
+      TabOrder = 0
+      Size.Width = 688.000000000000000000
+      Size.Height = 126.000000000000000000
+      Size.PlatformDefault = False
+      Spectrums = <
+        item
+          SeriesName = 'Series1'
+          Series = Series1
+          InputsItemIndex = 0
+          Input = SpectrumAnalyzer
+        end>
+      ConfidenceIntervalIndex = 0
+      ConfidenceIntervalVisible = False
+      PrintMargins = (
+        15
+        43
+        15
+        43)
+      ColorPaletteIndex = 0
+      object Series1: TFastLineSeries
+        SeriesColor = x00A00000
+        LinePen.Color = xFF1000A0
+        LinePen.Fill.Color = xFF1000A0
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TPointSeries
+        Marks.Transparent = True
+        Marks.Visible = True
+        Marks.Arrow.Visible = False
+        Marks.Callout.Arrow.Visible = False
+        Marks.Callout.Length = 10
+        SeriesColor = claGreen
+        ClickableLine = False
+        Pointer.Brush.Color = claRed
+        Pointer.Brush.Gradient.EndColor = claGreen
+        Pointer.Gradient.EndColor = claGreen
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TAxisScaleTool
+        UpperMargin = 20
+        LowerMargin = 5
+        AxisScaleMode = amPeakHold
+        DataIsSpectrum = True
+        AxisID = 2
+      end
+      object ChartTool2: TSpectrumMarkTool
+        CursorActive = True
+        MarkSeries = Series2
+        DoubleClickClear = True
+        Series = Series1
+        PeakFilterMode = False
+        MarkMode = mmSingle
+        MarkType = mtAmplt
+        AmpltFormat = '0.00#'
+        PhaseFormat = '0.00#'
+        FreqFormat = '0.00#'
+        LabelHeaders = True
+        PeakZoomBand = False
+        ConfLabels = cnfNone
+      end
+    end
+    object SignalChart: TSignalChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'Time signal')
+      BottomAxis.AxisValuesFormat = '#,##0.000'
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.Title.Caption = 'Time [s]'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 192.500000000000000000
+      LeftAxis.Minimum = 2.500000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Align = Client
+      BevelOuter = bvNone
+      TabOrder = 1
+      Size.Width = 688.000000000000000000
+      Size.Height = 95.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          SeriesName = 'Series3'
+          Series = Series3
+          InputsItemIndex = 0
+          Input = Signal1
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+      object Series3: TFastLineSeries
+        SeriesColor = x00A00000
+        LinePen.Color = xFF2100A0
+        LinePen.Fill.Color = xFF2100A0
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 504
+    Top = 30
+    object Spectrum1: TMenuItem
+      Text = 'Spectrum...'
+      OnClick = Spectrum1Click
+    end
+    object Recording1: TMenuItem
+      Text = 'Recording...'
+      OnClick = Recording1Click
+    end
+    object N1: TMenuItem
+      Text = '-'
+    end
+    object Spectrumchart1: TMenuItem
+      Text = 'Spectrum chart...'
+      OnClick = Spectrumchart1Click
+    end
+    object imechart1: TMenuItem
+      Text = 'Time chart...'
+      OnClick = imechart1Click
+    end
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    ScaleFactor = 1.000000000000000000
+    Input = Signal1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.009999999776482582
+    RunningPhase = rpDefault
+    SidelobeAtt = 40.000000000000000000
+    Window = wtHanning
+    Left = 438
+    Top = 9
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzerDialog: TSpectrumAnalyzerDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SpectrumAnalyzer
+    SourceListIndex = 0
+    Left = 357
+    Top = 21
+    MtxDataValues = {}
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 123
+    Top = 105
+  end
+  object SignalTimer1: TSignalTimer
+    Enabled = True
+    Interval = 50
+    Frequency = 20.000000000000000000
+    OnTimer = SignalTimer1Timer
+    Left = 189
+    Top = 15
+    MtxDataValues = {}
+  end
+  object SignalIn1: TSignalIn
+    ChannelCount = 2
+    SamplingFrequency = 44100.000000000000000000
+    BufferSize = 576000
+    UsesInputs = False
+    Input = SignalWrite1
+    TriggerChannel = chLeft
+    TriggerAbove = 100.000000000000000000
+    TriggerBelow = -1000.000000000000000000
+    TriggerDelay = 0
+    TriggerPosition = tpAfter
+    TriggerMode = trCrossing
+    Triggering = trNone
+    Left = 117
+    Top = 18
+    MtxDataValues = {}
+  end
+  object Signal1: TSignal
+    SamplingFrequency = 1.000000000000000000
+    Left = 258
+    Top = 21
+    MtxDataValues = {}
+  end
+  object SignalWrite1: TSignalWrite
+    Active = False
+    SamplingFrequency = 1.000000000000000000
+    FileFormat = ffWav
+    FileName = 'C:\test.wav'
+    AuthorInfo = 'Unknown'
+    Input = SignalIn1
+    Left = 576
+    Top = 27
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    Chart = SignalChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 117
+    Top = 243
+  end
+  object SignalInDialog: TSignalInDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SignalIn1
+    SourceListIndex = 0
+    Left = 63
+    Top = 27
+    MtxDataValues = {}
+  end
+end

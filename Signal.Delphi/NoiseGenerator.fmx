@@ -1,0 +1,925 @@
+object NoiseGeneratorForm: TNoiseGeneratorForm
+  Left = 0
+  Top = 0
+  Caption = 'Signal Generator'
+  ClientHeight = 465
+  ClientWidth = 634
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label7: TLabel
+    AutoSize = True
+    Position.X = 24.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 62.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Amplitude:'
+  end
+  object Label8: TLabel
+    AutoSize = True
+    Position.X = 24.000000000000000000
+    Position.Y = 178.000000000000000000
+    Size.Width = 62.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Frequence:'
+  end
+  object Label15: TLabel
+    AutoSize = True
+    Position.X = 244.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = '(Range in dB)'
+  end
+  object Label16: TLabel
+    AutoSize = True
+    Position.X = 430.000000000000000000
+    Position.Y = 171.000000000000000000
+    Size.Width = 227.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = '(0Hz to 1/2 Max Sound Card Sample Rate)'
+  end
+  object Label17: TLabel
+    AutoSize = True
+    Position.X = 105.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 46.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Single/1'
+  end
+  object Label18: TLabel
+    AutoSize = True
+    Position.X = 212.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Tone/2'
+  end
+  object Label19: TLabel
+    AutoSize = True
+    Position.X = 318.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Tone/3'
+  end
+  object Label20: TLabel
+    AutoSize = True
+    Position.X = 106.000000000000000000
+    Position.Y = 247.000000000000000000
+    Size.Width = 42.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Tone/4'
+  end
+  object Label21: TLabel
+    AutoSize = True
+    Position.X = 212.000000000000000000
+    Position.Y = 247.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Tone/5'
+  end
+  object Label23: TLabel
+    AutoSize = True
+    Position.X = 318.000000000000000000
+    Position.Y = 247.000000000000000000
+    Size.Width = 42.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = 'Tone/6'
+  end
+  object GroupBox1: TGroupBox
+    Position.X = 273.000000000000000000
+    Position.Y = 269.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 177.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Frequency Sweep'
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Start Frequency:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 62.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Stop Frequency:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Enabled = False
+      Position.X = 16.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Frequency Step:'
+    end
+    object Label12: TLabel
+      AutoSize = True
+      Enabled = False
+      Position.X = 16.000000000000000000
+      Position.Y = 126.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Step Speed:'
+    end
+    object MtxFloatEdit5: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 132.000000000000000000
+      Enabled = False
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object MtxFloatEdit8: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 103.000000000000000000
+      Enabled = False
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object F2SweepEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '192000'
+      MinValue = '0'
+      Value = '1000'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 63.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = F2SweepEditChange
+    end
+    object F1SweepEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '192000'
+      MinValue = '0'
+      Value = '1000'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 31.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = F1SweepEditChange
+    end
+  end
+  object GroupBox2: TGroupBox
+    Position.X = 24.000000000000000000
+    Position.Y = 269.000000000000000000
+    Size.Width = 227.000000000000000000
+    Size.Height = 177.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Amplitude Sweep'
+    TabOrder = 1
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 86.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Start Level (dB):'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 62.000000000000000000
+      Size.Width = 86.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Stop Level [dB]:'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Enabled = False
+      Position.X = 16.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 85.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Level [dB] Step:'
+    end
+    object Label13: TLabel
+      AutoSize = True
+      Enabled = False
+      Position.X = 16.000000000000000000
+      Position.Y = 126.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Step Speed:'
+    end
+    object MtxFloatEdit4: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 132.000000000000000000
+      Enabled = False
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object MtxFloatEdit6: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.00'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 103.000000000000000000
+      Enabled = False
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object A1SweepEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '-140'
+      Value = '0.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 31.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = A1SweepEditChange
+    end
+    object A2SweepEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '-140'
+      Value = '0.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 138.000000000000000000
+      Position.Y = 63.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = A2SweepEditChange
+    end
+  end
+  object F2Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 212.000000000000000000
+    Position.Y = 175.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F2EditChange
+  end
+  object FunctionGroup: TPanel
+    Position.X = 24.000000000000000000
+    Position.Y = 18.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 112.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object SineRadioButton: TRadioButton
+      GroupName = 'FunctionGroup'
+      IsChecked = True
+      Position.X = 15.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Sine'
+      OnChange = SineRadioButtonChange
+    end
+    object RadioButton2: TRadioButton
+      GroupName = 'FunctionGroup'
+      Position.X = 15.000000000000000000
+      Position.Y = 46.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Triangle'
+      OnChange = SineRadioButtonChange
+    end
+    object RadioButton3: TRadioButton
+      GroupName = 'FunctionGroup'
+      Position.X = 15.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Square'
+      OnChange = SineRadioButtonChange
+    end
+    object RadioButton4: TRadioButton
+      GroupName = 'FunctionGroup'
+      Position.X = 15.000000000000000000
+      Position.Y = 87.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Pink noise'
+      OnChange = SineRadioButtonChange
+    end
+    object RadioButton9: TRadioButton
+      GroupName = 'FunctionGroup'
+      Position.X = 15.000000000000000000
+      Position.Y = 66.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'White noise'
+      OnChange = SineRadioButtonChange
+    end
+  end
+  object ToneGroup: TPanel
+    Position.X = 150.000000000000000000
+    Position.Y = 18.000000000000000000
+    Size.Width = 147.000000000000000000
+    Size.Height = 112.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object SingleToneRadioButton: TRadioButton
+      GroupName = 'SelectionGroup'
+      IsChecked = True
+      Position.X = 18.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Single tone'
+      OnChange = SingleToneRadioButtonChange
+    end
+    object RadioButton6: TRadioButton
+      GroupName = 'SelectionGroup'
+      Position.X = 18.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 103.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Multi tone'
+      OnChange = SingleToneRadioButtonChange
+    end
+    object RadioButton7: TRadioButton
+      GroupName = 'SelectionGroup'
+      Position.X = 18.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 103.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Amp sweep'
+      OnChange = SingleToneRadioButtonChange
+    end
+    object RadioButton8: TRadioButton
+      GroupName = 'SelectionGroup'
+      Position.X = 18.000000000000000000
+      Position.Y = 84.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Freq sweep'
+      OnChange = SingleToneRadioButtonChange
+    end
+  end
+  object GroupBox3: TGroupBox
+    Position.X = 312.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 291.000000000000000000
+    Size.Height = 122.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Output Sound Device'
+    TabOrder = 5
+    object Label9: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 83.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Output Device:'
+    end
+    object Label10: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 47.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Sampling rate:'
+    end
+    object Label11: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 69.000000000000000000
+      Size.Width = 68.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Bits/sample:'
+    end
+    object Label14: TLabel
+      AutoSize = True
+      Position.X = 16.000000000000000000
+      Position.Y = 91.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Channel:'
+    end
+    object ComboBox1: TComboBox
+      DisableFocusEffect = False
+      Position.X = 131.000000000000000000
+      Position.Y = 22.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = ComboBox1Change
+    end
+    object SampleRateEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '44100'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 131.000000000000000000
+      Position.Y = 44.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = SampleRateEditChange
+    end
+    object BitRateEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '16'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 131.000000000000000000
+      Position.Y = 69.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object ChannelEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 131.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object F3Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 318.000000000000000000
+    Position.Y = 175.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F3EditChange
+  end
+  object F4Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 106.000000000000000000
+    Position.Y = 222.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F4EditChange
+  end
+  object A1Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '1'
+    MaxValue = '0'
+    MinValue = '-100'
+    Value = '0'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 105.000000000000000000
+    Position.Y = 143.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = A1EditChange
+  end
+  object F1Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 105.000000000000000000
+    Position.Y = 175.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F1EditChange
+  end
+  object StartButton: TButton
+    Position.X = 542.000000000000000000
+    Position.Y = 269.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Start'
+    OnClick = StartButtonClick
+  end
+  object StopButton: TButton
+    Position.X = 542.000000000000000000
+    Position.Y = 309.000000000000000000
+    Size.Width = 75.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Stop'
+    OnClick = StopButtonClick
+  end
+  object F5Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 12
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 212.000000000000000000
+    Position.Y = 222.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F5EditChange
+  end
+  object F6Edit: TMtxFloatEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 13
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    StoreInRegistry = False
+    IntegerIncrement = True
+    Scientific = False
+    ReFormat = '0'
+    ImFormat = '+0.00#i;-0.00#i'
+    Increment = '10'
+    MaxValue = '0'
+    MinValue = '0'
+    Value = '1000'
+    Cursor = crIBeam
+    KeyboardType = Default
+    Position.X = 318.000000000000000000
+    Position.Y = 222.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = F6EditChange
+  end
+  object Label22: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 3.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Function:'
+  end
+  object Label24: TLabel
+    Position.X = 150.000000000000000000
+    Position.Y = 3.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Selection:'
+  end
+  object SignalOut: TSignalOut
+    SamplingFrequency = 22050.000000000000000000
+    ScaleFactor = 1.000000000000000000
+    Input = SignalMux
+    Left = 570
+    Top = 402
+    MtxDataValues = {}
+  end
+  object SignalMux: TSignalMux
+    SamplingFrequency = 1.000000000000000000
+    Inputs = <
+      item
+        Input = SignalGenerator
+      end
+      item
+        Input = Signal
+      end>
+    Left = 570
+    Top = 345
+    MtxDataValues = {}
+  end
+  object SignalGenerator: TSignalGenerator
+    OnAfterUpdate = SignalGeneratorAfterUpdate
+    SamplingFrequency = 128.000000000000000000
+    Inputs = <
+      item
+      end>
+    Sounds.Templates.Strings = (
+      'Square'
+      'Sine'
+      'Triangle'
+      'Gaussian noise'
+      'PinkNoise'
+      'MultiSine'
+      'Amplitue sweep')
+    Sounds.Templates.StreamBinaryData = {
+      9800000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000001000000000100000E000000000000408F40000000
+      000000000000000000004CDD4000000000000000000000000000000000000000
+      0000000000000000000000000001000000000000000000000000000098000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000001000000000100040E000000000000408F4000000000000000
+      0000000000004CDD400000000000000000000000000000000000000000000000
+      0000000000000000000100000000000000000000000000009800000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000001000000000100030E000000000000408F400000000000000000000000
+      00004CDD40000000000000000000000000000000000000000000000000000000
+      0000000000010000000000000000000000000000980000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000001
+      000000000100060E00000000000040DFC0000000000040DF4000000000004CDD
+      4000000000000000000000000000000000000000000000000000000000000000
+      0001000000000000000000000000000098000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000100000000
+      0100060E00000000000040DFC0000000000040DF4000000000004CDD40000000
+      0000000000000000000000000000000000000000000000000000000000010000
+      0000000000000000000000009003000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000B000000000100000E
+      000000000000408F400000000000000000000000000000E04000000000000000
+      0000000000000000000000000000000000000000000000000001000000000000
+      00000000000000000100000E000000000000408F400000000000000000000000
+      000000E040000000000000000000000000000000000000000000000000000000
+      00000000000100000000000000000000000000000100000E000000000000408F
+      400000000000000000000000000000E040000000000000000000000000000000
+      0000000000000000000000000000000000010000000000000000000000000000
+      0100000E000000000000408F400000000000000000000000000000E040000000
+      0000000000000000000000000000000000000000000000000000000000010000
+      0000000000000000000000000100000E000000000000408F4000000000000000
+      00000000000000E0400000000000000000000000000000000000000000000000
+      0000000000000000000100000000000000000000000000000100000E00000000
+      0000408F400000000000000000000000000000E0400000000000000000000000
+      0000000000000000000000000000000000000000000100000000000000000000
+      0000000001011100000000000000408F40000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000001011100000000000000408F40000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000001011100
+      000000000000408F400000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000001011100000000000000408F400000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000001011100000000000000408F
+      4000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      9800000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000001000000000100070E000000000000408F40000000
+      0000000000000000000000E04000000000000000000000000000000000000000
+      00000000000000000000002040010000000000000000000000000000}
+    Sounds.TemplateIndex = 5
+    Left = 567
+    Top = 201
+    MtxDataValues = {}
+  end
+  object Signal: TSignal
+    SamplingFrequency = 1.000000000000000000
+    Left = 567
+    Top = 111
+    MtxDataValues = {}
+  end
+end

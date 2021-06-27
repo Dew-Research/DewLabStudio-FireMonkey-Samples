@@ -1,0 +1,584 @@
+object VariableRateConverterForm: TVariableRateConverterForm
+  Left = 0
+  Top = 0
+  Caption = 'Variable rate converter'
+  ClientHeight = 424
+  ClientWidth = 1015
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 351.000000000000000000
+    Size.Width = 1015.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 320.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 30.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Freq:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 445.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Phase:'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 569.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 39.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Amplt:'
+    end
+    object Label4: TLabel
+      AutoSize = True
+      Position.X = 313.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'cFreq'
+    end
+    object Label5: TLabel
+      AutoSize = True
+      Position.X = 448.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 42.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'cAmplt'
+    end
+    object Label6: TLabel
+      AutoSize = True
+      Position.X = 571.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 38.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'ccFreq'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 4.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 309.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpectrumEditButton: TButton
+        Size.Width = 80.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '    Spectrum      '
+        TextSettings.WordWrap = True
+        OnClick = SpectrumEditButtonClick
+      end
+      object ChartEditButton: TButton
+        Position.X = 82.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Spectrum chart'
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+      object ToolButton1: TButton
+        Position.X = 164.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Signal chart'
+        TextSettings.WordWrap = True
+        OnClick = ToolButton1Click
+      end
+    end
+    object FreqEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.0000;-0.0000'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.0002'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.0100'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 349.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 81.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+    object PhaseEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 490.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+    object AmpltEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '1.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 612.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+    object cFreqEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '96.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 351.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+    object cAmpltEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '1.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 489.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+    object ccFreqEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 6
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '8.0'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 612.000000000000000000
+      Position.Y = 39.000000000000000000
+      Size.Width = 67.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = FreqEditChange
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Top
+    Size.Width = 1015.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ReadOnly = True
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 1015.000000000000000000
+    Size.Height = 275.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnResize = Panel2Resize
+    object Splitter1: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 1015.000000000000000000
+      Size.Height = 4.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SpectrumChart: TSpectrumChart
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Frequency spectrum')
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.Title.Caption = 'Frequency [Hz]'
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMaximum = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.Maximum = 1055.500000000000000000
+      LeftAxis.Minimum = 224.250000000000000000
+      LeftAxis.Title.Caption = 'Magnitude [dB]'
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Top
+      TabOrder = 0
+      Size.Width = 1015.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      Spectrums = <
+        item
+          SeriesName = 'Series1'
+          Series = Series1
+          Caption = 'Resampled tone'
+          InputsItemIndex = 0
+          Input = SpectrumAnalyzer
+        end
+        item
+          SeriesName = 'Series4'
+          Series = Series4
+          Caption = 'Orignal tone'
+          InputsItemIndex = 0
+          Input = SpectrumAnalyzer1
+        end>
+      ConfidenceIntervalIndex = 0
+      ConfidenceIntervalVisible = False
+      ColorPaletteIndex = 0
+      object Series1: TFastLineSeries
+        SeriesColor = x00A00000
+        LinePen.Color = x00A00000
+        LinePen.Fill.Color = x00A00000
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series4: TMtxFastLineSeries
+        LinePen.Color = claRed
+        LinePen.Fill.Color = claRed
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TPointSeries
+        Marks.Transparent = True
+        Marks.Arrow.Visible = False
+        Marks.Callout.Arrow.Visible = False
+        Marks.Callout.Length = 10
+        ClickableLine = False
+        Pointer.Brush.Color = claRed
+        Pointer.Brush.Gradient.EndColor = claGreen
+        Pointer.Gradient.EndColor = claGreen
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TAxisScaleTool
+        UpperMargin = 20
+        LowerMargin = 5
+        AxisScaleMode = amPeakHold
+        DataIsSpectrum = True
+        AxisID = 2
+      end
+      object ChartTool2: TSpectrumMarkTool
+        CursorActive = False
+        MarkSeries = Series2
+        DoubleClickClear = True
+        Series = Series1
+        PeakFilterMode = False
+        MarkMode = mmSingle
+        MarkType = mtAmpltPhase
+        AmpltFormat = '0.0000'
+        PhaseFormat = '0.0000'
+        FreqFormat = '0.0000'
+        LabelHeaders = True
+        PeakZoomBand = False
+        ConfLabels = cnfNone
+      end
+    end
+    object SignalChart: TSignalChart
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'Signal')
+      BottomAxis.Title.Caption = 'Time [s]'
+      LeftAxis.Title.Caption = 'Amplitude'
+      RightAxis.Title.Caption = 'Frequency [Hz]'
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Client
+      TabOrder = 1
+      Size.Width = 1015.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          SeriesName = 'Series3'
+          InputsItemIndex = 0
+          Input = Signal1
+        end
+        item
+          SeriesName = 'Series5'
+          Series = Series5
+          InputsItemIndex = 0
+          Input = RateConverter
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+      object Series3: TMtxFastLineSeries
+        SeriesColor = x00A00000
+        LinePen.Color = x00A00000
+        LinePen.Fill.Color = x00A00000
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series5: TMtxFastLineSeries
+        LinePen.Color = claRed
+        LinePen.Fill.Color = claRed
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series6: TMtxFastLineSeries
+        VertAxis = aRightAxis
+        LinePen.Color = claGreen
+        LinePen.Fill.Color = claGreen
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series7: TMtxFastLineSeries
+        VertAxis = aRightAxis
+        LinePen.Color = claYellow
+        LinePen.Fill.Color = claYellow
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    object SignalChart1: TSignalChart
+      Position.Y = 124.000000000000000000
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'TSignalChart')
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Mode = pmNotXor
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Top
+      TabOrder = 2
+      Size.Width = 1015.000000000000000000
+      Size.Height = 250.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+    end
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    LogSpan = ls350
+    ScaleFactor = 1.000000000000000000
+    Input = RateConverter
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 250.000000000000000000
+    Window = wtKaiser
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzerDialog: TSpectrumAnalyzerDialog
+    ShowLive = True
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SpectrumAnalyzer
+    SourceListIndex = 0
+    MtxDataValues = {}
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+  end
+  object Signal1: TSignal
+    OnAfterUpdate = Signal1AfterUpdate
+    Length = 512
+    SamplingFrequency = 4096.000000000000000000
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    Chart = SignalChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+  end
+  object RateConverter: TSignalVariableRateConverter
+    SamplingFrequency = 1.000000000000000000
+    Input = Signal1
+    Ripple = 0.001000000000000000
+    Factor = 1.000000000000000000
+    TransBW = 0.100000000000000000
+    ScaleFactor = 1.000000000000000000
+    MaxFactor = 2.000000000000000000
+    MinFactor = 0.500000000000000000
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer1: TSpectrumAnalyzer
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    LogSpan = ls350
+    ScaleFactor = 1.000000000000000000
+    Input = Signal1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 250.000000000000000000
+    Window = wtKaiser
+    MtxDataValues = {}
+  end
+end

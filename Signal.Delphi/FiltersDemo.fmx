@@ -1,0 +1,451 @@
+object FiltersDemoForm: TFiltersDemoForm
+  Left = 0
+  Top = 0
+  Caption = 'Filter demo'
+  ClientHeight = 488
+  ClientWidth = 765
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 423.000000000000000000
+    Size.Width = 765.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 4.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 582.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SpectrumEditButton: TButton
+        Position.X = 6.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '    Spectrum      '
+        TextSettings.WordWrap = True
+        OnClick = SpectrumEditButtonClick
+      end
+      object ChartEditButton: TButton
+        Position.X = 133.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 186.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Spectrum chart'
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+      object ToolButton1: TButton
+        Position.X = 326.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Signal chart'
+        TextSettings.WordWrap = True
+        OnClick = ToolButton1Click
+      end
+      object FilterButton: TButton
+        Position.X = 450.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Filter editor'
+        TextSettings.WordWrap = True
+        OnClick = FilterButtonClick
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 765.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 757.000000000000000000
+    Viewport.Height = 68.000000000000000000
+  end
+  object Panel2: TPanel
+    Align = Client
+    Size.Width = 765.000000000000000000
+    Size.Height = 347.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnResize = Panel2Resize
+    object Splitter1: TSplitter
+      Align = Top
+      Cursor = crVSplit
+      MinSize = 20.000000000000000000
+      Position.Y = 120.000000000000000000
+      Size.Width = 765.000000000000000000
+      Size.Height = 4.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object SpectrumChart: TSpectrumChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'Frequency spectrum')
+      BottomAxis.LabelsSeparation = 0
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.MinorTicks.Visible = False
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Frequency [Hz]'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMaximum = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 1133.000000000000000000
+      LeftAxis.Minimum = 536.125000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Top
+      TabOrder = 0
+      Size.Width = 765.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      Spectrums = <
+        item
+          InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
+          Input = SpectrumAnalyzer
+        end>
+      ConfidenceIntervalIndex = 0
+      ConfidenceIntervalVisible = False
+      ColorPaletteIndex = 0
+      object Series1: TFastLineSeries
+        HoverElement = []
+        SeriesColor = x00A00000
+        LinePen.Color = claBlue
+        LinePen.Fill.Color = claBlue
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TPointSeries
+        HoverElement = [heCurrent]
+        Marks.Transparent = True
+        Marks.Visible = True
+        Marks.Arrow.Visible = False
+        Marks.Callout.Arrow.Visible = False
+        Marks.Callout.Length = 10
+        ClickableLine = False
+        Pointer.Brush.Color = claRed
+        Pointer.Brush.Gradient.EndColor = claGreen
+        Pointer.Gradient.EndColor = claGreen
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TAxisScaleTool
+        UpperMargin = 20
+        LowerMargin = 5
+        AxisScaleMode = amPeakHold
+        DataIsSpectrum = True
+        AxisID = 2
+      end
+      object ChartTool2: TSpectrumMarkTool
+        CursorActive = True
+        MarkSeries = Series2
+        DoubleClickClear = True
+        Series = Series1
+        PeakFilterMode = False
+        MarkMode = mmFreeStyle
+        MarkType = mtAmplt
+        AmpltFormat = '0.0000'
+        PhaseFormat = '0.0000'
+        FreqFormat = '0.0000'
+        LabelHeaders = True
+        PeakZoomBand = False
+        ConfLabels = cnfNone
+      end
+    end
+    object SignalChart: TSignalChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.Direction = gdFromTopLeft
+      Gradient.EndColor = claWhite
+      Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        'Filter taps')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 667.500000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      Zoom.Brush.Kind = None
+      Zoom.Brush.Gradient.Direction = gdFromTopLeft
+      Zoom.Brush.Gradient.EndColor = claSilver
+      Zoom.Brush.Gradient.MidColor = claWhite
+      Zoom.Brush.Gradient.StartColor = claSilver
+      Zoom.Pen.Color = claBlack
+      Zoom.Pen.Mode = pmNotXor
+      Align = Client
+      TabOrder = 1
+      Size.Width = 765.000000000000000000
+      Size.Height = 223.000000000000000000
+      Size.PlatformDefault = False
+      Signals = <
+        item
+          SeriesName = 'Series3'
+          Series = Series3
+          InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
+          Input = Signal2
+        end>
+      ComplexSignalPart = cspReal
+      ColorPaletteIndex = 0
+      object Series3: TSignalDiscreteSeries
+        HoverElement = [heCurrent]
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = claRed
+        Pointer.Gradient.EndColor = claRed
+        Pointer.HorizSize = 2
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        Pointer.VertSize = 2
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        UseYOrigin = True
+      end
+    end
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    OnParameterUpdate = SpectrumAnalyzerParameterUpdate
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 128.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    ScaleFactor = 1.000000000000000000
+    Input = SignalFilter1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    DCDump = False
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 60.000000000000000000
+    Left = 324
+    Top = 27
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzerDialog: TSpectrumAnalyzerDialog
+    ShowLive = True
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SpectrumAnalyzer
+    SourceListIndex = 0
+    Left = 213
+    Top = 21
+    MtxDataValues = {}
+  end
+  object ChartEditor: TChartEditor
+    Chart = SpectrumChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 564
+    Top = 144
+  end
+  object Signal1: TSignal
+    IsDouble = True
+    Length = 512
+    SamplingFrequency = 2.000000000000000000
+    Left = 123
+    Top = 18
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    Chart = SignalChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 111
+    Top = 231
+  end
+  object SignalFilter1: TSignalFilter
+    IsDouble = True
+    Continuous = False
+    OnAfterUpdate = SignalFilter1AfterUpdate
+    OnParameterUpdate = SignalFilter1ParameterUpdate
+    SamplingFrequency = 2.000000000000000000
+    Input = Signal1
+    Filters.Templates.Strings = (
+      'Lowpass'
+      'Highpass'
+      'Comb filter'
+      'Hilbert'
+      'Bandstop'
+      'Bandpass')
+    Filters.Templates.StreamBinaryData = {
+      7B00000000000000000000400000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000333333333333D33F000000
+      000000F03F8087E0BA77CE913F3F000000000000F001333333333333E33F0000
+      00000000F03F00000000000000000000000000004E400000333333333333017B
+      0000000000000000000040000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000009A9999999999D93F00000000
+      000000000000000000004E403F0000000000000001333333333333E33F000000
+      000000F03F000000000000F03F8087E0BA77CE913F000033333333333301A400
+      0000000000000000084000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000333333333333D33F0000000000
+      000040B548953B1476C63F3F00000000000000019A9999999999D93F33333333
+      3333E33F0000000000000840B548953B1476C63F00009A999999999901666666
+      666666E63F000000000000F03F0000000000001040B548953B1476C63F400101
+      00000000000152000000000000000000F03F0000000000000000000000000000
+      000000000000000000000000000000000000009A9999999999B93FCDCCCCCCCC
+      CCEC3F000000000000F03F8087E0BA77CE913F3F000000000000F001A4000000
+      0000000000000840000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000333333333333D33F000000000000F0
+      3FB548953B1476C63F3F000000000000F001666666666666D63F333333333333
+      E33F00000000000000000000000000004E400000CDCCCCCCCCCC01CDCCCCCCCC
+      CCE43F000000000000F03F000000000000F03F8087E0BA77CE913F3F01010000
+      00000001A4000000000000000000084000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000009A9999999999D9
+      3F00000000000000000000000000004F403F0000000000000001A4703D0AD7A3
+      E03F333333333333E33F000000000000F03F8087E0BA77CE913F00009A999999
+      999901666666666666E63F000000000000F03F00000000000000000000000000
+      004F40000101000000000001}
+    Filters.TemplateIndex = 5
+    Taps.DataValues = {
+      0000000000008642000000000000803F00000000000016440000004100000000
+      00137A47000000000000000000000000B10D6A304523E8BE357363BD53E2513F
+      3550EE8A79BE40BFF382A9E037595FBF3FC04D1F69C3603F576A9A85040E603F
+      2EEF56CC289C6EBF94EE839129B242BF38590C6D90486E3FA70F12478B0350BF
+      F0C233E56A9645BF73A88F1CC82736BF91F4110E0D976FBF8DF1B69DBF827B3F
+      F773DFAE1394763F936B2D0D8D8F90BF2565F547C2FE48BF177C8E19A49E963F
+      D9FD5EA39C9580BFB5BFBDDA726592BF809C7E3FF192873F526140CF55A6733F
+      3D3F2721AA6C5B3FDD1DC0623797763FB9049C2B976BA1BFB58ACFCED7B9703F
+      2918AED72FB1B23F3FCE2E189203A6BFCBD542CAA271B8BFA745A418593CBA3F
+      31D76F11040AB53FB669874F751CC4BF3DEDF26B83A3A0BF396EBE09F1F2C63F
+      3DEDF26B83A3A0BFB669874F751CC4BF31D76F11040AB53FA745A418593CBA3F
+      CBD542CAA271B8BF3FCE2E189203A6BF2918AED72FB1B23FB58ACFCED7B9703F
+      B9049C2B976BA1BFDD1DC0623797763F3D3F2721AA6C5B3F526140CF55A6733F
+      809C7E3FF192873FB5BFBDDA726592BFD9FD5EA39C9580BF177C8E19A49E963F
+      2565F547C2FE48BF936B2D0D8D8F90BFF773DFAE1394763F8DF1B69DBF827B3F
+      91F4110E0D976FBF73A88F1CC82736BFF0C233E56A9645BFA70F12478B0350BF
+      38590C6D90486E3F94EE839129B242BF2EEF56CC289C6EBF576A9A85040E603F
+      3FC04D1F69C3603FF382A9E037595FBF3550EE8A79BE40BF357363BD53E2513F
+      B10D6A304523E8BE}
+    FirMethod = fimParksMcClellan
+    Response = rstFIR
+    Beta = 4.000000000000000000
+    Order = 6
+    NormalizedFrequency = 2.000000000000000000
+    FirLength = 67
+    WaveletP1 = 0
+    WaveletP2 = 0
+    ScaleFactor = 1.000000000000000000
+    Left = 420
+    Top = 30
+    MtxDataValues = {}
+  end
+  object SignalFilterDialog1: TSignalFilterDialog
+    RegistryPath = '\Software\DewResearch\MtxVec'
+    Source = SignalFilter1
+    SourceListIndex = 0
+    Left = 510
+    Top = 27
+    MtxDataValues = {}
+  end
+  object Signal2: TSignal
+    IsDouble = True
+    Length = 512
+    SamplingFrequency = 1.000000000000000000
+    Left = 66
+    Top = 24
+    MtxDataValues = {}
+  end
+end

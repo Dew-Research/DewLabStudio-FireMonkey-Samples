@@ -1,0 +1,355 @@
+object IirZerosForm: TIirZerosForm
+  Left = 0
+  Top = 0
+  Caption = 'Low pass IIR filter zeros'
+  ClientHeight = 359
+  ClientWidth = 688
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ZeroPoleChart: TSpectrumChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Gradient.EndColor = x00C08000
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Font.Color = claWhite
+    Title.Font.Brush.Color = claWhite
+    Title.Text.Strings = (
+      'Pole-zero plot')
+    BottomAxis.Automatic = False
+    BottomAxis.AutomaticMaximum = False
+    BottomAxis.AutomaticMinimum = False
+    BottomAxis.AxisValuesFormat = '#,##0.0'
+    BottomAxis.ExactDateTime = False
+    BottomAxis.Increment = 30.000000000000000000
+    BottomAxis.LabelsOnAxis = False
+    BottomAxis.LabelsSeparation = 60
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 1.000000000000000000
+    BottomAxis.MinorTicks.Visible = False
+    BottomAxis.EndPosition = 100.000000000000000000
+    ClipPoints = False
+    DepthAxis.AxisValuesFormat = '#,##0.0'
+    DepthAxis.LabelsOnAxis = False
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.ExactDateTime = False
+    LeftAxis.Increment = 0.200000000000000000
+    LeftAxis.LabelsOnAxis = False
+    LeftAxis.LabelsSeparation = 100
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 1.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Automatic = False
+    RightAxis.AutomaticMaximum = False
+    RightAxis.AutomaticMinimum = False
+    RightAxis.AxisValuesFormat = '#,##0.0'
+    RightAxis.ExactDateTime = False
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.Increment = 0.200000000000000000
+    RightAxis.LabelsOnAxis = False
+    RightAxis.LabelsSeparation = 100
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.Maximum = 1.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Automatic = False
+    TopAxis.AutomaticMaximum = False
+    TopAxis.AutomaticMinimum = False
+    TopAxis.AxisValuesFormat = '#,##0.0'
+    TopAxis.ExactDateTime = False
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.Increment = 0.200000000000000000
+    TopAxis.LabelsOnAxis = False
+    TopAxis.LabelsSeparation = 50
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.Maximum = 1.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    View3DOptions.Elevation = 315
+    View3DOptions.Orthogonal = False
+    View3DOptions.Perspective = 0
+    View3DOptions.Rotation = 360
+    Zoom.Brush.Kind = None
+    Zoom.Brush.Gradient.Direction = gdFromTopLeft
+    Zoom.Brush.Gradient.EndColor = claSilver
+    Zoom.Brush.Gradient.MidColor = claWhite
+    Zoom.Brush.Gradient.StartColor = claSilver
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 0
+    Size.Width = 688.000000000000000000
+    Size.Height = 212.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        InputsItemIndex = 0
+        UnitScaleXAxis = 1.000000000000000000
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object Series1: TPolarSeries
+      HoverElement = []
+      Title = 'Zeros'
+      XValues.Name = 'Angle'
+      XValues.Order = loNone
+      YValues.Name = 'Radius'
+      YValues.Order = loNone
+      Frame.InnerBrush.Kind = Gradient
+      Frame.InnerBrush.Gradient.EndColor = claGray
+      Frame.InnerBrush.Gradient.MidColor = claWhite
+      Frame.InnerBrush.Gradient.StartColor = xFF404040
+      Frame.InnerBrush.Gradient.Visible = True
+      Frame.InnerBrush.BackColor = claRed
+      Frame.MiddleBrush.Kind = Gradient
+      Frame.MiddleBrush.Gradient.EndColor = xFF828282
+      Frame.MiddleBrush.Gradient.MidColor = claWhite
+      Frame.MiddleBrush.Gradient.StartColor = claGray
+      Frame.MiddleBrush.Gradient.Visible = True
+      Frame.MiddleBrush.BackColor = claYellow
+      Frame.OuterBrush.Kind = Gradient
+      Frame.OuterBrush.Gradient.EndColor = xFF404040
+      Frame.OuterBrush.Gradient.MidColor = claWhite
+      Frame.OuterBrush.Gradient.StartColor = claSilver
+      Frame.OuterBrush.Gradient.Visible = True
+      Frame.OuterBrush.BackColor = claGreen
+      Frame.Width = 4
+      Shadow.Visible = False
+      AngleIncrement = 30.000000000000000000
+      AngleValues.Name = 'AngleValues'
+      AngleValues.Order = loAscending
+      Brush.Color = claWhite
+      Brush.Kind = None
+      Pen.Color = claRed
+      Pen.Fill.Color = claRed
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      RadiusIncrement = 0.200000000000000000
+    end
+    object Series2: TPolarSeries
+      HoverElement = []
+      SeriesColor = xFFF6FD00
+      Title = 'Poles'
+      XValues.Name = 'Angle'
+      XValues.Order = loNone
+      YValues.Name = 'Radius'
+      YValues.Order = loNone
+      Frame.InnerBrush.Kind = Gradient
+      Frame.InnerBrush.Gradient.EndColor = claGray
+      Frame.InnerBrush.Gradient.MidColor = claWhite
+      Frame.InnerBrush.Gradient.StartColor = xFF404040
+      Frame.InnerBrush.Gradient.Visible = True
+      Frame.InnerBrush.BackColor = claRed
+      Frame.MiddleBrush.Kind = Gradient
+      Frame.MiddleBrush.Gradient.EndColor = xFF828282
+      Frame.MiddleBrush.Gradient.MidColor = claWhite
+      Frame.MiddleBrush.Gradient.StartColor = claGray
+      Frame.MiddleBrush.Gradient.Visible = True
+      Frame.MiddleBrush.BackColor = claYellow
+      Frame.OuterBrush.Kind = Gradient
+      Frame.OuterBrush.Gradient.EndColor = xFF404040
+      Frame.OuterBrush.Gradient.MidColor = claWhite
+      Frame.OuterBrush.Gradient.StartColor = claSilver
+      Frame.OuterBrush.Gradient.Visible = True
+      Frame.OuterBrush.BackColor = claGreen
+      Frame.Width = 4
+      Shadow.Visible = False
+      AngleIncrement = 30.000000000000000000
+      AngleValues.Name = 'AngleValues'
+      AngleValues.Order = loAscending
+      Brush.Kind = None
+      Pen.Color = xFFF6FD00
+      Pen.Fill.Color = xFFF6FD00
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      RadiusIncrement = 0.200000000000000000
+    end
+    object ChartTool1: TAxisScaleTool
+      UpperMargin = 20
+      LowerMargin = 5
+      AxisScaleMode = amNone
+      DataIsSpectrum = True
+      AxisID = 2
+    end
+    object ChartTool2: TSpectrumMarkTool
+      CursorActive = True
+      DoubleClickClear = True
+      PeakFilterMode = False
+      MarkMode = mmSingle
+      MarkType = mtAmplt
+      AmpltFormat = '0.00#'
+      PhaseFormat = '0.00#'
+      FreqFormat = '0.00#'
+      LabelHeaders = True
+      PeakZoomBand = False
+      ConfLabels = cnfNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 288.000000000000000000
+    Size.Width = 688.000000000000000000
+    Size.Height = 71.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 372.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 34.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Order:'
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 525.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 43.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Att (dB):'
+    end
+    object Label3: TLabel
+      AutoSize = True
+      Position.X = 189.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 29.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Filter:'
+    end
+    object ToolBar1: TToolBar
+      Align = None
+      Position.X = 10.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ChartEditButton: TButton
+        Position.X = 18.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = '          Chart           '
+        TextSettings.WordWrap = True
+        OnClick = ChartEditButtonClick
+      end
+    end
+    object OrderEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '45'
+      MinValue = '1'
+      Value = '5'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 371.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = OrderEditChange
+    end
+    object AttEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      RegistryPath = '\Software\DewResearch\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = True
+      Scientific = False
+      ReFormat = '0'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '1'
+      MaxValue = '200'
+      MinValue = '1'
+      Value = '40'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 524.000000000000000000
+      Position.Y = 30.000000000000000000
+      Enabled = False
+      Size.Width = 131.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = OrderEditChange
+    end
+    object FilterBox: TComboBox
+      ItemIndex = 0
+      Position.X = 189.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 166.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = FilterBoxChange
+      object TListBoxItem
+        IsSelected = True
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Butterworth'
+      end
+      object TListBoxItem
+        TabOrder = 0
+        Text = 'Chebyshev I'
+      end
+      object TListBoxItem
+        TabOrder = 1
+        Text = 'Chebyshev II'
+      end
+      object TListBoxItem
+        TabOrder = 2
+        Text = 'Elliptic'
+      end
+    end
+  end
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 688.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 684.000000000000000000
+    Viewport.Height = 72.000000000000000000
+  end
+  object ChartEditor: TChartEditor
+    Chart = ZeroPoleChart
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 75
+    Top = 153
+  end
+end

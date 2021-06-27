@@ -1,0 +1,439 @@
+object RateConvertForm: TRateConvertForm
+  Left = 0
+  Top = 0
+  Caption = 'Rate converter test'
+  ClientHeight = 622
+  ClientWidth = 925
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 301.000000000000000000
+    Size.Width = 925.000000000000000000
+    Size.Height = 6.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object SignalChart: TSignalChart
+    Legend.CheckBoxes = True
+    Title.Text.Strings = (
+      'Time signal')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Time [s]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 710.000000000000000000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.Minimum = 267.500000000000000000
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Client
+    TabOrder = 0
+    Size.Width = 925.000000000000000000
+    Size.Height = 269.000000000000000000
+    Size.PlatformDefault = False
+    Signals = <
+      item
+        SeriesName = 'ConvertedSignal'
+        Series = ConvertedSignal
+        Caption = 'Converted signal'
+        InputsItemIndex = 0
+        Input = SignalStoreBuffer
+      end
+      item
+        SeriesName = 'OriginalSignal'
+        Series = OriginalSignal
+        Caption = 'Original signal'
+        InputsItemIndex = 0
+        Input = SignalStoreBuffer1
+      end>
+    ComplexSignalPart = cspReal
+    ColorPaletteIndex = 0
+    object ConvertedSignal: TFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object OriginalSignal: TFastLineSeries
+      LinePen.Color = claGreen
+      LinePen.Fill.Color = claGreen
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 576.000000000000000000
+    Size.Width = 925.000000000000000000
+    Size.Height = 46.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 12.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Rate factor:'
+    end
+    object Updatebutton: TButton
+      Anchors = [akRight, akBottom]
+      Position.X = 672.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Update'
+      OnClick = UpdatebuttonClick
+    end
+    object RateFactorEdit: TMtxFloatEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      RegistryPath = '\Software\Dew Research\MtxVec'
+      StoreInRegistry = False
+      IntegerIncrement = False
+      Scientific = False
+      ReFormat = '0.00#;-0.00#'
+      ImFormat = '+0.00#i;-0.00#i'
+      Increment = '0.05'
+      MaxValue = '0'
+      MinValue = '0'
+      Value = '0.40'
+      Cursor = crIBeam
+      KeyboardType = Default
+      Position.X = 110.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 155.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = RateFactorEditChange
+    end
+    object ResetButton: TButton
+      Anchors = [akRight, akBottom]
+      Position.X = 794.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Reset'
+      OnClick = ResetButtonClick
+    end
+    object Button1: TButton
+      Position.X = 324.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 178.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Signal generator'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 508.000000000000000000
+      Position.Y = 6.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Benchmark'
+      OnClick = Button2Click
+    end
+  end
+  object SpectrumChart: TSpectrumChart
+    Position.Y = 76.000000000000000000
+    Legend.CheckBoxes = True
+    MarginBottom = 0
+    MarginRight = 0
+    Title.Text.Strings = (
+      'Frequency spectrum')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
+    BottomAxis.MaximumOffset = 1
+    BottomAxis.MinimumOffset = 1
+    BottomAxis.EndPosition = 100.000000000000000000
+    BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.Automatic = False
+    DepthAxis.AutomaticMaximum = False
+    DepthAxis.AutomaticMinimum = False
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.170000000000006400
+    DepthAxis.Minimum = -0.829999999999990300
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.Automatic = False
+    DepthTopAxis.AutomaticMaximum = False
+    DepthTopAxis.AutomaticMinimum = False
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.170000000000006400
+    DepthTopAxis.Minimum = -0.829999999999990300
+    DepthTopAxis.EndPosition = 100.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 337.500000000000000000
+    LeftAxis.MaximumOffset = 1
+    LeftAxis.Minimum = 5.000000000000000000
+    LeftAxis.MinimumOffset = 1
+    LeftAxis.EndPosition = 100.000000000000000000
+    LeftAxis.Title.Caption = 'Amplitude [dB]'
+    RightAxis.Automatic = False
+    RightAxis.AutomaticMaximum = False
+    RightAxis.AutomaticMinimum = False
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Color = claBlack
+    Zoom.Pen.Mode = pmNotXor
+    Align = Top
+    TabOrder = 2
+    Size.Width = 925.000000000000000000
+    Size.Height = 225.000000000000000000
+    Size.PlatformDefault = False
+    Spectrums = <
+      item
+        SeriesName = 'ConvertedSpectrum'
+        Series = ConvertedSpectrum
+        Caption = 'ConvertedSpectrum'
+        InputsItemIndex = 0
+        Input = SpectrumAnalyzer
+      end
+      item
+        SeriesName = 'OriginalSpectrum'
+        Series = OriginalSpectrum
+        Caption = 'Original spectrum'
+        InputsItemIndex = 0
+        Input = SpectrumAnalyzer1
+      end>
+    ConfidenceIntervalIndex = 0
+    ConfidenceIntervalVisible = False
+    ColorPaletteIndex = 0
+    object ConvertedSpectrum: TFastLineSeries
+      LinePen.Color = claRed
+      LinePen.Fill.Color = claRed
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object OriginalSpectrum: TFastLineSeries
+      LinePen.Color = claGreen
+      LinePen.Fill.Color = claGreen
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+  object RichEdit: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Top
+    Size.Width = 925.000000000000000000
+    Size.Height = 76.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    ReadOnly = True
+    TextSettings.WordWrap = True
+  end
+  object SignalRateConverter: TSignalRateConverter
+    SamplingFrequency = 1.000000000000000000
+    Input = SignalGenerator
+    Ripple = 0.000010000000000000
+    Factor = 1.250000000000000000
+    TransBW = 0.100000000000000000
+    ScaleFactor = 1.000000000000000000
+    Left = 453
+    Top = 198
+    MtxDataValues = {}
+  end
+  object SignalStoreBuffer: TSignalStoreBuffer
+    Length = 0
+    SamplingFrequency = 1.000000000000000000
+    ActualBufferSize = 0
+    IncrementStep = 1.500000000000000000
+    Input = SignalRateConverter
+    Left = 204
+    Top = 12
+    MtxDataValues = {}
+  end
+  object SignalGenerator: TSignalGenerator
+    OnParameterUpdate = SignalGeneratorParameterUpdate
+    Length = 1024
+    SamplingFrequency = 100.000000000000000000
+    Inputs = <
+      item
+      end>
+    Sounds.Templates.Strings = (
+      'Tones'
+      'Noise')
+    Sounds.Templates.StreamBinaryData = {
+      C801000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000005000000000100000E000000000000001440000000
+      0000000000000000000000104000000000000000000000000000000000000000
+      000000000000000000000000000100000000000000000000000000000100000E
+      000000000000002A400000000000000000000000000000004000000000000000
+      0000000000000000000000000000000000000000000000000001000000000000
+      0000000000000000010111000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000100000E0000000000008046
+      4000000000000000000000000000000840000000000000000000000000000000
+      0000000000000000000000000000000000010000000000000000000000000000
+      0101110000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000009800000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000001000000000100050E
+      0000000000000000000000000000000840000000000000084000000000000000
+      0000000000000000000000000000000000000000000000000001000000000000
+      0000000000000000}
+    Sounds.TemplateIndex = 0
+    Left = 396
+    Top = 6
+    MtxDataValues = {}
+  end
+  object SignalStoreBuffer1: TSignalStoreBuffer
+    Length = 0
+    SamplingFrequency = 1.000000000000000000
+    ActualBufferSize = 0
+    IncrementStep = 1.500000000000000000
+    Input = SignalGenerator
+    Left = 651
+    Top = 33
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer: TSpectrumAnalyzer
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 16.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    ZeroPadding = 8
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    LogSpan = ls200
+    ScaleFactor = 1.000000000000000000
+    Input = SignalStoreBuffer
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    DCDump = False
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 100.000000000000000000
+    Window = wtKaiser
+    Left = 513
+    Top = 21
+    MtxDataValues = {}
+  end
+  object SpectrumAnalyzer1: TSpectrumAnalyzer
+    PhaseRange = prPiPi
+    SamplingFrequency = 1.000000000000000000
+    SamplingTime = 16.000000000000000000
+    HzRes = 0.007812500000000000
+    Dt = 1.000000000000000000
+    ZeroPadding = 8
+    Report.ReportItems.GeneralInfo = False
+    Report.ReportItems.MarkedPeaks = False
+    Report.ReportItems.FrequencyLines = False
+    Report.ReportItems.Phase = False
+    Report.ReportItems.THD = False
+    Report.ReportItems.THDN = False
+    Report.ReportItems.NF = False
+    Report.ReportItems.SFDR = False
+    Report.ReportItems.BandsRMS = False
+    Report.ReportItems.SINAD = False
+    Report.ReportItems.RMS = False
+    Report.ReportItems.SNR = False
+    Report.ReportItems.DateTime = False
+    Bands.Templates.Strings = ()
+    Bands.Templates.StreamBinaryData = {}
+    Logarithmic = True
+    LogSpan = ls200
+    ScaleFactor = 1.000000000000000000
+    Input = SignalStoreBuffer1
+    Stats.CalcMinMax = False
+    Stats.CalcLimits = False
+    Stats.ConfidenceInterval = 99.000000000000000000
+    CZT.StopFrequency = 0.500000000000000000
+    CZT.FrequencyStep = 0.007812500000000000
+    CZT.StartRadius = 1.000000000000000000
+    CZT.StopRadius = 1.000000000000000000
+    DCDump = False
+    ExpWindow = 0.010000000000000000
+    SidelobeAtt = 100.000000000000000000
+    Window = wtKaiser
+    Left = 513
+    Top = 84
+    MtxDataValues = {}
+  end
+  object SignalGeneratorDialog: TSignalGeneratorDialog
+    RegistryPath = '\Software\Dew Research\MtxVec'
+    Source = SignalGenerator
+    SourceListIndex = 0
+    Left = 381
+    Top = 87
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 99
+    Top = 153
+  end
+end
