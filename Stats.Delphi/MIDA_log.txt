@@ -1,0 +1,324 @@
+Mida - Convert VCL Application To FireMonkey for Delphi Embarcadero XE2/XE3/XE4 and C++Builder XE2/XE3/XE4
+Official Site http://www.midaconverter.com
+Mida version : 270
+----------------------------------------------------------------------------------------------------------------------------------------------
+This is a Basic version of Mida ( LiveBindinds - StyleBook - Image - Source Update, Custom components... are not supported )
+
+The Third Party Components ( TMS - JVCL - DevExpress... ) are not supported in this version of Mida.
+Opening from XE2/XE3/XE4 IDE a converted project, with components like TMS,JVCL,personal ... IDE will indicate an error of Class not known.
+
+This is not an error of Mida.
+
+Upgrade your licence to Mida Pro or Studio to obtain a greater number of components supported.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Converting...
+
+MODE XE4
+
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\ANOVA1_Box.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Anova_Tests.dfm
+     Component not supported on FireMonkey :     object RichEdit1: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\ARIMAWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     Component not supported on FireMonkey :       object rgARMAInit: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_Chart.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_DB.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_Form.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_QC.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_REdit.dfm
+     Component not supported on FireMonkey :   object RichEdit1: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Basic_Wizard.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\BiPlotDemo.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Changes11.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Changes21.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Changes30.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\DecompWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\EWMA_Demo.dfm
+     Component not supported on FireMonkey :       object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Fit_Model.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\GOF_Chi2.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\GOF_KS.dfm
+     Component not supported on FireMonkey :         object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\HotellingT2.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     Component not supported on FireMonkey :       object RadioGroup2: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Hypothesis_Test.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Item_Analysis.dfm
+     Component not supported on FireMonkey :     object RichEdit1: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\List_Func.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\LogMemo.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\LogReg_Demo.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Main.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\MDSWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\MLRegWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\MLR_Editor.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\NIST_Introduction.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\NLin_Tests.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\NormalProbPlot.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Oder_Form.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\PCAWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\PCRegWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QC_Attr.dfm
+     Component not supported on FireMonkey :       object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QC_CP.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QC_Levey.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QC_Pareto.dfm
+     Component not supported on FireMonkey :       object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QC_XR.dfm
+     Component not supported on FireMonkey :       object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\QQPlot.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Quick_Start.dfm
+     Component not supported on FireMonkey :   object RichEdit1: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Random_Generator.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\RidgeRegWizard.dfm
+     Component not supported on FireMonkey :       object RichEdit: TRichEdit
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\SCC_XBar.dfm
+     Not supported on FireMonkey : OnKeyPress
+     Component not supported on FireMonkey :       object RadioGroup1: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\TS_ARAR.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\TS_ARIMASim.dfm
+     Component not supported on FireMonkey :       object RadioGroupCT: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\TS_ExpSmooth.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\TS_PACF.dfm
+     Component not supported on FireMonkey :       object RadioGroupPT: TRadioGroup
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\WeibullProbPlot.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Welcome_Stat.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\WhatsNew.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_ARIMA.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_Decomp.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_Hotelling.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_MDS.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_MLReg.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_PCA.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_PCReg.dfm
+     
+Converting : C:\CommonObjects\Dew Stats.NET\Examples\Wizard_RidgeReg.dfm
+     
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\aerosol_particles.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\airpass.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ANOVA1_Box.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ANOVA1_Box.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ANOVA1_Data.mtx
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Anova_Tests.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Anova_Tests.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ARIMAWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ARIMAWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Chart.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Chart.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_DB.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Form.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Form.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_QC.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_QC.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_REdit.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_REdit.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Wizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Basic_Wizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\beam_deflection.VEC
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\BiPlotDemo.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\BiPlotDemo.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes11.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes11.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes21.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes21.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes30.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Changes30.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\deaths.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\DecompWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\DecompWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\dowjones.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\ewma_data.MTX
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\EWMA_Demo.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\EWMA_Demo.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\FisherIris.mtx
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Fit_Model.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Fit_Model.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\FIT_X.VEC
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\FIT_Y.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\GOF_Chi2.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\GOF_Chi2.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\GOF_KS.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\GOF_KS.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\HotellingT2.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\HotellingT2.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Hypothesis_Test.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Hypothesis_Test.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Item_Analysis.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Item_Analysis.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\List_Func.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\List_Func.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\List_Functions.txt
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\LogMemo.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\LogMemo.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\LogReg_Demo.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\LogReg_Demo.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Main.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Main.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MDSWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MDSWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MLRegWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MLRegWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MLR_Editor.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MLR_Editor.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MulLinReg_A.mtx
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\MulLinReg_Y.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NIST_Introduction.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NIST_Introduction.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NLin_Tests.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NLin_Tests.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NormalProbPlot.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\NormalProbPlot.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Oder_Form.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Oder_Form.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\PCAWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\PCAWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\PCA_Data.mtx
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\PCRegWizard.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\PCRegWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Attr.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Attr.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Attribute.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_CP.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_CP.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Levey.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Levey.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Pareto.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Pareto.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_Pareto.vec
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_XR.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_XR.mtx
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QC_XR.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QQPlot.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\QQPlot.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Quick_Start.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Quick_Start.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Random_Generator.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Random_Generator.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\RidgeRegWizard.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\SCC_XBar.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemo.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET.bdsproj
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D10.bdsproj
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D10.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D11.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D11.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D12.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D9.bdsproj
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoNET_D9.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D10.bdsproj
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D10.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D10.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D11.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D11.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D12.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D12.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D14.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D14.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D15.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D15.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D15_Icon.ico
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D16.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D16.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D16_Icon.ico
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D17.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D18.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D18.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D19.exe
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D19.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D9.bdsproj
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\StatDemoW32_D9.res
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ARAR.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ARAR.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ARIMASim.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ARIMASim.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ExpSmooth.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_ExpSmooth.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_PACF.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\TS_PACF.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\WeibullProbPlot.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\WeibullProbPlot.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Welcome_Stat.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Welcome_Stat.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\WhatsNew.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\WhatsNew.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_ARIMA.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_ARIMA.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_Decomp.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_Decomp.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_Hotelling.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_Hotelling.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_MDS.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_MDS.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_MLReg.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_MLReg.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_PCA.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_PCA.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_PCReg.dcuil
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_PCReg.nfm
+copy extra file : C:\CommonObjects\Dew Stats.NET\Examples.FM\Wizard_RidgeReg.nfm
+
+Operation Complete
+Time convertion project : 5.52 seconds.
