@@ -1,0 +1,8 @@
+inherited frmChanges11: TfrmChanges11
+  Caption = 'frmChanges11'
+  DesignerMasterStyle = 0
+  inherited RichEdit1: TMemo
+    Viewport.Width = 676.000000000000000000
+    Viewport.Height = 438.000000000000000000
+  end
+end

@@ -1,0 +1,12 @@
+inherited frmShowPCAWizard: TfrmShowPCAWizard
+  Caption = 'frmShowPCAWizard'
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Height = 288.000000000000000000
+  end
+  inherited Memo1: TMemo
+    Size.Height = 113.000000000000000000
+    Viewport.Width = 481.000000000000000000
+    Viewport.Height = 113.000000000000000000
+  end
+end

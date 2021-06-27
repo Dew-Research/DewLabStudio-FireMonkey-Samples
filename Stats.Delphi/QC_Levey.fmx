@@ -1,0 +1,86 @@
+inherited frmLevey: TfrmLevey
+  Caption = 'frmLevey'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    inherited Chart1: TChart
+      Legend.Visible = False
+      Title.Text.Strings = (
+        '1S3: One value beyond three sigma from the mean.'
+        '1S2: One value beyond two sigma from the mean.'
+        
+          '2S2: Two consecutive values either greater than, or less than, t' +
+          'wo sigma from the mean.'
+        
+          'RS4: A difference between consecutive values greater than four s' +
+          'igma.'
+        
+          '41S: Four consecutive values greater than, or less than, one sig' +
+          'ma from the mean.'
+        
+          '10X: Ten consecutive values all greater than, or less than, the ' +
+          'mean. '
+        '')
+      BottomAxis.Maximum = 24.000000000000000000
+      LeftAxis.Maximum = 925.000000000000000000
+      LeftAxis.Minimum = 205.000000000000000000
+      OnAfterDraw = Chart1AfterDraw
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TLineSeries
+        OnGetPointerStyle = Series1GetPointerStyle
+        Marks.Visible = True
+        Marks.MultiLine = True
+        SeriesColor = claWhite
+        OnGetMarkText = Series1GetMarkText
+        Brush.BackColor = x00FFFFFF
+        Pointer.Brush.Gradient.EndColor = claWhite
+        Pointer.Gradient.EndColor = claWhite
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      object CheckBoxMean: TCheckBox
+        IsChecked = True
+        Position.X = 8.000000000000000000
+        Position.Y = 69.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Show mean line'
+        OnClick = CheckBoxMeanClick
+      end
+      object CheckBoxSigma: TCheckBox
+        IsChecked = True
+        Position.X = 8.000000000000000000
+        Position.Y = 99.000000000000000000
+        Size.Width = 173.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Show sigma lines'
+        OnClick = CheckBoxSigmaClick
+      end
+      object Button2: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 132.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Edit data'
+        OnClick = Button2Click
+      end
+    end
+  end
+end

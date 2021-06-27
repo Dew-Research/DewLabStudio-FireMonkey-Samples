@@ -1,0 +1,50 @@
+object frmListFunc: TfrmListFunc
+  Left = 236
+  Top = 106
+  Caption = 'frmListFunc'
+  ClientHeight = 282
+  ClientWidth = 523
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  Left = 236
+  Top = 106
+  DesignerMasterStyle = 0
+  object StringGrid1: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 523.000000000000000000
+    Size.Height = 241.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowHeight = 21.000000000000000000
+    Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+    Viewport.Width = 503.000000000000000000
+    Viewport.Height = 216.000000000000000000
+    object StringColumn1: TStringColumn
+      Size.Width = 187.000000000000000000
+    end
+    object StringColumn2: TStringColumn
+    end
+  end
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 523.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      AutoSize = True
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Label1'
+    end
+  end
+end

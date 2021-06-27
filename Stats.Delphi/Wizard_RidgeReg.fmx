@@ -1,0 +1,4 @@
+inherited frmShowRidgeReg: TfrmShowRidgeReg
+  Caption = 'frmShowRidgeReg'
+  DesignerMasterStyle = 0
+end

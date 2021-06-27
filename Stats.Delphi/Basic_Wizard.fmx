@@ -1,0 +1,91 @@
+object frmBasicWizard: TfrmBasicWizard
+  Left = 236
+  Top = 106
+  ClientHeight = 310
+  ClientWidth = 615
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  Left = 236
+  Top = 106
+  DesignerMasterStyle = 3
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 266.000000000000000000
+    Size.Width = 615.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnHelp: TButton
+      Position.X = 16.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Help'
+    end
+    object btnBack: TButton
+      Position.X = 198.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = '< Back'
+      OnClick = btnBackClick
+    end
+    object btnNext: TButton
+      Position.X = 323.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Next >'
+      OnClick = btnNextClick
+    end
+    object btnCancel: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 487.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Cancel'
+      OnClick = btnCancelClick
+    end
+  end
+  object Panel2: TPanel
+    Align = Top
+    Size.Width = 615.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object lblHeader: TLabel
+      AutoSize = True
+      StyledSettings = [Family, Size, FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Style = [fsBold]
+      TextSettings.WordWrap = False
+      Text = 'lblHeader'
+    end
+  end
+  object PageControl: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 615.000000000000000000
+    Size.Height = 233.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = Top
+  end
+end

@@ -1,0 +1,435 @@
+inherited frmMDSWiz: TfrmMDSWiz
+  Left = 266
+  Top = 237
+  Caption = 'frmMDSWiz'
+  ClientHeight = 396
+  ClientWidth = 670
+  OnDestroy = FormDestroy
+  Left = 266
+  Top = 237
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Position.Y = 352.000000000000000000
+    Size.Width = 670.000000000000000000
+    inherited btnCancel: TButton
+      Position.X = 542.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Size.Width = 670.000000000000000000
+  end
+  inherited PageControl: TTabControl
+    Size.Width = 670.000000000000000000
+    Size.Height = 319.000000000000000000
+    object tsInputData: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 169.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Step 1: Input data'
+      ExplicitSize.cx = 169.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object GroupBox2: TGroupBox
+        Position.X = 335.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 323.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Additional settings'
+        TabOrder = 0
+        object Label4: TLabel
+          AutoSize = True
+          Position.X = 27.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 123.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Format string : '
+        end
+        object EditFmtString: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 159.000000000000000000
+          Position.Y = 32.000000000000000000
+          Size.Width = 142.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object GroupBox3: TGroupBox
+        Position.X = 11.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 302.000000000000000000
+        Size.Height = 254.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Data matrix'
+        TabOrder = 1
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 14.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Columns:'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 16.000000000000000000
+          Position.Y = 39.000000000000000000
+          Size.Width = 54.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Rows:'
+        end
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 16.000000000000000000
+          Position.Y = 120.000000000000000000
+          Size.Width = 52.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Data : '
+        end
+        object Label5: TLabel
+          AutoSize = True
+          Position.X = 14.000000000000000000
+          Position.Y = 168.000000000000000000
+          Size.Width = 87.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Data type:'
+        end
+        object Label6: TLabel
+          AutoSize = True
+          Position.X = 17.000000000000000000
+          Position.Y = 204.000000000000000000
+          Size.Width = 61.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Metric:'
+        end
+        object Label7: TLabel
+          AutoSize = True
+          Position.X = 192.000000000000000000
+          Position.Y = 123.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Data matrix'
+        end
+        object EditCols: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          ReadOnly = True
+          Position.X = 118.000000000000000000
+          Position.Y = 66.000000000000000000
+          Size.Width = 87.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditRows: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          ReadOnly = True
+          Position.X = 118.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 87.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object BtnEditData: TButton
+          Position.X = 75.000000000000000000
+          Position.Y = 111.000000000000000000
+          Size.Width = 94.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Edit'
+          OnClick = BtnEditDataClick
+        end
+        object CBoxDataType: TComboBox
+          DisableFocusEffect = False
+          Position.X = 115.000000000000000000
+          Position.Y = 162.000000000000000000
+          Size.Width = 171.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          OnChange = CBoxDataTypeChange
+          object TListBoxItem
+            TabOrder = 0
+            Text = 'Dissimilarities matrix'
+          end
+          object TListBoxItem
+            TabOrder = 1
+            Text = 'Similarities matrix'
+          end
+          object TListBoxItem
+            TabOrder = 2
+            Text = 'Raw data'
+          end
+        end
+        object CBoxMetricType: TComboBox
+          DisableFocusEffect = False
+          Position.X = 115.000000000000000000
+          Position.Y = 204.000000000000000000
+          Size.Width = 174.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          OnChange = CBoxMetricTypeChange
+          object TListBoxItem
+            TabOrder = 0
+            Text = 'Euclidian'
+          end
+          object TListBoxItem
+            TabOrder = 1
+            Text = 'City-Block'
+          end
+        end
+      end
+    end
+    object tsConfigReport: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 167.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Step 2: Configure reports'
+      ExplicitSize.cx = 167.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object GroupBox1: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 141.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Text reports'
+        TabOrder = 0
+        object chkBoxEigenvalues: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 150.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Eigenvalues'
+        end
+        object chkBoxFit: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 67.000000000000000000
+          Size.Width = 150.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Fit and solution'
+        end
+        object chkBoxDissimilarities: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 99.000000000000000000
+          Size.Width = 150.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Dissimilarities'
+        end
+      end
+      object GroupBox4: TGroupBox
+        Position.X = 200.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 395.000000000000000000
+        Size.Height = 141.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Report range'
+        TabOrder = 1
+        object Label8: TLabel
+          AutoSize = True
+          Position.X = 21.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 171.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Minimum dimension'
+        end
+        object Label9: TLabel
+          AutoSize = True
+          Position.X = 21.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 175.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Maximum dimension'
+        end
+        object Label10: TLabel
+          AutoSize = True
+          Position.X = 21.000000000000000000
+          Position.Y = 99.000000000000000000
+          Size.Width = 227.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Reduced space dimensions'
+        end
+        object EditMinDim: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = True
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '1'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 258.000000000000000000
+          Position.Y = 21.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditMaxDim: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 4
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = True
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '1'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 258.000000000000000000
+          Position.Y = 57.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditNumDim: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 5
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = True
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '1'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 258.000000000000000000
+          Position.Y = 93.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object tsTextReport: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 167.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Classical MDS: Text report'
+      ExplicitSize.cx = 167.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object RichEdit: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          'RichEdit')
+        ReadOnly = True
+        Align = Client
+        Size.Width = 670.000000000000000000
+        Size.Height = 270.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 662.000000000000000000
+        Viewport.Height = 262.000000000000000000
+      end
+    end
+    object tsChart: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 167.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Classical MDS: Charts'
+      ExplicitSize.cx = 167.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Chart1: TChart
+        Legend.LegendStyle = lsValues
+        Legend.TextStyle = ltsPlain
+        Title.Text.Strings = (
+          'MDS Map')
+        Chart3DPercent = 100
+        View3DOptions.Elevation = 336
+        View3DOptions.Orthogonal = False
+        View3DOptions.Perspective = 29
+        View3DOptions.Rotation = 343
+        View3DOptions.Zoom = 70
+        Zoom.Brush.Kind = None
+        Zoom.Brush.Gradient.Direction = gdFromTopLeft
+        Zoom.Brush.Gradient.EndColor = claSilver
+        Zoom.Brush.Gradient.MidColor = claWhite
+        Zoom.Brush.Gradient.StartColor = claSilver
+        Zoom.Pen.Color = claWhite
+        Zoom.Pen.Mode = pmNotXor
+        Zoom.Pen.Fill.Color = claWhite
+        Align = Client
+        Color = claWhite
+        TabOrder = 0
+        Size.Width = 670.000000000000000000
+        Size.Height = 215.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 0
+      end
+      object TeeCommander1: TTeeCommander
+        Panel = Chart1
+        Align = Top
+        ParentShowHint = False
+        Size.Width = 670.000000000000000000
+        Size.Height = 55.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+  end
+end

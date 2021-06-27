@@ -1,0 +1,111 @@
+inherited frmParetoChart: TfrmParetoChart
+  Caption = 'frmParetoChart'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    inherited Chart1: TChart
+      Legend.Alignment = laBottom
+      Legend.LegendStyle = lsSeries
+      Title.Text.Strings = (
+        'Pareto Chart')
+      LeftAxis.Title.Caption = 'Values'
+      RightAxis.ExactDateTime = False
+      RightAxis.Grid.Visible = False
+      RightAxis.Increment = 10.000000000000000000
+      RightAxis.Title.Caption = 'Cumulative [%]'
+      Size.Width = 439.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TBarSeries
+        SeriesColor = x0080FFFF
+        Title = 'Pareto'
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Bar'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        Marks.Visible = True
+        Marks.Style = smsValue
+        SeriesColor = x004080FF
+        Title = 'Cumulative Pareto'
+        VertAxis = aRightAxis
+        OnGetMarkText = Series2GetMarkText
+        Brush.BackColor = x00FFFFFF
+        Pointer.Brush.Gradient.EndColor = x004080FF
+        Pointer.Gradient.EndColor = x004080FF
+        Pointer.HorizSize = 3
+        Pointer.InflateMargins = False
+        Pointer.Style = psTriangle
+        Pointer.VertSize = 3
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 184.000000000000000000
+      inherited Button1: TButton
+        Position.X = 11.000000000000000000
+      end
+      object RadioGroup1: TPanel
+        Position.X = 11.000000000000000000
+        Position.Y = 145.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 87.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object RadioButton1: TRadioButton
+          GroupName = 'ParetoChartGroup'
+          IsChecked = True
+          Position.X = 9.000000000000000000
+          Position.Y = 12.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Regular'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'ParetoChartGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 54.000000000000000000
+          Size.Width = 127.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Cumulative'
+          OnChange = RadioButton2Change
+        end
+      end
+      object ParetoChartLabel: TLabel
+        Position.X = 12.000000000000000000
+        Position.Y = 117.000000000000000000
+        Size.Width = 136.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Pareto chart:'
+      end
+    end
+    object Button2: TButton
+      Position.X = 11.000000000000000000
+      Position.Y = 63.000000000000000000
+      Size.Width = 120.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Edit Data'
+      OnClick = Button2Click
+    end
+  end
+  inherited Memo1: TMemo
+    Viewport.Width = 615.000000000000000000
+    Viewport.Height = 113.000000000000000000
+  end
+end

@@ -1,0 +1,181 @@
+inherited frmQCCP: TfrmQCCP
+  Caption = 'frmQCCP'
+  ClientHeight = 389
+  ClientWidth = 604
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 604.000000000000000000
+    Size.Height = 297.000000000000000000
+    object Chart1: TChart
+      AllowPanning = pmHorizontal
+      Border.Visible = True
+      Legend.FontSeriesColor = True
+      Legend.Visible = False
+      Title.Text.Strings = (
+        'CP/CPK Chart')
+      LeftAxis.Title.Caption = 'N'
+      RightAxis.Grid.Visible = False
+      RightAxis.Title.Angle = 90
+      RightAxis.Title.Caption = 'Normal PDF'
+      View3D = False
+      Zoom.Allow = False
+      Zoom.Brush.Color = claSilver
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Align = Client
+      Color = claWhite
+      TabOrder = 0
+      Size.Width = 402.000000000000000000
+      Size.Height = 297.000000000000000000
+      Size.PlatformDefault = False
+      PrintMargins = (
+        34
+        15
+        34
+        15)
+      ColorPaletteIndex = 0
+      object Series1: THistogramSeries
+        SeriesColor = claBlue
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        SeriesColor = claBlack
+        VertAxis = aRightAxis
+        Brush.BackColor = x00FFFFFF
+        LinePen.Width = 2.000000000000000000
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object ChartTool1: TColorLineTool
+        Pen.Color = claRed
+        Pen.Width = 2.000000000000000000
+        Pen.Fill.Color = claRed
+        Value = 1.000000000000000000
+        OnEndDragLine = ChartTool1EndDragLine
+        AxisID = 0
+        object TAnnotationTool
+          Shape.Alignment = taCenter
+          Shape.Shadow.Visible = False
+          Shape.TextAlignment = taCenter
+          TextAlignment = taCenter
+        end
+      end
+      object ChartTool2: TColorLineTool
+        Pen.Color = claRed
+        Pen.Width = 2.000000000000000000
+        Pen.Fill.Color = claRed
+        Value = 5.000000000000000000
+        OnEndDragLine = ChartTool2EndDragLine
+        AxisID = 0
+        object TAnnotationTool
+          Shape.Alignment = taCenter
+          Shape.Shadow.Visible = False
+          Shape.TextAlignment = taCenter
+          TextAlignment = taCenter
+        end
+      end
+    end
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 202.000000000000000000
+      Size.Height = 297.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 70.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Alpha  = '
+      end
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'p = '
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'p = '
+      end
+      object Label4: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 99.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'p = '
+      end
+      object Label5: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'p = '
+      end
+      object Label6: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 142.000000000000000000
+        Size.Width = 30.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'p = '
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 89.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 68.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit1Change
+      end
+      object CheckBox1: TCheckBox
+        IsChecked = True
+        Position.X = 7.000000000000000000
+        Position.Y = 181.000000000000000000
+        Size.Width = 162.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Draw Bell curve'
+        OnClick = CheckBox1Click
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 604.000000000000000000
+    Size.Height = 92.000000000000000000
+    Viewport.Width = 596.000000000000000000
+    Viewport.Height = 84.000000000000000000
+  end
+end

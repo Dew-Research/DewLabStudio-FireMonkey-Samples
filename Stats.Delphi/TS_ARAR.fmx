@@ -1,0 +1,135 @@
+inherited frmARAR: TfrmARAR
+  Caption = 'frmARAR'
+  ClientHeight = 541
+  ClientWidth = 856
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 856.000000000000000000
+    Size.Height = 441.000000000000000000
+    inherited Chart1: TChart
+      Legend.Alignment = laBottom
+      Title.Text.Strings = (
+        'ARAR fiting and forecasting')
+      Size.Width = 555.000000000000000000
+      Size.Height = 441.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TLineSeries
+        Title = 'Time series'
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 102
+        Top = 21
+      end
+      object Series2: TLineSeries
+        SeriesColor = claWhite
+        Title = 'Forecasts'
+        Brush.BackColor = x00FFFFFF
+        Pointer.Brush.Gradient.EndColor = claWhite
+        Pointer.Gradient.EndColor = claWhite
+        Pointer.HorizSize = 2
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.VertSize = 2
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Left = 159
+        Top = 24
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 301.000000000000000000
+      Size.Height = 441.000000000000000000
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 132.000000000000000000
+        Size.Width = 118.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = '# fo forecasts'
+        Left = 8
+        Top = 112
+      end
+      object btnLoad: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Load data'
+        OnClick = btnLoadClick
+      end
+      object chkShorten: TCheckBox
+        IsChecked = True
+        Position.X = 11.000000000000000000
+        Position.Y = 99.000000000000000000
+        Size.Width = 230.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Shorten memory filter'
+        OnClick = chkShortenClick
+      end
+      object MemoLog: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Position.X = 15.000000000000000000
+        Position.Y = 174.000000000000000000
+        Size.Width = 271.000000000000000000
+        Size.Height = 227.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Viewport.Width = 263.000000000000000000
+        Viewport.Height = 219.000000000000000000
+      end
+      object NEdit: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '24'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 135.000000000000000000
+        Position.Y = 129.000000000000000000
+        Size.Width = 106.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 856.000000000000000000
+    Size.Height = 100.000000000000000000
+    Viewport.Width = 848.000000000000000000
+    Viewport.Height = 92.000000000000000000
+  end
+  object OpenDialog: TOpenDialog
+    Filter = '*.vec (vector)|*.vec'
+    Left = 187
+    Top = 142
+  end
+end

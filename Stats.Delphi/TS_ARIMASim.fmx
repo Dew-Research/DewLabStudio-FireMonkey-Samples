@@ -1,0 +1,290 @@
+inherited frmARIMASim: TfrmARIMASim
+  Caption = 'frmARIMASim'
+  ClientHeight = 659
+  ClientWidth = 833
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 833.000000000000000000
+    Size.Height = 562.000000000000000000
+    inherited Chart1: TChart
+      Legend.Alignment = laBottom
+      Legend.LegendStyle = lsSeries
+      BottomAxis.Maximum = 24.000000000000000000
+      LeftAxis.Maximum = 347.500000000000000000
+      LeftAxis.Minimum = 2.500000000000000000
+      Size.Width = 493.000000000000000000
+      Size.Height = 562.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        Title = 'Theoretical ACF'
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 340.000000000000000000
+      Size.Height = 562.000000000000000000
+      inherited Button1: TButton
+        Position.X = 11.000000000000000000
+      end
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 183.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = '# of points:'
+        Left = 8
+        Top = 64
+      end
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 141.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = '# of diffs:'
+        Left = 8
+        Top = 88
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 105.000000000000000000
+        Size.Width = 83.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'MA order:'
+        Left = 8
+        Top = 112
+      end
+      object Label4: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'AR order:'
+        Left = 8
+        Top = 136
+      end
+      object Button2: TButton
+        Position.X = 225.000000000000000000
+        Position.Y = 61.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'AR'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 225.000000000000000000
+        Position.Y = 97.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'MA'
+        OnClick = Button3Click
+      end
+      object Button4: TButton
+        Position.X = 11.000000000000000000
+        Position.Y = 219.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 7
+        Text = 'Simulate'
+        OnClick = Button4Click
+      end
+      object Button5: TButton
+        Position.X = 225.000000000000000000
+        Position.Y = 133.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 8
+        Text = 'D(init)'
+        OnClick = Button5Click
+      end
+      object RadioGroupCT: TPanel
+        Position.X = 8.000000000000000000
+        Position.Y = 290.000000000000000000
+        Size.Width = 170.000000000000000000
+        Size.Height = 92.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        object RadioButton1: TRadioButton
+          GroupName = 'PlotGroup'
+          IsChecked = True
+          Position.X = 12.000000000000000000
+          Position.Y = 12.000000000000000000
+          Size.Width = 142.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Time series'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 12.000000000000000000
+          Position.Y = 37.000000000000000000
+          Size.Width = 148.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Time series ACF'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton3: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 12.000000000000000000
+          Position.Y = 63.000000000000000000
+          Size.Width = 157.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Time series PACF'
+          OnChange = RadioButton1Change
+        end
+      end
+      object MemoLog: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        Position.X = 191.000000000000000000
+        Position.Y = 289.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 93.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+      end
+      object EditAR: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 11
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '2'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 105.000000000000000000
+        Position.Y = 63.000000000000000000
+        Size.Width = 109.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = EditARChange
+      end
+      object EditMA: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 12
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '3'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 105.000000000000000000
+        Position.Y = 100.000000000000000000
+        Size.Width = 109.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = EditMAChange
+      end
+      object EditD: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 13
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '1'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 105.000000000000000000
+        Position.Y = 137.000000000000000000
+        Size.Width = 109.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = EditDChange
+      end
+      object EditN: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 14
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = True
+        Scientific = False
+        ReFormat = '0'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '100'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 111.000000000000000000
+        Position.Y = 174.000000000000000000
+        Size.Width = 106.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = EditNChange
+      end
+      object Label5: TLabel
+        Position.X = 12.000000000000000000
+        Position.Y = 273.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Plot:'
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 833.000000000000000000
+    Size.Height = 97.000000000000000000
+  end
+end

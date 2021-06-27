@@ -1,0 +1,123 @@
+inherited frmNormalProb: TfrmNormalProb
+  Caption = 'frmNormalProb'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    object Panel2: TPanel
+      Align = Top
+      Size.Width = 481.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Position.X = 333.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 139.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Generate data'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit'
+        OnClick = Button2Click
+      end
+      object PenButton: TButton
+        Position.X = 143.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 173.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Edit slope pen...'
+        OnClick = PenButtonClick
+      end
+    end
+    object Chart1: TChart
+      BackWall.Pen.Visible = False
+      BottomWall.Pen.Visible = False
+      BottomWall.Size = 4
+      LeftWall.Pen.Visible = False
+      LeftWall.Size = 4
+      Legend.Frame.Color = claGray
+      Legend.Frame.Fill.Color = claGray
+      Legend.Frame.Visible = False
+      Legend.Shadow.Color = x00CCCCCC
+      Legend.Visible = False
+      Title.Alignment = taLeftJustify
+      Title.Font.Size = 9.750000000000000000
+      Title.Font.Color = claBlack
+      Title.Font.Brush.Color = claBlack
+      Title.Font.InterCharSize = 2
+      Title.Font.Shadow.Color = claGray
+      Title.Font.Shadow.HorizSize = 2
+      Title.Font.Shadow.VertSize = 1
+      Title.Frame.Color = claGray
+      Title.Frame.Fill.Color = claGray
+      Title.Shadow.HorizSize = 0
+      Title.Shadow.VertSize = 0
+      Title.Text.Strings = (
+        'Normal probability plot')
+      Title.Transparent = False
+      BottomAxis.Axis.Color = x00404040
+      BottomAxis.Axis.Fill.Color = x00404040
+      BottomAxis.Grid.Color = x00CCCCCC
+      BottomAxis.Grid.Fill.Color = x00CCCCCC
+      BottomAxis.Grid.Visible = False
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Ordered data values'
+      BottomAxis.Title.Color = claBlack
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      Frame.Visible = False
+      LeftAxis.Axis.Color = x00404040
+      LeftAxis.Axis.Fill.Color = x00404040
+      LeftAxis.Grid.Visible = False
+      LeftAxis.LabelsSize = 30
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'p'
+      LeftAxis.Title.Color = x0080FFFF
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      Color = claWhite
+      TabOrder = 1
+      Size.Width = 481.000000000000000000
+      Size.Height = 223.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 3
+      object GridBandTool1: TGridBandTool
+        Band1.Color = x00E9E9E9
+        Band2.Color = claWhite
+        Left = 123
+        Top = 36
+        AxisID = 2
+      end
+    end
+  end
+end

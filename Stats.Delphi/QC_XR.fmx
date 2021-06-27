@@ -1,0 +1,101 @@
+inherited frmQCXR: TfrmQCXR
+  Caption = 'frmQCXR'
+  ClientHeight = 477
+  ClientWidth = 697
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 697.000000000000000000
+    Size.Height = 380.000000000000000000
+    inherited Chart1: TChart
+      Border.Width = 6.000000000000000000
+      BorderRound = 10
+      Gradient.Visible = True
+      Legend.Brush.Kind = Gradient
+      Legend.Brush.Gradient.Direction = gdTopBottom
+      Legend.Brush.Gradient.Visible = True
+      Size.Width = 534.000000000000000000
+      Size.Height = 380.000000000000000000
+      PrintMargins = (
+        15
+        22
+        15
+        22)
+      ColorPaletteIndex = 2
+      inherited GridBandTool1: TGridBandTool
+        AxisID = 2
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 163.000000000000000000
+      Size.Height = 380.000000000000000000
+      inherited Edit1: TEdit
+        Position.X = 12.000000000000000000
+        Position.Y = 44.000000000000000000
+        Size.Width = 118.000000000000000000
+      end
+      inherited Button1: TButton
+        Position.Y = 108.000000000000000000
+      end
+      inherited Button2: TButton
+        Position.Y = 149.000000000000000000
+      end
+      object RadioGroup1: TPanel
+        Position.X = 8.000000000000000000
+        Position.Y = 220.000000000000000000
+        Size.Width = 134.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        OnClick = RadioGroup1Click
+        object RadioButton1: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          IsChecked = True
+          Position.X = 9.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 103.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'X Chart'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 103.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'R Chart'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton3: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          Position.X = 9.000000000000000000
+          Position.Y = 87.000000000000000000
+          Size.Width = 103.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'S Chart'
+          OnChange = RadioButton1Change
+        end
+      end
+      object Label2: TLabel
+        Position.X = 15.000000000000000000
+        Position.Y = 195.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Chart type:'
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 697.000000000000000000
+    Size.Height = 97.000000000000000000
+    Viewport.Width = 689.000000000000000000
+    Viewport.Height = 89.000000000000000000
+  end
+end

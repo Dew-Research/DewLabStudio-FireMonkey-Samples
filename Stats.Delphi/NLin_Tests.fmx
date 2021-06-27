@@ -1,0 +1,325 @@
+inherited frmNonLinTest: TfrmNonLinTest
+  Left = 221
+  Top = 40
+  Caption = 'frmNonLinTest'
+  ClientHeight = 676
+  ClientWidth = 928
+  OnDestroy = FormDestroy
+  Left = 221
+  Top = 40
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 928.000000000000000000
+    Size.Height = 578.000000000000000000
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 334.000000000000000000
+      Size.Height = 578.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 10.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 184.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Optimization method : '
+      end
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 10.000000000000000000
+        Position.Y = 73.000000000000000000
+        Size.Width = 222.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Max. number of iterations : '
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Position.X = 10.000000000000000000
+        Position.Y = 136.000000000000000000
+        Size.Width = 140.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Regression test : '
+      end
+      object Label5: TLabel
+        AutoSize = True
+        Position.X = 14.000000000000000000
+        Position.Y = 206.000000000000000000
+        Size.Width = 152.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = '||Grad||C Tolerance'
+      end
+      object Label6: TLabel
+        AutoSize = True
+        Position.X = 15.000000000000000000
+        Position.Y = 244.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Convergence Tolerance'
+      end
+      object Label4: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 282.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Numerical grad step size'
+      end
+      object ComboBox1: TComboBox
+        Position.X = 13.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 210.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = ComboBox1Change
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'Simplex'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'Marquardt'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'Quasi-Newton (BFGS)'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'Quasi-Newton (DFP)'
+        end
+        object TListBoxItem
+          TabOrder = 4
+          Text = 'Conjugate Grad (Fletcher)'
+        end
+        object TListBoxItem
+          TabOrder = 5
+          Text = 'Conjugate Grad (Polak)'
+        end
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '20000'
+        Position.X = 10.000000000000000000
+        Position.Y = 95.000000000000000000
+        Size.Width = 210.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit1Change
+      end
+      object ComboBox2: TComboBox
+        Position.X = 10.000000000000000000
+        Position.Y = 158.000000000000000000
+        Size.Width = 210.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        OnChange = ComboBox2Change
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'Eckerle4 (high difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'Thurber (high difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'Rat42 (average difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'Misra1c (average difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 4
+          Text = 'MGH09 (high difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 5
+          Text = 'Chwirut2 (low difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 6
+          Text = 'MGH10 (high difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 7
+          Text = 'Roszman1(average difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 8
+          Text = 'Rat43 (high difficulty)'
+        end
+      end
+      object Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Text = '1e-3'
+        Position.X = 230.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 86.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit3Change
+      end
+      object CheckBox1: TCheckBox
+        IsChecked = True
+        Position.X = 146.000000000000000000
+        Position.Y = 327.000000000000000000
+        Size.Width = 149.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Coefficients'
+        OnClick = CheckBox1Click
+      end
+      object Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Text = '1e-3'
+        Position.X = 230.000000000000000000
+        Position.Y = 238.000000000000000000
+        Size.Width = 86.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit4Change
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Text = '1e-3'
+        Position.X = 227.000000000000000000
+        Position.Y = 276.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit2Change
+      end
+      object SpeedButton1: TButton
+        Position.X = 12.000000000000000000
+        Position.Y = 321.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 13
+        Text = 'Recalculate'
+        OnClick = SpeedButton1Click
+      end
+    end
+    object Panel3: TPanel
+      Align = Client
+      Size.Width = 594.000000000000000000
+      Size.Height = 578.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Memo2: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Top
+        Size.Width = 594.000000000000000000
+        Size.Height = 148.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 586.000000000000000000
+        Viewport.Height = 140.000000000000000000
+      end
+      object Chart1: TChart
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Legend.Alignment = laTop
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.Text.Strings = (
+          'Fitted data')
+        Title.Visible = False
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        BottomAxis.Maximum = 24.000000000000000000
+        BottomAxis.EndPosition = 100.000000000000000000
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.Maximum = 0.500000000000000000
+        DepthAxis.Minimum = -0.500000000000000000
+        DepthAxis.EndPosition = 100.000000000000000000
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.Maximum = 0.500000000000000000
+        DepthTopAxis.Minimum = -0.500000000000000000
+        DepthTopAxis.EndPosition = 100.000000000000000000
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        LeftAxis.Maximum = 1228.375000000000000000
+        LeftAxis.Minimum = 400.000000000000000000
+        LeftAxis.EndPosition = 100.000000000000000000
+        RightAxis.Grid.ZPosition = 100.000000000000000000
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.EndPosition = 100.000000000000000000
+        RightAxis.ZPosition = 100.000000000000000000
+        TopAxis.Grid.ZPosition = 100.000000000000000000
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.EndPosition = 100.000000000000000000
+        TopAxis.ZPosition = 100.000000000000000000
+        View3D = False
+        Zoom.Brush.Kind = None
+        Zoom.Brush.Gradient.Direction = gdFromTopLeft
+        Zoom.Brush.Gradient.EndColor = claSilver
+        Zoom.Brush.Gradient.MidColor = claWhite
+        Zoom.Brush.Gradient.StartColor = claSilver
+        Zoom.Pen.Color = claBlack
+        Zoom.Pen.Mode = pmNotXor
+        Align = Client
+        BevelOuter = bvNone
+        Color = claSilver
+        TabOrder = 1
+        Size.Width = 594.000000000000000000
+        Size.Height = 430.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 0
+        object Series1: TPointSeries
+          HoverElement = [heCurrent]
+          SeriesColor = claYellow
+          Title = 'Data'
+          ClickableLine = False
+          Pointer.HorizSize = 2
+          Pointer.InflateMargins = True
+          Pointer.Pen.Color = claYellow
+          Pointer.Pen.Width = 2.000000000000000000
+          Pointer.Pen.Fill.Color = claYellow
+          Pointer.Style = psDiagCross
+          Pointer.VertSize = 2
+          XValues.Name = 'X'
+          XValues.Order = loNone
+          YValues.Name = 'Y'
+          YValues.Order = loNone
+        end
+        object Series2: TLineSeries
+          HoverElement = [heCurrent]
+          Title = 'Fitted data'
+          Brush.BackColor = x00FFFFFF
+          Pointer.InflateMargins = True
+          Pointer.Style = psRectangle
+          XValues.Name = 'X'
+          XValues.Order = loNone
+          YValues.Name = 'Y'
+          YValues.Order = loNone
+        end
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 928.000000000000000000
+    Size.Height = 98.000000000000000000
+    Viewport.Width = 928.000000000000000000
+    Viewport.Height = 98.000000000000000000
+  end
+end

@@ -1,0 +1,12 @@
+inherited frmShowMLRWizard: TfrmShowMLRWizard
+  Caption = 'frmShowMLRWizard'
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Height = 320.000000000000000000
+  end
+  inherited Memo1: TMemo
+    Size.Height = 81.000000000000000000
+    Viewport.Width = 477.000000000000000000
+    Viewport.Height = 77.000000000000000000
+  end
+end

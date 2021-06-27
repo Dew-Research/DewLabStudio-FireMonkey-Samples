@@ -1,0 +1,118 @@
+inherited frmBasicQC: TfrmBasicQC
+  Caption = 'frmBasicQC'
+  ClientHeight = 549
+  ClientWidth = 666
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 666.000000000000000000
+    Size.Height = 420.000000000000000000
+    object Chart1: TChart
+      BackWall.Pen.Visible = False
+      BottomWall.Pen.Visible = False
+      BottomWall.Size = 4
+      LeftWall.Pen.Visible = False
+      LeftWall.Size = 4
+      Legend.FontSeriesColor = True
+      Legend.Frame.Color = claGray
+      Legend.Frame.Fill.Color = claGray
+      Legend.Frame.Visible = False
+      Legend.Shadow.Color = x00CCCCCC
+      Legend.Visible = False
+      Title.Alignment = taLeftJustify
+      Title.Font.Size = 9.750000000000000000
+      Title.Font.Style = [fsBold]
+      Title.Font.Color = claBlack
+      Title.Font.Brush.Color = claBlack
+      Title.Frame.Color = claGray
+      Title.Frame.Fill.Color = claGray
+      Title.Shadow.HorizSize = 0
+      Title.Shadow.VertSize = 0
+      Title.Text.Strings = (
+        'Quality Control Chart')
+      Title.Transparent = False
+      BottomAxis.Axis.Color = x00404040
+      BottomAxis.Axis.Fill.Color = x00404040
+      BottomAxis.Grid.Color = x00CCCCCC
+      BottomAxis.Grid.Fill.Color = x00CCCCCC
+      BottomAxis.Grid.Visible = False
+      Frame.Visible = False
+      LeftAxis.Axis.Color = x00404040
+      LeftAxis.Axis.Fill.Color = x00404040
+      LeftAxis.Grid.Visible = False
+      View3D = False
+      Zoom.Brush.Color = claSilver
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claBlack
+      Align = Client
+      Color = claWhite
+      TabOrder = 0
+      Size.Width = 431.000000000000000000
+      Size.Height = 420.000000000000000000
+      Size.PlatformDefault = False
+      PrintMargins = (
+        15
+        22
+        15
+        22)
+      ColorPaletteIndex = 3
+      object GridBandTool1: TGridBandTool
+        Band1.Color = x00E9E9E9
+        Band2.Color = claWhite
+        AxisID = 2
+      end
+    end
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 235.000000000000000000
+      Size.Height = 420.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 130.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Confidence (%): '
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 142.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit1Change
+      end
+      object Button1: TButton
+        Position.X = 11.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit Series'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 11.000000000000000000
+        Position.Y = 101.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Edit Data'
+        OnClick = Button2Click
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 666.000000000000000000
+    Viewport.Width = 658.000000000000000000
+    Viewport.Height = 121.000000000000000000
+  end
+end

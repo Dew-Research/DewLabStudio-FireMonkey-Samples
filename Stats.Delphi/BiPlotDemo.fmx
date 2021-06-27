@@ -1,0 +1,59 @@
+inherited frmBiPlot: TfrmBiPlot
+  Caption = 'frmBiPlot'
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited Chart1: TChart
+      Legend.CheckBoxes = True
+      Title.Text.Strings = (
+        'Principal Component Analysis: BiPlot')
+      Size.Width = 430.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+    end
+    inherited Panel2: TPanel
+      Size.Width = 193.000000000000000000
+      inherited Button1: TButton
+        Position.X = 12.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 160.000000000000000000
+      end
+      object Button2: TButton
+        Position.X = 12.000000000000000000
+        Position.Y = 57.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit data'
+        OnClick = Button2Click
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 14.000000000000000000
+        Position.Y = 109.000000000000000000
+        Size.Width = 158.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Biplot settings'
+        TabOrder = 2
+        object CheckBox1: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 149.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Show arrows'
+          OnClick = CheckBox1Click
+        end
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Viewport.Width = 619.000000000000000000
+    Viewport.Height = 117.000000000000000000
+  end
+end

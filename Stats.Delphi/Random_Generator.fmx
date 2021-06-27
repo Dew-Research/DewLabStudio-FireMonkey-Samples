@@ -1,0 +1,386 @@
+inherited frmRandomGen: TfrmRandomGen
+  Left = 268
+  Top = 133
+  Caption = 'frmRandomGen'
+  ClientHeight = 572
+  ClientWidth = 903
+  Left = 268
+  Top = 133
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 903.000000000000000000
+    Size.Height = 467.000000000000000000
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 244.000000000000000000
+      Size.Height = 467.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 11.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 109.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Random generator : '
+      end
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 11.000000000000000000
+        Position.Y = 72.000000000000000000
+        Size.Width = 119.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'How many numbers ? '
+      end
+      object SpeedButton1: TSpeedButton
+        Position.X = 99.000000000000000000
+        Position.Y = 398.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Generate'
+        TextSettings.WordWrap = True
+        OnClick = SpeedButton1Click
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Position.X = 12.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Histogram bins : '
+      end
+      object CBRandomG: TComboBox
+        DropDownCount = 16
+        Position.X = 13.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = CBRandomGChange
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'Beta'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'Binomial'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'Cauchy'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'Chi-Squared'
+        end
+        object TListBoxItem
+          TabOrder = 4
+          Text = 'Erlang'
+        end
+        object TListBoxItem
+          TabOrder = 5
+          Text = 'Exponential'
+        end
+        object TListBoxItem
+          TabOrder = 6
+          Text = 'F (Fisher)'
+        end
+        object TListBoxItem
+          TabOrder = 7
+          Text = 'Gamma'
+        end
+        object TListBoxItem
+          TabOrder = 8
+          Text = 'Geometric'
+        end
+        object TListBoxItem
+          TabOrder = 9
+          Text = 'Generalized extreme value'
+        end
+        object TListBoxItem
+          TabOrder = 10
+          Text = 'Gumbel (Min)'
+        end
+        object TListBoxItem
+          TabOrder = 11
+          Text = 'Hypergeometric'
+        end
+        object TListBoxItem
+          TabOrder = 12
+          Text = 'Laplace'
+        end
+        object TListBoxItem
+          TabOrder = 13
+          Text = 'Logistic'
+        end
+        object TListBoxItem
+          TabOrder = 14
+          Text = 'LogNormal'
+        end
+        object TListBoxItem
+          TabOrder = 15
+          Text = 'Maxwell'
+        end
+        object TListBoxItem
+          TabOrder = 16
+          Text = 'Negative Binomial'
+        end
+        object TListBoxItem
+          TabOrder = 17
+          Text = 'Normal'
+        end
+        object TListBoxItem
+          TabOrder = 18
+          Text = 'Poisson'
+        end
+        object TListBoxItem
+          TabOrder = 19
+          Text = 'Rayleigh'
+        end
+        object TListBoxItem
+          TabOrder = 20
+          Text = 'Student'
+        end
+        object TListBoxItem
+          TabOrder = 21
+          Text = 'Triangular'
+        end
+        object TListBoxItem
+          TabOrder = 22
+          Text = 'Uniform (continuous)'
+        end
+        object TListBoxItem
+          TabOrder = 23
+          Text = 'Uniform (discrete)'
+        end
+        object TListBoxItem
+          TabOrder = 24
+          Text = 'Weibull'
+        end
+      end
+      object EditNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Text = '1000'
+        Position.X = 11.000000000000000000
+        Position.Y = 102.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 14.000000000000000000
+        Position.Y = 215.000000000000000000
+        Size.Width = 221.000000000000000000
+        Size.Height = 152.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Distribution parameters : '
+        TabOrder = 3
+        object lblPar1: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblPar1'
+        end
+        object lblPar2: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 75.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblPar2'
+        end
+        object lblPar3: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 114.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lnlPar3'
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Text = 'Edit1'
+          Position.X = 93.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = 'Edit2'
+          Position.X = 93.000000000000000000
+          Position.Y = 69.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Text = 'Edit3'
+          Position.X = 93.000000000000000000
+          Position.Y = 108.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object BinCountEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Text = '70'
+        Position.X = 12.000000000000000000
+        Position.Y = 165.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object CheckBox1: TCheckBox
+        IsChecked = True
+        Position.X = 17.000000000000000000
+        Position.Y = 376.000000000000000000
+        Size.Width = 161.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        Text = 'Estimate'
+        OnClick = CheckBox1Click
+      end
+    end
+    object Chart1: TChart
+      BackWall.Brush.Color = claWhite
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.EndColor = x00804000
+      Gradient.StartColor = x00FF8000
+      Legend.Alignment = laBottom
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Font.Color = claWhite
+      Title.Font.Brush.Color = claWhite
+      Title.Text.Strings = (
+        'Histogram')
+      OnUndoZoom = Chart1UndoZoom
+      BottomAxis.LabelsFormat.Font.Color = claWhite
+      BottomAxis.LabelsFormat.Font.Brush.Color = claWhite
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 5.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Automatic = False
+      LeftAxis.AutomaticMinimum = False
+      LeftAxis.LabelsFormat.Font.Color = claWhite
+      LeftAxis.LabelsFormat.Font.Brush.Color = claWhite
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 525.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Count'
+      LeftAxis.Title.Font.Color = claWhite
+      LeftAxis.Title.Font.Brush.Color = claWhite
+      RightAxis.Grid.Visible = False
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.Maximum = 1202.500000000000000000
+      RightAxis.Minimum = 517.500000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.Title.Caption = 'PDF'
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      TabOrder = 1
+      Size.Width = 659.000000000000000000
+      Size.Height = 467.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 0
+      object Series1: TBarSeries
+        HoverElement = []
+        Marks.Visible = False
+        Marks.AutoPosition = False
+        Title = 'Histogram'
+        BarWidthPercent = 100
+        Dark3D = False
+        MultiBar = mbNone
+        SideMargins = False
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Bar'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        HoverElement = [heCurrent]
+        SeriesColor = claYellow
+        Title = 'PDF'
+        VertAxis = aRightAxis
+        Brush.BackColor = x00FFFFFF
+        LinePen.Color = claYellow
+        LinePen.Width = 2.000000000000000000
+        LinePen.Fill.Color = claYellow
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Lines.Strings = (
+      
+        'The StatisticRandom unit offers random generators  for 25 differ' +
+        'ent distributions.'
+      ''
+      'Uses MtxExpr, StatRandom;'
+      ''
+      'var v1: Vector;'
+      'begin'
+      '  v1.Size(100);'
+      '  RandomBeta(2,2.5,v1); '
+      '  // generate 100 beta distribution [a=2, b=2.5] random  numbers'
+      ''
+      
+        'For some distributions you can also estimate parameter values. T' +
+        'ry generating '
+      
+        'random numbers (the  "Generate" button), then estimate distribut' +
+        'ion parameters by clicking on '
+      '""Estimate" button.')
+    Size.Width = 903.000000000000000000
+    Size.Height = 105.000000000000000000
+    Viewport.Width = 903.000000000000000000
+    Viewport.Height = 105.000000000000000000
+  end
+end

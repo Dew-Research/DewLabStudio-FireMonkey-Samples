@@ -1,0 +1,292 @@
+inherited frmExpSmooth: TfrmExpSmooth
+  Caption = 'frmExpSmooth'
+  ClientHeight = 556
+  ClientWidth = 950
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Width = 950.000000000000000000
+    Size.Height = 498.000000000000000000
+    inherited Chart1: TChart
+      Legend.Alignment = laBottom
+      Title.Text.Strings = (
+        'Single, double and triple'
+        'exponential smoothing')
+      OnAfterDraw = Chart1AfterDraw
+      Size.Width = 673.000000000000000000
+      Size.Height = 498.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TLineSeries
+        Marks.Callout.Length = 0
+        Title = 'Raw data'
+        Brush.BackColor = x00FFFFFF
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = x00FFFFCC
+        Pointer.Gradient.EndColor = x00FFFFCC
+        Pointer.HorizSize = 2
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.VertSize = 2
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series3: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series4: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 277.000000000000000000
+      Size.Height = 498.000000000000000000
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 9.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 88.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Forecast period:'
+        Left = 8
+        Top = 80
+      end
+      object Button2: TButton
+        Position.X = 143.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit data'
+        OnClick = Button2Click
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 251.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Single exp - initial values'
+        TabOrder = 3
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 20.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 34.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Alpha'
+        end
+        object EditAlphaS: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 91.000000000000000000
+          Position.Y = 27.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 174.000000000000000000
+        Size.Width = 251.000000000000000000
+        Size.Height = 106.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Double exp - initial values'
+        TabOrder = 4
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 33.000000000000000000
+          Size.Width = 34.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Alpha'
+        end
+        object Label4: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 69.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Gamma'
+        end
+        object EditAlphaD: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 89.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 107.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditGammaD: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 89.000000000000000000
+          Position.Y = 63.000000000000000000
+          Size.Width = 107.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object Button3: TButton
+        Position.X = 44.000000000000000000
+        Position.Y = 450.000000000000000000
+        Size.Width = 152.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Smooth data'
+        OnClick = Button3Click
+      end
+      object GroupBox3: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 285.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 160.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Triple exp - initial values'
+        TabOrder = 6
+        object Label5: TLabel
+          AutoSize = True
+          Position.X = 14.000000000000000000
+          Position.Y = 27.000000000000000000
+          Size.Width = 34.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Alpha'
+        end
+        object Label6: TLabel
+          AutoSize = True
+          Position.X = 131.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 27.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Beta'
+        end
+        object Label7: TLabel
+          AutoSize = True
+          Position.X = 14.000000000000000000
+          Position.Y = 93.000000000000000000
+          Size.Width = 45.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Gamma'
+        end
+        object Label8: TLabel
+          AutoSize = True
+          Position.X = 131.000000000000000000
+          Position.Y = 90.000000000000000000
+          Size.Width = 38.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Period'
+        end
+        object EditAlphaT: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Position.X = 11.000000000000000000
+          Position.Y = 51.000000000000000000
+          Size.Width = 98.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditBetaT: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 131.000000000000000000
+          Position.Y = 51.000000000000000000
+          Size.Width = 110.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditGammaT: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Position.X = 11.000000000000000000
+          Position.Y = 117.000000000000000000
+          Size.Width = 95.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditPeriod: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Position.X = 131.000000000000000000
+          Position.Y = 117.000000000000000000
+          Size.Width = 113.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object Edit1: TMtxFloatEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        RegistryPath = '\Software\Dew Research\MtxVec'
+        StoreInRegistry = False
+        IntegerIncrement = False
+        Scientific = False
+        ReFormat = '0.00#;-0.00#'
+        ImFormat = '+0.00#i;-0.00#i'
+        Increment = '0.1'
+        MaxValue = '0'
+        MinValue = '0'
+        Value = '0.00'
+        Cursor = crIBeam
+        KeyboardType = Default
+        Position.X = 144.000000000000000000
+        Position.Y = 54.000000000000000000
+        Size.Width = 118.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 950.000000000000000000
+    Size.Height = 58.000000000000000000
+    Viewport.Width = 946.000000000000000000
+    Viewport.Height = 54.000000000000000000
+  end
+end

@@ -1,0 +1,26 @@
+object frmBaseRichEdit: TfrmBaseRichEdit
+  Left = 192
+  Top = 107
+  Caption = 'frmBaseRichEdit'
+  ClientHeight = 442
+  ClientWidth = 680
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  Left = 192
+  Top = 107
+  DesignerMasterStyle = 0
+  object RichEdit1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 680.000000000000000000
+    Size.Height = 442.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 680.000000000000000000
+    Viewport.Height = 442.000000000000000000
+  end
+end

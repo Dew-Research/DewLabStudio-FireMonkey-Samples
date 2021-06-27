@@ -1,0 +1,232 @@
+inherited frmHotellingWizard: TfrmHotellingWizard
+  Caption = 'Hotelling T2'
+  ClientHeight = 421
+  ClientWidth = 767
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Position.Y = 377.000000000000000000
+    Size.Width = 767.000000000000000000
+    inherited btnNext: TButton
+      Text = 'Calculate'
+    end
+    inherited btnCancel: TButton
+      Position.X = 633.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Size.Width = 767.000000000000000000
+  end
+  inherited PageControl: TTabControl
+    Size.Width = 767.000000000000000000
+    Size.Height = 344.000000000000000000
+    object tsInputData: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 384.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Step 1: Input data'
+      ExplicitSize.cx = 384.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object RadioGroup1: TPanel
+        Position.X = 14.000000000000000000
+        Position.Y = 31.000000000000000000
+        Size.Width = 341.000000000000000000
+        Size.Height = 75.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnClick = RadioGroup1Click
+        object RadioButton3: TRadioButton
+          GroupName = 'TypeGroup'
+          IsChecked = True
+          Position.X = 15.000000000000000000
+          Position.Y = 12.000000000000000000
+          Size.Width = 325.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'One sample test (paired or unpaired)'
+          OnChange = RadioButton3Change
+        end
+        object RadioButton4: TRadioButton
+          GroupName = 'TypeGroup'
+          Position.X = 15.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 298.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Two sample test'
+          OnChange = RadioButton3Change
+        end
+      end
+      object RadioGroup2: TPanel
+        Position.X = 14.000000000000000000
+        Position.Y = 147.000000000000000000
+        Size.Width = 338.000000000000000000
+        Size.Height = 79.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnClick = RadioGroup2Click
+        object RadioButton1: TRadioButton
+          GroupName = 'MeansGroup'
+          Position.X = 12.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 154.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Means equal'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'MeansGroup'
+          IsChecked = True
+          Position.X = 12.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 148.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Means defined'
+          OnChange = RadioButton1Change
+        end
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 371.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 311.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'First dataset'
+        TabOrder = 2
+        object lblSamples1: TLabel
+          AutoSize = True
+          Position.X = 16.000000000000000000
+          Position.Y = 77.000000000000000000
+          Size.Width = 41.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Test'
+        end
+        object lblVariables1: TLabel
+          AutoSize = True
+          Position.X = 166.000000000000000000
+          Position.Y = 77.000000000000000000
+          Size.Width = 41.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Test'
+        end
+        object btnEdit1: TButton
+          Position.X = 17.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 200.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Edit/View data'
+          OnClick = btnEdit1Click
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 372.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 310.000000000000000000
+        Size.Height = 106.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Second dataset'
+        TabOrder = 3
+        object lblSamples2: TLabel
+          AutoSize = True
+          Position.X = 13.000000000000000000
+          Position.Y = 76.000000000000000000
+          Size.Width = 41.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Test'
+        end
+        object lblVariables2: TLabel
+          AutoSize = True
+          Position.X = 163.000000000000000000
+          Position.Y = 74.000000000000000000
+          Size.Width = 41.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Test'
+        end
+        object btnEdit2: TButton
+          Position.X = 11.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 200.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Edit/View data'
+          OnClick = btnEdit2Click
+        end
+      end
+      object btnEditMeans: TButton
+        Position.X = 211.000000000000000000
+        Position.Y = 172.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Define'
+        OnClick = btnEditMeansClick
+      end
+      object Label1: TLabel
+        Position.X = 12.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 199.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Define test type'
+      end
+      object Label2: TLabel
+        Position.X = 15.000000000000000000
+        Position.Y = 117.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Means:'
+      end
+    end
+    object tsTextReport: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 383.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Hotelling T2: Text reports'
+      ExplicitSize.cx = 383.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object RichEdit: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          'RichEdit')
+        ReadOnly = True
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 42.000000000000000000
+        Viewport.Height = 37.000000000000000000
+      end
+    end
+  end
+end

@@ -1,0 +1,129 @@
+inherited frmWeibullProb: TfrmWeibullProb
+  Caption = 'frmNormalProb'
+  ClientHeight = 467
+  ClientWidth = 524
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 524.000000000000000000
+    Size.Height = 376.000000000000000000
+    object Panel2: TPanel
+      Align = Top
+      Size.Width = 524.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Position.X = 325.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 138.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Generate data'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 149.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 134.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Edit slope'
+        OnClick = Button3Click
+      end
+    end
+    object Chart1: TChart
+      BackWall.Pen.Visible = False
+      BottomWall.Pen.Visible = False
+      BottomWall.Size = 4
+      LeftWall.Pen.Visible = False
+      LeftWall.Size = 4
+      Legend.Frame.Color = claGray
+      Legend.Frame.Fill.Color = claGray
+      Legend.Frame.Visible = False
+      Legend.Shadow.Color = x00CCCCCC
+      Legend.Visible = False
+      Title.Alignment = taLeftJustify
+      Title.Font.Size = 9.750000000000000000
+      Title.Font.Color = claBlack
+      Title.Font.Brush.Color = claBlack
+      Title.Font.InterCharSize = 2
+      Title.Font.Shadow.Color = claGray
+      Title.Font.Shadow.HorizSize = 2
+      Title.Font.Shadow.VertSize = 1
+      Title.Frame.Color = claGray
+      Title.Frame.Fill.Color = claGray
+      Title.Shadow.HorizSize = 0
+      Title.Shadow.VertSize = 0
+      Title.Text.Strings = (
+        'Weibull probability plot')
+      Title.Transparent = False
+      BottomAxis.Axis.Color = x00404040
+      BottomAxis.Axis.Fill.Color = x00404040
+      BottomAxis.Grid.Color = x00CCCCCC
+      BottomAxis.Grid.Fill.Color = x00CCCCCC
+      BottomAxis.Grid.Visible = False
+      BottomAxis.Logarithmic = True
+      BottomAxis.Title.Caption = 'ln(Ordered data values)'
+      BottomAxis.Title.Color = claBlack
+      DepthAxis.Automatic = False
+      DepthAxis.AutomaticMaximum = False
+      DepthAxis.AutomaticMinimum = False
+      DepthAxis.Maximum = 1.820000000000001000
+      DepthAxis.Minimum = 0.820000000000000800
+      DepthTopAxis.Automatic = False
+      DepthTopAxis.AutomaticMaximum = False
+      DepthTopAxis.AutomaticMinimum = False
+      DepthTopAxis.Maximum = 1.820000000000001000
+      DepthTopAxis.Minimum = 0.820000000000000800
+      Frame.Visible = False
+      LeftAxis.Axis.Color = x00404040
+      LeftAxis.Axis.Fill.Color = x00404040
+      LeftAxis.Grid.Visible = False
+      LeftAxis.LabelsSize = 30
+      LeftAxis.Title.Caption = 'ln[ln[1/(1-p)]]'
+      LeftAxis.Title.Color = claBlack
+      RightAxis.Automatic = False
+      RightAxis.AutomaticMaximum = False
+      RightAxis.AutomaticMinimum = False
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      Color = claWhite
+      TabOrder = 1
+      Size.Width = 524.000000000000000000
+      Size.Height = 327.000000000000000000
+      Size.PlatformDefault = False
+      PrintMargins = (
+        15
+        27
+        15
+        27)
+      ColorPaletteIndex = 3
+      object GridBandTool1: TGridBandTool
+        Band1.Color = x00E9E9E9
+        Band2.Color = claWhite
+        AxisID = 2
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 524.000000000000000000
+    Size.Height = 91.000000000000000000
+    Viewport.Width = 516.000000000000000000
+    Viewport.Height = 83.000000000000000000
+  end
+end

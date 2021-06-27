@@ -1,0 +1,384 @@
+inherited frmPCRegWizard: TfrmPCRegWizard
+  Caption = 'frmPCRegWizard'
+  ClientHeight = 396
+  ClientWidth = 738
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Position.Y = 352.000000000000000000
+    Size.Width = 738.000000000000000000
+    inherited btnCancel: TButton
+      Position.X = 610.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Size.Width = 738.000000000000000000
+    inherited lblHeader: TLabel
+      Size.Width = 56.000000000000000000
+      Size.Height = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited PageControl: TTabControl
+    Size.Width = 738.000000000000000000
+    Size.Height = 319.000000000000000000
+    Sizes = (
+      738s
+      270s
+      738s
+      270s
+      738s
+      270s
+      738s
+      270s)
+    object tsInputData: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 184.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = '1. Define data'
+      ExplicitSize.cx = 186.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object GroupBox1: TGroupBox
+        Position.X = 6.000000000000000000
+        Position.Y = 3.000000000000000000
+        Size.Width = 316.000000000000000000
+        Size.Height = 211.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Equation'
+        TabOrder = 0
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 18.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 76.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Solving A*b=y'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 18.000000000000000000
+          Position.Y = 57.000000000000000000
+          Size.Width = 11.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'A:'
+        end
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 18.000000000000000000
+          Position.Y = 89.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'y:'
+        end
+        object Label4: TLabel
+          AutoSize = True
+          Position.X = 18.000000000000000000
+          Position.Y = 120.000000000000000000
+          Size.Width = 47.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Weights:'
+        end
+        object Label5: TLabel
+          AutoSize = True
+          Position.X = 18.000000000000000000
+          Position.Y = 159.000000000000000000
+          Size.Width = 103.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Ommited variables:'
+        end
+        object Button1: TButton
+          Position.X = 177.000000000000000000
+          Position.Y = 37.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Edit'
+          OnClick = Button1Click
+        end
+        object Button2: TButton
+          Position.X = 177.000000000000000000
+          Position.Y = 75.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Edit'
+          OnClick = Button2Click
+        end
+        object Button3: TButton
+          Enabled = False
+          Position.X = 177.000000000000000000
+          Position.Y = 112.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Edit'
+          OnClick = Button3Click
+        end
+        object Edit1: TMtxFloatEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 8
+          RegistryPath = '\Software\Dew Research\MtxVec'
+          StoreInRegistry = False
+          IntegerIncrement = True
+          Scientific = False
+          ReFormat = '0'
+          ImFormat = '+0.00#i;-0.00#i'
+          Increment = '1'
+          MaxValue = '0'
+          MinValue = '0'
+          Value = '0'
+          Cursor = crIBeam
+          KeyboardType = Default
+          Position.X = 189.000000000000000000
+          Position.Y = 153.000000000000000000
+          Size.Width = 106.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 334.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 261.000000000000000000
+        Size.Height = 208.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Additional settings : '
+        TabOrder = 1
+        object Label6: TLabel
+          AutoSize = True
+          Position.X = 12.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Alpha  : '
+        end
+        object Label7: TLabel
+          AutoSize = True
+          Position.X = 12.000000000000000000
+          Position.Y = 99.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Format string : '
+        end
+        object ChkBoxUseWeights: TCheckBox
+          Position.X = 13.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Use weights ?'
+          OnClick = ChkBoxUseWeightsClick
+        end
+        object Edit4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = '0.0000'
+          Position.X = 158.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 74.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = Edit4Change
+        end
+        object Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Text = '0'
+          Position.X = 158.000000000000000000
+          Position.Y = 55.000000000000000000
+          Size.Width = 74.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = Edit3Change
+        end
+      end
+    end
+    object tsReports: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 184.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = '2. Reports'
+      ExplicitSize.cx = 184.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object cbDescStat: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Descriptive statistics'
+      end
+      object cbCorrMtx: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 33.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Correlation matrix'
+      end
+      object cbLSMultiCol: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 56.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'LS multicollinearity'
+      end
+      object cbEigenvalues: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 79.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Eigenvalues'
+      end
+      object cbPCCoeffs: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 102.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'PC coefficients'
+      end
+      object cbResiduals: TCheckBox
+        IsChecked = True
+        Position.X = 12.000000000000000000
+        Position.Y = 125.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Residuals'
+      end
+    end
+    object tsTextReports: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 184.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Text results'
+      ExplicitSize.cx = 184.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object RichEdit: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Lines.Strings = (
+          'RichEdit')
+        ReadOnly = True
+        Align = Client
+        Size.Width = 738.000000000000000000
+        Size.Height = 270.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 738.000000000000000000
+        Viewport.Height = 270.000000000000000000
+      end
+    end
+    object tsCharts: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 184.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Charts'
+      ExplicitSize.cx = 184.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object TeeCommander1: TTeeCommander
+        Panel = Chart
+        Align = Top
+        ParentShowHint = False
+        Size.Width = 738.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+      object Chart: TChart
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.Text.Strings = (
+          'TChart')
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        BottomAxis.EndPosition = 100.000000000000000000
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.EndPosition = 100.000000000000000000
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.EndPosition = 100.000000000000000000
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        LeftAxis.EndPosition = 100.000000000000000000
+        RightAxis.Grid.ZPosition = 100.000000000000000000
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.EndPosition = 100.000000000000000000
+        RightAxis.ZPosition = 100.000000000000000000
+        TopAxis.Grid.ZPosition = 100.000000000000000000
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.EndPosition = 100.000000000000000000
+        TopAxis.ZPosition = 100.000000000000000000
+        View3D = False
+        Zoom.Brush.Kind = None
+        Zoom.Brush.Gradient.Direction = gdFromTopLeft
+        Zoom.Brush.Gradient.EndColor = claSilver
+        Zoom.Brush.Gradient.MidColor = claWhite
+        Zoom.Brush.Gradient.StartColor = claSilver
+        Zoom.Pen.Color = claWhite
+        Zoom.Pen.Mode = pmNotXor
+        Zoom.Pen.Fill.Color = claWhite
+        Align = Client
+        TabOrder = 1
+        Size.Width = 738.000000000000000000
+        Size.Height = 237.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 0
+      end
+    end
+  end
+end

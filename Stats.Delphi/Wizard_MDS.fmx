@@ -1,0 +1,15 @@
+inherited frmShowMDSWizard: TfrmShowMDSWizard
+  Caption = 'frmShowMDSWizard'
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  inherited Panel1: TPanel
+    Height = 248.000000000000000000
+  end
+  inherited Memo1: TMemo
+    Height = 153.000000000000000000
+  end
+end

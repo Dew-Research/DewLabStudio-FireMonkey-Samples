@@ -1,0 +1,161 @@
+inherited frmTSPACF: TfrmTSPACF
+  Caption = 'frmTSPACF'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    inherited Chart1: TChart
+      AllowPanning = pmNone
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      BottomAxis.ExactDateTime = False
+      BottomAxis.Increment = 1.000000000000000000
+      BottomAxis.Title.Caption = 'Lag'
+      BottomAxis.Visible = False
+      Zoom.Allow = False
+      OnAfterDraw = Chart1AfterDraw
+      OnBeforeDrawSeries = Chart1BeforeDrawSeries
+      Size.Width = 454.000000000000000000
+      PrintMargins = (
+        15
+        12
+        15
+        12)
+      object Series1: TLineSeries
+        HoverElement = [heCurrent]
+        SeriesColor = claYellow
+        Brush.BackColor = x00FFFFFF
+        Pointer.HorizSize = 2
+        Pointer.InflateMargins = True
+        Pointer.Style = psCircle
+        Pointer.VertSize = 2
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 169.000000000000000000
+      inherited Button1: TButton
+        Position.X = 11.000000000000000000
+      end
+      object Label1: TLabel
+        AutoSize = True
+        Size.Width = 0.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Left = 8
+        Top = 192
+      end
+      object Button2: TButton
+        Position.X = 11.000000000000000000
+        Position.Y = 57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Edit data'
+        OnClick = Button2Click
+      end
+      object RadioGroupPT: TPanel
+        Position.X = 11.000000000000000000
+        Position.Y = 123.000000000000000000
+        Size.Width = 134.000000000000000000
+        Size.Height = 160.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object RadioButton1: TRadioButton
+          GroupName = 'PlotGroup'
+          IsChecked = True
+          Position.X = 12.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Data'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 11.000000000000000000
+          Position.Y = 38.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Lag plot'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton3: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 11.000000000000000000
+          Position.Y = 67.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'ACF plot'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton4: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 11.000000000000000000
+          Position.Y = 96.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'PACF plot'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton5: TRadioButton
+          GroupName = 'PlotGroup'
+          Position.X = 11.000000000000000000
+          Position.Y = 126.000000000000000000
+          Size.Width = 107.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Histogram'
+          OnChange = RadioButton1Change
+        end
+      end
+      object EditLags: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Text = '50'
+        Position.X = 82.000000000000000000
+        Position.Y = 291.000000000000000000
+        Size.Width = 72.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = EditLagsChange
+      end
+      object Label2: TLabel
+        Position.X = 18.000000000000000000
+        Position.Y = 300.000000000000000000
+        Size.Width = 55.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Lags:'
+      end
+      object Label3: TLabel
+        Position.X = 12.000000000000000000
+        Position.Y = 102.000000000000000000
+        Size.Width = 37.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Plot:'
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Viewport.Width = 623.000000000000000000
+    Viewport.Height = 121.000000000000000000
+  end
+end

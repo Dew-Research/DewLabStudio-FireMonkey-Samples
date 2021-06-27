@@ -1,0 +1,65 @@
+inherited frmLogReg: TfrmLogReg
+  Left = 323
+  Top = 242
+  Caption = 'frmLogReg'
+  Left = 323
+  Top = 242
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Height = 295.000000000000000000
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 253.000000000000000000
+      Size.Height = 295.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button1: TButton
+        Position.X = 13.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Dependent variable (Y)'
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Position.X = 13.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Independent variables (A)'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 13.000000000000000000
+        Position.Y = 100.000000000000000000
+        Size.Width = 220.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Recalculate'
+        OnClick = Button3Click
+      end
+    end
+    object Memo2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Align = Client
+      Size.Width = 228.000000000000000000
+      Size.Height = 295.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Height = 106.000000000000000000
+  end
+  object MtxLogReg: TMtxLogistReg
+    Tolerance = 0.000000014901161194
+    Left = 216
+    Top = 47
+    MtxDataValues = {}
+  end
+end

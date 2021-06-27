@@ -1,0 +1,11 @@
+inherited frmHypTest: TfrmHypTest
+  Caption = 'frmHypTest'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Height = 336.000000000000000000
+  end
+  inherited Memo1: TMemo
+    Size.Height = 65.000000000000000000
+  end
+end

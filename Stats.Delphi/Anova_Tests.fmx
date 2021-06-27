@@ -1,0 +1,161 @@
+inherited frmANOVATest: TfrmANOVATest
+  Left = 218
+  Caption = 'frmANOVATest'
+  ClientHeight = 518
+  ClientWidth = 756
+  WindowState = wsMaximized
+  Left = 218
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 756.000000000000000000
+    Size.Height = 412.000000000000000000
+    object Panel2: TPanel
+      Align = Bottom
+      Position.Y = 251.000000000000000000
+      Size.Width = 756.000000000000000000
+      Size.Height = 161.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Top = 251
+      object Label1: TLabel
+        Align = Top
+        AutoSize = True
+        Size.Width = 756.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Analysis of variance : '
+      end
+      object StringGrid1: TStringGrid
+        Align = Client
+        Size.Width = 756.000000000000000000
+        Size.Height = 139.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        RowCount = 4
+        RowHeight = 25.000000000000000000
+        object TStringColumn
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object TStringColumn
+          Position.X = 100.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object TStringColumn
+          Position.X = 200.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object TStringColumn
+          Position.X = 300.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+        object TStringColumn
+          Position.X = 400.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+        end
+        object TStringColumn
+          Position.X = 500.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
+        object TStringColumn
+          Position.X = 600.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 100.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+      end
+    end
+    object Panel3: TPanel
+      Align = Left
+      Size.Width = 202.000000000000000000
+      Size.Height = 251.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label2: TLabel
+        AutoSize = True
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Test : '
+      end
+      object SpeedButton1: TSpeedButton
+        Position.X = 34.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Recalculate'
+        TextSettings.WordWrap = True
+        OnClick = SpeedButton1Click
+      end
+      object ComboBox1: TComboBox
+        DisableFocusEffect = False
+        Position.X = 6.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 187.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = ComboBox1Change
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'SmLs01 (lower difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'tmWtAg (avg. difficulty)'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'SmLs07 (higher difficulty)'
+        end
+      end
+    end
+    object RichEdit1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Align = Client
+      Size.Width = 554.000000000000000000
+      Size.Height = 251.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Lines.Strings = (
+        '')
+      ReadOnly = True
+      Left = 163
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 756.000000000000000000
+    Size.Height = 106.000000000000000000
+  end
+  object MtxAnova: TMtxAnova
+    Alpha = 0.050000000000000000
+    FmtString = '0.0000'
+    ResultDest = StringGrid1
+    Left = 510
+    Top = 51
+    MtxDataValues = {}
+  end
+end

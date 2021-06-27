@@ -1,0 +1,13 @@
+inherited frmMLREditor: TfrmMLREditor
+  Caption = 'frmMLREditor'
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Size.Height = 328.000000000000000000
+  end
+  inherited Memo1: TMemo
+    Size.Height = 73.000000000000000000
+    Viewport.Width = 477.000000000000000000
+    Viewport.Height = 69.000000000000000000
+  end
+end

@@ -1,0 +1,339 @@
+inherited frmGOFChi2: TfrmGOFChi2
+  Caption = 'frmGOFChi2'
+  ClientHeight = 509
+  ClientWidth = 743
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 743.000000000000000000
+    Size.Height = 421.000000000000000000
+    inherited Chart1: TChart
+      Title.Text.Strings = (
+        'Goodnes of fit')
+      Size.Width = 421.000000000000000000
+      Size.Height = 348.000000000000000000
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: THistogramSeries
+        Title = 'Histogram'
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        SeriesColor = claYellow
+        Title = 'Predicted'
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 322.000000000000000000
+      Size.Height = 348.000000000000000000
+      inherited Button1: TButton
+        Position.X = 156.000000000000000000
+        Position.Y = 229.000000000000000000
+        Size.Width = 70.000000000000000000
+        Visible = False
+      end
+      object GroupBox1: TGroupBox
+        Position.X = 14.000000000000000000
+        Position.Y = 166.000000000000000000
+        Size.Width = 290.000000000000000000
+        Size.Height = 177.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Fit for :'
+        TabOrder = 1
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 31.000000000000000000
+          Size.Width = 109.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Distribution :'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 73.000000000000000000
+          Size.Width = 138.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Number of bins :'
+        end
+        object Label4: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 106.000000000000000000
+          Size.Width = 56.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Alpha:'
+        end
+        object ComboBox1: TComboBox
+          DisableFocusEffect = False
+          Position.X = 129.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnChange = ComboBox1Change
+          object TListBoxItem
+            TabOrder = 0
+            Text = 'Beta'
+          end
+          object TListBoxItem
+            TabOrder = 1
+            Text = 'Chi2'
+          end
+          object TListBoxItem
+            TabOrder = 2
+            Text = 'Erlang'
+          end
+          object TListBoxItem
+            TabOrder = 3
+            Text = 'Exponential'
+          end
+          object TListBoxItem
+            TabOrder = 4
+            Text = 'Gamma'
+          end
+          object TListBoxItem
+            TabOrder = 5
+            Text = 'Laplace'
+          end
+          object TListBoxItem
+            TabOrder = 6
+            Text = 'Log-Normal'
+          end
+          object TListBoxItem
+            TabOrder = 7
+            Text = 'Maxwell'
+          end
+          object TListBoxItem
+            TabOrder = 8
+            Text = 'Normal'
+          end
+          object TListBoxItem
+            TabOrder = 9
+            Text = 'Rayleigh'
+          end
+          object TListBoxItem
+            TabOrder = 10
+            Text = 'Uniform'
+          end
+          object TListBoxItem
+            TabOrder = 11
+            Text = 'Weibull'
+          end
+        end
+        object BinEdit: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = '25'
+          Position.X = 160.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = BinEditChange
+        end
+        object Button3: TButton
+          Position.X = 125.000000000000000000
+          Position.Y = 142.000000000000000000
+          Size.Width = 158.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Chi2 GOF test'
+          OnClick = Button3Click
+        end
+        object AlphaEdit: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 4
+          Text = 'Edit2'
+          Position.X = 160.000000000000000000
+          Position.Y = 103.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = AlphaEditChange
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 14.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 293.000000000000000000
+        Size.Height = 158.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Generate data'
+        TabOrder = 2
+        object Label3: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 28.000000000000000000
+          Size.Width = 109.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Distribution :'
+        end
+        object lblDistName: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblDistName'
+        end
+        object lblPar1: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 90.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblPar1'
+        end
+        object lblPar2: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 123.000000000000000000
+          Size.Width = 63.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblPar2'
+        end
+        object Button2: TButton
+          Position.X = 204.000000000000000000
+          Position.Y = 81.000000000000000000
+          Size.Width = 88.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Generate'
+          OnClick = Button2Click
+        end
+        object ComboBox2: TComboBox
+          DisableFocusEffect = False
+          Position.X = 132.000000000000000000
+          Position.Y = 22.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnChange = ComboBox2Change
+          object TListBoxItem
+            TabOrder = 0
+            Text = 'Beta'
+          end
+          object TListBoxItem
+            TabOrder = 1
+            Text = 'Chi Squared'
+          end
+          object TListBoxItem
+            TabOrder = 2
+            Text = 'Erlang'
+          end
+          object TListBoxItem
+            TabOrder = 3
+            Text = 'Exponential'
+          end
+          object TListBoxItem
+            TabOrder = 4
+            Text = 'Gamma'
+          end
+          object TListBoxItem
+            TabOrder = 5
+            Text = 'Laplace'
+          end
+          object TListBoxItem
+            TabOrder = 6
+            Text = 'Log-Normal'
+          end
+          object TListBoxItem
+            TabOrder = 7
+            Text = 'Maxwell'
+          end
+          object TListBoxItem
+            TabOrder = 8
+            Text = 'Normal'
+          end
+          object TListBoxItem
+            TabOrder = 9
+            Text = 'Rayleigh'
+          end
+          object TListBoxItem
+            TabOrder = 10
+            Text = 'Uniform'
+          end
+          object TListBoxItem
+            TabOrder = 11
+            Text = 'Weibull'
+          end
+        end
+        object EditPar1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          Text = 'EditPar1'
+          Position.X = 90.000000000000000000
+          Position.Y = 84.000000000000000000
+          Size.Width = 85.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object EditPar2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          Text = 'EditPar1'
+          Position.X = 90.000000000000000000
+          Position.Y = 120.000000000000000000
+          Size.Width = 85.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object Memo2: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Lines.Strings = (
+        '')
+      ReadOnly = True
+      TextSettings.WordWrap = True
+      Align = Bottom
+      Position.Y = 348.000000000000000000
+      Size.Width = 743.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Viewport.Width = 735.000000000000000000
+      Viewport.Height = 65.000000000000000000
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 743.000000000000000000
+    Size.Height = 88.000000000000000000
+    Viewport.Width = 735.000000000000000000
+    Viewport.Height = 80.000000000000000000
+  end
+end

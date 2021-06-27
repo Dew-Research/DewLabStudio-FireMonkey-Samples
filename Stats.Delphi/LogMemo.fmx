@@ -1,0 +1,41 @@
+object frmLogForm: TfrmLogForm
+  Left = 260
+  Top = 163
+  Caption = 'Calculated coefficients'
+  ClientHeight = 316
+  ClientWidth = 396
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  Left = 260
+  Top = 163
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 396.000000000000000000
+    Size.Height = 46.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Position.X = 7.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 60.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Clear'
+      OnClick = Button1Click
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Align = Client
+    Size.Width = 396.000000000000000000
+    Size.Height = 270.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Lines.Strings = (
+      '')
+    ReadOnly = True
+  end
+end

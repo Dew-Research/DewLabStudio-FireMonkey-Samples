@@ -1,0 +1,74 @@
+inherited frmBasicChart: TfrmBasicChart
+  Caption = 'frmBasicChart'
+  ClientHeight = 470
+  ClientWidth = 623
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 623.000000000000000000
+    Size.Height = 349.000000000000000000
+    object Chart1: TChart
+      Border.Color = claNavy
+      Border.Width = 6.000000000000000000
+      Border.Fill.Color = claNavy
+      Border.Visible = True
+      BorderRound = 10
+      Gradient.EndColor = claGray
+      Gradient.Visible = True
+      Legend.Brush.Gradient.Direction = gdTopBottom
+      Legend.Brush.Gradient.EndColor = claYellow
+      Legend.Brush.Gradient.StartColor = claWhite
+      Legend.Frame.Color = claGray
+      Legend.Frame.Fill.Color = claGray
+      Legend.Shadow.Color = x00CCCCCC
+      Legend.Symbol.Pen.Visible = False
+      Title.Font.Shadow.Color = claBlack
+      Title.Font.Shadow.HorizSize = 1
+      Title.Font.Shadow.VertSize = 1
+      Title.Frame.Color = claGray
+      Title.Frame.Fill.Color = claGray
+      Title.Shadow.HorizSize = 0
+      Title.Shadow.VertSize = 0
+      Title.Text.Strings = (
+        'TChart')
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      BevelOuter = bvNone
+      TabOrder = 0
+      Size.Width = 434.000000000000000000
+      Size.Height = 349.000000000000000000
+      Size.PlatformDefault = False
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      ColorPaletteIndex = 3
+    end
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 189.000000000000000000
+      Size.Height = 349.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Button1: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Edit Chart'
+        OnClick = Button1Click
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 623.000000000000000000
+    Size.Height = 121.000000000000000000
+    Viewport.Width = 615.000000000000000000
+    Viewport.Height = 113.000000000000000000
+  end
+end

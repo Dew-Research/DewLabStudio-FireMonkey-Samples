@@ -1,0 +1,144 @@
+inherited frmModels: TfrmModels
+  Left = 110
+  Top = 0
+  Caption = 'frmModels'
+  ClientHeight = 323
+  ClientWidth = 593
+  Position = Designed
+  OnDestroy = FormDestroy
+  Left = 110
+  Top = 0
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 593.000000000000000000
+    Size.Height = 202.000000000000000000
+    inherited Chart1: TChart
+      Title.Text.Strings = (
+        'Fitting models')
+      Zoom.Pen.Color = claBlack
+      Size.Width = 388.000000000000000000
+      Size.Height = 202.000000000000000000
+      Left = 163
+      PrintMargins = (
+        15
+        7
+        15
+        7)
+      object Series1: TPointSeries
+        SeriesColor = x004080FF
+        Title = 'Data'
+        ClickableLine = False
+        Pointer.Brush.Gradient.EndColor = x004080FF
+        Pointer.Gradient.EndColor = x004080FF
+        Pointer.HorizSize = 3
+        Pointer.InflateMargins = True
+        Pointer.Style = psDiamond
+        Pointer.VertSize = 3
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+      object Series2: TLineSeries
+        SeriesColor = claYellow
+        Title = 'Fitted'
+        Brush.BackColor = x00FFFFFF
+        LinePen.Color = claYellow
+        LinePen.Fill.Color = claYellow
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Width = 205.000000000000000000
+      Size.Height = 202.000000000000000000
+      inherited Button1: TButton
+        Size.Width = 182.000000000000000000
+      end
+      object Label2: TLabel
+        AutoSize = True
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Left = 8
+        Top = 90
+      end
+      object Label1: TLabel
+        AutoSize = True
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Left = 8
+        Top = 48
+      end
+      object Button2: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 112.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'X...'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 108.000000000000000000
+        Position.Y = 112.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Y...'
+        OnClick = Button3Click
+      end
+      object ComboBox1: TComboBox
+        DisableFocusEffect = False
+        Position.X = 8.000000000000000000
+        Position.Y = 64.000000000000000000
+        Size.Width = 182.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        OnChange = ComboBox1Change
+        object TListBoxItem
+          TabOrder = 0
+          Text = 'Simple exponential'
+        end
+        object TListBoxItem
+          TabOrder = 1
+          Text = 'Simple linear'
+        end
+        object TListBoxItem
+          TabOrder = 2
+          Text = 'Simple power'
+        end
+        object TListBoxItem
+          TabOrder = 3
+          Text = 'Simple polynomial'
+        end
+        object TListBoxItem
+          TabOrder = 4
+          Text = 'Rational'
+        end
+        object TListBoxItem
+          TabOrder = 5
+          Text = 'Logistic'
+        end
+        object TListBoxItem
+          TabOrder = 6
+          Text = 'Natural logarithm'
+        end
+      end
+    end
+  end
+  inherited Memo1: TMemo
+    Anchors = [akBottom]
+    Size.Width = 593.000000000000000000
+    Viewport.Width = 585.000000000000000000
+    Viewport.Height = 113.000000000000000000
+  end
+end

@@ -1,0 +1,8 @@
+inherited frmWelcome: TfrmWelcome
+  Caption = 'frmWelcome'
+  DesignerMasterStyle = 0
+  inherited RichEdit1: TMemo
+    TextSettings.Font.Size = 14.000000000000000000
+    StyledSettings = [Family, Style, FontColor]
+  end
+end

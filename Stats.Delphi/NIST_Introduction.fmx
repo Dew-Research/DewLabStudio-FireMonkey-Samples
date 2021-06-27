@@ -1,0 +1,16 @@
+object frmNISTIntro: TfrmNISTIntro
+  Left = 236
+  Top = 106
+  Caption = 'frmNISTIntro'
+  ClientHeight = 444
+  ClientWidth = 680
+  OnCreate = FormCreate
+  object Memo1: TMemo
+Position.Point = '(0,0)'
+    Width = 680
+    Height = 444
+    Align = alClient
+    ReadOnly = True
+    TabOrder = 0
+  end
+end

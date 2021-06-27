@@ -1,0 +1,157 @@
+inherited frmANOVA1Box: TfrmANOVA1Box
+  Caption = 'frmANOVA1Box'
+  ClientHeight = 440
+  ClientWidth = 614
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Width = 614.000000000000000000
+    Size.Height = 368.000000000000000000
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Gradient.EndColor = x00804000
+      Gradient.StartColor = x00FF8000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Font.Color = claWhite
+      Title.Font.Brush.Color = claWhite
+      Title.Font.InterCharSize = 2
+      Title.Font.Shadow.HorizSize = 1
+      Title.Text.Strings = (
+        'One-way ANOVA (Box plot)')
+      BottomAxis.LabelsFormat.Font.Color = claWhite
+      BottomAxis.LabelsFormat.Font.Brush.Color = claWhite
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      BottomAxis.Title.Caption = 'Values'
+      BottomAxis.Title.Font.Color = claWhite
+      BottomAxis.Title.Font.Brush.Color = claWhite
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LabelsFormat.Font.Color = claWhite
+      LeftAxis.LabelsFormat.Font.Brush.Color = claWhite
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      LeftAxis.Title.Caption = 'Group'
+      LeftAxis.Title.Font.Color = claWhite
+      LeftAxis.Title.Font.Brush.Color = claWhite
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
+      View3D = False
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Color = claWhite
+      Zoom.Pen.Fill.Color = claWhite
+      Align = Client
+      TabOrder = 0
+      Size.Width = 457.000000000000000000
+      Size.Height = 294.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 0
+    end
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 157.000000000000000000
+      Size.Height = 294.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label1: TLabel
+        AutoSize = True
+        Position.X = 8.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = 'Alpha : '
+      end
+      object Button1: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 116.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Edit data'
+        OnClick = Button1Click
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 72.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit1Change
+      end
+      object Button2: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Recalculate'
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 8.000000000000000000
+        Position.Y = 157.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Edit Chart'
+        OnClick = Button3Click
+      end
+    end
+    object StringGrid1: TStringGrid
+      Align = Bottom
+      CanFocus = True
+      ClipChildren = True
+      Position.Y = 294.000000000000000000
+      Size.Width = 614.000000000000000000
+      Size.Height = 74.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      RowHeight = 21.000000000000000000
+      RowCount = 4
+      Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+      Viewport.Width = 614.000000000000000000
+      Viewport.Height = 42.000000000000000000
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 614.000000000000000000
+    Size.Height = 72.000000000000000000
+    Viewport.Width = 614.000000000000000000
+    Viewport.Height = 72.000000000000000000
+  end
+  object MtxAnova: TMtxAnova
+    Alpha = 0.050000000000000000
+    FmtString = '0.0000'
+    Left = 360
+    Top = 27
+    MtxDataValues = {}
+  end
+  object ChartEditor1: TChartEditor
+    GalleryHeight = 0
+    GalleryWidth = 0
+    Height = 0
+    Width = 0
+    Left = 447
+    Top = 30
+  end
+end

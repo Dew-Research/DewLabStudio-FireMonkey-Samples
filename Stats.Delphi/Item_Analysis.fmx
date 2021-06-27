@@ -1,0 +1,150 @@
+inherited frmItemAnalysis: TfrmItemAnalysis
+  Left = 206
+  Top = 152
+  Caption = 'frmItemAnalysis'
+  ClientHeight = 511
+  ClientWidth = 761
+  OnDestroy = FormDestroy
+  Left = 206
+  Top = 152
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Anchors = []
+    Size.Width = 761.000000000000000000
+    Size.Height = 382.000000000000000000
+    object Panel2: TPanel
+      Align = Left
+      Size.Width = 169.000000000000000000
+      Size.Height = 382.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object GroupBox1: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 149.000000000000000000
+        Size.Height = 119.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Data'
+        TabOrder = 0
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 66.000000000000000000
+          Size.Width = 55.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Label1'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 11.000000000000000000
+          Position.Y = 91.000000000000000000
+          Size.Width = 55.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Label2'
+        end
+        object Button1: TButton
+          Position.X = 11.000000000000000000
+          Position.Y = 22.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Edit'
+          OnClick = Button1Click
+        end
+      end
+      object GroupBox2: TGroupBox
+        Position.X = 9.000000000000000000
+        Position.Y = 134.000000000000000000
+        Size.Width = 148.000000000000000000
+        Size.Height = 185.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Reports'
+        TabOrder = 1
+        object CheckBox1: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Reliability'
+        end
+        object CheckBox2: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 66.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Distribution'
+        end
+        object CheckBox4: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Correlation'
+        end
+        object CheckBox5: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Covariance'
+        end
+        object CheckBox3: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 159.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = 'Details'
+        end
+      end
+      object Button2: TButton
+        Position.X = 19.000000000000000000
+        Position.Y = 337.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Report'
+        OnClick = Button2Click
+      end
+    end
+    object RichEdit1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Align = Client
+      Anchors = []
+      Size.Width = 592.000000000000000000
+      Size.Height = 382.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Left = 137
+      Viewport.Width = 584.000000000000000000
+      Viewport.Height = 374.000000000000000000
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Width = 761.000000000000000000
+    Viewport.Width = 761.000000000000000000
+    Viewport.Height = 129.000000000000000000
+  end
+end

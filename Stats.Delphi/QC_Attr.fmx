@@ -1,0 +1,138 @@
+inherited frmQCAttr: TfrmQCAttr
+  Caption = 'frmQCAttr'
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Size.Height = 431.000000000000000000
+    inherited Chart1: TChart
+      Border.Color = claNavy
+      Border.Width = 6.000000000000000000
+      Border.Fill.Color = claNavy
+      BorderRound = 10
+      Gradient.EndColor = claGray
+      Gradient.Visible = True
+      Legend.Brush.Kind = Gradient
+      Legend.Brush.Gradient.Direction = gdTopBottom
+      Legend.Brush.Gradient.EndColor = claYellow
+      Legend.Brush.Gradient.StartColor = claWhite
+      Legend.Brush.Gradient.Visible = True
+      BevelOuter = bvNone
+      Size.Height = 431.000000000000000000
+      PrintMargins = (
+        15
+        22
+        15
+        22)
+      ColorPaletteIndex = 2
+      inherited GridBandTool1: TGridBandTool
+        AxisID = 2
+      end
+    end
+    inherited Panel2: TPanel
+      Size.Height = 431.000000000000000000
+      inherited Button1: TButton
+        Position.X = 12.000000000000000000
+        Position.Y = 93.000000000000000000
+      end
+      inherited Button2: TButton
+        Position.X = 12.000000000000000000
+        Position.Y = 134.000000000000000000
+      end
+      object Label3: TLabel
+        AutoSize = True
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Left = 8
+        Top = 49
+      end
+      object RadioGroup1: TPanel
+        Position.X = 10.000000000000000000
+        Position.Y = 207.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 157.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object RadioButton1: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          IsChecked = True
+          Position.X = 6.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'P Chart'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton2: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          Position.X = 6.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'NP Chart'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton3: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          Position.X = 6.000000000000000000
+          Position.Y = 79.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'U Chart'
+          OnChange = RadioButton1Change
+        end
+        object RadioButton4: TRadioButton
+          GroupName = 'ChartTypeGroup'
+          Position.X = 6.000000000000000000
+          Position.Y = 114.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'C Chart'
+          OnChange = RadioButton1Change
+        end
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Position.X = 142.000000000000000000
+        Position.Y = 49.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        OnChange = Edit2Change
+      end
+      object Label4: TLabel
+        Position.X = 12.000000000000000000
+        Position.Y = 183.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Type:'
+      end
+    end
+    object Label2: TLabel
+      AutoSize = True
+      Position.X = 9.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 107.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Sample size:'
+      Left = 8
+      Top = 120
+    end
+  end
+  inherited Memo1: TMemo
+    Size.Height = 118.000000000000000000
+    Viewport.Width = 658.000000000000000000
+    Viewport.Height = 110.000000000000000000
+  end
+end

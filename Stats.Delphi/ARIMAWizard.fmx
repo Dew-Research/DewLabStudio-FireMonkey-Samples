@@ -1,0 +1,798 @@
+inherited frmARIMAWizard: TfrmARIMAWizard
+  Left = 164
+  Top = 166
+  Caption = 'frmARIMAWizard'
+  ClientHeight = 527
+  ClientWidth = 1016
+  OnDestroy = FormDestroy
+  Left = 164
+  Top = 166
+  DesignerMasterStyle = 3
+  inherited Panel1: TPanel
+    Position.Y = 471.000000000000000000
+    Size.Width = 1016.000000000000000000
+    Size.Height = 56.000000000000000000
+    inherited btnHelp: TButton
+      Position.X = 13.000000000000000000
+      Position.Y = 10.000000000000000000
+    end
+    inherited btnBack: TButton
+      Position.X = 141.000000000000000000
+      Position.Y = 10.000000000000000000
+    end
+    inherited btnNext: TButton
+      Position.X = 269.000000000000000000
+      Position.Y = 10.000000000000000000
+    end
+    inherited btnCancel: TButton
+      Position.X = 880.000000000000000000
+      Position.Y = 9.000000000000000000
+    end
+  end
+  inherited Panel2: TPanel
+    Size.Width = 1016.000000000000000000
+    inherited lblHeader: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited PageControl: TTabControl
+    Size.Width = 1016.000000000000000000
+    Size.Height = 438.000000000000000000
+    Sizes = (
+      1016s
+      389s
+      1016s
+      389s
+      1016s
+      389s
+      1016s
+      389s
+      1016s
+      389s)
+    object tsInputData: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 203.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Step 1: Define time series'
+      ExplicitSize.cx = 203.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Panel3: TPanel
+        Align = Left
+        Size.Width = 538.000000000000000000
+        Size.Height = 389.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object GroupBox1: TGroupBox
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 260.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Time series'
+          TabOrder = 0
+          object Label3: TLabel
+            AutoSize = True
+            Position.X = 8.000000000000000000
+            Position.Y = 93.000000000000000000
+            Size.Width = 68.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = '# of diff.'
+          end
+          object btnLoad: TButton
+            Position.X = 8.000000000000000000
+            Position.Y = 24.000000000000000000
+            Size.Width = 101.000000000000000000
+            Size.Height = 31.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Load'
+            OnClick = btnLoadClick
+          end
+          object chkBoxRemoveMean: TCheckBox
+            IsChecked = True
+            Position.X = 8.000000000000000000
+            Position.Y = 62.000000000000000000
+            Size.Width = 155.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Remove mean'
+            OnClick = chkBoxRemoveMeanClick
+          end
+          object EditD: TMtxFloatEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 3
+            RegistryPath = '\Software\Dew Research\MtxVec'
+            StoreInRegistry = False
+            IntegerIncrement = True
+            Scientific = False
+            ReFormat = '0'
+            ImFormat = '+0.00#i;-0.00#i'
+            Increment = '1'
+            MaxValue = '0'
+            MinValue = '0'
+            Value = '0'
+            Cursor = crIBeam
+            KeyboardType = Default
+            Position.X = 90.000000000000000000
+            Position.Y = 90.000000000000000000
+            Size.Width = 90.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = editDChange
+          end
+        end
+        object GroupBox2: TGroupBox
+          Position.X = 278.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 230.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Additional settings'
+          TabOrder = 1
+          object Label4: TLabel
+            AutoSize = True
+            Position.X = 12.000000000000000000
+            Position.Y = 32.000000000000000000
+            Size.Width = 123.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Format string : '
+          end
+          object Label8: TLabel
+            AutoSize = True
+            Position.X = 12.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 101.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'Alpha level : '
+          end
+          object EditFmtString: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 0
+            Position.X = 136.000000000000000000
+            Position.Y = 29.000000000000000000
+            Size.Width = 82.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = EditFmtStringChange
+          end
+          object editAlpha: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 1
+            Position.X = 136.000000000000000000
+            Position.Y = 67.000000000000000000
+            Size.Width = 81.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = editAlphaChange
+          end
+        end
+        object GroupBox6: TGroupBox
+          Position.X = 8.000000000000000000
+          Position.Y = 149.000000000000000000
+          Size.Width = 257.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Untransformed series statistics'
+          TabOrder = 2
+          object lblLength: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'size : '
+          end
+          object lblMean: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 39.000000000000000000
+            Size.Width = 59.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'mean : '
+          end
+          object lblStdDev: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 58.000000000000000000
+            Size.Width = 78.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'std.dev  : '
+          end
+          object lblVariance: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 77.000000000000000000
+            Size.Width = 87.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'variance  : '
+          end
+        end
+        object GroupBox7: TGroupBox
+          Position.X = 8.000000000000000000
+          Position.Y = 255.000000000000000000
+          Size.Width = 251.000000000000000000
+          Size.Height = 70.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Transformed series statistics'
+          TabOrder = 3
+          object lblTrSize: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 46.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'size : '
+          end
+          object lblTrMean: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 40.000000000000000000
+            Size.Width = 59.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'mean : '
+          end
+          object lblTrStdDev: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 60.000000000000000000
+            Size.Width = 78.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'std.dev  : '
+          end
+          object lblTrVar: TLabel
+            AutoSize = True
+            Position.X = 16.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 87.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.WordWrap = False
+            Text = 'variance  : '
+          end
+        end
+        object rgPlot: TPanel
+          Position.X = 278.000000000000000000
+          Position.Y = 143.000000000000000000
+          Size.Width = 185.000000000000000000
+          Size.Height = 110.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          OnClick = rgPlotClick
+          object RadioButton1: TRadioButton
+            GroupName = 'PlotGroup'
+            IsChecked = True
+            Position.X = 9.000000000000000000
+            Position.Y = 9.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'data set'
+            OnChange = RadioButton1Change
+          end
+          object RadioButton2: TRadioButton
+            GroupName = 'PlotGroup'
+            Position.X = 9.000000000000000000
+            Position.Y = 43.000000000000000000
+            Size.Width = 157.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'data set ACF'
+            OnChange = RadioButton1Change
+          end
+          object RadioButton3: TRadioButton
+            GroupName = 'PlotGroup'
+            Position.X = 9.000000000000000000
+            Position.Y = 78.000000000000000000
+            Size.Width = 160.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'data set PACF'
+            OnChange = RadioButton1Change
+          end
+        end
+        object Label9: TLabel
+          Position.X = 279.000000000000000000
+          Position.Y = 123.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Plot:'
+        end
+      end
+      object chartData: TChart
+        AllowPanning = pmNone
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        Legend.Visible = False
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.Text.Strings = (
+          'Time series')
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.Maximum = 0.500000000000000000
+        DepthAxis.Minimum = -0.500000000000000000
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.Maximum = 0.500000000000000000
+        DepthTopAxis.Minimum = -0.500000000000000000
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.Grid.ZPosition = 100.000000000000000000
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.ZPosition = 100.000000000000000000
+        TopAxis.Grid.ZPosition = 100.000000000000000000
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.ZPosition = 100.000000000000000000
+        View3D = False
+        Zoom.Allow = False
+        Zoom.Brush.Kind = None
+        Zoom.Brush.Gradient.Direction = gdFromTopLeft
+        Zoom.Brush.Gradient.EndColor = claSilver
+        Zoom.Brush.Gradient.MidColor = claWhite
+        Zoom.Brush.Gradient.StartColor = claSilver
+        Zoom.Pen.Color = claWhite
+        Zoom.Pen.Mode = pmNotXor
+        Zoom.Pen.Fill.Color = claWhite
+        OnAfterDraw = chartDataAfterDraw
+        OnBeforeDrawSeries = chartDataBeforeDrawSeries
+        Align = Client
+        BevelOuter = bvNone
+        Color = claWhite
+        TabOrder = 1
+        Size.Width = 478.000000000000000000
+        Size.Height = 389.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 0
+      end
+    end
+    object tsDefineModel: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 203.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Step 2: Define model'
+      ExplicitSize.cx = 203.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object lblModel: TLabel
+        AutoSize = True
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 8.000000000000000000
+        Position.Y = 128.000000000000000000
+        Size.Width = 47.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.WordWrap = False
+        Text = 'Model : '
+        TabOrder = 6
+      end
+      object GroupBox3: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 11.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Order'
+        TabOrder = 0
+        object Label1: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 68.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'AR order (p)'
+        end
+        object Label2: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 69.000000000000000000
+          Size.Width = 72.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'MA order (q)'
+        end
+        object editAROrder: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Text = '0'
+          Position.X = 132.000000000000000000
+          Position.Y = 24.000000000000000000
+          Size.Width = 79.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = editAROrderChange
+        end
+        object editMAOrder: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = '0'
+          Position.X = 132.000000000000000000
+          Position.Y = 63.000000000000000000
+          Size.Width = 79.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = editMAOrderChange
+        end
+      end
+      object rgARInit: TPanel
+        Position.X = 168.000000000000000000
+        Position.Y = 29.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 80.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        TabOrder = 1
+        OnClick = rgARInitClick
+        object ArButton1: TRadioButton
+          GroupName = 'ArGroupPreliminary'
+          IsChecked = True
+          Position.X = 9.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Yulle Walker'
+          OnChange = ArButton1Change
+        end
+        object ArButton2: TRadioButton
+          GroupName = 'ArGroupPreliminary'
+          Position.X = 9.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Burg'
+          OnChange = ArButton1Change
+        end
+        object ArButton3: TRadioButton
+          GroupName = 'ArGroupPreliminary'
+          Position.X = 9.000000000000000000
+          Position.Y = 51.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Fixed'
+          OnChange = ArButton1Change
+        end
+      end
+      object rgARMAInit: TPanel
+        Position.X = 168.000000000000000000
+        Position.Y = 29.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 80.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        TabOrder = 2
+        OnClick = rgARMAInitClick
+        object ArimaButton1: TRadioButton
+          GroupName = 'ArimaGroupPreliminary'
+          IsChecked = True
+          Position.X = 15.000000000000000000
+          Position.Y = 9.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Innovations'
+          OnChange = ArimaButton1Change
+        end
+        object ArimaButton2: TRadioButton
+          GroupName = 'ArimaGroupPreliminary'
+          Position.X = 15.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Hanmah-Rissanen'
+          OnChange = ArimaButton1Change
+        end
+        object ArimaButton3: TRadioButton
+          GroupName = 'ArimaGroupPreliminary'
+          Position.X = 15.000000000000000000
+          Position.Y = 51.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Fixed'
+          OnChange = ArimaButton1Change
+        end
+      end
+      object gbPhiThetaEdit: TGroupBox
+        Position.X = 328.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 81.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Phi, Theta'
+        Visible = False
+        TabOrder = 3
+        object btnEditPhi: TButton
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Edit Phi'
+          OnClick = btnEditPhiClick
+        end
+        object btnEditTheta: TButton
+          Position.X = 8.000000000000000000
+          Position.Y = 48.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 25.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Edit Theta'
+          OnClick = btnEditThetaClick
+        end
+      end
+      object gbInnovationsLag: TGroupBox
+        Position.X = 328.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 81.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Maximum lag'
+        Visible = False
+        TabOrder = 4
+        object Label5: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 40.000000000000000000
+          Size.Width = 76.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = '-1 = automatic'
+        end
+        object EditInnoLag: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Text = '-1'
+          Position.X = 8.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = EditInnoLagChange
+        end
+      end
+      object GroupBox5: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 161.000000000000000000
+        Size.Width = 236.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Estimation'
+        TabOrder = 5
+        object chkDoMLE: TCheckBox
+          Position.X = 14.000000000000000000
+          Position.Y = 34.000000000000000000
+          Size.Width = 164.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Do MLE estimation'
+        end
+      end
+      object Label10: TLabel
+        Position.X = 279.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Preliminary estimates:'
+        TabOrder = 7
+      end
+    end
+    object tsDefineReport: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 203.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Step 3: Define reports'
+      ExplicitSize.cx = 203.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object GroupBox4: TGroupBox
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 263.000000000000000000
+        Size.Height = 70.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Additional settings'
+        TabOrder = 0
+        object Label6: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 39.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = '# of forecasts : '
+        end
+        object Label7: TLabel
+          AutoSize = True
+          Position.X = 8.000000000000000000
+          Position.Y = 81.000000000000000000
+          Size.Width = 71.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'Lag for ACF : '
+        end
+        object editForecastNo: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 0
+          Text = '20'
+          Position.X = 140.000000000000000000
+          Position.Y = 36.000000000000000000
+          Size.Width = 74.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = editForecastNoChange
+        end
+        object editACFLag: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Text = '-1'
+          Position.X = 140.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 74.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = editACFLagChange
+        end
+        object chkAddMean: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 125.000000000000000000
+          Size.Width = 218.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Add mean to forecasts'
+        end
+        object chkIntegrate: TCheckBox
+          IsChecked = True
+          Position.X = 8.000000000000000000
+          Position.Y = 149.000000000000000000
+          Size.Width = 299.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = 'Forecast the undifferenced data'
+        end
+      end
+    end
+    object tsTextReport: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 203.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'ARMA/ARIMA: Text reports'
+      ExplicitSize.cx = 203.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object RichEdit: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        Align = Client
+        Size.Width = 1016.000000000000000000
+        Size.Height = 389.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 1016.000000000000000000
+        Viewport.Height = 389.000000000000000000
+      end
+    end
+    object tsChart: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 204.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'ARMA/ARIMA: Charts'
+      ExplicitSize.cx = 204.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Chart: TChart
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.Text.Strings = (
+          '')
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.Maximum = 0.500000000000000000
+        DepthAxis.Minimum = -0.500000000000000000
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.Maximum = 0.500000000000000000
+        DepthTopAxis.Minimum = -0.500000000000000000
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.Grid.ZPosition = 100.000000000000000000
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.ZPosition = 100.000000000000000000
+        TopAxis.Grid.ZPosition = 100.000000000000000000
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.ZPosition = 100.000000000000000000
+        View3D = False
+        Zoom.Brush.Kind = None
+        Zoom.Brush.Gradient.Direction = gdFromTopLeft
+        Zoom.Brush.Gradient.EndColor = claSilver
+        Zoom.Brush.Gradient.MidColor = claWhite
+        Zoom.Brush.Gradient.StartColor = claSilver
+        Zoom.Pen.Color = claWhite
+        Zoom.Pen.Mode = pmNotXor
+        Zoom.Pen.Fill.Color = claWhite
+        Align = Client
+        Color = x00C08080
+        TabOrder = 0
+        Size.Width = 1016.000000000000000000
+        Size.Height = 389.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 0
+      end
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'vector (*.vec)|*.vec|text file (*.txt)|*.txt'
+    Left = 543
+    Top = 66
+  end
+end
