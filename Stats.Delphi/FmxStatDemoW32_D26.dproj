@@ -138,6 +138,10 @@
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
+        <PostBuildEvent><![CDATA[(copy *.txt  $(OUTPUTDIR))
+(copy *.vec  $(OUTPUTDIR))
+(copy *.mtx  $(OUTPUTDIR))
+$(PostBuildEvent)]]></PostBuildEvent>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <Android_SplashGravity>center</Android_SplashGravity>

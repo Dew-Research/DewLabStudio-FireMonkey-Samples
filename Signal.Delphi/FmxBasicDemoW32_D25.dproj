@@ -98,6 +98,9 @@
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
+        <PostBuildEvent><![CDATA[(copy *.sfs $(OUTPUTDIR))
+(copy *.rtf $(OUTPUTDIR))
+$(PostBuildEvent)]]></PostBuildEvent>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>

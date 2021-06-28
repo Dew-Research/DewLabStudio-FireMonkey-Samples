@@ -112,6 +112,9 @@
         <DCC_K>false</DCC_K>
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\delphi_PROJECTICNS.icns</Icns_MainIcns>
+        <PostBuildEvent><![CDATA[(copy *.sfs $(OUTPUTDIR))
+(copy *.rtf $(OUTPUTDIR))
+$(PostBuildEvent)]]></PostBuildEvent>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>
