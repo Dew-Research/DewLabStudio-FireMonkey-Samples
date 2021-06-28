@@ -561,15 +561,15 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Android64\Release\libFmxStatDemoW32_D27.so" Configuration="Release" Class="ProjectOutput">
-                    <Platform Name="Android64">
-                        <RemoteName>libFmxStatDemoW32_D27.so</RemoteName>
+                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Configuration="Debug" Class="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteName>splash_image.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="MulLinReg_A.mtx" Configuration="Debug" Class="File">
-                    <Platform Name="OSX32">
-                        <RemoteName>MulLinReg_A.mtx</RemoteName>
+                <DeployFile LocalName="Android64\Release\libFmxStatDemoW32_D27.so" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Android64">
+                        <RemoteName>libFmxStatDemoW32_D27.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -591,9 +591,9 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Configuration="Debug" Class="Android_SplashImage426">
-                    <Platform Name="Android">
-                        <RemoteName>splash_image.png</RemoteName>
+                <DeployFile LocalName="MulLinReg_A.mtx" Configuration="Debug" Class="File">
+                    <Platform Name="OSX32">
+                        <RemoteName>MulLinReg_A.mtx</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
