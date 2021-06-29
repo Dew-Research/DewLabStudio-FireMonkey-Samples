@@ -3,7 +3,6 @@
 </a>  
 
 # Dew Lab Studio FMX for RAD Studio Delphi samples.
-==========================================================================
   
 Sample programs showing how to use Dew Lab Studio FMX for (RAD Studio Delphi)
 
