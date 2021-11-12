@@ -68,8 +68,8 @@ object clCustomFunctionForm: TclCustomFunctionForm
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 351.000000000000000000
-      Viewport.Height = 69.000000000000000000
+      Viewport.Width = 355.000000000000000000
+      Viewport.Height = 73.000000000000000000
     end
     object DeviceListBox: TListBox
       Position.X = 15.000000000000000000
@@ -83,8 +83,8 @@ object clCustomFunctionForm: TclCustomFunctionForm
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 351.000000000000000000
-      Viewport.Height = 85.000000000000000000
+      Viewport.Width = 355.000000000000000000
+      Viewport.Height = 89.000000000000000000
     end
     object VectorLengthBox: TComboBox
       Position.X = 129.000000000000000000
@@ -143,7 +143,7 @@ object clCustomFunctionForm: TclCustomFunctionForm
     Size.Height = 124.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    Viewport.Width = 589.000000000000000000
-    Viewport.Height = 120.000000000000000000
+    Viewport.Width = 593.000000000000000000
+    Viewport.Height = 124.000000000000000000
   end
 end

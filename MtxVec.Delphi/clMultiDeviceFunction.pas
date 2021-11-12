@@ -115,11 +115,6 @@ begin
 
     MaximumJobCountEdit.ItemIndex := 1;
 
-{    clPlatform.AdaptGPUAndSingleToCPUAndDouble('C:\CommonObjects\Dew MtxVec.NET\');
-    clPlatform.SaveDefaultToRes('C:\CommonObjects\Dew MtxVec.NET\'); }
-    clPlatform.IgnoreIntel := True;
-//    if clPlatform.
-
     kernelSum := 0;
     for i := 0 to clPlatform.Count-1 do
     begin
@@ -131,9 +126,8 @@ begin
 
     if kernelSum = 0 then
     begin
-        ShowMessage('When loading the first time, the Open CL drivers need to recompile the source code.'
-                  + 'This may take a minute or longer. If you have Intel Open CL drivers installed they '
-                  + 'add 20s delay regardless, if the program is precompiled.');
+        ShowMessage('When loading the first time, the Open CL drivers need to compile new kernels.'
+                  + 'This may take minutes.');
 
         SetHourGlassCursor;
         clPlatform.LoadProgramsForDevices(false, false, true, false, false);

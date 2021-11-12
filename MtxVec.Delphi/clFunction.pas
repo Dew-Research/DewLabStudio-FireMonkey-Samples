@@ -252,10 +252,7 @@ begin
       Add('The platform list shows the Open CL drivers  '
         + 'available on your computer. If you dont have a AMD or Nvidia GPU '
         + 'you can still install Intel or Open CL drivers which '
-        + 'run on the CPU alone.  '
-        + 'Intel drivers require at least SSE4.x (Core 2) capable hardware. '
-        + 'Presence of Intel drivers also slows down the start of the '
-        + 'application by minutes. That is why clPlatform.IgnoreIntel is set to true by default. ');
+        + 'run on the CPU alone.  ');
       Add('Select various functions and see how they perform in compare to '
         + 'intel IPP (MtxVec) and native Delphi code. Dont forget however '
         + 'that data also needs to be copied to GPU and back and this is '
@@ -265,15 +262,12 @@ begin
         + 'on the amount of total memory allocated on the GPU by the Open CL library. ');
     end;
 
-
-//    clPlatform.IgnoreIntel := False;
     FloatPrecisionBox.ItemIndex := 0;
 
     case FloatPrecisionBox.ItemIndex of
     0: CPUFloatPrecisionLabel.Text := 'CPU (MtxVec) float precision: ' + IntToStr(sizeof(single)*8) + 'bit';
     1: CPUFloatPrecisionLabel.Text := 'CPU (MtxVec) float precision: ' + IntToStr(sizeof(double)*8) + 'bit';
     end;
-{    ReportMemoryLeaksOnShutDown := True; }
 
     if clPlatform.Count = 0 then Exit;
 
@@ -288,9 +282,6 @@ begin
 
     DeviceListBox.ItemIndex := 0;
 
-//    clPlatform.SaveDefaultToRC('C:\CommonObjects\Dew MtxVec.NET\');
-    clPlatform.IgnoreIntel := true;
-
     kernelSum := 0;
     for i := 0 to clPlatform.Count - 1 do
     begin
@@ -302,9 +293,8 @@ begin
 
     if kernelSum = 0 then
     begin
-        ShowMessage('When loading the first time, the Open CL drivers need to recompile the source code.'
-                      + 'This may take a minute or longer. If you have Intel Open CL drivers installed they '
-                      + 'add 20s delay regardless, if the program is precompiled.');
+        ShowMessage('When loading the first time, the Open CL drivers need to compile new kernels.'
+                  + 'This may take minutes.');
 
         SetHourGlassCursor;
         clPlatform.LoadProgramsForDevices(false, false, true, false, false);
