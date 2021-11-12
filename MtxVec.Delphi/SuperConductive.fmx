@@ -157,27 +157,7 @@ object SuperConductiveForm: TSuperConductiveForm
     Title.Text.Strings = (
       'Memory allocations/second/thread'
       'depending on object type and memory manager used. ')
-    BottomAxis.LogarithmicBase = 10.000000000000000000
-    BottomAxis.EndPosition = 100.000000000000000000
-    DepthAxis.LogarithmicBase = 10.000000000000000000
-    DepthAxis.Maximum = 0.500000000000000000
-    DepthAxis.Minimum = -0.500000000000000000
-    DepthAxis.EndPosition = 100.000000000000000000
-    DepthTopAxis.LogarithmicBase = 10.000000000000000000
-    DepthTopAxis.Maximum = 0.500000000000000000
-    DepthTopAxis.Minimum = -0.500000000000000000
-    DepthTopAxis.EndPosition = 100.000000000000000000
-    LeftAxis.LogarithmicBase = 10.000000000000000000
-    LeftAxis.EndPosition = 100.000000000000000000
     LeftAxis.Title.Caption = 'Milions of allocs/second/thread'
-    RightAxis.Grid.ZPosition = 100.000000000000000000
-    RightAxis.LogarithmicBase = 10.000000000000000000
-    RightAxis.EndPosition = 100.000000000000000000
-    RightAxis.ZPosition = 100.000000000000000000
-    TopAxis.Grid.ZPosition = 100.000000000000000000
-    TopAxis.LogarithmicBase = 10.000000000000000000
-    TopAxis.EndPosition = 100.000000000000000000
-    TopAxis.ZPosition = 100.000000000000000000
     View3D = False
     Zoom.Animated = True
     Zoom.Brush.Kind = None

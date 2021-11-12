@@ -209,6 +209,7 @@ end;
 procedure TSuperConductiveForm.FormDestroy(Sender: TObject);
 begin
     GlobalThreads.Free;
+    GlobalThreads := nil;
 end;
 
 procedure TSuperConductiveForm.SetTestMethod(const Value: TTestMethod);
