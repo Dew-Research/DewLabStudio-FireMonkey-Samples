@@ -21,7 +21,7 @@ uses
   FMX.Edit,
   Fmx.StdCtrls,
   FMX.Header,
-  Basic3, FMX.ExtCtrls;
+  Basic3, FMX.ExtCtrls, FMX.Memo.Types, FMX.Controls.Presentation, FMX.ScrollBox;
 
 
 type

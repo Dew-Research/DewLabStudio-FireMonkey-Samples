@@ -1,24 +1,21 @@
 inherited IntroCompListForm: TIntroCompListForm
   Caption = 'IntroCompListForm'
-  DesignerMobile = False
-  DesignerWidth = 0
-  DesignerHeight = 0
-  DesignerDeviceName = ''
-  DesignerOrientation = 0
-  DesignerOSVersion = ''
+  DesignerMasterStyle = 0
   inherited RichEdit1: TMemo
-    Align = alBottom
-    Height = 5.000000000000000000
+    Align = Bottom
     Position.Y = 441.000000000000000000
+    Size.Height = 5.000000000000000000
     Visible = False
+    Viewport.Width = 688.000000000000000000
+    Viewport.Height = 5.000000000000000000
   end
   object ImageViewer1: TImageViewer
-    Align = alClient
-    Cursor = crHandPoint
-    Height = 446.000000000000000000
+    Align = Client
+    Size.Width = 688.000000000000000000
+    Size.Height = 446.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 1
-    Width = 688.000000000000000000
-    BackgroundFill.Kind = bkNone
+    BackgroundFill.Kind = None
     Bitmap.PNG = {
       89504E470D0A1A0A0000000D4948445200000298000003BF08060000006BEFB6
       F3000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
@@ -2500,6 +2497,7 @@ inherited IntroCompListForm: TIntroCompListForm
       A058601A638C31C698816281698C31C61863068A05A631C618638C19281698C6
       18638C3166A058601A638C31C698816281698C31C61863064896FD3F61C46B98
       0F3D422B0000000049454E44AE426082}
-    BitmapScale = 1.000000000000000000
+    Viewport.Width = 668.000000000000000000
+    Viewport.Height = 442.000000000000000000
   end
 end
