@@ -128,11 +128,11 @@ begin
   StartTimer;
   { Levinson Yule Walker }
   {$IFDEF POSIX}
-      {$IFDEF OSX}
+      {$IF defined(OSX) or defined(LINUX)}
       aPath := TPath.Combine(TPath.GetDirectoryName(ParamStr(0)), 'FFTData.vec');
       {$ELSE}
       aPath := TPath.Combine(TPath.GetDocumentsPath, 'FFTData.vec');
-      {$ENDIF}
+      {$IFEND}
   {$ELSE}
   aPath := 'FFTData.vec'; {Load signal}
   {$ENDIF}

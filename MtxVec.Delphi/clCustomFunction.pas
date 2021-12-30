@@ -121,8 +121,20 @@ end;
 
 procedure TclCustomFunctionForm.Button1Click(Sender: TObject);
 begin
+    if PlatformListBox.Items.Count = 0 then
+    begin
+        ShowMessage('There have been no OpenCL platforms detected on this computer!');
+        Exit;
+    end;
+
     if VectorLengthBox.ItemIndex >= 0 then
         VectorLen := StrToInt(VectorLengthBox.Items[VectorLengthBox.ItemIndex]);
+
+    if DeviceListBox.Items.Count = 0 then
+    begin
+        ShowMessage('There have been no OpenCL devices detected on this on the selected platform!');
+        Exit;
+    end;
 
     clPlatform.UnmarkThreads;
     selectedDevice := clPlatform[PlatformListBox.ItemIndex].Device[DeviceListBox.ItemIndex];
@@ -184,16 +196,24 @@ procedure TclCustomFunctionForm.PlatformListBoxClick(Sender: TObject);
 var i: integer;
     DeviceList: StringList;
 begin
+    if PlatformListBox.Items.Count = 0 then Exit;
+
     for i := 0 to clPlatform[PlatformListBox.ItemIndex].Count - 1 do
          DeviceList.Add(clPlatform[PlatformListBox.ItemIndex].Device[i].Name);
 
     DeviceListBox.Items.Assign(TStringList(DeviceList));
-    DeviceListBox.ItemIndex := 0;
+    if DeviceListBox.Items.Count > 0 then DeviceListBox.ItemIndex := 0;
 end;
 
 procedure TclCustomFunctionForm.AutoDeviceButtonClick(Sender: TObject);
 var aDevice: TOpenCLDevice;
 begin
+    if DeviceListBox.Items.Count = 0 then
+    begin
+        ShowMessage('There have been no OpenCL devices detected on this on the selected platform!');
+        Exit;
+    end;
+
    if VectorLengthBox.ItemIndex >= 0 then
        VectorLen := StrToInt(VectorLengthBox.Items[VectorLengthBox.ItemIndex]);
 

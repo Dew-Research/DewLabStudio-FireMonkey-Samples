@@ -197,7 +197,7 @@ begin
     TestBox.ItemIndex := 0;
     cpuCores := Controller.CpuCores;
 
-    SetLength(Timings, cpuCores, TestBox.Items.Count);
+    SetLength(Timings, TestBox.Items.Count, cpuCores);
 
     SetLength(av, cpuCores);
     SetLength(bv, Length(av));

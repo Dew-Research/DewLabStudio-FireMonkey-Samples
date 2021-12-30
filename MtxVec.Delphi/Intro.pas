@@ -10,7 +10,7 @@ uses
   Fmx.StdCtrls,
   FMX.Forms,
   FMX.Header, FMX.Controls, FMX.Objects, FMX.Layouts, FMX.Memo, FMX.Types,
-  FMX.ScrollBox, FMX.Controls.Presentation;
+  FMX.ScrollBox, FMX.Controls.Presentation, FMX.Memo.Types;
 
 type
   TIntroduction = class(TForm)
@@ -38,7 +38,7 @@ uses Math387;
 
 procedure TIntroduction.FormCreate(Sender: TObject);
 begin
-  Label1.Text := 'Welcome to MtxVec v' + FormatSample('0.0',MtxVecVersion/100);
+  Label1.Text := 'Welcome to MtxVec v' + FormatSample('0.00',MtxVecVersion/100);
   With RichEdit1.Lines, RichEdit1 do
   begin
     Clear;

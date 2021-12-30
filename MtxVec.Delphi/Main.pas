@@ -178,7 +178,7 @@ begin
   TreeView1.Visible := True;
   TreeView1.ExpandAll;
 
-  Application.Title := 'Dew Research MtxVec ' + FormatSample('0.0',MtxVecVersion/100) +  ' - FireMonkey demo';
+  Application.Title := 'Dew Research MtxVec ' + FormatSample('0.00',MtxVecVersion/100) +  ' - FireMonkey demo';
   Caption := Application.Title;
 end;
 

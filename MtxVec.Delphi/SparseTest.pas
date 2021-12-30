@@ -15,7 +15,7 @@ uses
   Fmx.StdCtrls,
   FMX.Header,
   Basic2, Sparse, MtxVec, MtxExpr, FMX.ListBox, FMX.Controls, FMX.Layouts,
-  FMX.Memo, FMX.Types, FMX.Controls.Presentation, FMX.ScrollBox;
+  FMX.Memo, FMX.Types, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 
                                  
@@ -123,6 +123,7 @@ begin
   for i := 1 to 100 do A.LUSolve(B,x1);
   Series1.Add(StopTimer*1000,'LUSolve', TAlphaColors.Red);
 
+  {$IFNDEF LINUX}
   { "UMFPack" sparse solve }
   SparseA.ReportLevel := TReportLevel(ComboBox1.ItemIndex);
   SparseA.SparseSolver := ssUmfPack;
@@ -135,6 +136,7 @@ begin
   Memo1.Lines.Clear();
   MtxVec.Report.Position := 0;
   Memo1.Lines.LoadFromStream(MtxVec.Report);
+  {$ENDIF}
 
   { "Pardiso" sparse solve }
   {$IFDEF TTDOUBLE}

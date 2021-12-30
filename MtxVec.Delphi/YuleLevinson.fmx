@@ -59,9 +59,6 @@ inherited YuleLev: TYuleLev
     Foot.Font.StyleExt = {00040000000200000004000000}
     Legend.Title.Font.StyleExt = {00070000000000000004000000}
     SubFoot.Font.StyleExt = {00040000000200000004000000}
-    BottomAxis.Maximum = 24.000000000000000000
-    LeftAxis.Maximum = 400.000000000000000000
-    LeftAxis.Minimum = 5.000000000000000000
     Size.Width = 670.000000000000000000
     Size.Height = 342.000000000000000000
     object Series1: TLineSeries

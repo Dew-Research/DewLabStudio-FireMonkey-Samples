@@ -139,8 +139,8 @@ object clMultiDeviceFunctionForm: TclMultiDeviceFunctionForm
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 321.000000000000000000
-      Viewport.Height = 69.000000000000000000
+      Viewport.Width = 325.000000000000000000
+      Viewport.Height = 73.000000000000000000
     end
     object DeviceListBox: TListBox
       Position.X = 15.000000000000000000
@@ -155,8 +155,8 @@ object clMultiDeviceFunctionForm: TclMultiDeviceFunctionForm
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
       MultiSelectStyle = Default
-      Viewport.Width = 321.000000000000000000
-      Viewport.Height = 85.000000000000000000
+      Viewport.Width = 325.000000000000000000
+      Viewport.Height = 89.000000000000000000
     end
     object FunctionBox: TListBox
       Position.X = 15.000000000000000000
@@ -170,8 +170,8 @@ object clMultiDeviceFunctionForm: TclMultiDeviceFunctionForm
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 321.000000000000000000
-      Viewport.Height = 78.000000000000000000
+      Viewport.Width = 325.000000000000000000
+      Viewport.Height = 82.000000000000000000
       object TListBoxItem
         Size.Width = 321.000000000000000000
         Size.Height = 13.000000000000000000
@@ -312,8 +312,8 @@ object clMultiDeviceFunctionForm: TclMultiDeviceFunctionForm
     Size.Height = 124.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    Viewport.Width = 713.000000000000000000
-    Viewport.Height = 120.000000000000000000
+    Viewport.Width = 717.000000000000000000
+    Viewport.Height = 124.000000000000000000
   end
   object SchedulerTimer: TTimer
     Enabled = False

@@ -121,7 +121,8 @@ begin
 
   Series1.Clear;
   Series2.Clear;
-  Controller.ThreadWaitBeforeSleep := 1;
+  Controller.ThreadWaitBeforeSleep := 10;
+
   repeat
         ADim := i;
         GenerateData(ADim);
@@ -143,6 +144,7 @@ begin
 
         if i<50 then i := i+2 else i:= i+25;
   until i >= MtxDim;
+
   Controller.ThreadWaitBeforeSleep := 0;
   ResetCursor;
 end;

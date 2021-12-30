@@ -183,11 +183,11 @@ begin
   Add ('ArcTan', VAL1, CVAL1, {$IF Defined(NEXTGEN) and not Defined(OSX)} System.{$ELSE} Math387 {$IFEND}.ArcTan, Math387.ArcTan, fDst.ArcTan);
   {$ELSE}
 
-  Add ( 'Sin', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX)} System.{$IFEND}Sin, Math387.Sin, fDst.Sin);
-  Add ('Cos', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX)} System.{$IFEND}Cos, Math387.Cos, fDst.Cos);
-  Add ('Exp', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX)} System.{$IFEND}Exp, Math387.Exp, fDst.Exp);
-  Add ('Ln', VAL1, CVAL1,  {$IF Defined(D23) and not Defined(OSX)} System.{$IFEND}Ln, Math387.Ln, fDst.Ln);
-  Add ('ArcTan', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX)} System.{$IFEND}ArcTan, Math387.ArcTan, fDst.ArcTan);
+  Add ( 'Sin', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX) and not Defined(Linux)} System.{$IFEND}Sin, Math387.Sin, fDst.Sin);
+  Add ('Cos', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX) and not Defined(Linux)} System.{$IFEND}Cos, Math387.Cos, fDst.Cos);
+  Add ('Exp', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX) and not Defined(Linux)} System.{$IFEND}Exp, Math387.Exp, fDst.Exp);
+  Add ('Ln', VAL1, CVAL1,  {$IF Defined(D23) and not Defined(OSX) and not Defined(Linux)} System.{$IFEND}Ln, Math387.Ln, fDst.Ln);
+  Add ('ArcTan', VAL1, CVAL1, {$IF Defined(D23) and not Defined(OSX) and not Defined(Linux)} System.{$IFEND}ArcTan, Math387.ArcTan, fDst.ArcTan);
 
   {$ENDIF}
 

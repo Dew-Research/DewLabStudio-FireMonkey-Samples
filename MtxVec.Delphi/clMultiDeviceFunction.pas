@@ -150,25 +150,41 @@ procedure TclMultiDeviceFunctionForm.PlatformListBoxClick(Sender: TObject);
 var i: integer;
     DeviceList: StringList;
 begin
+    if PlatformListBox.Items.Count = 0 then Exit;
+
     for i := 0 to clPlatform[PlatformListBox.ItemIndex].Count - 1 do
          DeviceList.Add(clPlatform[PlatformListBox.ItemIndex].Device[i].Name);
 
+
+
     DeviceListBox.Items.Assign(TStringList(DeviceList));
-    DeviceListBox.ItemIndex := 0;
+    if DeviceListBox.Items.Count > 0 then DeviceListBox.ItemIndex := 0;
 
     for i := 0 to clPlatform[PlatformListBox.ItemIndex].Count - 1 do
       DeviceListBox.ListItems[i].IsSelected := true;
 end;
 
 procedure TclMultiDeviceFunctionForm.Button1Click(Sender: TObject);
-var i:integer;
+var i: integer;
     aDevice: TOpenCLDevice;
     CacheLength: integer;
 begin
     if not Finished then Exit; { previous run not yet finished }
 
+    if PlatformListBox.Items.Count = 0 then
+    begin
+        ShowMessage('There have been no OpenCL platforms detected on this computer!');
+        Exit;
+    end;
+
     if vectorLengthBox.ItemIndex >= 0 then
         VectorLen := StrToInt(VectorLengthBox.Items[vectorLengthBox.ItemIndex]);
+
+    if DeviceListBox.Items.Count = 0 then
+    begin
+        ShowMessage('There have been no OpenCL devices detected on this on the selected platform!');
+        Exit;
+    end;
 
     CacheLength := VectorLen;
     if ComplexBox.IsChecked then CacheLength := CacheLength*2;
