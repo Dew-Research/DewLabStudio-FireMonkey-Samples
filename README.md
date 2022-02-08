@@ -4,7 +4,7 @@
 
 # Dew Lab Studio FMX for RAD Studio Delphi samples.
   
-Sample programs showing how to use Dew Lab Studio FMX for (RAD Studio Delphi)
+Sample programs showing how to use Dew Lab Studio FMX for (RAD Studio Delphi). TeeChart Pro FMX trial or registered version is required (!) to rebuild the demos. The MtxVec Demo will build also with TeeChart version included with distribution of Deplhi. 
 
 Dew Lab Studio contains four products. For each product there is a separate "main" demo project, which contains multiple examples. The VCL samples are in a separate repository. 
 
@@ -12,7 +12,7 @@ You'll need Dew Lab Studio for Delphi FMX evaluation or registered version to ru
 
 Support for Firemonkey is implemented for all supported platforms:
 
-* Linux 64bit
+* Linux 64bit (not in trial version)
 * iOS 64bit
 * MacOS 64bit (10 and 11)
 * Android 64bit
