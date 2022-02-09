@@ -4,7 +4,7 @@
 
 # Dew Lab Studio FMX for RAD Studio Delphi samples.
   
-Sample programs showing how to use Dew Lab Studio FMX for (RAD Studio Delphi). TeeChart Pro FMX trial or registered version is required (!) to rebuild the demos. The MtxVec Demo will build also with TeeChart version included with distribution of Deplhi. 
+Sample programs showing how to use Dew Lab Studio FMX for (RAD Studio Delphi). TeeChart Pro FMX trial or registered version is required (!) to rebuild the demos. The MtxVec Demo will build also with TeeChart version included with distribution of Delphi. 
 
 Dew Lab Studio contains four products. For each product there is a separate "main" demo project, which contains multiple examples. The VCL samples are in a separate repository. 
 
