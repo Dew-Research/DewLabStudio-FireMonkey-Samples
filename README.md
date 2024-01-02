@@ -15,7 +15,7 @@ Support for Firemonkey is implemented for all supported platforms:
 * Linux 64bit (not in trial version)
 * iOS 64bit
 * MacOS 64bit (10 and newer)
-* Android 64bit
+* Android 32bit and 64bit
 * Win32 and Win64
 
 To build for Mac OS it is neccessary to add the following frameworks to the SDK Manager 
