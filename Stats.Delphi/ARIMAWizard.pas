@@ -29,8 +29,6 @@ type
     editAROrder: TEdit;
     editMAOrder: TEdit;
     lblModel: TLabel;
-    rgARInit: TPanel;
-    rgARMAInit: TPanel;
     gbPhiThetaEdit: TGroupBox;
     btnEditPhi: TButton;
     btnEditTheta: TButton;
@@ -69,21 +67,23 @@ type
     lblTrMean: TLabel;
     lblTrStdDev: TLabel;
     lblTrVar: TLabel;
-    rgPlot: TPanel;
     chkAddMean: TCheckBox;
     chkIntegrate: TCheckBox;
     EditD: TMtxFloatEdit;
-    Label9: TLabel;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
     ArButton1: TRadioButton;
-    Label10: TLabel;
     ArButton2: TRadioButton;
     ArButton3: TRadioButton;
-    ArimaButton1: TRadioButton;
-    ArimaButton2: TRadioButton;
-    ArimaButton3: TRadioButton;
+    rgArmaInitIndex3: TRadioButton;
+    rgArmaInitIndex4: TRadioButton;
+    rgArmaInitIndex0: TRadioButton;
+    PlotGroupBox: TGroupBox;
+    rgArmaInit: TGroupBox;
+    rgArmaInitIndex1: TRadioButton;
+    rgArmaInitIndex2: TRadioButton;
+    rgArInit: TGroupBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure EditFmtStringChange(Sender: TObject);
@@ -105,18 +105,19 @@ type
     procedure chartDataAfterDraw(Sender: TObject);
     procedure RadioButton1Change(Sender: TObject);
     procedure ArButton1Change(Sender: TObject);
-    procedure ArimaButton1Change(Sender: TObject);
+    procedure rgArmaInitIndex3Change(Sender: TObject);
+    procedure chkDoMLEChange(Sender: TObject);
   private
     { Private declarations }
     Data,Residuals,Forecasts,
     FStdDev,phi,theta: Vector;
     phiinit,thetainit: Vector;
     p,q,d,MaxLag,ForecastPer,ACFLag: Integer;
-    dMean: Tsample;
+    dMean: double;
     InitM: TcfInitMethod;
-    Alpha: TSample;
+    Alpha: double;
     ChartIndex: Integer;
-    chartLCL,chartUCL: TSample;
+    chartLCL,chartUCL: double;
     function CoeffReport(coeff,cstderrs: TVec; coefCaption: string): String; overload;
     function CoeffReport(coeff: TVec; coefCaption: string): String; overload;
     procedure InfoReport;
@@ -162,12 +163,21 @@ begin
   { initialize page }
   PageControl.ActiveTab := tsInputData;
   EditFmtString.Text := FormatString;
+
+  editAROrderChange(nil);
+  editMAOrderChange(nil);
+
+  UpdateModelInfo;
+  InfoReport;
 end;
 
 
 procedure TfrmARIMAWizard.FormCreate(Sender: TObject);
 begin
   inherited;
+  rgARMAInitItemIndex := 1;
+  rgARInitItemIndex := 1;
+
   TimeSeries := TVec.Create;
   chartData.AddSeries(TLineSeries.Create(chartData));
   { initial values for different parameters }
@@ -177,7 +187,7 @@ begin
   p := 0;
   q := 0;
   d := 0;
-  InitM := cfInitFixed;
+  InitM := TCfInitMethod(rgArmaInitItemIndex);
   Alpha := 0.05;
 
   { update visual controls }
@@ -186,6 +196,8 @@ begin
 
   EditAlpha.Text := FormatSample(FormatString,Alpha);
   chartindex := firstchartindex;
+
+  EditFmtString.Text := FormatString;
 end;
 
 procedure TfrmARIMAWizard.FormDestroy(Sender: TObject);
@@ -228,7 +240,7 @@ begin
 end;
 
 procedure TfrmARIMAWizard.InfoReport;
-var sd: TSample;
+var sd: double;
 begin
   sd := TimeSeries.StdDev;
   lblLength.Text := 'size : '+IntToStr(TimeSeries.Length);
@@ -298,21 +310,13 @@ end;
 
 procedure TfrmARIMAWizard.rgARInitClick(Sender: TObject);
 begin
-  case rgARInitItemIndex of
-    0: InitM := cfInitYW;
-    1: InitM := cfInitBurg;
-    2: InitM := cfInitFixed;
-  end;
+  InitM := TcfInitMethod(rgARInitItemIndex);
   UpdateModelInfo;
 end;
 
 procedure TfrmARIMAWizard.rgARMAInitClick(Sender: TObject);
 begin
-  case rgARMAInitItemIndex of
-    0: InitM := cfInitInno;
-    1: InitM := cfInitHannah;
-    2: InitM := cfInitFixed;
-  end;
+  InitM := TcfInitMethod(rgARMAInitItemIndex);
   UpdateModelInfo;
 end;
 
@@ -324,11 +328,13 @@ begin
   rgARInitClick(nil);
 end;
 
-procedure TfrmARIMAWizard.ArimaButton1Change(Sender: TObject);
+procedure TfrmARIMAWizard.rgArmaInitIndex3Change(Sender: TObject);
 begin
-  if Sender = ArButton1 then rgArmaInitItemIndex := 0;
-  if Sender = ArButton2 then rgArmaInitItemIndex := 1;
-  if Sender = ArButton3 then rgArmaInitItemIndex := 2;
+  if Sender = rgArmaInitIndex0 then rgArmaInitItemIndex := 0;
+  if Sender = rgArmaInitIndex1 then rgArmaInitItemIndex := 1;
+  if Sender = rgArmaInitIndex2 then rgArmaInitItemIndex := 2;
+  if Sender = rgArmaInitIndex3 then rgArmaInitItemIndex := 3;
+  if Sender = rgArmaInitIndex4 then rgArmaInitItemIndex := 4;
   rgARMAInitClick(nil);
 end;
 
@@ -390,7 +396,7 @@ begin
 end;
 
 procedure TfrmARIMAWizard.InitEstReport;
-var estVar: TSample;
+var estVar: double;
   d1,d2: Vector;
   innolag : Integer;
 begin
@@ -426,6 +432,11 @@ begin
         else ARMAInnovationsFit(Data,phi,theta,estVar,d1,d2,innolag);
         RichEdit.Lines.Add('Method used: Innovations');
       end;
+    cfInitHannah:
+      begin
+        ARMAHannahFit(Data, Phi,Theta, estVar);
+        RichEdit.Lines.Add('Method used: Hannah');
+      end;
   end;
 
   if (InitM<>cfInitFixed) then RichEdit.Lines.Add('Estimated WN variance: ' + FormatSample(FormatString,estVar));
@@ -445,10 +456,21 @@ end;
 
 procedure TfrmARIMAWizard.CausalReport;
 begin
-  if p>0 then
-    if CheckARMACoeffs(Phi,True) then RichEdit.Lines.Add('Model causal') else RichEdit.Lines.Add('Model not causal');
-  if q>0 then
-    if CheckARMACoeffs(Theta,False) then RichEdit.Lines.Add('Model invertible') else RichEdit.Lines.Add('Model not invertible');
+  if p > 0 then  //if all ar roots are outside of uing circyle
+  begin
+      if CheckARMACoeffs(Phi, True) then RichEdit.Lines.Add('Model causal') else RichEdit.Lines.Add('Model not causal');
+      if CheckARMACoeffs(Phi, False) then RichEdit.Lines.Add('Model stationary') else RichEdit.Lines.Add('Model not stationary');
+  end;
+  if q > 0 then
+  begin
+      if CheckARMACoeffs(Theta,False) then
+      begin
+          RichEdit.Lines.Add('Model invertible')
+      end else
+      begin
+          RichEdit.Lines.Add('Model not invertible');
+      end;
+  end;
 end;
 
 procedure TfrmARIMAWizard.editAlphaChange(Sender: TObject);
@@ -468,11 +490,11 @@ begin
 end;
 
 procedure TfrmARIMAWizard.MLEReport;
-var MLE: TSample;
+var MLE: double;
   iters: Integer;
 begin
   try
-    iters := ARMAMLE(Data,phi,theta,Residuals,mle);
+    iters := ARMAMLE(Data,phi,theta,Residuals,mle, dMean);
 //    RichEdit.SelAttributes.Style := [fsBold,fsUnderline];
     RichEdit.Lines.Add('Finding optimal coefficients (MLE)');
     RichEdit.Lines.Add('Number of iterations needed : '+IntToStr(iters));
@@ -501,10 +523,7 @@ begin
   RichEdit.Lines.Add('Forecasting '+IntToStr(ForecastPer)+' points');
   SetHourGlassCursor;
   try
-    ARMAForecast(Data,phi,theta,ForecastPer,Forecasts,FStdDev);
-
-    { add mean, if required }
-    if (chkBoxRemoveMean.IsChecked) and (chkAddMean.IsChecked) then Forecasts.Add(dMean);
+     ARMAForecast(Data, phi, theta, residuals, ForecastPer, dMean, Forecasts, FStdDev);
 
     { integrate, if required }
     if (d>0) and (chkIntegrate.IsChecked) then
@@ -521,8 +540,8 @@ begin
 //    RichEdit.SelAttributes.Color := clBlue;
     RichEdit.Lines.Add('Period'+chr(9)+'Forecast'+chr(9)+'Forecast std.dev.');
     for i := 1 to ForecastPer do
-      RichEdit.Lines.Add(IntToStr(i+endperiod)+chr(9)+FormatSample(FormatString,Forecasts.Values[i-1])+chr(9)
-                        +FormatSample(FormatString,FStdDev.Values[i-1]));
+      RichEdit.Lines.Add(IntToStr(i+endperiod)+chr(9)+FormatSample(FormatString,Forecasts[i-1])+chr(9)
+                        +FormatSample(FormatString,FStdDev[i-1]));
 
     RichEdit.Lines.Add('');
   finally
@@ -561,7 +580,7 @@ begin
       Chart[3].ShowInLegend := False;
       v1.Copy(data);
       { add mean, if required }
-      if (chkBoxRemoveMean.IsChecked) and (chkAddMean.IsChecked) then v1.Add(dMean);
+//      if (chkBoxRemoveMean.IsChecked) and (chkAddMean.IsChecked) then v1.Add(dMean);
       { integrate }
       if (d>0) and (chkIntegrate.IsChecked) then
       begin
@@ -580,8 +599,8 @@ begin
       v2.Size(Forecasts);
       for i := 0 to v1.Length-1 do
       begin
-        v1.Values[i] := NormalCDFInv(0.5*Alpha,Forecasts.Values[i],FStdDev.Values[i]);
-        v2.Values[i] := NormalCDFInv(1.0 - 0.5*Alpha,Forecasts.Values[i],FStdDev.Values[i]);
+        v1[i] := NormalCDFInv(0.5*Alpha,Forecasts[i],FStdDev[i]);
+        v2[i] := NormalCDFInv(1.0 - 0.5*Alpha,Forecasts[i],FStdDev[i]);
       end;
       DrawValues(v1,Chart[2],offset);
       DrawValues(v2,Chart[3],offset);
@@ -596,6 +615,12 @@ begin
   chkAddMean.Enabled := chkBoxRemoveMean.IsChecked;
 end;
 
+procedure TfrmARIMAWizard.chkDoMLEChange(Sender: TObject);
+begin
+  inherited;
+
+end;
+
 { transformations on original time series }
 procedure TfrmARIMAWizard.TransformTimeSeries;
 var i: Integer;
@@ -605,7 +630,7 @@ begin
   if d>0 then for i := 1 to d do Data.Difference;
   dMean := Data.Mean;
   { remove mean, if needed }
-  if chkBoxRemoveMean.IsChecked then Data.Add(-dMean);
+//  if chkBoxRemoveMean.IsChecked then Data.Add(-dMean);
 end;
 
 procedure TfrmARIMAWizard.RadioButton1Change(Sender: TObject);
@@ -733,14 +758,14 @@ begin
   df := Data.Length - p - q - d;
   StudentCDF(tVals,df,pVals);
   for i := 0 to pvals.Length-1 do
-    pVals.Values[i] := 2.0*Min(pVals.Values[i],1.0-pVals.Values[i]);
+    pVals[i] := 2.0*Min(pVals[i],1.0-pVals[i]);
 
   for i := 0 to coeff.Length -1 do
   begin
-    Result := Result + coefCaption+'['+IntToStr(i+1)+']'+#9+FormatSample(FormatString,coeff.Values[i])+#9;
-    Result := Result + FormatSample(FormatString,cstderrs.Values[i])+#9;
-    Result := Result + FormatSample(FormatString,tVals.Values[i])+#9;
-    Result := Result + FormatSample(FormatString,pVals.Values[i])+#10;
+    Result := Result + coefCaption+'['+IntToStr(i+1)+']'+#9+FormatSample(FormatString,coeff[i])+#9;
+    Result := Result + FormatSample(FormatString,cstderrs[i])+#9;
+    Result := Result + FormatSample(FormatString,tVals[i])+#9;
+    Result := Result + FormatSample(FormatString,pVals[i])+#10;
   end;
 end;
 
@@ -749,7 +774,7 @@ var i: Integer;
 begin
   Result := '';
   for i := 0 to coeff.Length -1 do
-    Result := Result + coefCaption+'['+IntToStr(i+1)+']'+#9+FormatSample(FormatString,coeff.Values[i])+#10;
+    Result := Result + coefCaption + '['+IntToStr(i+1)+']'+ #9 + FormatSample(FormatString,coeff[i]) + #10;
 end;
 
 

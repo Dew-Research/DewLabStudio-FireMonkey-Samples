@@ -36,7 +36,7 @@ uses
   FMXTee.Chart,
   FMXTee.Engine,
   FMXTee.Series,
-  FMXTee.Procs;
+  FMXTee.Procs, FMX.Memo.Types, FMX.ScrollBox, FMX.Controls.Presentation;
 
 type
   TOnLineCoherenceForm = class(TForm)

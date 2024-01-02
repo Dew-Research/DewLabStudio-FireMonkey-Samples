@@ -42,7 +42,23 @@ begin
   begin
     Clear;
 
+    Add('   New features in version 6.2.0:');
     Add('');
+    Add('');
+    Add('   *   Updated for Rad Studio Athens 12.0 and MtxVec v6.2.0.');
+    Add('   *   Enhanced click/pop protection for the TSignalCoreAudioOut.Paused functionality.');
+    Add('   *   Bug fix for TSignalCoreAudioOut.Paused.');
+    Add('   *   Android 11 tagged pointer support.');
+    Add('');
+
+    Add('   New features in version 6.0.5:');
+    Add('');
+    Add('');
+    Add('   *   Updated for Alexandria 11.0 and MtxVec v6.0.5.');
+    Add('   *   Updated TSignalCoreAudioIn and TSignalCoreAudioOut to support Android v25 and newer.');
+    Add('   *   Enhanced TSignalCoreAudioIn and TSignalCoreAudioOut with new API for low-latency (uncompressed) streaming over network across all platforms.');
+    Add('');
+
     Add('   New features in version v6.0:');
     Add('');
     Add('');

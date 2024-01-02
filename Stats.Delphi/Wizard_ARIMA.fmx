@@ -2,7 +2,7 @@ inherited frmWizardARIMA: TfrmWizardARIMA
   Caption = 'frmWizardARIMA'
   DesignerMasterStyle = 0
   inherited Memo1: TMemo
-    Viewport.Width = 477.000000000000000000
-    Viewport.Height = 125.000000000000000000
+    Viewport.Width = 481.000000000000000000
+    Viewport.Height = 129.000000000000000000
   end
 end

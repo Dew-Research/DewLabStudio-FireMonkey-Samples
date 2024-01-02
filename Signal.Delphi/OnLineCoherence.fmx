@@ -2,28 +2,20 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
   Left = 0
   Top = 0
   Caption = 'On-Line Cross-spectrum analyzer'
-  ClientHeight = 359
-  ClientWidth = 688
+  ClientHeight = 367
+  ClientWidth = 738
   FormFactor.Width = 320
   FormFactor.Height = 480
-  FormFactor.Devices = [dkDesktop, dkiPhone, dkiPad]
+  FormFactor.Devices = [Desktop, iPhone, iPad]
   OnCreate = FormCreate
-  DesignerMobile = False
-  DesignerWidth = 0
-  DesignerHeight = 0
-  DesignerDeviceName = ''
-  DesignerOrientation = 0
-  DesignerOSVersion = ''
+  DesignerMasterStyle = 0
   object SpectrumChart: TSpectrumChart
-    Height = 190.000000000000000000
-    Width = 688.000000000000000000
-    Foot.Font.Brush.Color = claRed
+    Foot.Font.StyleExt = {00040000000200000004000000}
     Gradient.EndColor = claWhite
     Gradient.StartColor = x00C08000
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
     Legend.Visible = False
-    SubFoot.Font.Brush.Color = claRed
-    SubTitle.Font.Brush.Color = claBlue
-    Title.Font.Brush.Color = claBlue
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Text.Strings = (
       'Frequency spectrum')
     BottomAxis.LabelsSeparation = 0
@@ -34,26 +26,28 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     LeftAxis.Automatic = False
     LeftAxis.AutomaticMaximum = False
     LeftAxis.AutomaticMinimum = False
-    LeftAxis.Maximum = 675.000000000000000000
-    LeftAxis.Minimum = -28.125000000000000000
+    LeftAxis.Maximum = 489.000000000000000000
+    LeftAxis.Minimum = -20.375000000000000000
     LeftAxis.Title.Caption = 'Amplitude [dB]'
-    Zoom.Brush.Kind = bkNone
+    Zoom.Brush.Kind = None
     Zoom.Pen.Color = claBlack
-    Zoom.Pen.Width = 3.000000000000000000
-    Align = alClient
+    Align = Client
     TabOrder = 0
+    Size.Width = 738.000000000000000000
+    Size.Height = 231.000000000000000000
+    Size.PlatformDefault = False
     Spectrums = <
       item
         SeriesName = 'Series1'
         Series = Series1
         InputsItemIndex = 0
+        UnitScaleXAxis = 1.000000000000000000
         Input = CrossAnalyzer
       end>
     ConfidenceIntervalIndex = 0
     ConfidenceIntervalVisible = False
     ColorPaletteIndex = 0
     object Series1: TFastLineSeries
-      Marks.Visible = False
       SeriesColor = x00A00000
       LinePen.Color = xFF0000A0
       LinePen.Fill.Color = xFF0000A0
@@ -75,7 +69,6 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
       Pointer.Gradient.EndColor = claGreen
       Pointer.InflateMargins = True
       Pointer.Style = psCircle
-      Pointer.Visible = True
       XValues.Name = 'X'
       XValues.Order = loAscending
       YValues.Name = 'Y'
@@ -105,90 +98,100 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     end
   end
   object Panel1: TPanel
-    Align = alBottom
-    Height = 39.000000000000000000
-    Position.Y = 320.000000000000000000
-    Width = 688.000000000000000000
+    Align = Bottom
+    Position.Y = 328.000000000000000000
+    Size.Width = 738.000000000000000000
+    Size.Height = 39.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 1
     object Label1: TLabel
       AutoSize = True
-      Height = 19.000000000000000000
       Position.X = 242.000000000000000000
       Position.Y = 12.000000000000000000
+      Size.Width = 54.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = 'Spectrum:'
-      Width = 53.000000000000000000
-      WordWrap = False
     end
     object ToolBar1: TToolBar
-      Align = alNone
-      Height = 25.000000000000000000
-      Position.X = 8.000000000000000000
-      Position.Y = 9.000000000000000000
+      Size.Width = 738.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
       TabOrder = 0
-      Width = 185.000000000000000000
       object ChartEditButton: TButton
-        Height = 22.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
         TabOrder = 0
         Text = '         Chart        '
-        Width = 80.000000000000000000
-        WordWrap = True
+        TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ChartEditButtonClick
       end
       object ToolButton1: TButton
-        Height = 22.000000000000000000
-        Position.X = 83.000000000000000000
+        Position.X = 91.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
         TabOrder = 1
         Text = 'Spectrum'
-        Width = 80.000000000000000000
-        WordWrap = True
+        TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ToolButton1Click
       end
     end
     object SpectrumBox: TComboBox
-      DisableFocusEffect = False
-      Height = 21.000000000000000000
       ItemIndex = 0
       Position.X = 304.000000000000000000
       Position.Y = 9.000000000000000000
+      Size.Width = 111.000000000000000000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
       TabOrder = 1
-      Width = 111.000000000000000000
       OnChange = SpectrumBoxChange
       object TListBoxItem
-        Height = 19.000000000000000000
         IsSelected = True
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
         Text = 'Input spectrum'
-        Width = 19.000000000000000000
       end
       object TListBoxItem
-        Height = 19.000000000000000000
+        TabOrder = 1
         Text = 'Output spectrum'
-        Width = 19.000000000000000000
       end
       object TListBoxItem
-        Height = 19.000000000000000000
+        TabOrder = 2
         Text = 'Cross spectrum'
-        Width = 19.000000000000000000
       end
       object TListBoxItem
-        Height = 19.000000000000000000
+        TabOrder = 3
         Text = 'Coherence'
-        Width = 19.000000000000000000
       end
       object TListBoxItem
-        Height = 19.000000000000000000
+        TabOrder = 4
         Text = 'TransferFunction'
-        Width = 19.000000000000000000
       end
     end
   end
   object RichEdit1: TMemo
-    Touch.InteractiveGestures = [igPan, igLongTap, igDoubleTap]
-    Align = alTop
-    Height = 130.000000000000000000
-    TabOrder = 2
-    Width = 688.000000000000000000
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
     ReadOnly = True
-    WordWrap = True
+    TextSettings.WordWrap = True
+    Align = Top
+    Size.Width = 738.000000000000000000
+    Size.Height = 97.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 734.000000000000000000
+    Viewport.Height = 93.000000000000000000
   end
   object ChartEditor: TChartEditor
     Chart = SpectrumChart
@@ -200,6 +203,8 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     Top = 21
   end
   object CrossAnalyzer: TCrossSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = CrossAnalyzerParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -219,6 +224,7 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -239,6 +245,8 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     MtxDataValues = {}
   end
   object SignalIn1: TSignalIn
+    IsDouble = True
+    FloatPrecision = mvDouble
     ChannelCount = 2
     SamplingFrequency = 44100.000000000000000000
     BufferSize = 32000
@@ -262,12 +270,16 @@ object OnLineCoherenceForm: TOnLineCoherenceForm
     MtxDataValues = {}
   end
   object Signal1: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 258
     Top = 105
     MtxDataValues = {}
   end
   object Signal2: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 426
     Top = 96

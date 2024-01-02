@@ -13,7 +13,7 @@ uses
   Fmx.StdCtrls,
   FMX.Header,
   Basic_Form, FMX.Layouts, FMX.Memo, FMX.Types, FMX.Controls, FMX.ScrollBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Memo.Types;
 
 type
   TfrmWizardARIMA = class(TfrmBasic)

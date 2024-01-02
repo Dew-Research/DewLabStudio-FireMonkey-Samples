@@ -25,6 +25,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
       Size.PlatformDefault = False
       TabOrder = 0
       Text = 'Open file...'
+      TextSettings.Trimming = None
       OnClick = OKButtonClick
     end
     object ProgressPanel: TProgressBar
@@ -38,9 +39,12 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     end
   end
   object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
     Legend.Visible = False
     MarginBottom = 1
     MarginRight = 1
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Text.Strings = (
       'Spectrogram')
     BottomAxis.Title.Caption = 'Time [s]'
@@ -76,12 +80,10 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
       PixelResampleMethod = pdsAverage
       LegendItemsCount = 11
       ColorPalette.PaletteSteps = 1000
-      ColorPalette.PaletteStyle = palRangeDiscrete
       ColorPalette.ColorBalance = -0.500000000000000000
       ColorPalette.SharpContrast = False
       ColorPalette.TopClipOffColor = claNull
       ColorPalette.BottomClipOffColor = claNull
-      ColorPalette.UseMidColor = False
     end
   end
   object OpenDialog: TOpenDialog
@@ -89,6 +91,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     Top = 195
   end
   object SignalRead: TSignalRead
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     LastFrameCheck = lfcLastFullBlock
     SelectionStop = -1
@@ -101,6 +105,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     MtxDataValues = {}
   end
   object Spectrogram: TSpectrogram
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnAfterUpdate = SpectrogramAfterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -120,6 +126,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     TraceOnly = False
@@ -132,6 +139,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     MtxDataValues = {}
   end
   object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnAfterUpdate = SpectrumAnalyzerAfterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -151,6 +160,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -169,6 +179,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     MtxDataValues = {}
   end
   object SignalDemux1: TSignalDemux
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnAfterUpdate = SignalDemux1AfterUpdate
     SamplingFrequency = 1.000000000000000000
     Input = SignalRead
