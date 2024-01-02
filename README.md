@@ -14,7 +14,7 @@ Support for Firemonkey is implemented for all supported platforms:
 
 * Linux 64bit (not in trial version)
 * iOS 64bit
-* MacOS 64bit (10 and 11)
+* MacOS 64bit (10 and newer)
 * Android 64bit
 * Win32 and Win64
 
