@@ -4,9 +4,10 @@ inherited MemComp1: TMemComp1
   Caption = 'Object cache'
   ClientHeight = 539
   ClientWidth = 655
+  Position = ScreenCenter
   Left = 202
   Top = 97
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 0
   inherited Panel1: TPanel
     Size.Width = 655.000000000000000000
     inherited RichEdit1: TMemo
@@ -39,8 +40,8 @@ inherited MemComp1: TMemComp1
       AutoSize = True
       Position.X = 18.000000000000000000
       Position.Y = 8.000000000000000000
-      Size.Width = 108.000000000000000000
-      Size.Height = 22.000000000000000000
+      Size.Width = 71.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
       Text = 'Vector length'
@@ -49,8 +50,8 @@ inherited MemComp1: TMemComp1
       AutoSize = True
       Position.X = 145.000000000000000000
       Position.Y = 7.000000000000000000
-      Size.Width = 55.000000000000000000
-      Size.Height = 22.000000000000000000
+      Size.Width = 35.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
       Text = 'Label2'
@@ -64,7 +65,7 @@ inherited MemComp1: TMemComp1
       Position.X = 8.000000000000000000
       Position.Y = 27.000000000000000000
       Size.Width = 212.000000000000000000
-      Size.Height = 32.000000000000000000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Value = 1000.000000000000000000
@@ -96,8 +97,8 @@ inherited MemComp1: TMemComp1
       Size.Height = 295.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      Viewport.Width = 191.000000000000000000
-      Viewport.Height = 282.000000000000000000
+      Viewport.Width = 200.000000000000000000
+      Viewport.Height = 291.000000000000000000
     end
   end
   object Chart1: TChart
@@ -119,7 +120,7 @@ inherited MemComp1: TMemComp1
     DepthTopAxis.Minimum = -0.500000000000000000
     DepthTopAxis.EndPosition = 100.000000000000000000
     LeftAxis.LogarithmicBase = 10.000000000000000000
-    LeftAxis.Maximum = 452.500000000000000000
+    LeftAxis.Maximum = 410.000000000000000000
     LeftAxis.EndPosition = 100.000000000000000000
     LeftAxis.Title.Caption = 'Time [ms]'
     RightAxis.Grid.ZPosition = 100.000000000000000000

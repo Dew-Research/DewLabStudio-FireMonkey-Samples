@@ -1149,7 +1149,7 @@ object frmMain: TfrmMain
     Size.Height = 447.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 3
     TabPosition = Bottom
     OnChange = PageControl1Change
@@ -1162,7 +1162,7 @@ object frmMain: TfrmMain
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 373.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
@@ -1183,7 +1183,7 @@ object frmMain: TfrmMain
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 373.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
