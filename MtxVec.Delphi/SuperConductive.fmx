@@ -52,6 +52,7 @@ object SuperConductiveForm: TSuperConductiveForm
         Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
+        TextSettings.Trimming = None
         Text = 'Test method:'
         TabOrder = 2
       end
@@ -63,6 +64,7 @@ object SuperConductiveForm: TSuperConductiveForm
         Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
+        TextSettings.Trimming = None
         Text = 'Vector length:'
         TabOrder = 3
       end
@@ -113,6 +115,7 @@ object SuperConductiveForm: TSuperConductiveForm
       Size.PlatformDefault = False
       TabOrder = 0
       Text = 'Run full test'
+      TextSettings.Trimming = None
       OnClick = FullRunButtonClick
     end
     object Button2: TButton
@@ -124,6 +127,7 @@ object SuperConductiveForm: TSuperConductiveForm
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Run single shot'
+      TextSettings.Trimming = None
       OnClick = Button2Click
     end
     object AllocsLabel: TLabel
@@ -133,6 +137,7 @@ object SuperConductiveForm: TSuperConductiveForm
       Size.Width = 301.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Trimming = None
       TabOrder = 3
     end
     object Label1: TLabel
@@ -144,6 +149,7 @@ object SuperConductiveForm: TSuperConductiveForm
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.Trimming = None
       Text = 
         'All multithreading timing tests show meaningfull results only wh' +
         'en run outside of IDE!'

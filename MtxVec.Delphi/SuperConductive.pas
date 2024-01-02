@@ -56,7 +56,6 @@ type
   private
     { Private declarations }
     TimeStart: array of Int64;
-    TimedThread: array of double;
     FTestMethod: TTestMethod;
     procedure SetTestMethod(const Value: TTestMethod);
     procedure ForLoopFun(LoopIndex: integer; const Context: TObjectArray;

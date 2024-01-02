@@ -21,7 +21,7 @@ uses
   FMXTee.Chart,FMXTee.Procs,FMXTee.Engine,FMXTee.Series,
   System.Rtti,
   Basic2, MtxVec, FMX.StdCtrls, PlatformHelpers, FMX.ScrollBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Memo.Types;
 
 
 
@@ -96,7 +96,7 @@ var vec1,vec2,vec3,vec4,
     i         : integer;
 begin
   StartTimer;
-  for i := 1 to 11000 do
+  for i := 1 to 110000 do
   begin
      { use Create to create 12 vectors }
      Vec1 := TVec.Create;
@@ -155,7 +155,7 @@ var vec1,vec2,vec3,vec4,
     i         : integer;
 begin
   StartTimer;
-  for i := 1 to 11000 do
+  for i := 1 to 110000 do
   begin
      { use CreateIt to create 8 vectors }
      CreateIt(vec1,vec2,vec3,vec4);
@@ -181,6 +181,7 @@ begin
         FreeIt(vec9,vec10,vec11,vec12);
      end;
   end;
+
   { store the time elapsed to series }
   Series1.YValues[Index] := StopTimer*1000;
   Series1.ValueColor[Index] := AColor;

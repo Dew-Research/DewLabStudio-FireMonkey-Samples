@@ -209,16 +209,16 @@ Const MtxVecRegKey='\Software\Dew Research\';
 Function CodePath:String;
 var aRegistry: TRegistry;
 begin
-  result:='';
+    result:='';
 
-  aRegistry := TRegistry.Create();
-  if aRegistry.OpenKeyReadOnly(MtxVecRegKey) then
-      result:= aRegistry.ReadString('FmxMtxVecDemoPath');
-  aRegistry.Free;
+    aRegistry := TRegistry.Create();
+    if aRegistry.OpenKeyReadOnly(MtxVecRegKey) then
+        result := aRegistry.ReadString('FmxMtxVecDemo');
+    aRegistry.Free;
 
-  if result='' then
-     if FileExists('FmxMtxVecDemoW32_D21.dpr') then
-        result:=GetCurrentDir;
+    if result='' then
+       if FileExists('FmxMtxVecDemoW32_D21.dpr') then
+          result := GetCurrentDir;
 end;
 {$ENDIF}
 
@@ -308,7 +308,7 @@ begin
   {$IFNDEF POSIX}
   if PageControl1.ActiveTab = TabSource then
   begin
-    if not FileExists(CodePath+'\FmxMtxVecDemoW32_D19.dpr') then
+    if not FileExists(CodePath+'\FmxMtxVecDemoW32_D28.dpr') then
     With TRegistry.Create do
     try
       DeleteKey(MtxVecRegKey);
@@ -316,8 +316,8 @@ begin
       Free;
     end;
 
-    btnConfig.Visible := CodePath='';
-    if (CodePath<>'') and (CodeFile<>'') then
+    btnConfig.Visible := CodePath = '';
+    if (CodePath <> '') and (CodeFile <> '') then
     begin
       if OldCodeFile<>CodeFile then
       begin
@@ -325,14 +325,22 @@ begin
         RichEditCode := TMemo.Create(Self);
         With RichEditCode do
         begin
-          Align:= {$IFDEF D21} TAlignLayout.Client; {$ELSE} TAlignLayout.alClient; {$ENDIF}
-          ReadOnly := True;
-          WordWrap:=False;
-//           ScrollBars := ssBoth;
-          Font.Family := 'Courier New';
-          Font.Size:=9;
-          Parent:=TabSource;
-          Lines.LoadFromFile(CodePath+'\'+CodeFile+'.pas');
+            Align:= {$IFDEF D21} TAlignLayout.Client; {$ELSE} TAlignLayout.alClient; {$ENDIF}
+            ReadOnly := True;
+            WordWrap:=False;
+
+            {$IFDEF MSWINDOWS}
+                RichEditCode.TextSettings.Font.Family := 'Courier New';
+                RichEditCode.StyledSettings :=  RichEditCode.StyledSettings - [TStyledSetting.Family];
+            {$ENDIF}
+            {$IFDEF ANDROID}
+                RichEditCode.TextSettings.Font.Family := 'monospace';
+                RichEditCode.StyledSettings :=  RichEditCode.StyledSettings - [TStyledSetting.Family]
+            {$ENDIF}
+
+            TextSettings.Font.Size := 11;
+            Parent:=TabSource;
+            Lines.LoadFromFile(CodePath+'\'+CodeFile+'.pas');
         end;
 //        HighLight(RichEditCode, clGreen);
         OldCodeFile:=CodeFile;
@@ -347,19 +355,19 @@ procedure TfrmMain.btnConfigClick(Sender: TObject);
 var tmpDir : String;
 {$IFNDEF POSIX}  aRegistry: TRegistry; {$ENDIF}
 begin
-  {$IFNDEF POSIX}
-  OpenDialog.Title := 'Folder with MtxVec demo source';
-  if OpenDialog.Execute then
-  begin
-      tmpDir := ExtractFilePath(OpenDialog.FileName);
-      aRegistry := TRegistry.Create();
-      if aRegistry.OpenKey(MtxVecRegKey, true) then
-          aRegistry.WriteString('FmxMtxVecDemo',tmpDir);
-      aRegistry.Free;
+    {$IFNDEF POSIX}
+    OpenDialog.Title := 'Folder with MtxVec demo source';
+    if OpenDialog.Execute then
+    begin
+        tmpDir := ExtractFilePath(OpenDialog.FileName);
+        aRegistry := TRegistry.Create();
+        if aRegistry.OpenKey(MtxVecRegKey, true) then
+            aRegistry.WriteString('FmxMtxVecDemo',tmpDir);
+        aRegistry.Free;
 
-      PageControl1Change(Self);
-  end;
-  {$ENDIF}
+        PageControl1Change(Self);
+    end;
+    {$ENDIF}
 end;
 
 procedure TfrmMain.btnPreviousClick(Sender: TObject);
