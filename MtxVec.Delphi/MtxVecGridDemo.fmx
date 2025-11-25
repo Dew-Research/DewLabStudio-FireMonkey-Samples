@@ -12,6 +12,8 @@ inherited frmGridDemo: TfrmGridDemo
     Size.Width = 748.000000000000000000
     inherited RichEdit1: TMemo
       Size.Width = 748.000000000000000000
+      Viewport.Width = 748.000000000000000000
+      Viewport.Height = 130.000000000000000000
     end
   end
   inherited Panel2: TPanel
@@ -91,7 +93,7 @@ inherited frmGridDemo: TfrmGridDemo
           AutoSize = True
           Position.X = 10.000000000000000000
           Position.Y = 35.000000000000000000
-          Size.Width = 68.000000000000000000
+          Size.Width = 63.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
@@ -101,7 +103,7 @@ inherited frmGridDemo: TfrmGridDemo
           AutoSize = True
           Position.X = 7.000000000000000000
           Position.Y = 83.000000000000000000
-          Size.Width = 129.000000000000000000
+          Size.Width = 125.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
@@ -129,7 +131,6 @@ inherited frmGridDemo: TfrmGridDemo
           OnChange = Edit1Change
         end
         object ComboBox1: TComboBox
-          DisableFocusEffect = False
           ItemIndex = 2
           ItemHeight = 13.000000000000000000
           Position.X = 147.000000000000000000

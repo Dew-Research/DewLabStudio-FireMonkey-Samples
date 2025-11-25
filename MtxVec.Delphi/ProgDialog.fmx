@@ -1,66 +1,70 @@
 inherited frmProgDialog: TfrmProgDialog
   Caption = 'frmProgDialog'
-  ClientHeight = 518
-  ClientWidth = 505
+  ClientHeight = 520
+  ClientWidth = 504
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   inherited Panel1: TPanel
-    Size.Width = 505.000000000000000000
+    Size.Width = 504.000000000000000000
     Size.Height = 85.000000000000000000
     inherited RichEdit1: TMemo
       DragMode = dmAutomatic
-      Size.Width = 505.000000000000000000
+      Size.Width = 504.000000000000000000
       Size.Height = 85.000000000000000000
-      Viewport.Width = 505.000000000000000000
+      Viewport.Width = 504.000000000000000000
       Viewport.Height = 85.000000000000000000
     end
   end
   inherited Panel2: TPanel
-    Position.Y = 460.000000000000000000
-    Size.Width = 505.000000000000000000
+    Position.Y = 462.000000000000000000
+    Size.Width = 504.000000000000000000
   end
   inherited Panel3: TPanel
-    Size.Width = 505.000000000000000000
-    Size.Height = 375.000000000000000000
+    Size.Width = 504.000000000000000000
+    Size.Height = 377.000000000000000000
     object Label1: TLabel
       AutoSize = True
       Position.X = 13.000000000000000000
       Position.Y = 156.000000000000000000
-      Size.Width = 81.000000000000000000
+      Size.Width = 80.800003051757810000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = 'Thread priority:'
     end
     object ProgressLabel: TLabel
       AutoSize = True
       Position.X = 237.000000000000000000
       Position.Y = 13.000000000000000000
-      Size.Width = 99.000000000000000000
+      Size.Width = 98.399993896484380000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = 'Progress indicator:'
     end
     object Label2: TLabel
       AutoSize = True
       Position.X = 13.000000000000000000
       Position.Y = 189.000000000000000000
-      Size.Width = 187.000000000000000000
+      Size.Width = 186.399993896484400000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = 'Progress indicators update interval:'
     end
     object Label3: TLabel
       AutoSize = True
       Position.X = 270.000000000000000000
       Position.Y = 189.000000000000000000
-      Size.Width = 23.000000000000000000
+      Size.Width = 23.200012207031250000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = '[ms]'
     end
     object IteratorGroup: TPanel
@@ -70,8 +74,9 @@ inherited frmProgDialog: TfrmProgDialog
       Size.Height = 79.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      object RadioButton1: TRadioButton
+      object IteratorButton1: TRadioButton
         GroupName = 'IteratorGroup'
+        IsChecked = True
         Position.X = 6.000000000000000000
         Position.Y = 9.000000000000000000
         Size.Width = 120.000000000000000000
@@ -79,9 +84,9 @@ inherited frmProgDialog: TfrmProgDialog
         Size.PlatformDefault = False
         TabOrder = 0
         Text = 'Internal Loop'
-        OnChange = RadioButton1Change
+        OnChange = IteratorButton1Change
       end
-      object RadioButton2: TRadioButton
+      object IteratorButton2: TRadioButton
         GroupName = 'IteratorGroup'
         Position.X = 7.000000000000000000
         Position.Y = 30.000000000000000000
@@ -90,9 +95,9 @@ inherited frmProgDialog: TfrmProgDialog
         Size.PlatformDefault = False
         TabOrder = 1
         Text = 'External loop'
-        OnChange = RadioButton1Change
+        OnChange = IteratorButton1Change
       end
-      object RadioButton3: TRadioButton
+      object IteratorButton3: TRadioButton
         GroupName = 'IteratorGroup'
         Position.X = 7.000000000000000000
         Position.Y = 51.000000000000000000
@@ -101,7 +106,7 @@ inherited frmProgDialog: TfrmProgDialog
         Size.PlatformDefault = False
         TabOrder = 2
         Text = 'In Procedure'
-        OnChange = RadioButton1Change
+        OnChange = IteratorButton1Change
       end
     end
     object LoopTypeGroup: TPanel
@@ -111,9 +116,9 @@ inherited frmProgDialog: TfrmProgDialog
       Size.Height = 63.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      OnClick = LoopTypeGroupClick
-      object RadioButton4: TRadioButton
+      object LoopButton1: TRadioButton
         GroupName = 'LoopGroup'
+        IsChecked = True
         Position.X = 9.000000000000000000
         Position.Y = 9.000000000000000000
         Size.Width = 120.000000000000000000
@@ -121,9 +126,9 @@ inherited frmProgDialog: TfrmProgDialog
         Size.PlatformDefault = False
         TabOrder = 0
         Text = 'For Loop'
-        OnChange = RadioButton4Change
+        OnChange = LoopButton1Change
       end
-      object RadioButton5: TRadioButton
+      object LoopButton2: TRadioButton
         GroupName = 'LoopGroup'
         Position.X = 9.000000000000000000
         Position.Y = 33.000000000000000000
@@ -132,7 +137,7 @@ inherited frmProgDialog: TfrmProgDialog
         Size.PlatformDefault = False
         TabOrder = 1
         Text = 'While Loop'
-        OnChange = RadioButton4Change
+        OnChange = LoopButton1Change
       end
     end
     object ShowFormBox: TCheckBox
@@ -143,7 +148,7 @@ inherited frmProgDialog: TfrmProgDialog
       Size.PlatformDefault = False
       TabOrder = 2
       Text = 'Show progress form'
-      OnClick = ShowFormBoxClick
+      OnChange = ShowFormBoxChange
     end
     object ThreadBox: TComboBox
       ItemHeight = 13.000000000000000000
@@ -191,6 +196,7 @@ inherited frmProgDialog: TfrmProgDialog
       Size.PlatformDefault = False
       TabOrder = 4
       Text = 'Start'
+      TextSettings.Trimming = None
       OnClick = StartButtonClick
     end
     object ProgressBar: TProgressBar
@@ -237,30 +243,33 @@ inherited frmProgDialog: TfrmProgDialog
         AutoSize = True
         Position.X = 12.000000000000000000
         Position.Y = 24.000000000000000000
-        Size.Width = 81.000000000000000000
+        Size.Width = 80.800003051757810000
         Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
+        TextSettings.Trimming = None
         Text = 'For Counter := '
       end
       object Label5: TLabel
         AutoSize = True
         Position.X = 173.000000000000000000
         Position.Y = 23.000000000000000000
-        Size.Width = 15.000000000000000000
+        Size.Width = 14.399993896484380000
         Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
+        TextSettings.Trimming = None
         Text = 'to '
       end
       object Label6: TLabel
         AutoSize = True
         Position.X = 278.000000000000000000
         Position.Y = 23.000000000000000000
-        Size.Width = 15.000000000000000000
+        Size.Width = 14.399993896484380000
         Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
+        TextSettings.Trimming = None
         Text = 'do'
       end
       object MinEdit: TMtxFloatEdit
@@ -318,6 +327,7 @@ inherited frmProgDialog: TfrmProgDialog
       Size.Width = 120.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Trimming = None
       Text = 'Iterator control'
     end
     object Label8: TLabel
@@ -326,11 +336,11 @@ inherited frmProgDialog: TfrmProgDialog
       Size.Width = 100.000000000000000000
       Size.Height = 17.000000000000000000
       Size.PlatformDefault = False
+      TextSettings.Trimming = None
       Text = 'Loop type'
     end
   end
   object MtxThread: TMtxProgressDialog
-    FreeOnTerminate = False
     ThreadBypass = False
     OnCompute = MtxThreadCompute
     OnProgressUpdate = MtxThreadProgressUpdate

@@ -113,31 +113,36 @@ begin
 end;
 
 procedure TInterpolating1.Button1Click(Sender: TObject);
-var    X,Y       : Vector;
+var    Y       : Vector;
        pX,pY     : Vector;
        i         : Integer;
+       Offset: double;
 begin
     Chart1.LeftAxis.Automatic := true;
     Chart1.BottomAxis.Automatic := true;
-    X.Size(NumPoints);
     Y.Size(NumPoints);
 
     Randomize;
-    X.Ramp;
+
     y[0] := 1000;
-    for i:=1 to X.Length-1 do
+    for i := 1 to Y.Length-1 do
     begin
         Y.Values[i]:= Y.Values[i-1] + 250 - random(500);
     end;
+
     DrawValues(Y,Series1,0,1,DownSize);
     { calculate piecewise poly for the range of points }
     StartTimer;
-    PX.Size((NumPoints-1)*Factor);
-    PX.Ramp(0,1.0/Factor);
+    PX.Size((NumPoints-1)*Factor + 1);
+
+//    offset := 1.2; //interpolation offset
+
+    Offset := 0;
+    PX.Ramp(Offset,1.0/Factor);
     Interpolate(Y,PX,PY,intMethod,true); { !! Check what happens if you have only Y }
     TimeElapsed := StopTimer*1000;
     Label5.Text:='Solved in '+ IntToStr(Round(TimeElapsed))+' ms';
-    DrawValues(pY,Series2,0,1.0/Factor, DownSize);
+    DrawValues(pY,Series2,Offset,1.0/Factor, DownSize);
 end;
 
 initialization

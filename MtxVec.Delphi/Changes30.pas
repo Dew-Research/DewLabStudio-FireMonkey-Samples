@@ -8,7 +8,7 @@ uses
   System.Classes,
   Fmx.StdCtrls,
   FMX.Header, Basic3, FMX.Types, FMX.Controls, FMX.Layouts, FMX.Memo,
-  FMX.Controls.Presentation, FMX.ScrollBox;
+  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 
 type
@@ -33,6 +33,308 @@ begin
 
   With RichEdit1.Lines, RichEdit1 do
   begin
+    Add('   List of new features in v6.3.8 (September 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Support for Rad Studio 13');
+    Add('   *   This release again refreshes the Linux support. ');
+    Add('   *   Bug fix for Bessel special functions, when Nu was 0.');
+    Add('   *   Added TMtx.AddDiag method. This complementes the TMtx.MulDiagLeft and TMtx.MulDiagRight for operations ' +
+               'with diagonal matrices. Similar for MtxExpr.AddDiag and Matrix.AddDiag');
+    Add('');
+    Add('   Linux:');
+    Add('   *   Intel IPP was not dispatching for all supported instruction sets. This fix delivers a big performance boost.');
+    Add('   *   Reduced GCLIB requirements to 2.14 and built on RHEL 8.9.');
+    Add('   *   Updated Intel One API to v2025.2');
+    Add('');
+    Add('   Debugger visualizer:');
+    Add('   *   Added ability to copy string lists  and subranges of the string list to clipboard');
+    Add('');
+
+    Add('   List of new features in v6.3.7 (August 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Separated threading library (MtxForLoop.pas) from dependancy upon MtxVec. Moved MtxVec dependant functions to MtxVec unit. This allows the use of the threading library also in units which do not depend upon MtxVec (MtxVec Core, Lapack, Blas, etc...).');
+    Add('');
+    Add('   Debugger visualizer:');
+    Add('   *   Debugger Tooltip visualizer launch button sometimes caused a lock-up, because it triggered multiple button press events.');
+    Add('   *   Improved the automatic naming of debugger mapped variables for cases, where chars like [,] and dot were in the expression.');
+    Add('   *   Significantly improved automatic column sizing for TMtxVecGrid, which is also used by the debugger visualizer.');
+    Add('');
+    Add('   Sparse matrices:');
+    Add('   *   Moved the function to obtain OS Temp folder in to the initialization section of the sparse.pas unit and cached the result.');
+    Add('');
+
+    Add('   List of new features in v6.3.6 (June 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Added ColumnWidth parameter to TVec/TMtx/TVecInt/TMtxInt method ValuesToStrings. Useful for fixed font width text table formatting.');
+    Add('   *   Matching API for the .NET Core release due to be released soon.');
+    Add('   *   Renamed TMtx.Mul overload for arrays of TMtx type to TMtx.MulArray to avoid a compiler bug.');
+    Add('');
+    Add('   Special functions:');
+    Add('   *   Bug fix for Bessel J function from SpecialFuncs.pas unit. Introduced due to upgraded compiler.');
+    Add('   *   Expanded Bessel functions with computations on array with integer step between consecutive elements.');
+    Add('');
+    Add('   Polynoms:');
+    Add('   *   Bug fix for Spline1D, which did not work correctly for X other than 0,1,2,3..');
+    Add('   *   Bug fix for TPiecePoly.Evaluate(X, Y), which did not work for scalar overload, if vectorized overload was not called before.');
+    Add('');
+
+    Add('   List of new features in v6.3.5 (April 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Updated installers to install packages and search paths also for the Modern C++ Compiler and for the 64bit IDE preview.');
+    Add('   *   Bug fix for MtxExpr.h which resulted in the calling of ud2 instruction for Modern C++ compiler of the C++Builder.');
+    Add('   *   Bug fix for TMtx.MulElem(a: TMtxVec), which was calling the wrong overload.');
+    Add('   *   Bug fix for FmxMtxVecTee.pas, for TeeChart standard (undefined variable DoubleResolution).');
+    Add('   *   Catastrophic cancellation mitigation for numerical GradHess routine for cases, where gradient is near zero. The routine is used by the Optimization methods.');
+    Add('   *   Ability to assign array of strings to StringList: a := [''Item1'', ''Item2'', ''Item3''], rather than calling Add method for each.');
+    Add('   *   Added TVec.Mask overload.');
+    Add('   *   Added Implicit conversion from array of TCplx to Vector and Matrix: aVector := [Cplx(1,2), Cplx(2,3)];');
+    Add('   *   Added support for saving and loading the header row to the TVec/TMtx Caption property when saving/loading .csv files with LoadFromFile/SaveToFile method.');
+    Add('');
+    Add('   Probabilities:');
+    Add('   *   Added three new NormalPDF, NormalCDF, NormalCDFTwoTail vectorized overloads to probabilities.pas.');
+    Add('   *   Faster vectorized TriangularCDF, TriangularCDFInv, TriangularPDF.');
+    Add('   *   Faster vectorized InverseGaussianPDF and InverseGaussianCDF.');
+    Add('');
+
+    Add('   List of new features in v6.3.4 (March 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Support for RAD Studio 12.3.');
+    Add('   *   Added compound expressions for saturated integer math for Integer (32bit), SmallInt (16bit) and byte precision (8bit). This feature adds over 160 new overloads to TVecInt and TMtxInt (VectorInt and MatrixInt).');
+    Add('   *   Added compound expressions for complex number math.');
+    Add('   *   Added Exponential Integral functions E1, Ei and ExpEi to the SpecialFuncs.pas unit. By passing Log(x) as argument, this will also compute Logarithmic integrals.');
+    Add('');
+    Add('   Added some behaviour typically expected to exist by AI large language models:');
+    Add('   *   Added ToString and Parse methods to TVec/TVecInt/TMtx/TMtxInt/Vector/VectorInt/Matrix/MatrixInt.');
+    Add('   *   Added implicit conversions from TCplxArray to Vector and Matrix: aVec := [Cplx(1), Cplx(2)];');
+    Add('   *   Added implicit conversions of Vector/VectorInt/Matrix/MatrixInt to TObject. The types dereference their internal data object, which is of type TVec/TVecInt/TMtx/TMtxInt.');
+    Add('');
+
+    Add('   List of new features in v6.3.3 (February 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Added TMtx.MulSmallInit and TMtx.MulSmall methods to surface the jitted small-matrix multiply.');
+    Add('   *   Small-matrix multiply features are implemented in MtxVec.TSmallMatrixMultiply class. Performance improvement ranges from 100x at matrix size 2x2 and is still 1.3x at matrix size 50x50.');
+    Add('   *   Added several matrix-multiply kernels with unrolled for-loops written in pascal in MtxVecBase unit: sgemm2, dgemm2, cgemm2, zgemm2 for matrices 2x2 and variants up to size 4x4.');
+    Add('   *   Added two additional compound expression functions to TVec/TMtx/Vector/Matrix: SqrAddScaled, AddScaledSqr.');
+    Add('   *   Inlined the implicit conversions of Vector and Matrix types to TMtx, TVec, etc... for Rad Studio 12 and newer. This positively affects performance of Vector and Matrix types in general.');
+    Add('   *   Added support for "Modern" C++ Compiler platform target in C++Builder for Rad Studio v12.2.');
+    Add('   *   Added MtxVec.Controller.BlasThreadCount and adjusted the mapping of thread count for individual library sub-systems.');
+    Add('   *   Fixed TCplx and TSCplx inline visualizers for Delphi Win64 debugger, when displaying NAN and INF values. Occurrence of NAN triggered an exception in the IDE, because Win64 debugger does not correctly display NAN and INF values since XE2.');
+    Add('   *   Fix for complex Math387.ArcSin, when the argument was 0. This affected (complex number) Math387.ArcCos, Math387.ArcSinh, Math387.ArcCosh, Math387.ArcCsc and Math387.ArcCsch, Math387.ArcSec and Math387.ArcSech, which all call this function.');
+    Add('');
+
+    Add('   List of new features in v6.3.1 (January 2025):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   New set of "compound" expression functions added to TVec/TMtx/Vector/Matrix to speed up computation of basic +/-* math. A total of 162 new overloads have been added to Vector and the same amount to the Matrix type.');
+    Add('   *   Added extended CPU info (thread, core and instruction support) used by MtxVec.Controller that works across Intel and AMD CPUs. Check the Intro page of this demo for an example how to access and display this information.');
+    Add('   *   Fixed MtxVec.Controller.CPUCores to work correctly also for AMD CPUs.');
+    Add('   *   Added a dedicated set of performance DLLs targeting AMD Zen architecture for AVX2 and AVX512 instruction set. Although not comprehensive they do improve some algorithms considerably and are a first step towards more comprehensive support also for AMD. These libraries are a separate download for registered customers.');
+    Add('');
+    Add('   Sparse matrices:');
+    Add('   *   Added TSparseMtx.SvdSymLargest, find user specified number of largest SVD values of sparse symmetric matrices.');
+    Add('   *   Added TSparseMtx.SvdSymSmallest, find user specified number of smallest SVD values of sparse symmetric matrices.');
+    Add('   *   Added TSparseMtx.EigSymLargest, TSparseMtx.EigSymGenLargest for user specified number of largest (generalized) eigen-values of sparse symmetric matrices.');
+    Add('   *   Added TSparseMtx.EigSymSmallest, TSparseMtx.EigSymGenSmallest for user specified number of largest (generalized) eigen-values of sparse symmetric matrices.');
+    Add('   *   Optionally, TSparseMtx.TripletsToSparse can either use or drop zeros on the main diagonal.');
+    Add('');
+
+    Add('   List of new features in v6.3.0 (December 2024):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Updated for Intel OneAPI v2025.0. Since the end of 2023 only the 64bit libraries continue receiving updates from Intel. New version of libiomp5md.dll is required. There will be an error about missing procedure entry point __kmpc_masked, if not provided. Make sure that the new version DLL overwrites the old one.');
+    Add('   *   Added SqrAbs combined function to Math387 for complex number TCplx and TSCplx types.');
+    Add('   *   Added Exp2Int to Math387 for integer based exponentials (up to 32bit range).');
+    Add('   *   Added Exp2Int64 to Math387 for integer based exponentials (up to 64bit range).');
+    Add('   *   Added Log2Int to Math387 for integer based exponentials (up to 32bit range).');
+    Add('   *   Added Log2Int64 to Math387 for integer based exponentials (up to 64bit range).');
+    Add('   *   Bug fix for TMtxGridSeries (VCL), where the Src parameter is single precision.');
+    Add('   *   Both Lapack and FFT threading are now disabled globally and become enabled only on user''s request. There were too many cases of performance degradation when threading was enabled too soon for too short data.');
+    Add('   *   Added implicit conversions to PDouble, PSingle, PCplx, PSCplx to Vector and Matrix.');
+    Add('   *   Added implicit conversions to PInteger, PSmallInt and PByte for VectorInt and MatrixInt.');
+    Add('');
+    Add('   Debugger Visualizer v2:');
+    Add('   *   Bug fix for IDE''s Run->View Value and Run->Draw Values. The shortcut was working, but menu command not.');
+    Add('   *   Changed IDE menu command shortcut for View Values to CTRL+SHIFT+F6 from CTRL+F6.');
+    Add('   *   Added ability to add both "View Values..." and "Draw Values..." commands to IDE Toolbar.');
+    Add('   *   Added Visualizer optimization preventing evaluation of vars, when no visualizer windows are open.');
+    Add('   *   Visualizer docking window bug fixed.');
+    Add('   *   Visualizer bug fix for single precision, byte and shortInt vectors and matrices.');
+    Add('   *   Visualizer dead-lock fix, if an exception happened in background evaluation.');
+    Add('   *   Bug fix for Inline Visualizer improving stability.');
+    Add('   *   Bug fix for Single precision Form visualizer when charting with xAxis parameter.');
+    Add('   *   Upgraded FMX variant of TMtxGridSeries to match implementation of the VCL version.');
+    Add('');
+
+    Add('   Technical note for MtxVec v6.2.5 affecting Debugger Visualizer (September 2024):');
+    Add('');
+    Add('   *   MtxVec packages may not be installed with range-checking enabled. The build tool will respect this. An immediate crash is possible otherwise.');
+    Add('   *   The use of "IDE Fix pack" packages is not recommended. An immediate crash is possible.');
+    Add('   *   Your own project needs to be compiled with "use debug dcu''s" option checked for the compiler to support all features.');
+    Add('');
+
+    Add('   Changes for MtxVec v6.2.5 (August 2024):');
+    Add('');
+    Add('   *   Bug fix TMtxGrid object, which had performance problems for column heavy matrices.');
+    Add('   *   Bug fix for TVec.ValuesToStrings, which had a bug for its sub-vector indexed overload.');
+    Add('   *   Bug fix for assigning TStringList objects within script.');
+    Add('   *   Bug fix for debugger visualizer, which had its command line print output disabled (due to performance issues).');
+    Add('   *   Important: When passing TStrings descendants to MtxVec routines like ValuesToStrings or to the Optimization routines accepting "Verbose" parameter, it should be avoided to pass TRichEdit.Lines or TMemo.Lines directly. Use an intermediate object like TStringList instead. There is a substantial performance penalty otherwise.');
+    Add('');
+
+    Add('   Changes for MtxVec v6.2.4 (July 2024):');
+    Add('');
+    Add('   *   First release of Dew Debugger Visualizer v2.0. This is the first major overhaul of the debugger visualizer since its first release in 2009. Stay tuned for a series of video clips to learn about the new features.');
+    Add('');
+    Add('   Scripting:');
+    Add('   *   Added TStringList type support to TMtxExpression script. You can now call: list(i), list(2:3), or assign with list(i) = "2" or concatenate lists with [list(2:3); list(14:15)].');
+    Add('   *   Added support to define externally owned TValueRec object as a variable in TMtxExpression script.');
+    Add('');
+
+    Add('   Changes for MtxVec v6.2.3 (May 2024):');
+    Add('');
+    Add('   *   New release of shared libs (*.so) for Linux based on latest Intel OneAPI 2024.1 and targeting GLIBC v2.27 or newer. This covers also RHEL v8.X and v9.X.');
+    Add('   *   Added support for .csv and .txt file formats to TVec/TMtx/TVecInt/TMtxInt types LoadFromFile and SaveToFile methods. If the extensions are not .csv or .txt, all other extensions result in binary storage.');
+    Add('   *   Fixed bug for Spline1D interpolation.');
+    Add('   *   A number of performance improvements for spline based interpolation and equidistant interpolation.');
+    Add('   *   Substantially improved parity of TMtxGridSeries for FireMonkey with its VCL variant.');
+    Add('');
+
+    Add('   New features for .NET and .NET Core release v6.2.2 (May 2024):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Updated for Intel MKL and Intel IPP to OneAPI v2023.2.');
+    Add('   *   Added TVecInt.Concat.');
+    Add('   *   MinRows, MinCols, MaxMinRows, MaxMinCols to VectorInt / MatrixInt, Vector / Matrix.');
+    Add('   *   MinEvery, MaxEvery to both VectorInt / MatrixInt, Vector / Matrix.');
+    Add('   *   TMtx.ScaleRows, TMtx.ScaleCols.');
+    Add('   *   Math387.TFifoCriticalSection. A fair critical section implementation. All threads enter in FIFO order.');
+    Add('   *   Math387.TFairSemaphoreSection. A fair critical section that allows at most N concurrent threads.');
+    Add('   *   Updated online and offline documentation.');
+    Add('');
+    Add('   Speed:');
+    Add('   *   Much faster implementation of TMtx.TensorProd(const Vec1, Vec2: TVec).');
+    Add('   *   Much faster TVec.Sqrt. Complex vectorized Sqrt sped up by roughly 10x compared to Intel VML.');
+    Add('   *   Introduces first use of a fair critical section for MtxVec object cache and FFT descriptor cache.');
+    Add('   *   First release to be compiled with latest Intel OneAPI DPC++ and Fortran compilers.');
+    Add('   *   Updated FFT descriptors and FFT storage format for the new Intel MKL API. Only CCS storage is now available. The layout of 2D FFT from/to "real" results has changed.');
+    Add('   *   Important: Only 64bit libraries are expected to receive performance improvements in the future!');
+    Add('');
+    Add('   Bugs fixed:');
+    Add('   *   Vectorized IntPower function.');
+    Add('   *   TMtx.BandedToDense function.');
+    Add('   *   Object cache was missing critical section, when not using super-conductive code path.');
+    Add('   *   Polynoms.IIRFilter fix for missing init of DelayLine, when not provided by user. Parameter was introduced with recent ARIMA updates.');
+    Add('   *   Polynoms.DeConv fixed because of dependency upon Polynoms.IIRFilter.');
+    Add('   *   TMtxVec.NormL2 fixed for complex, single precision and "core" variant.');
+    Add('   *   Implemented lockless (never enters sleep(..)) TMtxVecController.MarkThread and TMtxVecController.UnMarkThread. The performance gain grows with thread count. This speeds up the threading library when calling DoForLoop method.');
+    Add('   *   Object cache is now using TLS region (Thread Local Storage), to store its memory pool index. This progressively speeds up object allocation, when using more than 16 threads with the TMtxForLoop threading library.');
+    Add('   *   Added BlockGranularity addressing threading with high turbo clock frequencies and Intel Alder Lake with P + E cores (asymmetric multi-processing).');
+    Add('   *   Optimized critical-sections used for thread synchronisation for high thread count.');
+    Add('   *   The memory cache of TVecInt and TMtxInt was not active and this caused performance degradation in the case of threading.');
+    Add('');
+
+    Add('   List of new features in v6.2.0 (November 2023):');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Updated Intel MKL and Intel IPP to OneAPI v2023.2.');
+    Add('   *   Added support for RAD Studio Athens 12.0 release.');
+    Add('   *   Added TVecInt.Concat.');
+    Add('   *   Added MinRows, MinCols, MaxMinRows, MaxMinCols to VectorInt/MatrixInt, Vector/Matrix.');
+    Add('   *   Added MinEvery, MaxEvery to both VectorInt/MatrixInt, Vector/Matrix.');
+    Add('   *   Added TMtx.ScaleRows, TMtx.ScaleCols.');
+    Add('   *   Added Math387.TFifoCriticalSection. A fair critical section implementation. All threads enter in FIFO order.');
+    Add('   *   Added Math387.TFairSemaphoreSection. A fair critical section that allows at most N concurrent threads.');
+    Add('   *   Upgraded FMX variant of TMtxGridSeries to match implementation of the VCL version.');
+    Add('');
+    Add('   Speed:');
+    Add('   *   Much faster implementation of TMtx.TensorProd(const Vec1, Vec2: TVec).');
+    Add('   *   Much faster TVec.Sqrt. Complex vectorized Sqrt sped up by roughly 10x compared to Intel VML.');
+    Add('');
+    Add('   Bugs fixed:');
+    Add('   *   Fixed bug for IntPower function.');
+    Add('   *   Fixed bug for TMtx.BandedToDense function.');
+    Add('   *   Fixed bug for Move function Len parameter not typecasted to Int64. Product wide fix.');
+    Add('');
+
+    Add('   List of new features in v6.1.1:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Introduces first use of a fair critical section for MtxVec object cache and FFT descriptor cache.');
+    Add('   *   First release to be compiled with latest Intel OneAPI DPC++ and Fortran compilers.');
+    Add('   *   Updated to latest Intel MKL and IPP libraries. Important: Only 64bit libraries are expected to receive performance improvements in the future!');
+    Add('   *   Updated FFT descriptors and FFT storage format for the new Intel MKL API. Only CCS storage is now available. The layout of 2D FFT from/to "real" results has changed.');
+    Add('   *   Bug fix. Object cache was missing critical section, when not using super-conductive code path.');
+    Add('   *   Bug fix. Polynoms.IIRFilter fix for missing init of DelayLine, when not provided by user. Parameter was introduced with recent ARIMA updates.');
+    Add('   *   Bug fix. Polynoms.DeConv fixed because of dependency upon Polynoms.IIRFilter.');
+    Add('   *   Bug fix. TMtxVec.NormL2 fixed for complex, single precision and "core" variant.');
+    Add('   *   Bug fix for single threaded overload of MtxForLoop.ClusteredKNN.');
+    Add('');
+
+    Add('   List of new features in v6.1.0:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Implemented lockless (never enters sleep(..)) TMtxVecController.MarkThread and TMtxVecController.UnMarkThread. The performance gain grows with thread count. This speeds up the threading library when calling DoForLoop method.');
+    Add('   *   Object cache is now using TLS region (Thread Local Storage), to store its memory pool index. This progressively speeds up object allocation, when using more than 16 threads with the TMtxForLoop threading library.');
+    Add('   *   Added BlockGranularity addressing threading with high turbo clock frequencies and Intel Alder Lake with P+E cores (asymmetric multi-processing).');
+    Add('   *   Optimized critical-sections used for thread synchronisation for high thread count.');
+    Add('   *   Android 11 tagged pointer support.');
+    Add('   *   Updated Intel MKL and Intel IPP to OneAPI v2022.2.');
+    Add('   *   Updated for Embarcadero Alexandria 11.1 release (C++).');
+    Add('   *   Brute-force exact K-NN algorithm on CPU with Euclidean norm distance. Faster than KD-Tree, because it scales linearly with core count. Leads GPUs in price/performance by 4x especially in double precision. Can use AI accelerators used for NNs. Due to its performance a possible alternative to deep NNs. Located in MtxForLoop.ClusteredKNN. Up to 2000x faster than naive implementations for large problems.');
+    Add('   *   Fixed bug. When setting TMtxForLoop.ThreadCount, an Access Violation could be raised (thread race condition).');
+    Add('   *   Fixed bug. When launching TMtxForLoop thread execution, the call could deadlock (thread race condition).');
+    Add('   *   The memory cache of TVecInt and TMtxInt was not active and this caused performance degradation in the case of threading.');
+    Add('');
+
+    Add('   List of new features in v6.0.6:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Added support for OpenCL 3.0.');
+    Add('   *   New options for reporting build errors of OpenCL kernels.');
+    Add('   *   Added ability to read/write VectorInt/MatrixInt to/from GPU.');
+    Add('   *   Added possibility to declare arbitrary size of clVector and clMatrix with GPU memory not from object cache.');
+    Add('   *   Updated with latest Intel OneAPI IPP and MKL (2021 Update 4) libs!');
+    Add('   *   Fixed a bug affecting single precision 64bit apps resulting in invalid_instruction exception!');
+    Add('');
+
+    Add('   List of new features in v6.0.5:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Enabled support for Delphi Alexandria 11.0.');
+    Add('   *   Bug fixes when allocating objects larger than 2GB.');
+    Add('');
+
+    Add('   List of new features in v6.0.4:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Added TVec.Hilbert algorithm variant.');
+    Add('   *   Added TMtxVec.CapacityInElements, TMtxVec.CapacityInBytes. Changed behaviour of TMtxVec.Capacity.');
+    Add('   *   Added DLL version into names of high performance libraries. Simplifies different versions to coexist on the same computer.');
+    Add('   *   Added high performance shared libraries for Linux 64bit when using FireMonkey. The deployment is based on Intel OneAPI 2021 (Update 2). Achieves the same performance on Linux as on Windows.');
+    Add('   *   Fixed performance issues related to TStringList and TStrings debugger visualizers. Especially for RAD Studio 10.4 it is recommended to turn off visualizers provided by Embarcadero, which are currently not in use, to improve the debugging speed.');
+    Add('   *   Fixed a bug in ScatterByMask, when Src data vector had zero length.');
+    Add('');
+
+    Add('   List of new features in v6.0.2:');
+    Add('');
+    Add('   Core product:');
+    Add('   *   Bug fix for TVec/TMtx/TMtxInt/TVecInt BinarySearch.');
+    Add('');
+    Add('   Debugger Visualizers.pas:');
+    Add('   *   Greatly enhanced debugging stability and handling of nil and dangling pointers for Visualizers.');
+    Add('   *   TStringList bug fix for 64bit compilers, which used wrong string length field size (allows display of millions of strings in real time).');
+    Add('   *   Array visualizers now also show variable storage precision.');
+    Add('   *   Bug fix for TStringGrid in 10.4 used by the TStringList visualizers, which was showing empty grid (CustomDraw passes wrong TRect size).');
+    Add('   *   Greatly enhanced visualizers on iOS64, OSX64 and Android 64. Full support for inline and variable inspection from Delphi for all types, including TStringList.');
+    Add('   *   Updated TCplx visualizers for regional settings, where comma is used as a decimal separator.');
+    Add('');
+
     Add('   List of new features in v6.0:');
     Add('');
     Add('   MtxVec.pas, AbstractMtxVec, MtxVecBase, MtxVecUtils,...:');

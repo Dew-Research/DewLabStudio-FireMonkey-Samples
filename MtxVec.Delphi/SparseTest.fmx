@@ -109,7 +109,27 @@ inherited frmSparseTest: TfrmSparseTest
       SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 5.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 267.500000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.Title.Caption = 'Time for 100 evaluations [ms]'
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
       View3D = False
       Zoom.Brush.Kind = None
       Zoom.Pen.Fill.Color = claSilver
@@ -120,7 +140,7 @@ inherited frmSparseTest: TfrmSparseTest
       Size.PlatformDefault = False
       ColorPaletteIndex = 13
       object Series1: TBarSeries
-        HoverElement = []
+        Marks.OnTop = True
         XValues.Name = 'X'
         XValues.Order = loAscending
         YValues.Name = 'Bar'

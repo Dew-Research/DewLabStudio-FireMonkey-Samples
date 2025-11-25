@@ -11,7 +11,7 @@
     </PropertyGroup>
     <ItemGroup Condition="'$(Platform)'=='OSX64'">
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28.app\Contents\MacOS\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37.app\Contents\MacOS\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -20,7 +20,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28.app\Contents\Resources\StartUp\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37.app\Contents\Resources\StartUp\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -29,7 +29,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28.app\Contents\Resources\StartUp\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37.app\Contents\Resources\StartUp\</RemoteDir>
             <RemoteName>pde225.mtx</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -38,7 +38,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28.app\Contents\MacOS\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37.app\Contents\MacOS\</RemoteDir>
             <RemoteName>pde225.mtx</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -49,7 +49,7 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -61,7 +61,7 @@
     <ItemGroup Condition="'$(Platform)'=='Android64'"/>
     <ItemGroup Condition="'$(Platform)'=='Android'">
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\assets\internal\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37\assets\internal\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -72,221 +72,29 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win64'">
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Win64\Debug\FmxMtxVecDemoW32_D37.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>FmxMtxVecDemoW32_D37.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='OSXARM64'"/>
-    <ItemGroup Condition="'$(Platform)'=='Linux64'">
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.vmls.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.vmls.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.lapackd.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.lapackd.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.vmld.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.vmld.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.dsp.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.dsp.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libiomp5.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libiomp5.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libiomp5.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libiomp5.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.fft.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.fft.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Linux64\Debug\FmxMtxVecDemoW32_D28" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>FmxMtxVecDemoW32_D28</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.random.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.random.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.random.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.random.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Linux64\Release\FmxMtxVecDemoW32_D28" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>FmxMtxVecDemoW32_D28</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>pde225.mtx</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>FFTData.vec</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>FFTData.vec</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>pde225.mtx</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.2.0.so" Condition="'$(Config)'=='Release'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.lapacks.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.2.0.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28\</RemoteDir>
-            <RemoteName>libmtxvec.lapacks.6.2.0.so</RemoteName>
-            <DeployClass>File</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-    </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice64'">
         <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FmxMtxVecDemoW32_D28.app\</RemoteDir>
+            <RemoteDir>FmxMtxVecDemoW32_D37.app\</RemoteDir>
             <RemoteName>FFTData.vec</RemoteName>
             <DeployClass>File</DeployClass>
             <Operation>0</Operation>
@@ -296,4 +104,207 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSSimARM64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win64x'"/>
+    <ItemGroup Condition="'$(Platform)'=='Linux64'">
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.dsp.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.dsp.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.vmls.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.vmls.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libiomp5.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libiomp5.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libiomp5.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libiomp5.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.lapackd.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.lapackd.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Linux64\Release\FmxMtxVecDemoW32_D37" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>FmxMtxVecDemoW32_D37</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.fft.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.fft.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.lapacks.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.lapacks.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.random.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.random.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.random.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.random.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>pde225.mtx</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>FFTData.vec</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="FFTData.vec" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>FFTData.vec</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="pde225.mtx" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>pde225.mtx</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Linux64\Debug\FmxMtxVecDemoW32_D37" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>FmxMtxVecDemoW32_D37</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.3.0.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.vmld.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.3.0.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>FmxMtxVecDemoW32_D37\</RemoteDir>
+            <RemoteName>libmtxvec.vmld.6.3.0.so</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
 </Project>

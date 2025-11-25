@@ -194,8 +194,8 @@ var i: Integer;
 begin
    With ListBoxDist do
    begin
-     Button2.Enabled := ItemIndex < Items.Count-1;
-     Button1.Enabled := ItemIndex > 0;
+       Button2.Enabled := ItemIndex < Items.Count-1;
+       Button1.Enabled := ItemIndex > 0;
    end;
    ListViewParams.RowCount := Distribution.DistParams.Count + 1;
    SetGridColumnCount(ListViewParams, 4);

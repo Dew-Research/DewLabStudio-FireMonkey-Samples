@@ -15,7 +15,7 @@ uses
   FMX.Edit, FMX.StdCtrls, FMX.Grid,
   FMX.Controls, FMX.Layouts, FMX.Memo,
   FMX.Types, FMX.EditBox, FMX.SpinBox, FMX.Controls.Presentation,
-  FMX.Grid.Style, FMX.ScrollBox;
+  FMX.Grid.Style, FMX.ScrollBox, FMX.Memo.Types;
 
 
 
@@ -141,7 +141,11 @@ end;
 
 procedure TfrmOptimBounded.FormDestroy(Sender: TObject);
 begin
+  StringGridVars.ClearColumns;
+  StringGridResults.ClearColumns;
+
   iVariables.Free;
+
   SetLength(pars,0);
   SetLength(LB,0);
   SetLength(UB,0);

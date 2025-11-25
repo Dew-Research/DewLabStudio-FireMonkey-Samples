@@ -10,7 +10,8 @@ uses
   FMX.Controls,
   FMX.Forms,
   FMX.Header,
-  Basic3, FMX.Types, FMX.Layouts, FMX.Memo;
+  Basic3, FMX.Types, FMX.Layouts, FMX.Memo, FMX.Memo.Types,
+  FMX.Controls.Presentation, FMX.ScrollBox;
 
 
 type
@@ -32,6 +33,7 @@ implementation
 procedure TIntroFunList.FormCreate(Sender: TObject);
 begin
   inherited;
+
   With RichEdit1.Lines, RichEdit1 do
   begin
     Clear;

@@ -1,25 +1,25 @@
 inherited frmOptimBounded: TfrmOptimBounded
   Caption = 'frmOptimBounded'
-  ClientHeight = 662
-  ClientWidth = 731
+  ClientHeight = 749
+  ClientWidth = 1133
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 0
   inherited Panel1: TPanel
-    Size.Width = 731.000000000000000000
+    Size.Width = 1133.000000000000000000
     inherited RichEdit1: TMemo
-      Size.Width = 731.000000000000000000
-      Viewport.Width = 731.000000000000000000
+      Size.Width = 1133.000000000000000000
+      Viewport.Width = 1133.000000000000000000
       Viewport.Height = 130.000000000000000000
     end
   end
   inherited Panel2: TPanel
-    Position.Y = 604.000000000000000000
-    Size.Width = 731.000000000000000000
+    Position.Y = 691.000000000000000000
+    Size.Width = 1133.000000000000000000
   end
   inherited Panel3: TPanel
-    Size.Width = 731.000000000000000000
-    Size.Height = 474.000000000000000000
+    Size.Width = 1133.000000000000000000
+    Size.Height = 561.000000000000000000
     object Label1: TLabel
       Position.X = 8.000000000000000000
       Position.Y = 16.000000000000000000
@@ -65,18 +65,22 @@ inherited frmOptimBounded: TfrmOptimBounded
       TabOrder = 6
       RowHeight = 21.000000000000000000
       RowCount = 2
-      Viewport.Width = 374.000000000000000000
-      Viewport.Height = 49.000000000000000000
+      Viewport.Width = 370.000000000000000000
+      Viewport.Height = 56.000000000000000000
       object StringColumn3: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 80.000000000000000000
       end
       object StringColumn4: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 80.000000000000000000
       end
       object StringColumn5: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 80.000000000000000000
       end
       object StringColumn6: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 80.000000000000000000
       end
     end
@@ -109,11 +113,11 @@ inherited frmOptimBounded: TfrmOptimBounded
       Position.X = 8.000000000000000000
       Position.Y = 159.000000000000000000
       Size.Width = 374.000000000000000000
-      Size.Height = 310.000000000000000000
+      Size.Height = 397.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 4
-      Viewport.Width = 366.000000000000000000
-      Viewport.Height = 302.000000000000000000
+      Viewport.Width = 370.000000000000000000
+      Viewport.Height = 393.000000000000000000
     end
     object GroupBox1: TGroupBox
       Position.X = 391.000000000000000000
@@ -179,15 +183,17 @@ inherited frmOptimBounded: TfrmOptimBounded
       Position.X = 391.000000000000000000
       Position.Y = 255.000000000000000000
       Size.Width = 235.000000000000000000
-      Size.Height = 213.000000000000000000
+      Size.Height = 300.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 9
       RowHeight = 21.000000000000000000
-      Viewport.Width = 230.000000000000000000
-      Viewport.Height = 181.000000000000000000
+      Viewport.Width = 215.000000000000000000
+      Viewport.Height = 275.000000000000000000
       object StringColumn1: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
       end
       object StringColumn2: TStringColumn
+        HeaderSettings.TextSettings.WordWrap = False
       end
     end
   end

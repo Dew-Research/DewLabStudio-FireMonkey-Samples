@@ -118,13 +118,13 @@ begin
             1: begin //multi-threaded, standard memory manager
                Controller.SuperConductive := False; // ThreadDimension := 1;
                StartTimer;
-               DoForLoop(0, LoopCount-1, ForLoopFun, GlobalThreads, []);
+               DoForLoop(0, LoopCount-1, ForLoopFun, mtxThreadPool, []);
                Timings[j, i] := StopTimer*Controller.CpuCores;
                end;
             2: begin   //multi-threaded, super conducting
                Controller.SuperConductive := True; //Controller.ThreadDimension := 4;
                StartTimer;
-               DoForLoop(0, LoopCount-1, ForLoopFun, GlobalThreads, []);
+               DoForLoop(0, LoopCount-1, ForLoopFun, mtxThreadPool, []);
                Timings[j, i] := StopTimer*Controller.CpuCores;
                end;
             end;
@@ -171,7 +171,7 @@ begin
     if MultithreadBox.IsChecked then
     begin
         StartTimer;
-        DoForLoop(0, LoopCount-1, ForLoopFun, GlobalThreads, []);
+        DoForLoop(0, LoopCount-1, ForLoopFun, mtxThreadPool, []);
         AllocsLabel.Text := 'Bandwidth = ' + FormatSample('0.00',LoopCount/(StopTimer*Controller.CpuCores)/1E6) + ' MAllocs/s/thread';
     end else
     begin
@@ -191,7 +191,7 @@ end;
 procedure TSuperConductiveForm.FormCreate(Sender: TObject);
 var cpuCores: integer;
 begin
-    GlobalThreads := TMtxForLoop.Create;
+    mtxThreadPool := TMtxForLoop.Create;
 
     TestBox.ItemIndex := 0;
     cpuCores := Controller.CpuCores;
@@ -207,8 +207,8 @@ end;
 
 procedure TSuperConductiveForm.FormDestroy(Sender: TObject);
 begin
-    GlobalThreads.Free;
-    GlobalThreads := nil;
+    mtxThreadPool.Free;
+    mtxThreadPool := nil;
 end;
 
 procedure TSuperConductiveForm.SetTestMethod(const Value: TTestMethod);

@@ -28,7 +28,7 @@ uses
   Fmx.StdCtrls,
   FMX.Header,
   Basic2, MtxVecTools,
-  MtxBaseComp,  FMX.Controls.Presentation, FMX.ScrollBox;
+  MtxBaseComp,  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 
 type

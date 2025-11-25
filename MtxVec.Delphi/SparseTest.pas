@@ -49,7 +49,7 @@ var
 
 implementation
 
-Uses FmxMtxVecEdit, lapack_umfpack, Math387;
+Uses FmxMtxVecEdit, lapack_umfpack, Math387, AbstractMtxVec;
 
 {$R *.FMX}
 

@@ -26,7 +26,8 @@ uses
   System.Rtti,
   Fmx.StdCtrls,
   FMX.Header,
-  Basic2, MtxExpr, FmxMtxGrid, Math387, FMX.Controls.Presentation;
+  Basic2, MtxExpr, FmxMtxGrid, Math387, FMX.Controls.Presentation,
+  FMX.Memo.Types, FMX.ScrollBox;
 
 
 type
@@ -71,6 +72,8 @@ var
   frmGridDemo: TfrmGridDemo;
 
 implementation
+
+uses MtxVecBase, MtxVec;
 
 {$R *.FMX}
 {$R *.Windows.fmx MSWINDOWS}

@@ -40,16 +40,22 @@ end;
 procedure SetGridColumnCount(aGrid: TStringGrid; Count: integer);
 var i: integer;
 begin
-    for i := aGrid.ColumnCount to Count-1 do
-         aGrid.AddObject(TStringColumn.Create(aGrid));
+    aGrid.BeginUpdate;
+    try
+        for i := aGrid.ColumnCount to Count-1 do
+             aGrid.AddObject(TStringColumn.Create(aGrid));
 
-    for i := aGrid.ColumnCount-1 downto Count do
-    begin
-         {$IFDEF AUTOREFCOUNT}
-         aGrid.RemoveObject(aGrid.Columns[i]);
-         {$ELSE}
-         aGrid.Columns[i].Free;
-         {$ENDIF}
+        for i := aGrid.ColumnCount-1 downto Count do
+        begin
+             {$IFDEF AUTOREFCOUNT}
+             aGrid.RemoveObject(aGrid.Columns[i]);
+             {$ELSE}
+             aGrid.Model.RemoveColumn(i);
+             {$ENDIF}
+        end;
+
+    finally
+        aGrid.EndUpdate;
     end;
 end;
 

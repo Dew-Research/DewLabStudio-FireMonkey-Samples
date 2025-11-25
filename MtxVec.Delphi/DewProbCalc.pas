@@ -16,7 +16,7 @@ uses
   ProbEditor, FMX.Layouts, FMX.Memo, FMX.Controls, FMX.TabControl, FMX.Types,
   FMX.Forms, FMX.Menus, FMX.ListBox, System.Actions, FMX.ActnList,
   FMX.Grid, FMX.Controls.Presentation, FMXTee.Engine,
-  FMXTee.Series, FMXTee.Procs, FMX.ScrollBox, FMX.DialogService;
+  FMXTee.Series, FMXTee.Procs, FMX.ScrollBox, FMX.DialogService, FMX.Memo.Types;
 
 type
   TfrmProbCalc = class(TForm)
@@ -44,6 +44,7 @@ type
     aClearAll: TAction;
     aCalc: TAction;
     FrameDist1: TFrameDist;
+    StyleBook2: TStyleBook;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure aAdditionalInfoExecute(Sender: TObject);

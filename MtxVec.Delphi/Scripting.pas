@@ -354,6 +354,7 @@ end;
 procedure TScriptingForm.FormDestroy(Sender: TObject);
 begin
    Expr.Free;
+   varView.ClearColumns;
 end;
 
 procedure TScriptingForm.ListBoxDblClick(Sender: TObject);

@@ -100,14 +100,12 @@ object ForLoopExampleForm: TForLoopExampleForm
       LeftAxis.Automatic = False
       LeftAxis.AutomaticMinimum = False
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 281.562499999999900000
+      LeftAxis.Maximum = 1113.837500000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.Title.Caption = 'Time [ms]'
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.ZPosition = 100.000000000000000000
@@ -125,7 +123,6 @@ object ForLoopExampleForm: TForLoopExampleForm
       Size.PlatformDefault = False
       ColorPaletteIndex = 13
       object Series1: TFastLineSeries
-        HoverElement = []
         SeriesColor = x00A00000
         Title = 'Standard MM'
         LinePen.Color = xFFC82525
@@ -138,7 +135,6 @@ object ForLoopExampleForm: TForLoopExampleForm
         Top = 48
       end
       object Series2: TFastLineSeries
-        HoverElement = []
         SeriesColor = x000080FF
         Title = 'Super conductive MM'
         LinePen.Color = xFF461FDE
@@ -175,15 +171,13 @@ object ForLoopExampleForm: TForLoopExampleForm
       DepthTopAxis.Minimum = -0.500000000000000000
       DepthTopAxis.EndPosition = 100.000000000000000000
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 692.500000000000000000
-      LeftAxis.Minimum = 75.000000000000000000
+      LeftAxis.Maximum = 1307.500000000000000000
+      LeftAxis.Minimum = 805.000000000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.Title.Caption = 'Factor'
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.ZPosition = 100.000000000000000000
@@ -201,7 +195,6 @@ object ForLoopExampleForm: TForLoopExampleForm
       Size.PlatformDefault = False
       ColorPaletteIndex = 13
       object FastLineSeries1: TFastLineSeries
-        HoverElement = []
         SeriesColor = x00A00000
         Title = 'Scalability'
         LinePen.Color = xFFA00000

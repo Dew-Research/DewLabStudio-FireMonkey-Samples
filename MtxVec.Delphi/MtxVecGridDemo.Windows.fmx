@@ -1,3 +1,9 @@
 inherited frmGridDemo_Windows: TfrmGridDemo_Windows
   DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    inherited RichEdit1: TMemo
+      Viewport.Width = 748.000000000000000000
+      Viewport.Height = 130.000000000000000000
+    end
+  end
 end

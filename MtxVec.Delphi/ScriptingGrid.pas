@@ -800,6 +800,11 @@ begin
 
    UserVars.Free;
    LContext.Free;
+
+   VarView.ClearColumns;
+   ListBox.ClearColumns;
+   Grid1.ClearColumns;
+   Grid2.ClearColumns;
 end;
 
 procedure TScriptingGridForm.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
@@ -1597,7 +1602,7 @@ begin
 end;
 
 procedure _drawvalues5(const Param: TExprRec);
-var vt1,vt2,vt3, vt4, vt5: TValueType;
+var vt1,vt2,vt3, vt4, vt5: TExprValueType;
 begin
     vt1 := Param.Args[0].ValueType;
     vt2 := Param.Args[1].ValueType;
@@ -1612,7 +1617,7 @@ begin
 end;
 
 procedure _drawvalues4(const Param: TExprRec);
-var vt1,vt2,vt3, vt4: TValueType;
+var vt1,vt2,vt3, vt4: TExprValueType;
 begin
     vt1 := Param.Args[0].ValueType;
     vt2 := Param.Args[1].ValueType;

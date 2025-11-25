@@ -341,13 +341,16 @@ object ScriptingGridForm: TScriptingGridForm
         Viewport.Height = 246.000000000000000000
         object StringColumn1: TStringColumn
           Header = 'Name'
+          HeaderSettings.TextSettings.WordWrap = False
           Size.Width = 50.000000000000000000
         end
         object StringColumn2: TStringColumn
           Header = 'Type'
+          HeaderSettings.TextSettings.WordWrap = False
         end
         object StringColumn3: TStringColumn
           Header = 'Value'
+          HeaderSettings.TextSettings.WordWrap = False
           Size.Width = 200.000000000000000000
         end
       end
@@ -370,6 +373,7 @@ object ScriptingGridForm: TScriptingGridForm
         Viewport.Height = 344.000000000000000000
         object HistoryCmdColumn: TStringColumn
           Header = 'Name'
+          HeaderSettings.TextSettings.WordWrap = False
         end
       end
     end
@@ -448,8 +452,8 @@ object ScriptingGridForm: TScriptingGridForm
             TabOrder = 0
             OnSelChanged = Grid2SelChanged
             OnDrawColumnCell = Grid2DrawColumnCell
-            Viewport.Width = 432.000000000000000000
-            Viewport.Height = 640.000000000000000000
+            Viewport.Width = 428.000000000000000000
+            Viewport.Height = 615.000000000000000000
           end
         end
         object ChartTab: TTabItem
@@ -535,7 +539,6 @@ object ScriptingGridForm: TScriptingGridForm
             RightAxis.Axis.Fill.Color = x00404040
             RightAxis.Grid.Color = x00A9A9A9
             RightAxis.Grid.Fill.Color = x00A9A9A9
-            RightAxis.Grid.ZPosition = 100.000000000000000000
             RightAxis.LogarithmicBase = 10.000000000000000000
             RightAxis.EndPosition = 100.000000000000000000
             RightAxis.TicksInner.Color = x00A9A9A9
@@ -546,7 +549,6 @@ object ScriptingGridForm: TScriptingGridForm
             TopAxis.Axis.Fill.Color = x00404040
             TopAxis.Grid.Color = x00A9A9A9
             TopAxis.Grid.Fill.Color = x00A9A9A9
-            TopAxis.Grid.ZPosition = 100.000000000000000000
             TopAxis.LogarithmicBase = 10.000000000000000000
             TopAxis.EndPosition = 100.000000000000000000
             TopAxis.TicksInner.Color = x00A9A9A9
@@ -564,7 +566,6 @@ object ScriptingGridForm: TScriptingGridForm
             Size.PlatformDefault = False
             ColorPaletteIndex = 13
             object Series1: TFastLineSeries
-              HoverElement = []
               LinePen.Color = x00FFFFFF
               XValues.Name = 'X'
               XValues.Order = loNone
@@ -632,7 +633,6 @@ object ScriptingGridForm: TScriptingGridForm
             RightAxis.Axis.Fill.Color = x00404040
             RightAxis.Grid.Color = x00A9A9A9
             RightAxis.Grid.Fill.Color = x00A9A9A9
-            RightAxis.Grid.ZPosition = 100.000000000000000000
             RightAxis.LogarithmicBase = 10.000000000000000000
             RightAxis.EndPosition = 100.000000000000000000
             RightAxis.TicksInner.Color = x00A9A9A9
@@ -643,7 +643,6 @@ object ScriptingGridForm: TScriptingGridForm
             TopAxis.Axis.Fill.Color = x00404040
             TopAxis.Grid.Color = x00A9A9A9
             TopAxis.Grid.Fill.Color = x00A9A9A9
-            TopAxis.Grid.ZPosition = 100.000000000000000000
             TopAxis.LogarithmicBase = 10.000000000000000000
             TopAxis.EndPosition = 100.000000000000000000
             TopAxis.TicksInner.Color = x00A9A9A9
@@ -661,7 +660,6 @@ object ScriptingGridForm: TScriptingGridForm
             Size.PlatformDefault = False
             ColorPaletteIndex = 13
             object Series2: TFastLineSeries
-              HoverElement = []
               LinePen.Color = x00FFFFFF
               XValues.Name = 'X'
               XValues.Order = loNone
@@ -695,8 +693,8 @@ object ScriptingGridForm: TScriptingGridForm
             Size.Height = 640.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
-            Viewport.Width = 432.000000000000000000
-            Viewport.Height = 640.000000000000000000
+            Viewport.Width = 428.000000000000000000
+            Viewport.Height = 636.000000000000000000
           end
         end
       end

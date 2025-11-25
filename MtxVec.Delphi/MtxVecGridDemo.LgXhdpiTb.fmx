@@ -6,6 +6,8 @@ inherited frmGridDemo_LgXhdpiTb: TfrmGridDemo_LgXhdpiTb
     Size.Width = 480.000000000000000000
     inherited RichEdit1: TMemo
       Size.Width = 480.000000000000000000
+      Viewport.Width = 480.000000000000000000
+      Viewport.Height = 130.000000000000000000
     end
   end
   inherited Panel2: TPanel

@@ -3,26 +3,34 @@ unit ProgDialog;
 interface
 
 uses
-  System.SysUtils,
-  System.Types,
-  System.UITypes,
-  System.Classes,
-  FMX.Types,
-  FMX.Controls,
-  FMX.Forms,
-  FMX.Objects,
-  FMX.Grid,
-  FMX.ExtCtrls,
-  FMX.ListBox,
-  FMX.Memo,
-  FMX.Layouts,
-  FMX.Edit,
-  FMX.Platform,
-  System.Rtti,
-  Fmx.StdCtrls,
-  FMX.Header,
-  Basic2, MtxBaseComp, MtxDialogs, Optimization, FmxMtxComCtrls, MtxVec,
-  FMX.Controls.Presentation, FMX.ScrollBox;
+    System.SysUtils,
+    System.Types,
+    System.UITypes,
+    System.Classes,
+    FMX.Types,
+    FMX.Controls,
+    FMX.Forms,
+    FMX.Objects,
+    FMX.Grid,
+    FMX.ExtCtrls,
+    FMX.ListBox,
+    FMX.Memo,
+    FMX.Layouts,
+    FMX.Edit,
+    FMX.Platform,
+    System.Rtti,
+    Fmx.StdCtrls,
+    FMX.Header,
+    Basic2,
+    MtxBaseComp,
+    MtxDialogs,
+    Optimization,
+    FmxMtxComCtrls,
+    MtxVec,
+    MtxForLoop,
+    FMX.Controls.Presentation,
+    FMX.ScrollBox,
+    FMX.Memo.Types;
 
 type
   TfrmProgDialog = class(TBasicForm2)
@@ -46,16 +54,13 @@ type
     MtxThread: TMtxProgressDialog;
     Label7: TLabel;
     Label8: TLabel;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
-    RadioButton3: TRadioButton;
-    RadioButton4: TRadioButton;
-    RadioButton5: TRadioButton;
-    procedure ShowFormBoxClick(Sender: TObject);
-    procedure LoopTypeGroupClick(Sender: TObject);
+    IteratorButton1: TRadioButton;
+    IteratorButton2: TRadioButton;
+    IteratorButton3: TRadioButton;
+    LoopButton1: TRadioButton;
+    LoopButton2: TRadioButton;
     procedure MtxThreadCompute(Sender: TObject);
-    procedure MtxThreadProgressUpdate(Sender: TObject;
-      Event: TMtxProgressEvent);
+    procedure MtxThreadProgressUpdate(Sender: TObject;  Event: TMtxProgressEvent);
     procedure MinEditChange(Sender: TObject);
     procedure MaxEditChange(Sender: TObject);
     procedure UpdateIntervalEditChange(Sender: TObject);
@@ -63,14 +68,14 @@ type
     procedure StartButtonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure RadioButton1Change(Sender: TObject);
-    procedure RadioButton4Change(Sender: TObject);
+    procedure IteratorButton1Change(Sender: TObject);
+    procedure LoopButton1Change(Sender: TObject);
+    procedure ShowFormBoxChange(Sender: TObject);
   private
     IteratorGroupIndex, LoopGroupIndex: integer;
     { Private declarations }
     A,B,C: TMtx;
-    procedure WhileLoopInProcedure(var Counter: integer;
-      var Cancel: boolean);
+    procedure WhileLoopInProcedure();
 
   public
     { Public declarations }
@@ -83,14 +88,9 @@ implementation
 
 {$R *.FMX}
 
-procedure TfrmProgDialog.ShowFormBoxClick(Sender: TObject);
+procedure TfrmProgDialog.ShowFormBoxChange(Sender: TObject);
 begin
-  MtxThread.ShowDialog := ShowFormBox.IsChecked;
-end;
-
-procedure TfrmProgDialog.LoopTypeGroupClick(Sender: TObject);
-begin
-
+    MtxThread.ShowDialog := ShowFormBox.IsChecked;
 end;
 {
 Procedure that has been thread:
@@ -116,7 +116,7 @@ begin
              //
              C.Mul(A,B);
        end;
-    2: WhileLoopInProcedure(MtxThread.Counter,MtxThread.Cancel);
+    2: WhileLoopInProcedure();
   end;
 end;
 
@@ -144,15 +144,17 @@ begin
               ProgressBar.Value := MtxThread.Max;
               ProgressLabel.Text := 'Progress indicator: ' + FormatFloat('0.00',100);
             end;
+            StartButton.Text := 'Start';
+
             FreeIt(A,B,C);
           end;
   end;
 end;
-procedure TfrmProgDialog.RadioButton1Change(Sender: TObject);
+procedure TfrmProgDialog.IteratorButton1Change(Sender: TObject);
 begin
-  if Sender = RadioButton1 then IteratorGroupIndex := 0;
-  if Sender = RadioButton2 then IteratorGroupIndex := 1;
-  if Sender = RadioButton3 then IteratorGroupIndex := 2;
+  if Sender = IteratorButton1 then IteratorGroupIndex := 0;
+  if Sender = IteratorButton2 then IteratorGroupIndex := 1;
+  if Sender = IteratorButton3 then IteratorGroupIndex := 2;
 
   case IteratorGroupIndex of
     0:  MtxThread.InternalLoop := True;
@@ -160,10 +162,10 @@ begin
   end;
 end;
 
-procedure TfrmProgDialog.RadioButton4Change(Sender: TObject);
+procedure TfrmProgDialog.LoopButton1Change(Sender: TObject);
 begin
-  if Sender = RadioButton3 then LoopGroupIndex := 0;
-  if Sender = RadioButton4 then LoopGroupIndex := 1;
+  if Sender = LoopButton1 then LoopGroupIndex := 0;
+  if Sender = LoopButton2 then LoopGroupIndex := 1;
 
   case LoopGroupIndex of
     0: MtxThread.InfiniteLoop := False;
@@ -195,12 +197,11 @@ procedure TfrmProgDialog.StartButtonClick(Sender: TObject);
 begin
   if StartButton.Text = 'Start' then
   begin
-    StartButton.Text := 'Stop';
-    MtxThread.Start;
+      StartButton.Text := 'Stop';
+      MtxThread.Start;
   end else
   begin
-    MtxThread.Cancel := True;
-    StartButton.Text := 'Start';
+      MtxThread.Stop;
   end;
   {Sequence of calls:}
 
@@ -234,18 +235,19 @@ begin
       + 'available CPU power.');
   end;
   ThreadBox.ItemIndex := 3;
+  MtxThread.InfiniteLoop := false;
+  MtxThread.InternalLoop := True;
   MtxThread.DefineLoop(0,1500);
 end;
 
-procedure TfrmProgDialog.WhileLoopInProcedure(var Counter: integer;
-  var Cancel: boolean);
+procedure TfrmProgDialog.WhileLoopInProcedure();
 begin
-  while not (MtxThread.Max = Counter) do
-  begin
-    if Cancel then Break;
-    C.Mul(A,B);
-    Inc(Counter);
-  end;
+    while not (MtxThread.Max = MtxThread.Counter) do
+    begin
+        if MtxThread.Cancel then Break;
+        C.Mul(A,B);
+        MtxThread.Counter := MtxThread.Counter + 1;
+    end;
 end;
 
 procedure TfrmProgDialog.FormDestroy(Sender: TObject);

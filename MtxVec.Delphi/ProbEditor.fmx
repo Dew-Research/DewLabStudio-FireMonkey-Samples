@@ -1,11 +1,11 @@
 object FrameDist: TFrameDist
-  Size.Width = 487.000000000000000000
-  Size.Height = 522.000000000000000000
+  Size.Width = 1046.000000000000000000
+  Size.Height = 699.000000000000000000
   Size.PlatformDefault = False
   object Panel1: TPanel
     Align = Client
-    Size.Width = 366.000000000000000000
-    Size.Height = 522.000000000000000000
+    Size.Width = 808.000000000000000000
+    Size.Height = 699.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     OnClick = Panel1Click
@@ -154,36 +154,41 @@ object FrameDist: TFrameDist
       Viewport.Height = 105.000000000000000000
       object StringColumn1: TStringColumn
         Header = 'Name'
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 70.000000000000000000
       end
       object StringColumn2: TStringColumn
         Header = 'Type'
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 70.000000000000000000
       end
       object StringColumn3: TStringColumn
         Header = 'Valid range'
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 70.000000000000000000
       end
       object StringColumn4: TStringColumn
         Header = 'Value'
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 70.000000000000000000
       end
       object StringColumn5: TStringColumn
         Header = 'Valid?'
+        HeaderSettings.TextSettings.WordWrap = False
         Size.Width = 70.000000000000000000
       end
     end
   end
   object Panel2: TPanel
     Align = Left
-    Size.Width = 121.000000000000000000
-    Size.Height = 522.000000000000000000
+    Size.Width = 238.000000000000000000
+    Size.Height = 699.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object ListBoxDist: TListBox
       Align = Client
-      Size.Width = 121.000000000000000000
-      Size.Height = 501.000000000000000000
+      Size.Width = 238.000000000000000000
+      Size.Height = 678.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       OnClick = ListBoxDistClick
@@ -192,10 +197,10 @@ object FrameDist: TFrameDist
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
-      Viewport.Width = 121.000000000000000000
-      Viewport.Height = 501.000000000000000000
+      Viewport.Width = 218.000000000000000000
+      Viewport.Height = 674.000000000000000000
       object ListItem17: TListBoxItem
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -203,7 +208,7 @@ object FrameDist: TFrameDist
       end
       object ListItem18: TListBoxItem
         Position.Y = 22.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -211,7 +216,7 @@ object FrameDist: TFrameDist
       end
       object ListItem19: TListBoxItem
         Position.Y = 44.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
@@ -219,7 +224,7 @@ object FrameDist: TFrameDist
       end
       object ListItem20: TListBoxItem
         Position.Y = 66.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
@@ -227,7 +232,7 @@ object FrameDist: TFrameDist
       end
       object ListItem21: TListBoxItem
         Position.Y = 88.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 4
@@ -235,7 +240,7 @@ object FrameDist: TFrameDist
       end
       object ListItem22: TListBoxItem
         Position.Y = 110.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 5
@@ -243,7 +248,7 @@ object FrameDist: TFrameDist
       end
       object ListItem23: TListBoxItem
         Position.Y = 132.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 6
@@ -251,7 +256,7 @@ object FrameDist: TFrameDist
       end
       object ListItem24: TListBoxItem
         Position.Y = 154.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 7
@@ -259,7 +264,7 @@ object FrameDist: TFrameDist
       end
       object ListItem25: TListBoxItem
         Position.Y = 176.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 8
@@ -267,7 +272,7 @@ object FrameDist: TFrameDist
       end
       object ListItem26: TListBoxItem
         Position.Y = 198.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 9
@@ -275,7 +280,7 @@ object FrameDist: TFrameDist
       end
       object ListItem27: TListBoxItem
         Position.Y = 220.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 10
@@ -283,7 +288,7 @@ object FrameDist: TFrameDist
       end
       object ListItem28: TListBoxItem
         Position.Y = 242.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 11
@@ -291,7 +296,7 @@ object FrameDist: TFrameDist
       end
       object ListBoxItem1: TListBoxItem
         Position.Y = 264.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 37
@@ -299,7 +304,7 @@ object FrameDist: TFrameDist
       end
       object ListBoxItem2: TListBoxItem
         Position.Y = 286.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 38
@@ -307,7 +312,7 @@ object FrameDist: TFrameDist
       end
       object ListItem29: TListBoxItem
         Position.Y = 308.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 12
@@ -315,7 +320,7 @@ object FrameDist: TFrameDist
       end
       object ListItem30: TListBoxItem
         Position.Y = 330.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 13
@@ -323,7 +328,7 @@ object FrameDist: TFrameDist
       end
       object ListItem31: TListBoxItem
         Position.Y = 352.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 14
@@ -331,7 +336,7 @@ object FrameDist: TFrameDist
       end
       object ListItem32: TListBoxItem
         Position.Y = 374.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 15
@@ -339,7 +344,7 @@ object FrameDist: TFrameDist
       end
       object ListBoxItem3: TListBoxItem
         Position.Y = 396.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 39
@@ -347,7 +352,7 @@ object FrameDist: TFrameDist
       end
       object ListItem33: TListBoxItem
         Position.Y = 418.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 16
@@ -355,7 +360,7 @@ object FrameDist: TFrameDist
       end
       object ListItem34: TListBoxItem
         Position.Y = 440.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 17
@@ -363,7 +368,7 @@ object FrameDist: TFrameDist
       end
       object ListItem35: TListBoxItem
         Position.Y = 462.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 18
@@ -371,7 +376,7 @@ object FrameDist: TFrameDist
       end
       object Listitem36: TListBoxItem
         Position.Y = 484.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 19
@@ -379,7 +384,7 @@ object FrameDist: TFrameDist
       end
       object ListItem37: TListBoxItem
         Position.Y = 506.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 20
@@ -387,7 +392,7 @@ object FrameDist: TFrameDist
       end
       object ListItem38: TListBoxItem
         Position.Y = 528.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 21
@@ -395,7 +400,7 @@ object FrameDist: TFrameDist
       end
       object ListItem39: TListBoxItem
         Position.Y = 550.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 22
@@ -403,7 +408,7 @@ object FrameDist: TFrameDist
       end
       object ListItem40: TListBoxItem
         Position.Y = 572.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 23
@@ -411,7 +416,7 @@ object FrameDist: TFrameDist
       end
       object ListItem41: TListBoxItem
         Position.Y = 594.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 24
@@ -419,7 +424,7 @@ object FrameDist: TFrameDist
       end
       object ListItem42: TListBoxItem
         Position.Y = 616.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 25
@@ -427,7 +432,7 @@ object FrameDist: TFrameDist
       end
       object ListItem43: TListBoxItem
         Position.Y = 638.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 26
@@ -435,7 +440,7 @@ object FrameDist: TFrameDist
       end
       object ListItem44: TListBoxItem
         Position.Y = 660.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 27
@@ -443,7 +448,7 @@ object FrameDist: TFrameDist
       end
       object ListItem45: TListBoxItem
         Position.Y = 682.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 28
@@ -451,7 +456,7 @@ object FrameDist: TFrameDist
       end
       object ListItem46: TListBoxItem
         Position.Y = 704.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 29
@@ -459,7 +464,7 @@ object FrameDist: TFrameDist
       end
       object ListItem47: TListBoxItem
         Position.Y = 726.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 30
@@ -467,7 +472,7 @@ object FrameDist: TFrameDist
       end
       object ListItem48: TListBoxItem
         Position.Y = 748.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 31
@@ -475,7 +480,7 @@ object FrameDist: TFrameDist
       end
       object ListItem49: TListBoxItem
         Position.Y = 770.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 32
@@ -483,7 +488,7 @@ object FrameDist: TFrameDist
       end
       object ListItem50: TListBoxItem
         Position.Y = 792.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 33
@@ -491,7 +496,7 @@ object FrameDist: TFrameDist
       end
       object ListItem51: TListBoxItem
         Position.Y = 814.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 34
@@ -499,7 +504,7 @@ object FrameDist: TFrameDist
       end
       object ListItem52: TListBoxItem
         Position.Y = 836.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 35
@@ -507,7 +512,7 @@ object FrameDist: TFrameDist
       end
       object ListItem53: TListBoxItem
         Position.Y = 858.000000000000000000
-        Size.Width = 101.000000000000000000
+        Size.Width = 218.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 36
@@ -516,8 +521,8 @@ object FrameDist: TFrameDist
     end
     object Panel3: TPanel
       Align = Bottom
-      Position.Y = 501.000000000000000000
-      Size.Width = 121.000000000000000000
+      Position.Y = 678.000000000000000000
+      Size.Width = 238.000000000000000000
       Size.Height = 21.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1

@@ -1,14 +1,15 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{FF38E9A6-D564-41A4-ABFF-45E17BBB7A1C}</ProjectGuid>
-        <ProjectVersion>20.1</ProjectVersion>
+        <ProjectVersion>20.2</ProjectVersion>
         <FrameworkType>FMX</FrameworkType>
         <MainSource>FmxMtxVecDemoW32_D29.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>693267</TargetedPlatforms>
         <AppType>Application</AppType>
+        <ProjectName Condition="'$(ProjectName)'==''">FmxMtxVecDemoW32_D29</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -203,7 +204,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <Android_SplashImage640>$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png</Android_SplashImage640>
         <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=preferExternal;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=preferExternal;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=;minSdkVersion=23;targetSdkVersion=34</VerInfo_Keys>
         <Android_SplashImage960>$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png</Android_SplashImage960>
         <Android_LauncherIcon36>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png</Android_LauncherIcon36>
         <BT_BuildType>Debug</BT_BuildType>
@@ -215,7 +216,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android64)'!=''">
-        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=preferExternal;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=preferExternal;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=;minSdkVersion=23;targetSdkVersion=34</VerInfo_Keys>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <Base_Android>true</Base_Android>
@@ -692,16 +693,16 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <BorlandProject>
             <Delphi.Personality>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k290.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp290.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
                 <Source>
                     <Source Name="MainSource">FmxMtxVecDemoW32_D29.dpr</Source>
                 </Source>
             </Delphi.Personality>
-            <Deployment Version="4">
+            <Deployment Version="5">
                 <DeployFile LocalName="$(BDS)\Redist\iossim32\libcgunwind.1.0.dylib" Class="DependencyModule"/>
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule"/>
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
@@ -867,87 +868,87 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.dsp.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.dsp.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.dsp.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.dsp.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.dsp.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.fft.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.fft.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.fft.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.fft.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.fft.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.lapackd.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.lapackd.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapackd.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.lapackd.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.lapackd.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.lapacks.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.lapacks.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.lapacks.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.lapacks.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.lapacks.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.random.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.random.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.random.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.random.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.random.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.random.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.random.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.random.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.vmld.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.vmld.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmld.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.vmld.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.vmld.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.0.6.so" Configuration="Debug" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.2.0.so" Configuration="Debug" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.vmls.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.vmls.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.0.6.so" Configuration="Release" Class="File">
+                <DeployFile LocalName="..\..\Dew Dlls\Linux64\libmtxvec.vmls.6.2.0.so" Configuration="Release" Class="File">
                     <Platform Name="Linux64">
-                        <RemoteName>libmtxvec.vmls.6.0.6.so</RemoteName>
+                        <RemoteName>libmtxvec.vmls.6.2.0.so</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1053,7 +1054,9 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="Linux64\Debug\FmxMtxVecDemoW32_D28" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="Linux64\Debug\FmxMtxVecDemoW32_D29" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="Linux64\Release\FmxMtxVecDemoW32_D28" Configuration="Release" Class="ProjectOutput"/>
+                <DeployFile LocalName="Linux64\Release\FmxMtxVecDemoW32_D29" Configuration="Release" Class="ProjectOutput"/>
                 <DeployFile LocalName="OSX32\Debug\FmxMtxVecDemoW32_D25.entitlements" Configuration="Debug" Class="ProjectOSXEntitlements"/>
                 <DeployFile LocalName="OSX32\Debug\FmxMtxVecDemoW32_D25.info.plist" Configuration="Debug" Class="ProjectOSXInfoPList"/>
                 <DeployFile LocalName="OSX32\Debug\FmxMtxVecDemoW32_D26" Configuration="Debug" Class="ProjectOutput"/>
@@ -1135,16 +1138,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="AndroidClasses">
-                    <Platform Name="Android">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
                     <Platform Name="Android">
                         <RemoteDir>res\xml</RemoteDir>
@@ -1152,12 +1145,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\xml</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidGDBServer">
-                    <Platform Name="Android">
-                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1783,6 +1770,9 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     <Platform Name="Win64">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="Win64x">
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
@@ -2076,13 +2066,13 @@ $(PostBuildEvent)]]></PostBuildEvent>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win64x" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
                 <Platform value="Android">True</Platform>
                 <Platform value="Android64">True</Platform>
                 <Platform value="iOSDevice64">True</Platform>
                 <Platform value="iOSSimARM64">True</Platform>
-                <Platform value="Linux64">False</Platform>
                 <Platform value="OSX64">True</Platform>
                 <Platform value="OSXARM64">True</Platform>
                 <Platform value="Win32">True</Platform>
@@ -2120,14 +2110,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Debug' And '$(Platform)'=='iOSSimARM64'">
-        <PreBuildEvent/>
-        <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
-        <PreLinkEvent/>
-        <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>(copy *.txt $(OUTPUTDIR))&amp;&amp;(copy *.vec $(OUTPUTDIR))&amp;&amp;(copy *.mtx $(OUTPUTDIR))</PostBuildEvent>
-        <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Config)'=='Debug' And '$(Platform)'=='Linux64'">
         <PreBuildEvent/>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
@@ -2192,14 +2174,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' And '$(Platform)'=='iOSSimARM64'">
-        <PreBuildEvent/>
-        <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
-        <PreLinkEvent/>
-        <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>(copy *.txt $(OUTPUTDIR))&amp;&amp;(copy *.vec $(OUTPUTDIR))&amp;&amp;(copy *.mtx $(OUTPUTDIR))</PostBuildEvent>
-        <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Config)'=='Release' And '$(Platform)'=='Linux64'">
         <PreBuildEvent/>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>

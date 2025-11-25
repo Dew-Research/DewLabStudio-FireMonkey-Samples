@@ -28,6 +28,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     LastIndex: Integer;
@@ -134,6 +135,11 @@ begin
   LastIndex := -1;
   LastSearchText := '';
   LastFindAll := false;
+end;
+
+procedure TfrmListFunc.FormDestroy(Sender: TObject);
+begin
+    StringGrid1.ClearColumns;
 end;
 
 function TfrmListFunc.ListToStringGrid(AFileName: String): Integer;

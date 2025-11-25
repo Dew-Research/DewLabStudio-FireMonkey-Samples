@@ -142,6 +142,7 @@ inherited Interpolating1: TInterpolating1
       Size.PlatformDefault = False
       TabOrder = 4
       Text = 'Recreate'
+      TextSettings.Trimming = None
       OnClick = Button1Click
     end
     object Label4: TLabel
@@ -164,12 +165,11 @@ inherited Interpolating1: TInterpolating1
     SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Visible = False
     BottomAxis.Maximum = 24.000000000000000000
-    LeftAxis.Maximum = 592.687500000000000000
-    LeftAxis.Minimum = 172.500000000000000000
+    LeftAxis.Maximum = 683.512499999999900000
+    LeftAxis.Minimum = 2.500000000000000000
     BevelOuter = bvLowered
     Size.Height = 233.000000000000000000
     object Series1: TPointSeries
-      HoverElement = [heCurrent]
       Title = 'Original data'
       ClickableLine = False
       Pointer.Brush.Gradient.EndColor = claRed
@@ -186,7 +186,6 @@ inherited Interpolating1: TInterpolating1
       Top = 66
     end
     object Series2: TFastLineSeries
-      HoverElement = []
       SeriesColor = x00BA7F4A
       Title = 'Fitted values'
       LinePen.Color = xFFBA7F4A
