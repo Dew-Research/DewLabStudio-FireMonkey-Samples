@@ -133,9 +133,8 @@ object LissajousScopeForm: TLissajousScopeForm
       BottomAxis.Axis.Fill.Color = x00404040
       BottomAxis.Grid.Color = x00A9A9A9
       BottomAxis.Grid.Fill.Color = x00A9A9A9
-      BottomAxis.Increment = 10.000000000000000000
       BottomAxis.LogarithmicBase = 10.000000000000000000
-      BottomAxis.Maximum = 513.976966609082600000
+      BottomAxis.Maximum = 857.209042615826000000
       BottomAxis.EndPosition = 100.000000000000000000
       BottomAxis.TicksInner.Color = x00A9A9A9
       BottomAxis.TicksInner.Fill.Color = x00A9A9A9
@@ -170,7 +169,7 @@ object LissajousScopeForm: TLissajousScopeForm
       LeftAxis.Grid.Color = x00A9A9A9
       LeftAxis.Grid.Fill.Color = x00A9A9A9
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 769.629247909774100000
+      LeftAxis.Maximum = 815.132131800215800000
       LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.TicksInner.Color = x00A9A9A9
       LeftAxis.TicksInner.Fill.Color = x00A9A9A9
@@ -181,7 +180,6 @@ object LissajousScopeForm: TLissajousScopeForm
       RightAxis.Axis.Fill.Color = x00404040
       RightAxis.Grid.Color = x00A9A9A9
       RightAxis.Grid.Fill.Color = x00A9A9A9
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.TicksInner.Color = x00A9A9A9
@@ -194,7 +192,6 @@ object LissajousScopeForm: TLissajousScopeForm
       TopAxis.Axis.Fill.Color = x00404040
       TopAxis.Grid.Color = x00A9A9A9
       TopAxis.Grid.Fill.Color = x00A9A9A9
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.TicksInner.Color = x00A9A9A9
@@ -217,7 +214,6 @@ object LissajousScopeForm: TLissajousScopeForm
       Size.PlatformDefault = False
       ColorPaletteIndex = 13
       object Series1: TSignalPolarSeries
-        HoverElement = []
         XValues.Name = 'Angle'
         XValues.Order = loNone
         YValues.Name = 'Radius'
@@ -250,7 +246,6 @@ object LissajousScopeForm: TLissajousScopeForm
         CloseCircle = False
         Pen.Color = xFF4466A3
         Pen.Fill.Color = xFF4466A3
-        Pen.Visible = False
         Pointer.Brush.Gradient.EndColor = x00A36644
         Pointer.Gradient.EndColor = x00A36644
         Pointer.InflateMargins = True
@@ -278,6 +273,7 @@ object LissajousScopeForm: TLissajousScopeForm
   end
   object SignalIn1: TSignalIn
     IsDouble = True
+    FloatPrecision = mvDouble
     ChannelCount = 2
     SamplingFrequency = 44100.000000000000000000
     BufferSize = 32000
@@ -293,6 +289,7 @@ object LissajousScopeForm: TLissajousScopeForm
   end
   object Signal1: TSignal
     IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 381
     Top = 18
@@ -300,6 +297,7 @@ object LissajousScopeForm: TLissajousScopeForm
   end
   object Signal2: TSignal
     IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 480
     Top = 21

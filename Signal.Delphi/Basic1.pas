@@ -47,11 +47,12 @@ implementation
 function GetFile1(FileName: string): string;
 begin
     {$IFDEF POSIX}
-         {$IFDEF OSX}
-         Result := TPath.Combine(TPath.GetDirectoryName(ParamStr(0)) ,LowerCase(FileName));
-         {$ELSE}
+         {$IF Defined(OSX) or Defined(LINUX)}
+         Result := TPath.Combine(TPath.GetDirectoryName(ParamStr(0)) , UpperCase(FileName));
+         {$IFEND}
+         {$IF Defined(IOS) or Defined(ANDROID)}
          Result := TPath.Combine(TPath.GetDocumentsPath, UpperCase(FileName));
-         {$ENDIF}
+         {$IFEND}
      {$ELSE}
      Result := ExtractFileDir(ParamStr(0)) + '\' + LowerCase(FileName);
      {$ENDIF}

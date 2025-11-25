@@ -20,7 +20,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
       AutoSize = True
       Position.X = 8.000000000000000000
       Position.Y = 66.000000000000000000
-      Size.Width = 45.000000000000000000
+      Size.Width = 41.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -30,7 +30,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
       AutoSize = True
       Position.X = 220.000000000000000000
       Position.Y = 69.000000000000000000
-      Size.Width = 60.000000000000000000
+      Size.Width = 55.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -40,7 +40,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
       AutoSize = True
       Position.X = 434.000000000000000000
       Position.Y = 66.000000000000000000
-      Size.Width = 58.000000000000000000
+      Size.Width = 53.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -63,6 +63,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
         TabOrder = 0
         Text = '    Spectrum      '
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = SpectrumEditButtonClick
       end
       object ChartEditButton: TButton
@@ -74,6 +75,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
         TabOrder = 1
         Text = 'Spectrum chart'
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ChartEditButtonClick
       end
       object ToolButton1: TButton
@@ -85,6 +87,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
         TabOrder = 2
         Text = 'Signal chart'
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ToolButton1Click
       end
     end
@@ -157,13 +160,16 @@ object PeakInterpolateForm: TPeakInterpolateForm
   end
   object RichEdit1: TMemo
     Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
     Align = Top
     Size.Width = 812.000000000000000000
     Size.Height = 76.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    ReadOnly = True
-    TextSettings.WordWrap = True
+    Viewport.Width = 804.000000000000000000
+    Viewport.Height = 68.000000000000000000
   end
   object Panel2: TPanel
     Align = Client
@@ -182,10 +188,13 @@ object PeakInterpolateForm: TPeakInterpolateForm
       Size.PlatformDefault = False
     end
     object SpectrumChart: TSpectrumChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.Direction = gdFromTopLeft
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Frequency spectrum')
       BottomAxis.LabelsSeparation = 0
@@ -206,8 +215,8 @@ object PeakInterpolateForm: TPeakInterpolateForm
       LeftAxis.AutomaticMaximum = False
       LeftAxis.AutomaticMinimum = False
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 861.231250000000000000
-      LeftAxis.Minimum = -24.057812500000000000
+      LeftAxis.Maximum = 790.000000000000000000
+      LeftAxis.Minimum = -25.000000000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
@@ -229,6 +238,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
           SeriesName = 'Series1'
           Series = Series1
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
           Input = SpectrumAnalyzer
         end>
       ConfidenceIntervalIndex = 0
@@ -285,10 +295,13 @@ object PeakInterpolateForm: TPeakInterpolateForm
       end
     end
     object SignalChart: TSignalChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.Direction = gdFromTopLeft
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Signal')
       BottomAxis.LogarithmicBase = 10.000000000000000000
@@ -303,8 +316,8 @@ object PeakInterpolateForm: TPeakInterpolateForm
       DepthTopAxis.Minimum = -0.500000000000000000
       DepthTopAxis.EndPosition = 100.000000000000000000
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 972.500000000000000000
-      LeftAxis.Minimum = 695.000000000000000000
+      LeftAxis.Maximum = 945.000000000000000000
+      LeftAxis.Minimum = 585.000000000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
@@ -326,6 +339,7 @@ object PeakInterpolateForm: TPeakInterpolateForm
           SeriesName = 'Series3'
           Series = Series3
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
           Input = Signal1
         end>
       ComplexSignalPart = cspReal
@@ -342,6 +356,8 @@ object PeakInterpolateForm: TPeakInterpolateForm
     end
   end
   object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = SpectrumAnalyzerParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -361,7 +377,9 @@ object PeakInterpolateForm: TPeakInterpolateForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
     Peaks.TraceMethod = ptLargest
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -399,6 +417,8 @@ object PeakInterpolateForm: TPeakInterpolateForm
     Top = 102
   end
   object Signal1: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnAfterUpdate = Signal1AfterUpdate
     Length = 512
     SamplingFrequency = 1.000000000000000000

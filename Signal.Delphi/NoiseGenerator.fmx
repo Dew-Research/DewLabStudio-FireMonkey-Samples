@@ -13,101 +13,111 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     AutoSize = True
     Position.X = 24.000000000000000000
     Position.Y = 146.000000000000000000
-    Size.Width = 62.000000000000000000
+    Size.Width = 58.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Amplitude:'
+    TabOrder = 14
   end
   object Label8: TLabel
     AutoSize = True
     Position.X = 24.000000000000000000
     Position.Y = 178.000000000000000000
-    Size.Width = 62.000000000000000000
+    Size.Width = 58.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Frequence:'
+    TabOrder = 15
   end
   object Label15: TLabel
     AutoSize = True
     Position.X = 244.000000000000000000
     Position.Y = 146.000000000000000000
-    Size.Width = 75.000000000000000000
+    Size.Width = 71.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = '(Range in dB)'
+    TabOrder = 16
   end
   object Label16: TLabel
     AutoSize = True
     Position.X = 430.000000000000000000
     Position.Y = 171.000000000000000000
-    Size.Width = 227.000000000000000000
+    Size.Width = 224.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = '(0Hz to 1/2 Max Sound Card Sample Rate)'
+    TabOrder = 17
   end
   object Label17: TLabel
     AutoSize = True
     Position.X = 105.000000000000000000
     Position.Y = 200.000000000000000000
-    Size.Width = 46.000000000000000000
+    Size.Width = 44.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Single/1'
+    TabOrder = 18
   end
   object Label18: TLabel
     AutoSize = True
     Position.X = 212.000000000000000000
     Position.Y = 200.000000000000000000
-    Size.Width = 41.000000000000000000
+    Size.Width = 37.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Tone/2'
+    TabOrder = 19
   end
   object Label19: TLabel
     AutoSize = True
     Position.X = 318.000000000000000000
     Position.Y = 200.000000000000000000
-    Size.Width = 41.000000000000000000
+    Size.Width = 37.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Tone/3'
+    TabOrder = 20
   end
   object Label20: TLabel
     AutoSize = True
     Position.X = 106.000000000000000000
     Position.Y = 247.000000000000000000
-    Size.Width = 42.000000000000000000
+    Size.Width = 37.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Tone/4'
+    TabOrder = 21
   end
   object Label21: TLabel
     AutoSize = True
     Position.X = 212.000000000000000000
     Position.Y = 247.000000000000000000
-    Size.Width = 41.000000000000000000
+    Size.Width = 37.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Tone/5'
+    TabOrder = 22
   end
   object Label23: TLabel
     AutoSize = True
     Position.X = 318.000000000000000000
     Position.Y = 247.000000000000000000
-    Size.Width = 42.000000000000000000
+    Size.Width = 37.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     TextSettings.WordWrap = False
     Text = 'Tone/6'
+    TabOrder = 23
   end
   object GroupBox1: TGroupBox
     Position.X = 273.000000000000000000
@@ -121,7 +131,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 32.000000000000000000
-      Size.Width = 89.000000000000000000
+      Size.Width = 85.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -131,7 +141,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 62.000000000000000000
-      Size.Width = 89.000000000000000000
+      Size.Width = 85.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -142,7 +152,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       Enabled = False
       Position.X = 16.000000000000000000
       Position.Y = 104.000000000000000000
-      Size.Width = 88.000000000000000000
+      Size.Width = 84.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -153,7 +163,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       Enabled = False
       Position.X = 16.000000000000000000
       Position.Y = 126.000000000000000000
-      Size.Width = 67.000000000000000000
+      Size.Width = 63.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -260,7 +270,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 32.000000000000000000
-      Size.Width = 86.000000000000000000
+      Size.Width = 82.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -270,7 +280,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 62.000000000000000000
-      Size.Width = 86.000000000000000000
+      Size.Width = 82.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -281,7 +291,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       Enabled = False
       Position.X = 16.000000000000000000
       Position.Y = 104.000000000000000000
-      Size.Width = 85.000000000000000000
+      Size.Width = 81.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -292,7 +302,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       Enabled = False
       Position.X = 16.000000000000000000
       Position.Y = 126.000000000000000000
-      Size.Width = 67.000000000000000000
+      Size.Width = 63.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -538,7 +548,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 25.000000000000000000
-      Size.Width = 83.000000000000000000
+      Size.Width = 79.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -548,7 +558,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 47.000000000000000000
-      Size.Width = 80.000000000000000000
+      Size.Width = 77.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -558,7 +568,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 69.000000000000000000
-      Size.Width = 68.000000000000000000
+      Size.Width = 64.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -568,14 +578,13 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
       AutoSize = True
       Position.X = 16.000000000000000000
       Position.Y = 91.000000000000000000
-      Size.Width = 50.000000000000000000
+      Size.Width = 46.000000000000000000
       Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
       Text = 'Channel:'
     end
     object ComboBox1: TComboBox
-      DisableFocusEffect = False
       Position.X = 131.000000000000000000
       Position.Y = 22.000000000000000000
       Size.Width = 145.000000000000000000
@@ -808,6 +817,7 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Function:'
+    TabOrder = 24
   end
   object Label24: TLabel
     Position.X = 150.000000000000000000
@@ -816,8 +826,11 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Selection:'
+    TabOrder = 25
   end
   object SignalOut: TSignalOut
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 22050.000000000000000000
     ScaleFactor = 1.000000000000000000
     Input = SignalMux
@@ -826,6 +839,8 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     MtxDataValues = {}
   end
   object SignalMux: TSignalMux
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Inputs = <
       item
@@ -839,6 +854,8 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     MtxDataValues = {}
   end
   object SignalGenerator: TSignalGenerator
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnAfterUpdate = SignalGeneratorAfterUpdate
     SamplingFrequency = 128.000000000000000000
     Inputs = <
@@ -917,6 +934,8 @@ object NoiseGeneratorForm: TNoiseGeneratorForm
     MtxDataValues = {}
   end
   object Signal: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 567
     Top = 111

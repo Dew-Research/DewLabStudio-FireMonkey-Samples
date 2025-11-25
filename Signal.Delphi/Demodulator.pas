@@ -20,7 +20,7 @@ uses
   FileSignal, SignalAnalysis, MtxBaseComp, MtxDialogs, SignalToolsDialogs,
   FMXTee.Engine, SignalToolsTee, FMXTee.Series, SignalSeriesTee, FMXTee.Procs,
   FMXTee.Chart, FMX.ListBox, FMX.Edit, FmxMtxComCtrls, FMX.Layouts, FMX.Memo,
-  FMX.Controls.Presentation, FMX.ScrollBox;
+  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 type
   TDemodulatorForm = class(TForm)

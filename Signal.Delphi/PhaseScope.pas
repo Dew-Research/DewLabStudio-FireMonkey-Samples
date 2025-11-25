@@ -30,7 +30,7 @@ uses
   FMXTee.Editor.EditorPanel,
   FMXTee.Series, FMXTee.Series.Polar,
   FMXTee.Engine, FMXTee.Procs, FMXTee.Chart, FMX.ScrollBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Memo.Types;
 
 
 type
@@ -75,7 +75,7 @@ var
 
 implementation
 
-uses Math387, MtxVec, OptimalFir, FmxMtxVecTee;
+uses Math387, MtxVec, OptimalFir, FmxMtxVecTee, AbstractMtxVec;
 
 {$R *.FMX}
 

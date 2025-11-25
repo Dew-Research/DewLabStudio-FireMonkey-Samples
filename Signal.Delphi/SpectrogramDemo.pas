@@ -2,27 +2,36 @@ unit SpectrogramDemo;
 
 interface
 
-uses
-  System.SysUtils,
-  System.Types,
-  System.UITypes,
-  System.Classes,
-  System.IOUtils,
+uses  System.SysUtils,
+      System.Types,
+      System.UITypes,
+      System.Classes,
+      System.IOUtils,
 
-  FMX.Types,
-  FMX.Controls,
-  FMX.Forms,
-  FMX.Dialogs,
-  FMXTee.Chart,
-  FMXTee.Procs,
-  FMXTee.Engine,
-  FMXTee.Series,
-  Fmx.StdCtrls,
-  FMX.Header,
-  FmxMtxVecTee,
-  FmxMtxGridSerEdit,
-  MtxBaseComp, FMXTee.Editor.EditorPanel, MtxDialogs, SignalProcessing,
-  SignalAnalysis, SignalTools, FileSignal, FMX.Controls.Presentation;
+      FMX.Types,
+      FMX.Controls,
+      FMX.Forms,
+      FMX.Dialogs,
+      FMX.Controls.Presentation,
+      FMX.StdCtrls,
+      FMX.Header,
+
+      FMXTee.Chart,
+      FMXTee.Procs,
+      FMXTee.Engine,
+      FMXTee.Series,
+      FMXTee.Editor.EditorPanel,
+
+      FmxMtxVecTee,
+      FmxMtxGridSerEdit,
+
+      MtxBaseComp,
+      MtxDialogs,
+      MtxForLoop,
+      SignalProcessing,
+      SignalAnalysis,
+      SignalTools,
+      FileSignal;
 
 
 type
@@ -41,8 +50,7 @@ type
     ProgressPanel: TProgressBar;
     procedure OKButtonClick(Sender: TObject);
     procedure ComputeSpectrogramThreadCompute(Sender: TObject);
-    procedure ComputeSpectrogramThreadProgressUpdate(Sender: TObject;
-      Event: TMtxProgressEvent);
+    procedure ComputeSpectrogramThreadProgressUpdate(Sender: TObject;    Event: TMtxProgressEvent);
 //    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
     procedure SignalDemux1AfterUpdate(Sender: TObject);

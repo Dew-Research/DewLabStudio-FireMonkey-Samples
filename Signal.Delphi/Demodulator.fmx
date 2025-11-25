@@ -34,7 +34,7 @@ object DemodulatorForm: TDemodulatorForm
       AutoSize = True
       Position.X = 299.000000000000000000
       Position.Y = 6.000000000000000000
-      Size.Width = 93.000000000000000000
+      Size.Width = 88.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -44,7 +44,7 @@ object DemodulatorForm: TDemodulatorForm
       AutoSize = True
       Position.X = 441.000000000000000000
       Position.Y = 6.000000000000000000
-      Size.Width = 96.000000000000000000
+      Size.Width = 92.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -54,7 +54,7 @@ object DemodulatorForm: TDemodulatorForm
       AutoSize = True
       Position.X = 690.000000000000000000
       Position.Y = 6.000000000000000000
-      Size.Width = 54.000000000000000000
+      Size.Width = 49.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -64,7 +64,7 @@ object DemodulatorForm: TDemodulatorForm
       AutoSize = True
       Position.X = 573.000000000000000000
       Position.Y = 6.000000000000000000
-      Size.Width = 104.000000000000000000
+      Size.Width = 99.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -74,7 +74,7 @@ object DemodulatorForm: TDemodulatorForm
       AutoSize = True
       Position.X = 688.000000000000000000
       Position.Y = 33.000000000000000000
-      Size.Width = 37.000000000000000000
+      Size.Width = 32.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -97,6 +97,7 @@ object DemodulatorForm: TDemodulatorForm
         TabOrder = 0
         Text = '    Spectrum      '
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = SpectrumEditButtonClick
       end
       object ChartEditButton: TButton
@@ -108,6 +109,7 @@ object DemodulatorForm: TDemodulatorForm
         TabOrder = 1
         Text = 'Spectrum chart'
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ChartEditButtonClick
       end
     end
@@ -156,7 +158,6 @@ object DemodulatorForm: TDemodulatorForm
       OnChange = MtxFloatEdit1Change
     end
     object AttBox: TComboBox
-      DisableFocusEffect = False
       Position.X = 574.000000000000000000
       Position.Y = 27.000000000000000000
       Size.Width = 105.000000000000000000
@@ -194,12 +195,38 @@ object DemodulatorForm: TDemodulatorForm
       Size.PlatformDefault = False
     end
     object SpectrumChart2: TSpectrumChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Zoomed spectrum')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
       BottomAxis.MinorTicks.Visible = False
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 677.500000000000000000
+      LeftAxis.Minimum = 215.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
       Zoom.Brush.Kind = None
       Zoom.Pen.Color = claWhite
       Zoom.Pen.Mode = pmNotXor
@@ -214,6 +241,7 @@ object DemodulatorForm: TDemodulatorForm
           SeriesName = 'FastLineSeries1'
           Series = FastLineSeries1
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
           Input = SpectrumAnalyzer1
         end>
       ConfidenceIntervalIndex = 0
@@ -271,12 +299,38 @@ object DemodulatorForm: TDemodulatorForm
     end
     object SpectrumChart3: TSpectrumChart
       Position.Y = 122.000000000000000000
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Original spectrum')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
       BottomAxis.MinorTicks.Visible = False
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 960.000000000000000000
+      LeftAxis.Minimum = 650.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.Grid.ZPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.Grid.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
       Zoom.Brush.Kind = None
       Zoom.Pen.Color = claWhite
       Zoom.Pen.Mode = pmNotXor
@@ -291,6 +345,7 @@ object DemodulatorForm: TDemodulatorForm
           SeriesName = 'FastLineSeries2'
           Series = FastLineSeries2
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
           Input = SpectrumAnalyzer3
         end>
       ConfidenceIntervalIndex = 0
@@ -356,6 +411,8 @@ object DemodulatorForm: TDemodulatorForm
     MtxDataValues = {}
   end
   object SpectrumAnalyzer1: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = SpectrumAnalyzer1ParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -376,6 +433,8 @@ object DemodulatorForm: TDemodulatorForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -395,6 +454,8 @@ object DemodulatorForm: TDemodulatorForm
     MtxDataValues = {}
   end
   object SignalRead1: TSignalRead
+    IsDouble = True
+    FloatPrecision = mvDouble
     Length = 1024
     SamplingFrequency = 4666.666666666669000000
     SelectionStop = -1
@@ -416,6 +477,8 @@ object DemodulatorForm: TDemodulatorForm
     Top = 129
   end
   object Demodulator: TSignalDemodulator
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Input = SignalRead1
     Ripple = 0.000100000000000000
@@ -424,11 +487,13 @@ object DemodulatorForm: TDemodulatorForm
     ScaleFactor = 1.000000000000000000
     SubBandFrequency = 0.250000000000000000
     SubBandWidth = 0.125000000000000000
-    Left = 168
-    Top = 30
+    Left = 112
+    Top = 22
     MtxDataValues = {}
   end
   object SpectrumAnalyzer3: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = SpectrumAnalyzer1ParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -449,6 +514,8 @@ object DemodulatorForm: TDemodulatorForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -468,12 +535,14 @@ object DemodulatorForm: TDemodulatorForm
     MtxDataValues = {}
   end
   object SignalBuffer: TSignalBuffer
+    IsDouble = True
+    FloatPrecision = mvDouble
     Length = 1024
     SamplingFrequency = 1.000000000000000000
     IncrementStep = 1.500000000000000000
     Input = Demodulator
-    Left = 84
-    Top = 27
+    Left = 204
+    Top = 19
     MtxDataValues = {}
   end
 end

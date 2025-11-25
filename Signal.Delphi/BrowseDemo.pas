@@ -3,22 +3,45 @@ unit BrowseDemo;
 interface
 
 uses
+    System.SysUtils,
+    System.Types,
+    System.UITypes,
+    System.Classes,
 
-  System.SysUtils,
-  System.Types,
-  System.UITypes,
-  System.Classes,
-  FMX.Types,
-  FMX.Controls,
-  FMX.Forms,
-  FMX.Dialogs,
-  FMX.Objects,
-  Fmx.StdCtrls,
-  FMX.Header, FMXTee.Editor.EditorPanel, FileSignal, MtxBaseComp, SignalTools,
-  FMXTee.Engine, FMXTee.Series.Error, SignalSeriesTee, FMXTee.Procs,
-  FMXTee.Chart, SignalToolsTee, Math387, MtxVec, MtxExpr,
-  FMX.Layouts, FMX.Memo, FMX.ListBox, FmxMtxComCtrls, SignalUtils, FmxSpectrumAna,
-  MtxDialogs;
+    FMX.Types,
+    FMX.Controls,
+    FMX.Forms,
+    FMX.Dialogs,
+    FMX.Objects,
+    Fmx.StdCtrls,
+    FMX.Header,
+    FMX.Layouts,
+    FMX.Memo,
+    FMX.ListBox,
+    FMX.Memo.Types,
+    FMX.ScrollBox,
+    FMX.Controls.Presentation,
+
+    FMXTee.Editor.EditorPanel,
+    FMXTee.Engine,
+    FMXTee.Series.Error,
+    FMXTee.Procs,
+    FMXTee.Chart,
+
+    Math387,
+    MtxVec,
+    MtxExpr,
+    MtxForLoop,
+    MtxBaseComp,
+    FmxMtxComCtrls,
+    MtxDialogs,
+
+    FileSignal,
+    SignalToolsTee,
+    SignalSeriesTee,
+    FmxSpectrumAna,
+    SignalUtils,
+    SignalTools;
 
 
 type
@@ -39,6 +62,7 @@ type
     ChannelBox: TComboBox;
     ThreadedBox: TCheckBox;
     PositionPanel: TProgressBar;
+    MtxThread: TMtxProgressDialog;
     procedure FormCreate(Sender: TObject);
     procedure ChartButtonClick(Sender: TObject);
     procedure OpenFileButtonClick(Sender: TObject);
@@ -50,8 +74,7 @@ type
     procedure SignalChart1Scroll(Sender: TObject);
   private
     procedure BrowseChartUpdate(DtOffset: TSample);
-    procedure DrawOverviewSeries(Src: TVec; Series: TChartSeries; DtOffset,
-      Dt: TSample);
+    procedure DrawOverviewSeries(Src: TVec; Series: TChartSeries; DtOffset, Dt: TSample);
     { Private declarations }
   public
     { Public declarations }
@@ -69,7 +92,9 @@ uses FmxMtxVecTee, MtxVecUtils;
 procedure TBrowseDemoForm.FormCreate(Sender: TObject);
 begin
      ChannelBox.ItemIndex := 0;
-     SignalBrowse1.ProgressThread.UpdateInterval := 50; //20x times per second updates progress bar
+     SignalBrowse1.ProgressRuntime := MtxThread.Runtime;
+     SignalBrowse1.ProgressRuntime.UpdateInterval := 50; //20x times per second updates progress bar
+     SignalBrowse1.OverviewRepositoryPath := IncludeTrailingPathDelimiter(ExtractFilePath(ParamStr(0))) + 'Data';
      With RichEdit1.Lines, RichEdit1 do
      begin
         Clear;

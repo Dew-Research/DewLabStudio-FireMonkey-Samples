@@ -25,8 +25,8 @@ object BasicForm1: TBasicForm1
       Size.Height = 109.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      Viewport.Width = 566.000000000000000000
-      Viewport.Height = 109.000000000000000000
+      Viewport.Width = 558.000000000000000000
+      Viewport.Height = 101.000000000000000000
     end
   end
   object Panel2: TPanel
@@ -56,18 +56,24 @@ object BasicForm1: TBasicForm1
     Title.Text.Strings = (
       'TChart')
     BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.EndPosition = 100.000000000000000000
     DepthAxis.LogarithmicBase = 10.000000000000000000
     DepthAxis.Maximum = 0.500000000000000000
     DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
     DepthTopAxis.LogarithmicBase = 10.000000000000000000
     DepthTopAxis.Maximum = 0.500000000000000000
     DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
     LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
     RightAxis.Grid.ZPosition = 100.000000000000000000
     RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
     RightAxis.ZPosition = 100.000000000000000000
     TopAxis.Grid.ZPosition = 100.000000000000000000
     TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
     TopAxis.ZPosition = 100.000000000000000000
     View3D = False
     Zoom.Brush.Kind = None

@@ -31,7 +31,7 @@ uses
   FMXTee.Procs, FMXTee.Chart,
   FmxMtxComCtrls,
   MtxExpr,
-  SignalUtils, FMX.Controls.Presentation;
+  SignalUtils, FMX.Controls.Presentation, FMX.Memo.Types, FMX.ScrollBox;
 
 type
   TPhaseDemoForm = class(TForm)
@@ -62,7 +62,7 @@ var
 
 implementation
 
-uses Math387, MtxVec, FmxMtxVecTee, FmxMtxVecEdit;
+uses Math387, MtxVec, FmxMtxVecTee, FmxMtxVecEdit, AbstractMtxVec;
 
 {$R *.FMX}
 

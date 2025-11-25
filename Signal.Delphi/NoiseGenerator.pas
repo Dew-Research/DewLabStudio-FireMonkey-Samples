@@ -121,7 +121,7 @@ var
 
 implementation
 
-uses MtxExpr, Math387;
+uses MtxExpr, Math387, MtxVec, AbstractMtxVec;
 
 {$R *.FMX}
 procedure TNoiseGeneratorForm.SampleRateEditChange(Sender: TObject);

@@ -103,16 +103,35 @@ object PhaseScopeForm: TPhaseScopeForm
       SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Time signal')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.Maximum = 24.000000000000000000
       BottomAxis.MaximumOffset = 1
       BottomAxis.MinimumOffset = 1
+      BottomAxis.EndPosition = 100.000000000000000000
       BottomAxis.Title.Caption = 'Time [s]'
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
       LeftAxis.Automatic = False
       LeftAxis.AutomaticMaximum = False
       LeftAxis.AutomaticMinimum = False
-      LeftAxis.Maximum = 938.750000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.Maximum = 724.625000000000000000
       LeftAxis.MaximumOffset = 1
-      LeftAxis.Minimum = 636.250000000000000000
+      LeftAxis.Minimum = 17.875000000000000000
       LeftAxis.MinimumOffset = 1
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
       Zoom.Brush.Kind = None
       Zoom.Brush.Gradient.Direction = gdFromTopLeft
       Zoom.Brush.Gradient.EndColor = claSilver
@@ -137,7 +156,6 @@ object PhaseScopeForm: TPhaseScopeForm
       ComplexSignalPart = cspReal
       ColorPaletteIndex = 13
       object Series3: TFastLineSeries
-        HoverElement = []
         SeriesColor = x00A00000
         LinePen.Color = x00A00000
         LinePen.Fill.Color = x00A00000
@@ -198,7 +216,9 @@ object PhaseScopeForm: TPhaseScopeForm
         BottomAxis.Axis.Fill.Color = x00404040
         BottomAxis.Grid.Color = x00A9A9A9
         BottomAxis.Grid.Fill.Color = x00A9A9A9
-        BottomAxis.Increment = 10.000000000000000000
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        BottomAxis.Maximum = 856.337895214793700000
+        BottomAxis.EndPosition = 100.000000000000000000
         BottomAxis.TicksInner.Color = x00A9A9A9
         BottomAxis.TicksInner.Fill.Color = x00A9A9A9
         BottomAxis.Title.Font.Family = 'Verdana'
@@ -207,6 +227,10 @@ object PhaseScopeForm: TPhaseScopeForm
         DepthAxis.Axis.Fill.Color = x00404040
         DepthAxis.Grid.Color = x00A9A9A9
         DepthAxis.Grid.Fill.Color = x00A9A9A9
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.Maximum = 0.500000000000000000
+        DepthAxis.Minimum = -0.500000000000000000
+        DepthAxis.EndPosition = 100.000000000000000000
         DepthAxis.TicksInner.Color = x00A9A9A9
         DepthAxis.TicksInner.Fill.Color = x00A9A9A9
         DepthAxis.Title.Font.Family = 'Verdana'
@@ -214,6 +238,10 @@ object PhaseScopeForm: TPhaseScopeForm
         DepthTopAxis.Axis.Fill.Color = x00404040
         DepthTopAxis.Grid.Color = x00A9A9A9
         DepthTopAxis.Grid.Fill.Color = x00A9A9A9
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.Maximum = 0.500000000000000000
+        DepthTopAxis.Minimum = -0.500000000000000000
+        DepthTopAxis.EndPosition = 100.000000000000000000
         DepthTopAxis.TicksInner.Color = x00A9A9A9
         DepthTopAxis.TicksInner.Fill.Color = x00A9A9A9
         DepthTopAxis.Title.Font.Family = 'Verdana'
@@ -223,6 +251,9 @@ object PhaseScopeForm: TPhaseScopeForm
         LeftAxis.Axis.Fill.Color = x00404040
         LeftAxis.Grid.Color = x00A9A9A9
         LeftAxis.Grid.Fill.Color = x00A9A9A9
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        LeftAxis.Maximum = 764.783182232151400000
+        LeftAxis.EndPosition = 100.000000000000000000
         LeftAxis.TicksInner.Color = x00A9A9A9
         LeftAxis.TicksInner.Fill.Color = x00A9A9A9
         LeftAxis.Title.Font.Family = 'Verdana'
@@ -232,18 +263,24 @@ object PhaseScopeForm: TPhaseScopeForm
         RightAxis.Axis.Fill.Color = x00404040
         RightAxis.Grid.Color = x00A9A9A9
         RightAxis.Grid.Fill.Color = x00A9A9A9
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.EndPosition = 100.000000000000000000
         RightAxis.TicksInner.Color = x00A9A9A9
         RightAxis.TicksInner.Fill.Color = x00A9A9A9
         RightAxis.Title.Font.Family = 'Verdana'
+        RightAxis.ZPosition = 100.000000000000000000
         TopAxis.Automatic = False
         TopAxis.AutomaticMinimum = False
         TopAxis.Axis.Color = x00404040
         TopAxis.Axis.Fill.Color = x00404040
         TopAxis.Grid.Color = x00A9A9A9
         TopAxis.Grid.Fill.Color = x00A9A9A9
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.EndPosition = 100.000000000000000000
         TopAxis.TicksInner.Color = x00A9A9A9
         TopAxis.TicksInner.Fill.Color = x00A9A9A9
         TopAxis.Title.Font.Family = 'Verdana'
+        TopAxis.ZPosition = 100.000000000000000000
         View3D = False
         Zoom.Brush.Kind = None
         Zoom.Brush.Gradient.Direction = gdFromTopLeft
@@ -261,7 +298,6 @@ object PhaseScopeForm: TPhaseScopeForm
         Size.PlatformDefault = False
         ColorPaletteIndex = 13
         object Series2: TSignalPolarSeries
-          HoverElement = []
           XValues.Name = 'Angle'
           XValues.Order = loNone
           YValues.Name = 'Radius'
@@ -332,7 +368,9 @@ object PhaseScopeForm: TPhaseScopeForm
         BottomAxis.Axis.Fill.Color = x00404040
         BottomAxis.Grid.Color = x00A9A9A9
         BottomAxis.Grid.Fill.Color = x00A9A9A9
-        BottomAxis.Increment = 10.000000000000000000
+        BottomAxis.LogarithmicBase = 10.000000000000000000
+        BottomAxis.Maximum = 936.711680173089900000
+        BottomAxis.EndPosition = 100.000000000000000000
         BottomAxis.TicksInner.Color = x00A9A9A9
         BottomAxis.TicksInner.Fill.Color = x00A9A9A9
         BottomAxis.Title.Font.Family = 'Verdana'
@@ -341,6 +379,10 @@ object PhaseScopeForm: TPhaseScopeForm
         DepthAxis.Axis.Fill.Color = x00404040
         DepthAxis.Grid.Color = x00A9A9A9
         DepthAxis.Grid.Fill.Color = x00A9A9A9
+        DepthAxis.LogarithmicBase = 10.000000000000000000
+        DepthAxis.Maximum = 0.500000000000000000
+        DepthAxis.Minimum = -0.500000000000000000
+        DepthAxis.EndPosition = 100.000000000000000000
         DepthAxis.TicksInner.Color = x00A9A9A9
         DepthAxis.TicksInner.Fill.Color = x00A9A9A9
         DepthAxis.Title.Font.Family = 'Verdana'
@@ -348,6 +390,10 @@ object PhaseScopeForm: TPhaseScopeForm
         DepthTopAxis.Axis.Fill.Color = x00404040
         DepthTopAxis.Grid.Color = x00A9A9A9
         DepthTopAxis.Grid.Fill.Color = x00A9A9A9
+        DepthTopAxis.LogarithmicBase = 10.000000000000000000
+        DepthTopAxis.Maximum = 0.500000000000000000
+        DepthTopAxis.Minimum = -0.500000000000000000
+        DepthTopAxis.EndPosition = 100.000000000000000000
         DepthTopAxis.TicksInner.Color = x00A9A9A9
         DepthTopAxis.TicksInner.Fill.Color = x00A9A9A9
         DepthTopAxis.Title.Font.Family = 'Verdana'
@@ -357,6 +403,9 @@ object PhaseScopeForm: TPhaseScopeForm
         LeftAxis.Axis.Fill.Color = x00404040
         LeftAxis.Grid.Color = x00A9A9A9
         LeftAxis.Grid.Fill.Color = x00A9A9A9
+        LeftAxis.LogarithmicBase = 10.000000000000000000
+        LeftAxis.Maximum = 875.490055477261900000
+        LeftAxis.EndPosition = 100.000000000000000000
         LeftAxis.TicksInner.Color = x00A9A9A9
         LeftAxis.TicksInner.Fill.Color = x00A9A9A9
         LeftAxis.Title.Font.Family = 'Verdana'
@@ -366,18 +415,24 @@ object PhaseScopeForm: TPhaseScopeForm
         RightAxis.Axis.Fill.Color = x00404040
         RightAxis.Grid.Color = x00A9A9A9
         RightAxis.Grid.Fill.Color = x00A9A9A9
+        RightAxis.LogarithmicBase = 10.000000000000000000
+        RightAxis.EndPosition = 100.000000000000000000
         RightAxis.TicksInner.Color = x00A9A9A9
         RightAxis.TicksInner.Fill.Color = x00A9A9A9
         RightAxis.Title.Font.Family = 'Verdana'
+        RightAxis.ZPosition = 100.000000000000000000
         TopAxis.Automatic = False
         TopAxis.AutomaticMinimum = False
         TopAxis.Axis.Color = x00404040
         TopAxis.Axis.Fill.Color = x00404040
         TopAxis.Grid.Color = x00A9A9A9
         TopAxis.Grid.Fill.Color = x00A9A9A9
+        TopAxis.LogarithmicBase = 10.000000000000000000
+        TopAxis.EndPosition = 100.000000000000000000
         TopAxis.TicksInner.Color = x00A9A9A9
         TopAxis.TicksInner.Fill.Color = x00A9A9A9
         TopAxis.Title.Font.Family = 'Verdana'
+        TopAxis.ZPosition = 100.000000000000000000
         View3D = False
         Zoom.Brush.Kind = None
         Zoom.Brush.Gradient.Direction = gdFromTopLeft
@@ -395,7 +450,6 @@ object PhaseScopeForm: TPhaseScopeForm
         Size.PlatformDefault = False
         ColorPaletteIndex = 13
         object SignalPolarSeries1: TSignalPolarSeries
-          HoverElement = []
           XValues.Name = 'Angle'
           XValues.Order = loNone
           YValues.Name = 'Radius'
@@ -457,6 +511,8 @@ object PhaseScopeForm: TPhaseScopeForm
     MtxDataValues = {}
   end
   object SignalIn1: TSignalIn
+    IsDouble = True
+    FloatPrecision = mvDouble
     ChannelCount = 2
     SamplingFrequency = 11025.000000000000000000
     UsesInputs = False
@@ -470,12 +526,16 @@ object PhaseScopeForm: TPhaseScopeForm
     MtxDataValues = {}
   end
   object Signal1: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 216
     Top = 24
     MtxDataValues = {}
   end
   object Signal2: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 162
     Top = 24

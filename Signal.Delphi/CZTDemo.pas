@@ -35,7 +35,7 @@ uses
   FileSignal,
   MtxDialogs,
   MtxBaseComp,
-  FmxMtxComCtrls, FMX.Controls.Presentation, FMX.ScrollBox;
+  FmxMtxComCtrls, FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 
 

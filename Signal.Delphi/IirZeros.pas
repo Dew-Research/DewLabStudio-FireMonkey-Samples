@@ -76,7 +76,7 @@ implementation
 
 {$R *.FMX}
 
-uses SignalUtils, MtxVec, IIRFilters, FmxMtxVecTee, Math387;
+uses SignalUtils, MtxVec, IIRFilters, FmxMtxVecTee, Math387, AbstractMtxVec;
 
 procedure TIirZerosForm.ChartEditButtonClick(Sender: TObject);
 begin

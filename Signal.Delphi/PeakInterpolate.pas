@@ -8,16 +8,35 @@ uses
   System.Types,
   System.UITypes,
   System.Classes,
+
   FMX.Types,
   FMX.Controls,
   FMX.Forms,
   FMX.Dialogs,
   FMX.Objects,
   Fmx.StdCtrls,
-  FMX.Header, SignalTools, FMXTee.Editor.EditorPanel, MtxDialogs,
-  SignalToolsDialogs, MtxBaseComp, SignalAnalysis, SignalToolsTee,
-  FMXTee.Engine, FMXTee.Series, FMXTee.Procs, FMXTee.Chart, FMX.Layouts,
-  FMX.Memo, FMX.Edit, FmxMtxComCtrls, FMX.Controls.Presentation;
+  FMX.Header,
+  FMX.Controls.Presentation,
+  FMX.Memo.Types,
+  FMX.Layouts,
+  FMX.Memo,
+  FMX.Edit,
+  FMX.ScrollBox,
+
+  FMXTee.Engine,
+  FMXTee.Series,
+  FMXTee.Procs,
+  FMXTee.Chart,
+  FMXTee.Editor.EditorPanel,
+
+  MtxDialogs,
+  MtxBaseComp,
+  FmxMtxComCtrls,
+  SignalUtils,
+  SignalTools,
+  SignalToolsDialogs,
+  SignalAnalysis,
+  SignalToolsTee;
 
 
 type
@@ -35,8 +54,7 @@ type
     Label2: TLabel;
     PhaseEdit: TMtxFloatEdit;
     Label3: TLabel;
-    AmpltEdit: TMtxFloatEdit;                          
-    SpectrumAnalyzer: TSpectrumAnalyzer;              
+    AmpltEdit: TMtxFloatEdit;              
     Panel2: TPanel;
     SpectrumChart: TSpectrumChart;
     Series1: TFastLineSeries;
@@ -47,6 +65,7 @@ type
     ChartEditor1: TChartEditor;
     Series3: TFastLineSeries;
     ChartTool1: TAxisScaleTool;
+    SpectrumAnalyzer: TSpectrumAnalyzer;
     procedure SpectrumEditButtonClick(Sender: TObject);
     procedure ChartEditButtonClick(Sender: TObject);
     procedure SpectrumAnalyzerParameterUpdate(Sender: TObject);
@@ -55,6 +74,7 @@ type
     procedure FreqEditChange(Sender: TObject);
     procedure Panel2Resize(Sender: TObject);
     procedure ToolButton1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,13 +86,25 @@ var
 
 implementation
 
-uses SignalUtils, Math387;
+uses Math387;
 
 {$R *.FMX}
 
 procedure TPeakInterpolateForm.SpectrumEditButtonClick(Sender: TObject);
 begin
      SpectrumAnalyzerDialog.Execute;
+end;
+
+procedure TPeakInterpolateForm.Button1Click(Sender: TObject);
+//var i: integer;
+begin
+//    RichEdit1.Lines.Clear;
+//    StartTimer;
+//    for i := 0 to 1000 do
+//    begin
+//        SpectrumAnalyzer.PeakApproximate(SpectrumAnalyzer.Marks[0].Freq);
+//    end;
+//    RichEdit1.Lines.Add(FormatSample('0ms',StopTimer*1000));
 end;
 
 procedure TPeakInterpolateForm.ChartEditButtonClick(Sender: TObject);

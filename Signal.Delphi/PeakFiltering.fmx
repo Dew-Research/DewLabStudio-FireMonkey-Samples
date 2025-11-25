@@ -10,21 +10,43 @@ object PeakFilteringForm: TPeakFilteringForm
   OnCreate = FormCreate
   DesignerMasterStyle = 3
   object SpectrumChart: TSpectrumChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
     Gradient.Direction = gdFromTopLeft
     Gradient.EndColor = x00C08000
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
     Legend.Visible = False
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Font.Color = claWhite
     Title.Font.Brush.Color = claWhite
     Title.Text.Strings = (
       'Frequency spectrum')
     BottomAxis.LabelsSeparation = 0
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
     BottomAxis.MinorTicks.Visible = False
+    BottomAxis.EndPosition = 100.000000000000000000
     BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
     LeftAxis.Automatic = False
     LeftAxis.AutomaticMaximum = False
     LeftAxis.AutomaticMinimum = False
-    LeftAxis.Maximum = 485.500000000000000000
-    LeftAxis.Minimum = -20.125000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 1142.530000000000000000
+    LeftAxis.Minimum = -42.813749999999990000
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
     Zoom.Brush.Kind = None
     Zoom.Pen.Color = claBlack
     Align = Client
@@ -35,6 +57,7 @@ object PeakFilteringForm: TPeakFilteringForm
     Spectrums = <
       item
         InputsItemIndex = 0
+        UnitScaleXAxis = 1.000000000000000000
         Input = SpectrumAnalyzer
       end>
     ConfidenceIntervalIndex = 0
@@ -63,7 +86,7 @@ object PeakFilteringForm: TPeakFilteringForm
       Pointer.InflateMargins = True
       Pointer.Style = psCircle
       XValues.Name = 'X'
-      XValues.Order = loNone
+      XValues.Order = loAscending
       YValues.Name = 'Y'
       YValues.Order = loNone
     end
@@ -101,7 +124,7 @@ object PeakFilteringForm: TPeakFilteringForm
       AutoSize = True
       Position.X = 338.000000000000000000
       Position.Y = 24.000000000000000000
-      Size.Width = 44.000000000000000000
+      Size.Width = 39.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -149,7 +172,6 @@ object PeakFilteringForm: TPeakFilteringForm
       OnChange = CheckBox1Change
     end
     object ComboBox1: TComboBox
-      DisableFocusEffect = False
       Position.X = 385.000000000000000000
       Position.Y = 18.000000000000000000
       Size.Width = 135.000000000000000000
@@ -181,6 +203,8 @@ object PeakFilteringForm: TPeakFilteringForm
     Viewport.Height = 95.000000000000000000
   end
   object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = SpectrumAnalyzerParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -200,6 +224,8 @@ object PeakFilteringForm: TPeakFilteringForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     LogType = ltRelative
@@ -239,6 +265,8 @@ object PeakFilteringForm: TPeakFilteringForm
     Top = 174
   end
   object SignalRead1: TSignalRead
+    IsDouble = True
+    FloatPrecision = mvDouble
     Length = 1024
     SamplingFrequency = 1.000000000000000000
     FileFormat = ffSfs
@@ -253,6 +281,8 @@ object PeakFilteringForm: TPeakFilteringForm
     MtxDataValues = {}
   end
   object Signal1: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     Continuous = False
     OnAfterUpdate = Signal1AfterUpdate
     SamplingFrequency = 1.000000000000000000

@@ -33,7 +33,7 @@ uses
   MtxDialogs,
   MtxBaseComp,
   FmxSpectrumAna,
-  MtxExpr, FMX.ScrollBox, FMX.Controls.Presentation;
+  MtxExpr, FMX.ScrollBox, FMX.Controls.Presentation, FMX.Memo.Types;
 
 type
   TPeakFilteringForm = class(TForm)
@@ -74,7 +74,7 @@ var
 
 implementation
 
-uses SignalUtils, MtxVec, Math387, Basic1;
+uses SignalUtils, MtxVec, Math387, Basic1, AbstractMtxVec;
 
 {$IFDEF CLR}
 {$R *.nfm}

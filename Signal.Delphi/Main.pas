@@ -183,7 +183,7 @@ begin
   TreeView1.ExpandAll;
 
   Application.Title := 'Dew Research MtxVec ' + FormatSample('0.0',MtxVecVersion/100) +  ' - FireMonkey demo';
-  Caption := Application.Title;
+  Caption := Application.Title + ', Float precision = ' + IntToStr(Sizeof(TSample)*8) + 'bit';
 end;
 
 Function TfrmMain.CodeFile:String;

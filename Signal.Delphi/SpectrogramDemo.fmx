@@ -2,8 +2,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
   Left = 0
   Top = 0
   Caption = 'SpectrogramDemoForm'
-  ClientHeight = 438
-  ClientWidth = 678
+  ClientHeight = 440
+  ClientWidth = 680
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
@@ -12,8 +12,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
   DesignerMasterStyle = 0
   object Panel1: TPanel
     Align = Bottom
-    Position.Y = 390.000000000000000000
-    Size.Width = 678.000000000000000000
+    Position.Y = 392.000000000000000000
+    Size.Width = 680.000000000000000000
     Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -33,7 +33,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
       Orientation = Horizontal
       Position.X = 144.000000000000000000
       Position.Y = 12.000000000000000000
-      Size.Width = 523.000000000000000000
+      Size.Width = 525.000000000000000000
       Size.Height = 21.000000000000000000
       Size.PlatformDefault = False
     end
@@ -47,8 +47,14 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Text.Strings = (
       'Spectrogram')
+    BottomAxis.LogarithmicBase = 10.000000000000000000
     BottomAxis.Title.Caption = 'Time [s]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
     LeftAxis.Title.Caption = 'Frequency [Hz]'
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
     View3D = False
     Zoom.Animated = True
     Zoom.Brush.Kind = None
@@ -62,8 +68,8 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     BevelOuter = bvNone
     Color = claWhite
     TabOrder = 1
-    Size.Width = 678.000000000000000000
-    Size.Height = 390.000000000000000000
+    Size.Width = 680.000000000000000000
+    Size.Height = 392.000000000000000000
     Size.PlatformDefault = False
     OnDblClick = Chart1DblClick
     PrintMargins = (
@@ -127,6 +133,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
     Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     TraceOnly = False
@@ -161,6 +168,7 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
     Peaks.Interpolation.RecursiveHarmonics = rhNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -189,7 +197,6 @@ object SpectrogramDemoForm: TSpectrogramDemoForm
     MtxDataValues = {}
   end
   object ComputeSpectrogramThread: TMtxProgressDialog
-    FreeOnTerminate = False
     ThreadBypass = True
     OnCompute = ComputeSpectrogramThreadCompute
     OnProgressUpdate = ComputeSpectrogramThreadProgressUpdate

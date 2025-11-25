@@ -20,7 +20,7 @@ object PhaseDemoForm: TPhaseDemoForm
       AutoSize = True
       Position.X = 161.000000000000000000
       Position.Y = 18.000000000000000000
-      Size.Width = 86.000000000000000000
+      Size.Width = 81.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -30,7 +30,7 @@ object PhaseDemoForm: TPhaseDemoForm
       AutoSize = True
       Position.X = 389.000000000000000000
       Position.Y = 21.000000000000000000
-      Size.Width = 169.000000000000000000
+      Size.Width = 165.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -103,13 +103,16 @@ object PhaseDemoForm: TPhaseDemoForm
   end
   object RichEdit1: TMemo
     Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    TextSettings.WordWrap = True
     Align = Top
     Size.Width = 688.000000000000000000
     Size.Height = 76.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    ReadOnly = True
-    TextSettings.WordWrap = True
+    Viewport.Width = 680.000000000000000000
+    Viewport.Height = 68.000000000000000000
   end
   object Panel2: TPanel
     Align = Client
@@ -126,10 +129,13 @@ object PhaseDemoForm: TPhaseDemoForm
       Size.PlatformDefault = False
     end
     object SignalChart1: TSignalChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.Direction = gdFromTopLeft
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Phase spectrum')
       BottomAxis.LogarithmicBase = 10.000000000000000000
@@ -145,14 +151,12 @@ object PhaseDemoForm: TPhaseDemoForm
       DepthTopAxis.Minimum = -0.500000000000000000
       DepthTopAxis.EndPosition = 100.000000000000000000
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 612.500000000000000000
+      LeftAxis.Maximum = 725.000000000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.Title.Caption = 'Degrees'
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.ZPosition = 100.000000000000000000
@@ -167,6 +171,7 @@ object PhaseDemoForm: TPhaseDemoForm
       Signals = <
         item
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
         end>
       ComplexSignalPart = cspReal
       ColorPaletteIndex = 0

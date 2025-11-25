@@ -56,7 +56,6 @@ object IirZerosForm: TIirZerosForm
     RightAxis.AutomaticMinimum = False
     RightAxis.AxisValuesFormat = '#,##0.0'
     RightAxis.ExactDateTime = False
-    RightAxis.Grid.ZPosition = 100.000000000000000000
     RightAxis.Increment = 0.200000000000000000
     RightAxis.LabelsOnAxis = False
     RightAxis.LabelsSeparation = 100
@@ -69,7 +68,6 @@ object IirZerosForm: TIirZerosForm
     TopAxis.AutomaticMinimum = False
     TopAxis.AxisValuesFormat = '#,##0.0'
     TopAxis.ExactDateTime = False
-    TopAxis.Grid.ZPosition = 100.000000000000000000
     TopAxis.Increment = 0.200000000000000000
     TopAxis.LabelsOnAxis = False
     TopAxis.LabelsSeparation = 50
@@ -102,7 +100,6 @@ object IirZerosForm: TIirZerosForm
     ConfidenceIntervalVisible = False
     ColorPaletteIndex = 0
     object Series1: TPolarSeries
-      HoverElement = []
       Title = 'Zeros'
       XValues.Name = 'Angle'
       XValues.Order = loNone
@@ -140,7 +137,6 @@ object IirZerosForm: TIirZerosForm
       RadiusIncrement = 0.200000000000000000
     end
     object Series2: TPolarSeries
-      HoverElement = []
       SeriesColor = xFFF6FD00
       Title = 'Poles'
       XValues.Name = 'Angle'
@@ -314,6 +310,7 @@ object IirZerosForm: TIirZerosForm
         Size.Width = 19.000000000000000000
         Size.Height = 19.000000000000000000
         Size.PlatformDefault = False
+        TabOrder = 3
         Text = 'Butterworth'
       end
       object TListBoxItem

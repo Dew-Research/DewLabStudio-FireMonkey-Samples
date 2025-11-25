@@ -2,7 +2,7 @@ object BrowseDemoForm: TBrowseDemoForm
   Left = 0
   Top = 0
   Caption = 'Browse demo'
-  ClientHeight = 423
+  ClientHeight = 424
   ClientWidth = 692
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -11,7 +11,7 @@ object BrowseDemoForm: TBrowseDemoForm
   DesignerMasterStyle = 3
   object Panel1: TPanel
     Align = Bottom
-    Position.Y = 363.000000000000000000
+    Position.Y = 364.000000000000000000
     Size.Width = 692.000000000000000000
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
@@ -20,10 +20,11 @@ object BrowseDemoForm: TBrowseDemoForm
       AutoSize = True
       Position.X = 306.000000000000000000
       Position.Y = 21.000000000000000000
-      Size.Width = 31.000000000000000000
-      Size.Height = 22.000000000000000000
+      Size.Width = 26.399993896484380000
+      Size.Height = 22.400001525878910000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
+      TextSettings.Trimming = None
       Text = 'Ch:'
     end
     object ToolBar1: TToolBar
@@ -43,6 +44,7 @@ object BrowseDemoForm: TBrowseDemoForm
         TabOrder = 0
         Text = '         Chart          '
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ChartButtonClick
       end
       object OpenFileButton: TButton
@@ -54,11 +56,11 @@ object BrowseDemoForm: TBrowseDemoForm
         TabOrder = 1
         Text = 'Open file'
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = OpenFileButtonClick
       end
     end
     object ChannelBox: TComboBox
-      DisableFocusEffect = False
       Position.X = 338.000000000000000000
       Position.Y = 15.000000000000000000
       Size.Width = 71.000000000000000000
@@ -88,54 +90,43 @@ object BrowseDemoForm: TBrowseDemoForm
   end
   object RichEdit1: TMemo
     Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
     Align = Top
     Size.Width = 692.000000000000000000
     Size.Height = 76.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
-    ReadOnly = True
+    Viewport.Width = 684.000000000000000000
+    Viewport.Height = 68.000000000000000000
   end
   object Panel2: TPanel
     Align = Client
     Size.Width = 692.000000000000000000
-    Size.Height = 287.000000000000000000
+    Size.Height = 288.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
     object SignalChart1: TSignalChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.Direction = gdFromCenter
       Gradient.EndColor = claWhite
       Gradient.StartColor = x00C08000
       Gradient.Visible = True
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
       Legend.Visible = False
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Text.Strings = (
         'Time signal')
       OnScroll = SignalChart1Scroll
       OnUndoZoom = SignalChart1UndoZoom
       OnZoom = SignalChart1Zoom
       BottomAxis.LogarithmicBase = 10.000000000000000000
-      BottomAxis.Maximum = 24.000000000000000000
-      BottomAxis.EndPosition = 100.000000000000000000
       BottomAxis.Title.Caption = 'Time [s]'
       DepthAxis.LogarithmicBase = 10.000000000000000000
-      DepthAxis.Maximum = 0.500000000000000000
-      DepthAxis.Minimum = -0.500000000000000000
-      DepthAxis.EndPosition = 100.000000000000000000
       DepthTopAxis.LogarithmicBase = 10.000000000000000000
-      DepthTopAxis.Maximum = 0.500000000000000000
-      DepthTopAxis.Minimum = -0.500000000000000000
-      DepthTopAxis.EndPosition = 100.000000000000000000
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 340.000000000000000000
-      LeftAxis.Minimum = -160.000000000000000000
-      LeftAxis.EndPosition = 100.000000000000000000
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
-      RightAxis.EndPosition = 100.000000000000000000
-      RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
-      TopAxis.EndPosition = 100.000000000000000000
-      TopAxis.ZPosition = 100.000000000000000000
       Zoom.Brush.Kind = None
       Zoom.Brush.Gradient.Direction = gdFromTopLeft
       Zoom.Brush.Gradient.EndColor = claSilver
@@ -147,11 +138,12 @@ object BrowseDemoForm: TBrowseDemoForm
       BevelOuter = bvNone
       TabOrder = 0
       Size.Width = 692.000000000000000000
-      Size.Height = 277.000000000000000000
+      Size.Height = 278.000000000000000000
       Size.PlatformDefault = False
       Signals = <
         item
           InputsItemIndex = 0
+          UnitScaleXAxis = 1.000000000000000000
           Input = Signal1
         end>
       ComplexSignalPart = cspReal
@@ -162,19 +154,21 @@ object BrowseDemoForm: TBrowseDemoForm
         LowValues.Name = 'Low'
         LowValues.Order = loNone
         XValues.Name = 'X'
-        XValues.Order = loNone
+        XValues.Order = loAscending
         HighBrush.Color = claWhite
         LowBrush.Color = claWhite
         LowBrush.Kind = None
         ComplexSignalPart = cspReal
         SeriesMode = ssmHighLow
         ZMiddleDepth = False
+        Left = 40
+        Top = 24
       end
     end
     object PositionPanel: TProgressBar
       Align = Bottom
       Orientation = Horizontal
-      Position.Y = 277.000000000000000000
+      Position.Y = 278.000000000000000000
       Size.Width = 692.000000000000000000
       Size.Height = 10.000000000000000000
       Size.PlatformDefault = False
@@ -187,11 +181,16 @@ object BrowseDemoForm: TBrowseDemoForm
     Top = 9
   end
   object Signal1: TSignal
+    IsDouble = True
+    FloatPrecision = mvDouble
     SamplingFrequency = 1.000000000000000000
     Left = 255
+    Top = 8
     MtxDataValues = {}
   end
   object SignalBrowse1: TSignalBrowse
+    IsDouble = False
+    FloatPrecision = mvSingle
     Increment = 100
     SpanLimit = 8192
     SpanTime = 16384.000000000000000000
@@ -208,6 +207,17 @@ object BrowseDemoForm: TBrowseDemoForm
     Height = 0
     Width = 0
     Left = 141
-    Top = 6
+    Top = 14
+  end
+  object MtxThread: TMtxProgressDialog
+    ThreadBypass = False
+    InternalLoop = True
+    InfiniteLoop = False
+    Min = 0
+    Max = 0
+    ShowDialog = False
+    Left = 616
+    Top = 8
+    MtxDataValues = {}
   end
 end

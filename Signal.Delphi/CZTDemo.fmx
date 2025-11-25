@@ -10,9 +10,12 @@ object CZTDemoForm: TCZTDemoForm
   OnCreate = FormCreate
   DesignerMasterStyle = 3
   object SpectrumChart: TSpectrumChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
     Gradient.Direction = gdLeftRight
     Gradient.EndColor = x00C08000
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
     Legend.Visible = False
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
     Title.Font.Color = claWhite
     Title.Font.Brush.Color = claWhite
     Title.Text.Strings = (
@@ -21,13 +24,34 @@ object CZTDemoForm: TCZTDemoForm
     BottomAxis.Grid.Style = psDot
     BottomAxis.Grid.Fill.Color = claWhite
     BottomAxis.LabelsSeparation = 0
+    BottomAxis.LogarithmicBase = 10.000000000000000000
+    BottomAxis.Maximum = 24.000000000000000000
     BottomAxis.MinorTicks.Visible = False
+    BottomAxis.EndPosition = 100.000000000000000000
     BottomAxis.Title.Caption = 'Frequency [Hz]'
+    DepthAxis.LogarithmicBase = 10.000000000000000000
+    DepthAxis.Maximum = 0.500000000000000000
+    DepthAxis.Minimum = -0.500000000000000000
+    DepthAxis.EndPosition = 100.000000000000000000
+    DepthTopAxis.LogarithmicBase = 10.000000000000000000
+    DepthTopAxis.Maximum = 0.500000000000000000
+    DepthTopAxis.Minimum = -0.500000000000000000
+    DepthTopAxis.EndPosition = 100.000000000000000000
     LeftAxis.Automatic = False
     LeftAxis.AutomaticMaximum = False
     LeftAxis.AutomaticMinimum = False
-    LeftAxis.Maximum = 1112.500000000000000000
-    LeftAxis.Minimum = -46.250000000000000000
+    LeftAxis.LogarithmicBase = 10.000000000000000000
+    LeftAxis.Maximum = 874.700000000000000000
+    LeftAxis.Minimum = -35.612500000000000000
+    LeftAxis.EndPosition = 100.000000000000000000
+    RightAxis.Grid.ZPosition = 100.000000000000000000
+    RightAxis.LogarithmicBase = 10.000000000000000000
+    RightAxis.EndPosition = 100.000000000000000000
+    RightAxis.ZPosition = 100.000000000000000000
+    TopAxis.Grid.ZPosition = 100.000000000000000000
+    TopAxis.LogarithmicBase = 10.000000000000000000
+    TopAxis.EndPosition = 100.000000000000000000
+    TopAxis.ZPosition = 100.000000000000000000
     Zoom.Brush.Kind = None
     Zoom.Pen.Color = claBlack
     Zoom.Pen.Mode = pmNotXor
@@ -39,6 +63,7 @@ object CZTDemoForm: TCZTDemoForm
     Spectrums = <
       item
         InputsItemIndex = 0
+        UnitScaleXAxis = 1.000000000000000000
         Input = SpectrumAnalyzer
       end>
     ConfidenceIntervalIndex = 0
@@ -105,7 +130,7 @@ object CZTDemoForm: TCZTDemoForm
       AutoSize = True
       Position.X = 279.000000000000000000
       Position.Y = 9.000000000000000000
-      Size.Width = 85.000000000000000000
+      Size.Width = 81.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -115,7 +140,7 @@ object CZTDemoForm: TCZTDemoForm
       AutoSize = True
       Position.X = 433.000000000000000000
       Position.Y = 9.000000000000000000
-      Size.Width = 36.000000000000000000
+      Size.Width = 31.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -125,7 +150,7 @@ object CZTDemoForm: TCZTDemoForm
       AutoSize = True
       Position.X = 596.000000000000000000
       Position.Y = 9.000000000000000000
-      Size.Width = 53.000000000000000000
+      Size.Width = 49.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
@@ -148,6 +173,7 @@ object CZTDemoForm: TCZTDemoForm
         TabOrder = 0
         Text = '      Spectrum      '
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = SpectrumEditButtonClick
       end
       object ChartEditButton: TButton
@@ -159,6 +185,7 @@ object CZTDemoForm: TCZTDemoForm
         TabOrder = 1
         Text = 'Chart'
         TextSettings.WordWrap = True
+        TextSettings.Trimming = None
         OnClick = ChartEditButtonClick
       end
     end
@@ -243,6 +270,8 @@ object CZTDemoForm: TCZTDemoForm
     Viewport.Height = 68.000000000000000000
   end
   object SpectrumAnalyzer: TSpectrumAnalyzer
+    IsDouble = True
+    FloatPrecision = mvDouble
     OnParameterUpdate = SpectrumAnalyzerParameterUpdate
     PhaseRange = prPiPi
     SamplingFrequency = 1.000000000000000000
@@ -262,7 +291,9 @@ object CZTDemoForm: TCZTDemoForm
     Report.ReportItems.RMS = False
     Report.ReportItems.SNR = False
     Report.ReportItems.DateTime = False
+    Peaks.Interpolation.RecursiveHarmonics = rhNone
     Peaks.Interpolation.Method = imNone
+    Peaks.LargestRatio = 1000000000000000.000000000000000000
     Bands.Templates.Strings = ()
     Bands.Templates.StreamBinaryData = {}
     ScaleFactor = 1.000000000000000000
@@ -299,6 +330,8 @@ object CZTDemoForm: TCZTDemoForm
     Top = 216
   end
   object SignalRead1: TSignalRead
+    IsDouble = True
+    FloatPrecision = mvDouble
     Length = 1024
     SamplingFrequency = 1.000000000000000000
     FileFormat = ffSfs

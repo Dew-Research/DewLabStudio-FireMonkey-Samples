@@ -26,7 +26,7 @@ uses
   FMXTee.Series.Polar, SignalSeriesTee,
   FMXTee.Procs,
   FMXTee.Chart,
-  FMX.ListBox, FMX.ScrollBox, FMX.Controls.Presentation;
+  FMX.ListBox, FMX.ScrollBox, FMX.Controls.Presentation, FMX.Memo.Types;
 
 type
   TLissajousScopeForm = class(TForm)
@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses Math387, MtxVec, OptimalFir, FmxMtxVecTee;
+uses Math387, MtxVec, OptimalFir, FmxMtxVecTee, AbstractMtxVec;
 
 {$R *.FMX}
 
@@ -95,7 +95,7 @@ begin
     Im.Size(0);
 
     if not SignalIn1.Active then SignalIn1.Start;
-    SignalIn1.MonitorData(Signal1,Signal2);
+    SignalIn1.MonitorData(Signal1,Signal2);      //only works for stereo signal
     a.RealToCplx(Signal2.Data,Signal1.Data);
     a.CartToPolar(Re,Im);
     Im := Im*(180/Pi) + 45; //from radians to degrees //add 45 degrees
