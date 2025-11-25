@@ -1,5 +1,5 @@
 <a href="https://www.dewresearch.com/products/mtxvec/mtxvec-for-delphi-c-builder">
-<img align="right" src="https://www.dewresearch.com/templates/yootheme/cache/mtxvex-icon-ef5151c5.png">
+<img align="right" src="https://www.dewresearch.com/images/Dew.png">
 </a>  
 
 # Dew Lab Studio FMX for RAD Studio Delphi samples.
@@ -14,8 +14,8 @@ Support for Firemonkey is implemented for all supported platforms:
 
 * Linux 64bit (not in trial version)
 * iOS 64bit
-* MacOS 64bit (10 and 11)
-* Android 64bit
+* MacOS 64bit (10 and newer)
+* Android 32bit and 64bit
 * Win32 and Win64
 
 To build for Mac OS it is neccessary to add the following frameworks to the SDK Manager 
