@@ -23,6 +23,7 @@ type
     StringColumn2: TStringColumn;
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     function ListToStringGrid(AFileName: String): Integer;
@@ -77,6 +78,11 @@ begin
       CloseFile(f);
     end;
   end else ShowMessage('Cant find ' + AFileName);
+end;
+
+procedure TfrmListFunc.FormDestroy(Sender: TObject);
+begin
+  StringGrid1.ClearColumns;
 end;
 
 procedure TfrmListFunc.FormResize(Sender: TObject);

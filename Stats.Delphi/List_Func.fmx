@@ -8,6 +8,7 @@ object frmListFunc: TfrmListFunc
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop, iPhone, iPad]
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnResize = FormResize
   Left = 236
   Top = 106
@@ -25,9 +26,11 @@ object frmListFunc: TfrmListFunc
     Viewport.Width = 503.000000000000000000
     Viewport.Height = 216.000000000000000000
     object StringColumn1: TStringColumn
+      HeaderSettings.TextSettings.WordWrap = False
       Size.Width = 187.000000000000000000
     end
     object StringColumn2: TStringColumn
+      HeaderSettings.TextSettings.WordWrap = False
     end
   end
   object Panel1: TPanel

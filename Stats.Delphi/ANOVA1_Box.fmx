@@ -1,11 +1,12 @@
 inherited frmANOVA1Box: TfrmANOVA1Box
   Caption = 'frmANOVA1Box'
-  ClientHeight = 440
-  ClientWidth = 614
-  DesignerMasterStyle = 3
+  ClientHeight = 739
+  ClientWidth = 1065
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
   inherited Panel1: TPanel
-    Size.Width = 614.000000000000000000
-    Size.Height = 368.000000000000000000
+    Size.Width = 1065.000000000000000000
+    Size.Height = 667.000000000000000000
     object Chart1: TChart
       Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.EndColor = x00804000
@@ -41,11 +42,9 @@ inherited frmANOVA1Box: TfrmANOVA1Box
       LeftAxis.Title.Caption = 'Group'
       LeftAxis.Title.Font.Color = claWhite
       LeftAxis.Title.Font.Brush.Color = claWhite
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.ZPosition = 100.000000000000000000
@@ -55,23 +54,23 @@ inherited frmANOVA1Box: TfrmANOVA1Box
       Zoom.Pen.Fill.Color = claWhite
       Align = Client
       TabOrder = 0
-      Size.Width = 457.000000000000000000
-      Size.Height = 294.000000000000000000
+      Size.Width = 908.000000000000000000
+      Size.Height = 473.000000000000000000
       Size.PlatformDefault = False
       ColorPaletteIndex = 0
     end
     object Panel2: TPanel
       Align = Left
       Size.Width = 157.000000000000000000
-      Size.Height = 294.000000000000000000
+      Size.Height = 473.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       object Label1: TLabel
         AutoSize = True
         Position.X = 8.000000000000000000
         Position.Y = 16.000000000000000000
-        Size.Width = 60.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 16.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Alpha : '
@@ -118,25 +117,26 @@ inherited frmANOVA1Box: TfrmANOVA1Box
       end
     end
     object StringGrid1: TStringGrid
+      Anchors = []
       Align = Bottom
       CanFocus = True
       ClipChildren = True
-      Position.Y = 294.000000000000000000
-      Size.Width = 614.000000000000000000
-      Size.Height = 74.000000000000000000
+      Position.Y = 473.000000000000000000
+      Size.Width = 1065.000000000000000000
+      Size.Height = 194.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       RowHeight = 21.000000000000000000
       RowCount = 4
-      Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
-      Viewport.Width = 614.000000000000000000
-      Viewport.Height = 42.000000000000000000
+      Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, HeaderClick, AutoDisplacement]
+      Viewport.Width = 1061.000000000000000000
+      Viewport.Height = 190.000000000000000000
     end
   end
   inherited Memo1: TMemo
-    Size.Width = 614.000000000000000000
+    Size.Width = 1065.000000000000000000
     Size.Height = 72.000000000000000000
-    Viewport.Width = 614.000000000000000000
+    Viewport.Width = 1065.000000000000000000
     Viewport.Height = 72.000000000000000000
   end
   object MtxAnova: TMtxAnova

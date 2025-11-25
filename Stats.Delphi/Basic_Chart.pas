@@ -12,7 +12,7 @@ uses
   Fmx.StdCtrls,
   FMX.Header,
   Basic_Form, FMX.Controls, FMX.Layouts, FMX.Memo, FMX.Types, FMX.ScrollBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Memo.Types;
 
 
 type

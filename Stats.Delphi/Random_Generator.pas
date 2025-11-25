@@ -62,7 +62,7 @@ var
 
 implementation
 
-Uses FmxMtxVecTee, Math387, Probabilities, StatRandom, MtxVecUtils;
+Uses FmxMtxVecTee, Math387, Probabilities, StatRandom, MtxVecUtils, AbstractMtxVec, MtxVecBase;
 
 {$R *.FMX}
 

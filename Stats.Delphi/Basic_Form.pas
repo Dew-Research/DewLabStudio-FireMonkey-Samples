@@ -41,11 +41,11 @@ implementation
 function GetDataPath: string;
 begin
    {$IFDEF POSIX}
-       {$IFDEF OSX}
+       {$IF Defined(OSX) or Defined(LINUX)}
        Result := TPath.GetDirectoryName(ParamStr(0)) + '/';
        {$ELSE}
        Result := TPath.GetDocumentsPath + '/';
-       {$ENDIF}
+       {$IFEND}
    {$ELSE}
     Result := TPath.GetDirectoryName(ParamStr(0)) + '/';
    {$ENDIF}

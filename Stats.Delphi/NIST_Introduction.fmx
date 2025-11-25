@@ -4,13 +4,24 @@ object frmNISTIntro: TfrmNISTIntro
   Caption = 'frmNISTIntro'
   ClientHeight = 444
   ClientWidth = 680
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
   OnCreate = FormCreate
+  Left = 236
+  Top = 106
+  DesignerMasterStyle = 0
   object Memo1: TMemo
-Position.Point = '(0,0)'
-    Width = 680
-    Height = 444
-    Align = alClient
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
     ReadOnly = True
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 680.000000000000000000
+    Size.Height = 444.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 0
+    Viewport.Width = 676.000000000000000000
+    Viewport.Height = 440.000000000000000000
   end
 end

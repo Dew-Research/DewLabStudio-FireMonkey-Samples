@@ -86,7 +86,7 @@ inherited frmPCRegWizard: TfrmPCRegWizard
           AutoSize = True
           Position.X = 18.000000000000000000
           Position.Y = 120.000000000000000000
-          Size.Width = 47.000000000000000000
+          Size.Width = 46.000000000000000000
           Size.Height = 16.000000000000000000
           Size.PlatformDefault = False
           TextSettings.WordWrap = False
@@ -355,11 +355,9 @@ inherited frmPCRegWizard: TfrmPCRegWizard
         DepthTopAxis.EndPosition = 100.000000000000000000
         LeftAxis.LogarithmicBase = 10.000000000000000000
         LeftAxis.EndPosition = 100.000000000000000000
-        RightAxis.Grid.ZPosition = 100.000000000000000000
         RightAxis.LogarithmicBase = 10.000000000000000000
         RightAxis.EndPosition = 100.000000000000000000
         RightAxis.ZPosition = 100.000000000000000000
-        TopAxis.Grid.ZPosition = 100.000000000000000000
         TopAxis.LogarithmicBase = 10.000000000000000000
         TopAxis.EndPosition = 100.000000000000000000
         TopAxis.ZPosition = 100.000000000000000000

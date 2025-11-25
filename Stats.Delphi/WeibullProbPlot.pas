@@ -25,7 +25,7 @@ uses
   FMXTee.Editor.Chart,
   MtxVec, Math387,
   MtxExpr, StatSeries, FMXTee.Editor.Stroke, FMXTee.Editor.Brush, FMX.ScrollBox,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, FMX.Memo.Types;
 
 
 type
@@ -55,7 +55,7 @@ var
 
 implementation
 
-Uses  FmxMtxVecTee, Statistics, StatProbPlots, StatRandom;
+Uses  FmxMtxVecTee, Statistics, StatProbPlots, StatRandom, AbstractMtxVec;
 
 {$R *.FMX}
 

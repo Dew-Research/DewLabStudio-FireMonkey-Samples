@@ -3,52 +3,28 @@ unit NIST_Introduction;
 interface
 
 uses
-//** Converted to FireMonkey with Mida BASIC 270     http://www.midaconverter.com
-
   System.SysUtils,
   System.Types,
   System.UITypes,
   System.Classes,
-  System.Variants,
-  System.IniFiles,
-  Data.DB,
-  FMX.Types,
   FMX.Controls,
   FMX.Forms,
   FMX.Dialogs,
   FMX.Objects,
   FMX.Menus,
   FMX.Grid,
-  FMX.ExtCtrls,
-  FMX.ListBox,
   FMX.TreeView,
   FMX.Memo,
   FMX.TabControl,
   FMX.Layouts,
   FMX.Edit,
   FMX.Platform,
-  FMX.Bind.DBEngExt,
-  FMX.Bind.Editors,
-  FMX.Bind.DBLinks,
-  FMX.Bind.Navigator,
-  Data.Bind.EngExt,
-  Data.Bind.Components,
-  Data.Bind.DBScope,
-  Data.Bind.DBLinks,
-  Datasnap.DBClient,
-  Fmx.Bind.Grid,
-  System.Rtti,
-  System.Bindings.Outputs,
-  Data.Bind.Grid,
   Fmx.StdCtrls,
-  FMX.Header;
-
-//**   Original VCL Uses section : 
-
-
-//**   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-//**   StdCtrls;
-
+  FMX.Header,
+  FMX.Memo.Types,
+  FMX.Controls.Presentation,
+  FMX.ScrollBox,
+  FMX.Types;
 
 type
   TfrmNISTIntro = class(TForm)

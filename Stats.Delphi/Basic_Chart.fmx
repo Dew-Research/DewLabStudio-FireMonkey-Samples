@@ -12,6 +12,7 @@ inherited frmBasicChart: TfrmBasicChart
       Border.Fill.Color = claNavy
       Border.Visible = True
       BorderRound = 10
+      Foot.Font.StyleExt = {00040000000200000004000000}
       Gradient.EndColor = claGray
       Gradient.Visible = True
       Legend.Brush.Gradient.Direction = gdTopBottom
@@ -21,6 +22,8 @@ inherited frmBasicChart: TfrmBasicChart
       Legend.Frame.Fill.Color = claGray
       Legend.Shadow.Color = x00CCCCCC
       Legend.Symbol.Pen.Visible = False
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
       Title.Font.Shadow.Color = claBlack
       Title.Font.Shadow.HorizSize = 1
       Title.Font.Shadow.VertSize = 1
@@ -30,6 +33,24 @@ inherited frmBasicChart: TfrmBasicChart
       Title.Shadow.VertSize = 0
       Title.Text.Strings = (
         'TChart')
+      BottomAxis.LogarithmicBase = 10.000000000000000000
+      BottomAxis.EndPosition = 100.000000000000000000
+      DepthAxis.LogarithmicBase = 10.000000000000000000
+      DepthAxis.Maximum = 0.500000000000000000
+      DepthAxis.Minimum = -0.500000000000000000
+      DepthAxis.EndPosition = 100.000000000000000000
+      DepthTopAxis.LogarithmicBase = 10.000000000000000000
+      DepthTopAxis.Maximum = 0.500000000000000000
+      DepthTopAxis.Minimum = -0.500000000000000000
+      DepthTopAxis.EndPosition = 100.000000000000000000
+      LeftAxis.LogarithmicBase = 10.000000000000000000
+      LeftAxis.EndPosition = 100.000000000000000000
+      RightAxis.LogarithmicBase = 10.000000000000000000
+      RightAxis.EndPosition = 100.000000000000000000
+      RightAxis.ZPosition = 100.000000000000000000
+      TopAxis.LogarithmicBase = 10.000000000000000000
+      TopAxis.EndPosition = 100.000000000000000000
+      TopAxis.ZPosition = 100.000000000000000000
       View3D = False
       Zoom.Brush.Kind = None
       Zoom.Pen.Color = claWhite
@@ -68,7 +89,7 @@ inherited frmBasicChart: TfrmBasicChart
   inherited Memo1: TMemo
     Size.Width = 623.000000000000000000
     Size.Height = 121.000000000000000000
-    Viewport.Width = 615.000000000000000000
-    Viewport.Height = 113.000000000000000000
+    Viewport.Width = 623.000000000000000000
+    Viewport.Height = 121.000000000000000000
   end
 end

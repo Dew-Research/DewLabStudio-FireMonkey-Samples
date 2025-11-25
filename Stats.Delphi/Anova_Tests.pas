@@ -13,7 +13,8 @@ uses
   Basic_Form,
   StatTools, 
   MtxBaseComp, System.Rtti, FMX.ListBox, FMX.Layouts, FMX.Grid, FMX.Controls,
-  FMX.Types, FMX.Memo;
+  FMX.Types, FMX.Memo, FMX.Memo.Types, FMX.Grid.Style, FMX.ScrollBox,
+  FMX.Controls.Presentation;
 
 type
   TfrmANOVATest = class(TfrmBasic)
@@ -29,6 +30,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     procedure FillData;
@@ -269,6 +271,11 @@ begin
 
   ComboBox1.ItemIndex := 0;
   ComboBox1Change(Self);
+end;
+
+procedure TfrmANOVATest.FormDestroy(Sender: TObject);
+begin
+    StringGrid1.ClearColumns;
 end;
 
 initialization

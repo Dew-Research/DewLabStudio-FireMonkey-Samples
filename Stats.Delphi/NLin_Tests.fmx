@@ -7,7 +7,7 @@ inherited frmNonLinTest: TfrmNonLinTest
   OnDestroy = FormDestroy
   Left = 221
   Top = 40
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 1
   inherited Panel1: TPanel
     Size.Width = 928.000000000000000000
     Size.Height = 578.000000000000000000
@@ -21,8 +21,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 10.000000000000000000
         Position.Y = 16.000000000000000000
-        Size.Width = 184.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 133.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Optimization method : '
@@ -31,8 +31,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 10.000000000000000000
         Position.Y = 73.000000000000000000
-        Size.Width = 222.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 158.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Max. number of iterations : '
@@ -41,8 +41,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 10.000000000000000000
         Position.Y = 136.000000000000000000
-        Size.Width = 140.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Regression test : '
@@ -51,8 +51,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 14.000000000000000000
         Position.Y = 206.000000000000000000
-        Size.Width = 152.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 107.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = '||Grad||C Tolerance'
@@ -61,8 +61,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 15.000000000000000000
         Position.Y = 244.000000000000000000
-        Size.Width = 189.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 134.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Convergence Tolerance'
@@ -71,8 +71,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         AutoSize = True
         Position.X = 12.000000000000000000
         Position.Y = 282.000000000000000000
-        Size.Width = 201.000000000000000000
-        Size.Height = 22.000000000000000000
+        Size.Width = 142.000000000000000000
+        Size.Height = 18.000000000000000000
         Size.PlatformDefault = False
         TextSettings.WordWrap = False
         Text = 'Numerical grad step size'
@@ -218,6 +218,7 @@ inherited frmNonLinTest: TfrmNonLinTest
         Size.PlatformDefault = False
         TabOrder = 13
         Text = 'Recalculate'
+        TextSettings.Trimming = None
         OnClick = SpeedButton1Click
       end
     end
@@ -258,8 +259,8 @@ inherited frmNonLinTest: TfrmNonLinTest
         DepthTopAxis.Minimum = -0.500000000000000000
         DepthTopAxis.EndPosition = 100.000000000000000000
         LeftAxis.LogarithmicBase = 10.000000000000000000
-        LeftAxis.Maximum = 1228.375000000000000000
-        LeftAxis.Minimum = 400.000000000000000000
+        LeftAxis.Maximum = 745.000000000000000000
+        LeftAxis.Minimum = 417.500000000000000000
         LeftAxis.EndPosition = 100.000000000000000000
         RightAxis.Grid.ZPosition = 100.000000000000000000
         RightAxis.LogarithmicBase = 10.000000000000000000
@@ -286,7 +287,6 @@ inherited frmNonLinTest: TfrmNonLinTest
         Size.PlatformDefault = False
         ColorPaletteIndex = 0
         object Series1: TPointSeries
-          HoverElement = [heCurrent]
           SeriesColor = claYellow
           Title = 'Data'
           ClickableLine = False
@@ -303,7 +303,6 @@ inherited frmNonLinTest: TfrmNonLinTest
           YValues.Order = loNone
         end
         object Series2: TLineSeries
-          HoverElement = [heCurrent]
           Title = 'Fitted data'
           Brush.BackColor = x00FFFFFF
           Pointer.InflateMargins = True

@@ -16,7 +16,7 @@ uses
   Basic_Wizard, MtxVec, MtxExpr, Regress, Statistics, Math387, FMXTee.Commander,
   FMX.Layouts, FMX.Memo, FMX.Edit, FMX.TabControl, FMX.Controls,
   FMX.Types, FmxMtxComCtrls, FMXTee.Functions.Stats,
-  FMX.Controls.Presentation, FMX.ScrollBox;
+  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo.Types;
 
 
 
@@ -93,7 +93,7 @@ var
 
 implementation
 
-Uses FmxMtxVecEdit, Probabilities, FmxMtxVecTee, StatSeries, StatProbPlots;
+Uses FmxMtxVecEdit, Probabilities, FmxMtxVecTee, StatSeries, StatProbPlots, AbstractMtxVec;
 
 {$R *.FMX}
 

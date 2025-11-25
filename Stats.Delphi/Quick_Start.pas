@@ -9,7 +9,8 @@ uses
   System.Classes,
   FMX.Forms,
   Fmx.StdCtrls,
-  FMX.Header, FMX.Types, FMX.Controls, FMX.Layouts, FMX.Memo;
+  FMX.Header, FMX.Types, FMX.Controls, FMX.Layouts, FMX.Memo, FMX.Memo.Types,
+  FMX.Controls.Presentation, FMX.ScrollBox;
 
 type
   TfrmQuickStart = class(TForm)

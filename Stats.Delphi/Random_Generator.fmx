@@ -298,20 +298,18 @@ inherited frmRandomGen: TfrmRandomGen
       LeftAxis.LabelsFormat.Font.Color = claWhite
       LeftAxis.LabelsFormat.Font.Brush.Color = claWhite
       LeftAxis.LogarithmicBase = 10.000000000000000000
-      LeftAxis.Maximum = 525.000000000000000000
+      LeftAxis.Maximum = 567.500000000000000000
       LeftAxis.EndPosition = 100.000000000000000000
       LeftAxis.Title.Caption = 'Count'
       LeftAxis.Title.Font.Color = claWhite
       LeftAxis.Title.Font.Brush.Color = claWhite
       RightAxis.Grid.Visible = False
-      RightAxis.Grid.ZPosition = 100.000000000000000000
       RightAxis.LogarithmicBase = 10.000000000000000000
-      RightAxis.Maximum = 1202.500000000000000000
-      RightAxis.Minimum = 517.500000000000000000
+      RightAxis.Maximum = 782.500000000000000000
+      RightAxis.Minimum = 545.000000000000000000
       RightAxis.EndPosition = 100.000000000000000000
       RightAxis.Title.Caption = 'PDF'
       RightAxis.ZPosition = 100.000000000000000000
-      TopAxis.Grid.ZPosition = 100.000000000000000000
       TopAxis.LogarithmicBase = 10.000000000000000000
       TopAxis.EndPosition = 100.000000000000000000
       TopAxis.ZPosition = 100.000000000000000000
@@ -326,9 +324,9 @@ inherited frmRandomGen: TfrmRandomGen
       Size.PlatformDefault = False
       ColorPaletteIndex = 0
       object Series1: TBarSeries
-        HoverElement = []
         Marks.Visible = False
         Marks.AutoPosition = False
+        Marks.OnTop = True
         Title = 'Histogram'
         BarWidthPercent = 100
         Dark3D = False
@@ -340,7 +338,6 @@ inherited frmRandomGen: TfrmRandomGen
         YValues.Order = loNone
       end
       object Series2: TLineSeries
-        HoverElement = [heCurrent]
         SeriesColor = claYellow
         Title = 'PDF'
         VertAxis = aRightAxis
